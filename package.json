@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "name": "data-dictionary",
+  "version": "0.0.0",
+  "description": "Retsly's centralized Data Dictionary.",
+  "main": "lib/index.js",
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {}
+}
