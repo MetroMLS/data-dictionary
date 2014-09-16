@@ -15,7 +15,7 @@ Retsly's Data Dictionary.
 
 ## Repo Owner
 
-    TBD
+[switters](https://github.com/switters)
 
 ## License
 
