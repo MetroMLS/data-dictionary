@@ -122,7 +122,7 @@ module.exports = {
   UnitNumber: {type:String, maxLength:25},
   City: {type:String, required:true, maxLength:50},
   StateOrProvince: {type:String, required:true, maxLength:2},
-  Country: {type:String, maxLength:2, default:'USA'},
+  Country: {type:String, maxLength:2, default:'US'},
   PostalCode: {type:String, required:true, maxLength:10},
   PostalCodePlus4: {type:String, maxLength:4},
   CarrierRoute: {type:String, maxLength:9},
