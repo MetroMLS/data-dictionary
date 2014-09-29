@@ -122,7 +122,7 @@ module.exports = {
   UnitNumber: {type:String, maxLength:25, group:'/Property/Location/Address'},
   City: {type:String, required:true, maxLength:50, group:'/Property/Location/Address'},
   StateOrProvince: {type:String, required:true, maxLength:2, group:'/Property/Location/Address'},
-  Country: {type:String, maxLength:2, default:'USA', group:'/Property/Location/Address'},
+  Country: {type:String, maxLength:2, default:'US', group:'/Property/Location/Address'},
   PostalCode: {type:String, required:true, maxLength:10, group:'/Property/Location/Address'},
   PostalCodePlus4: {type:String, maxLength:4, group:'/Property/Location/Address'},
   CarrierRoute: {type:String, maxLength:9, group:'/Property/Location/Address'},
@@ -479,8 +479,13 @@ module.exports = {
   Flooring: {type:String, maxLength:1024, group:'/Property/Structure'},
   OtherStructures: {type:String, maxLength:1024, group:'/Property/Structure'},
   DirectionFaces: {type:String, maxLength:25, group:'/Property/Structure'},
+<<<<<<< HEAD
   OtherEquipment: {type:String, maxLength:1024, group:'/Property/Equipment'},
   Appliances: {type:String, maxLength:1024, group:'/Property/Equipment'},
+=======
+  OtherEquipment: {type:String, maxLength:1024, group:'/Property/Structure'},
+  Appliances: {type:String, maxLength:1024, group:'/Property/Structure'},
+>>>>>>> master
   LaundryFeatures: {type:String, maxLength:1024, group:'/Property/Characteristics'},
   SecurityFeatures: {type:String, maxLength:1024, group:'/Property/Equipment'},
   NumberOfSeparateElectricMeters: {type:Integer, group:'/Property/Utilities'},
