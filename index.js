@@ -12,7 +12,11 @@ var member = require('./schemas/member');
  */
 
 module.exports = {
+  // reso-defined
   property: property,
   office:   office,
-  member:   member
+  member:   member,
+  // export aliases
+  listing:  property,
+  agent:    member
 }
