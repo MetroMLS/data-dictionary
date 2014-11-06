@@ -1,6 +1,6 @@
 
 /**
- * Member Schema
+ * Member schema
  */
 
 module.exports = {
