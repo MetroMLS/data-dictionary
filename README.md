@@ -1,7 +1,7 @@
 
 # data-dictionary
 
-A node-friendly [RESO Data Dictionary](http://www.reso.org/data-dictionary-1-3). Used by [Retsly](https://rets.ly/) for our Web API.
+A node-friendly RESO Data Dictionary. Used by [Retsly](https://rets.ly/) for our Web API.
 
 ## Install
 
@@ -21,12 +21,14 @@ var Property = mongoose.model(schema)
 var ppty = new Property({ /*...*/ })
 ```
 
-## Version
+## What is this?
 
-This repo encodes the Data Dictionary as described in [RESO Data Dictionary 1.3 - Production Release](http://www.reso.org/data-dictionary-1-3), with Core fields as
+The [Real Estate Standards Organization](http://reso.org/) (RESO) has defined a standard schema for real estate advertising data called the [Data Dictionary](http://www.reso.org/data-dictionary). The goal is to allow interoperability between vendors that work with real estate data.
+
+This repo provides the Data Dictionary as described in [RESO Data Dictionary 1.3 - Production Release](http://www.reso.org/data-dictionary-1-3), with Core fields as
 defined in [Certification Rules v1.0.1a (pdf)](http://www.reso.org/assets/Certifications/resodatadictionarycertificationrules_v1.0.1a.pdf).
 
-## Repo Owner
+## Repo owner
 
 [Luke Vivier](https://github.com/lvivier)
 
