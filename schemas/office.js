@@ -1,10 +1,7 @@
 
 /**
- * Office Schema
+ * Office schema
  */
-
-var Phone = String
-var Url = String
 
 module.exports = {
   OfficeKey: {type:String, primary:true, core:true},

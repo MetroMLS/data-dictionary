@@ -1,6 +1,6 @@
 
 /**
- * Member Schema
+ * Member schema
  */
 
 module.exports = {
@@ -65,5 +65,8 @@ module.exports = {
   TimestampEntered: {type:Date, core:true},
   TimestampLastLoggedIn: {type:Date},
   TimestampModified: {type:Date, core:true},
+
+  /* non-standard fields */
+
   Photos: {type:Array, default:[]}
 };
