@@ -1,27 +1,40 @@
+
 # data-dictionary
 
-Retsly's Data Dictionary.
+A node-friendly [RESO Data Dictionary](http://www.reso.org/data-dictionary-1-3). Used by [Retsly](https://rets.ly/) for our Web API.
 
+## Install
 
-### Usage
+Install using [npm](https://npmjs.org):
 
-    var propertySchema = require('data-dictionary').property;
-    var officeSchema = require('data-dictionary').office;
-    var memberSchema = require('data-dictionary').member;
+    $ npm install retsly/data-dictionary
 
-### Version
+## Usage
 
-[RESO Data Dictionary 1.3 - Production Release](http://www.reso.org/data-dictionary-1-3)
+The schemas are intended to be used with [Mongoose](http://mongoosejs.com/):
+
+```js
+var schema = require('data-dictionary').property
+var mongoose = require('mongoose')
+var Property = mongoose.model(schema)
+
+var ppty = new Property({ /*...*/ })
+```
+
+## Version
+
+This repo encodes the Data Dictionary as described in [RESO Data Dictionary 1.3 - Production Release](http://www.reso.org/data-dictionary-1-3), with Core fields as
+defined in [Certification Rules v1.0.1a (pdf)](http://www.reso.org/assets/Certifications/resodatadictionarycertificationrules_v1.0.1a.pdf).
 
 ## Repo Owner
 
-[switters](https://github.com/switters)
+[Luke Vivier](https://github.com/lvivier)
 
 ## License
 
 (The MIT License)
 
-Copyright (c) 2013 Retsly Software Inc <support@rets.ly>
+Copyright (c) 2014 Retsly Software Inc <support@rets.ly>
 
 Permission is hereby granted, free of charge, to any person obtaining a
 copy of this software and associated documentation files (the 'Software'),

@@ -2,9 +2,10 @@
   "private": true,
   "name": "data-dictionary",
   "version": "0.0.2",
-  "description": "Retsly's centralized Data Dictionary.",
-  "main": "lib/index.js",
-  "scripts": {},
-  "dependencies": {},
-  "devDependencies": {}
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/retsly/data-dictionary.git"
+  },
+  "description": "RESO Data Dictionary",
+  "main": "index.js"
 }
