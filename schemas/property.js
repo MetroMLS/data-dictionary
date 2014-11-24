@@ -553,10 +553,5 @@ module.exports = {
   TaxStatusCurrent: {type:String, maxLength:50, group:'/Property/Tax'},
   PublicSurveySection: {type:String, maxLength:20, group:'/Property/Tax'},
   PublicSurveyTownship: {type:String, maxLength:20, group:'/Property/Tax'},
-  PublicSurveyRange: {type:String, maxLength:20, group:'/Property/Tax'},
-
-  /* non-standard fields */
-
-  Photos:{type:Array, default:[]},
-  Coordinates:{type:Object}
+  PublicSurveyRange: {type:String, maxLength:20, group:'/Property/Tax'}
 };
