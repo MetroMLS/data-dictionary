@@ -64,9 +64,5 @@ module.exports = {
   OfficeMlsId: {type:String, core:true},
   TimestampEntered: {type:Date, core:true},
   TimestampLastLoggedIn: {type:Date},
-  TimestampModified: {type:Date, core:true},
-
-  /* non-standard fields */
-
-  Photos: {type:Array, default:[]}
+  TimestampModified: {type:Date, core:true}
 };
