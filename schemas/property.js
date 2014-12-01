@@ -4,9 +4,9 @@
  */
 
 module.exports = {
-  ListingKey:{type:String, primary:true, maxLength:255, group:'/Listing', core:true},
+  ListingKey: {type:String, primary:true, maxLength:255, group:'/Listing', core:true},
   ListingId: {type:String, group:'/Listing', core:true},
-  ListAOR:   {type:String, maxLength:50, group:'/Listing'},
+  ListAOR: {type:String, maxLength:50, group:'/Listing'},
   OriginatingSystemKey: {type:String, maxLength:255, group:'/Listing', core:true},
   OriginatingSystemName: {type:String, maxLength:255, group:'/Listing', core:true},
   ListingService: {type:String, maxLength:25, group:'/Listing', core:true},
