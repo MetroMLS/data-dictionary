@@ -9,7 +9,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "build": "bin/all",
+    "build": "bin/all"
   },
   "devDependencies": {
     "xlsx-rows": "^1.0.0",
