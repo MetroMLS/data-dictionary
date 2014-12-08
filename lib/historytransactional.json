@@ -1,0 +1,77 @@
+{
+  "HistoryRecordKey": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/History",
+    "primary": true
+  },
+  "OriginatingSystemHistoryKey": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/History"
+  },
+  "OriginatingSystemName": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/History"
+  },
+  "ChangedByMemberID": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/History"
+  },
+  "ChangedByMemberKey": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/History"
+  },
+  "ChangeType": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/History"
+  },
+  "ChangeTimestamp": {
+    "type": "date",
+    "group": "/History"
+  },
+  "FieldKey": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/History"
+  },
+  "FieldName": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/History"
+  },
+  "PreviousValue": {
+    "type": "string",
+    "maxLength": 8000,
+    "group": "/History"
+  },
+  "NewValue": {
+    "type": "string",
+    "maxLength": 8000,
+    "group": "/History"
+  },
+  "ClassName": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/History"
+  },
+  "ResourceName": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/History"
+  },
+  "ResourceRecordKey": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/History"
+  },
+  "ResourceRecordID": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/History"
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "SearchKey": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/SavedSearch",
+    "primary": true
+  },
+  "SearchName": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/SavedSearch"
+  },
+  "SearchDescription": {
+    "type": "string",
+    "maxLength": 4000,
+    "group": "/SavedSearch"
+  },
+  "SearchType": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/SavedSearch"
+  },
+  "OriginatingSystemKey": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/SavedSearch"
+  },
+  "OriginatingSystemName": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/SavedSearch"
+  },
+  "SearchQuery": {
+    "type": "string",
+    "maxLength": 8000,
+    "group": "/SavedSearch"
+  },
+  "SearchQueryType": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/SavedSearch"
+  },
+  "OriginalEntryTimestamp": {
+    "type": "date",
+    "group": "/SavedSearch"
+  },
+  "ModificationTimestamp": {
+    "type": "date",
+    "group": "/SavedSearch"
+  },
+  "ResourceName": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/SavedSearch"
+  },
+  "ClassName": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/SavedSearch"
+  },
+  "MemberKey": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/SavedSearch"
+  },
+  "OriginatingSystemMemberKey": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/SavedSearch"
+  },
+  "OriginatingSystemMemberName": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/SavedSearch"
+  },
+  "MemberMlsId": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/SavedSearch"
+  }
+}
