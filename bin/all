@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-: ${FILE:="src/reso_dictionary.final.v.1.3_20140703t0000.xlsx"}
+: ${FILE:="src/dd.xlsx"}
 
 function gen {
   bin/generate $FILE $1 > lib/$2.json
