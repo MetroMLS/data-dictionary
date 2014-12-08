@@ -1,11 +1,18 @@
 {
   "private": true,
   "name": "data-dictionary",
+  "description": "RESO Data Dictionary",
   "version": "0.0.3",
   "repository": {
     "type": "git",
     "url": "https://github.com/retsly/data-dictionary.git"
   },
-  "description": "RESO Data Dictionary",
-  "main": "index.js"
+  "main": "index.js",
+  "scripts": {
+    "build": "bin/all",
+  },
+  "devDependencies": {
+    "xlsx-rows": "^1.0.0",
+    "plural": "^0.1.6"
+  }
 }
