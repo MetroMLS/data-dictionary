@@ -1,0 +1,102 @@
+{
+  "OpenHouseKey": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/OpenHouse",
+    "primary": true
+  },
+  "OpenHouseId": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/OpenHouse"
+  },
+  "OriginatingSystemKey": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/OpenHouse"
+  },
+  "OriginatingSystemName": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/OpenHouse"
+  },
+  "ListingKey": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/OpenHouse/Listing"
+  },
+  "ListingId": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/OpenHouse/Listing"
+  },
+  "ModificationTimestamp": {
+    "type": "date",
+    "group": "/OpenHouse/OpenHouseDates"
+  },
+  "OriginalEntryTimestamp": {
+    "type": "date",
+    "group": "/OpenHouse/OpenHouseDates"
+  },
+  "OpenHouseDate": {
+    "type": "date",
+    "group": "/OpenHouse/OpenHouseDates"
+  },
+  "OpenHouseStartTime": {
+    "type": "date",
+    "group": "/OpenHouse/OpenHouseDates"
+  },
+  "OpenHouseEndTime": {
+    "type": "date",
+    "group": "/OpenHouse/OpenHouseDates"
+  },
+  "ShowingAgentMlsID": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/OpenHouse/AgentOffice"
+  },
+  "ShowingAgentKey": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/OpenHouse/AgentOffice"
+  },
+  "ShowingAgentFirstName": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/OpenHouse/AgentOffice"
+  },
+  "ShowingAgentLastName": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/OpenHouse/AgentOffice"
+  },
+  "OpenHouseType": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/OpenHouse"
+  },
+  "AppointmentRequiredYN": {
+    "type": "boolean",
+    "group": "/OpenHouse"
+  },
+  "Refreshments": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/OpenHouse"
+  },
+  "Attended": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/OpenHouse"
+  },
+  "OpenHouseRemarks": {
+    "type": "string",
+    "maxLength": 500,
+    "group": "/OpenHouse"
+  },
+  "Status": {
+    "type": "string",
+    "maxLength": 1,
+    "group": "/OpenHouse"
+  }
+}

@@ -1,17 +1,30 @@
 
 # data-dictionary
 
-A node-friendly RESO Data Dictionary. Used by [Retsly](https://rets.ly/) for our Web API.
+A node-friendly RESO Data Dictionary.
+Used by [Retsly](https://rets.ly/) for our Web API.
+
+## What is this?
+
+The [Real Estate Standards Organization](http://reso.org/) (RESO) has defined a standard schema for real estate advertising data called the [Data Dictionary](http://www.reso.org/data-dictionary). The goal is to allow interoperability between vendors that work with real estate data.
+
+This repo provides the Data Dictionary as described in [RESO Data Dictionary 1.3 - Production Release](http://www.reso.org/data-dictionary-1-3), with Core fields as
+defined in [Certification Rules v1.0.1a (pdf)](http://www.reso.org/assets/Certifications/resodatadictionarycertificationrules_v1.0.1a.pdf).
 
 ## Install
 
-Install using [npm](https://npmjs.org):
+For use with node and browserify projects, install using [npm](https://npmjs.org):
 
     $ npm install retsly/data-dictionary
 
+Otherwise you can clone the project with git:
+
+    $ git clone https://github.com/retsly/data-dictionary.git
+
 ## Usage
 
-The schemas are intended to be used with [Mongoose](http://mongoosejs.com/):
+The schemas may be used with [Mongoose](http://mongoosejs.com/) and
+[mschema](https://github.com/mschema/mschema):
 
 ```js
 var schema = require('data-dictionary').property
@@ -21,12 +34,16 @@ var Property = mongoose.model(schema)
 var ppty = new Property({ /*...*/ })
 ```
 
-## What is this?
+## Generating schemas
 
-The [Real Estate Standards Organization](http://reso.org/) (RESO) has defined a standard schema for real estate advertising data called the [Data Dictionary](http://www.reso.org/data-dictionary). The goal is to allow interoperability between vendors that work with real estate data.
+The schemas are generated from the source data dictionary files in
+Excel format ([available on reso.org](http://www.reso.org/data-dictionary-1-3)).
 
-This repo provides the Data Dictionary as described in [RESO Data Dictionary 1.3 - Production Release](http://www.reso.org/data-dictionary-1-3), with Core fields as
-defined in [Certification Rules v1.0.1a (pdf)](http://www.reso.org/assets/Certifications/resodatadictionarycertificationrules_v1.0.1a.pdf).
+By default, the generate script expects the file to be at `src/dd.xlsx`,
+but you can place it anywhere and set the `FILE` environment variable.
+One done, run the script:
+
+    $ bin/all
 
 ## Repo owner
 

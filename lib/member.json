@@ -1,0 +1,318 @@
+{
+  "MemberKey": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/Member",
+    "primary": true
+  },
+  "OriginatingSystemMemberKey": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/Member"
+  },
+  "OriginatingSystemName": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/Member"
+  },
+  "MemberMlsId": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Member"
+  },
+  "MemberLoginId": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Member"
+  },
+  "MemberNrdsID": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Member"
+  },
+  "MemberPassword": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Member"
+  },
+  "MemberNamePrefix": {
+    "type": "string",
+    "maxLength": 10,
+    "group": "/Member"
+  },
+  "MemberFirstName": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Member"
+  },
+  "MemberMiddleName": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Member"
+  },
+  "MemberLastName": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Member"
+  },
+  "MemberNameSuffix": {
+    "type": "string",
+    "maxLength": 10,
+    "group": "/Member"
+  },
+  "MemberFullName": {
+    "type": "string",
+    "maxLength": 150,
+    "group": "/Member"
+  },
+  "MemberNickname": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Member"
+  },
+  "JobTitle": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Member"
+  },
+  "MemberEmail": {
+    "type": "string",
+    "maxLength": 80,
+    "group": "/Member"
+  },
+  "MemberPreferredPhone": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Member"
+  },
+  "MemberPreferredPhoneExt": {
+    "type": "number",
+    "group": "/Member"
+  },
+  "MemberOfficePhone": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Member"
+  },
+  "MemberOfficePhoneExt": {
+    "type": "number",
+    "group": "/Member"
+  },
+  "MemberMobilePhone": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Member"
+  },
+  "MemberDirectPhone": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Member"
+  },
+  "MemberHomePhone": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Member"
+  },
+  "MemberFax": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Member"
+  },
+  "MemberPager": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Member"
+  },
+  "MemberVoiceMail": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Member"
+  },
+  "MemberVoiceMailExt": {
+    "type": "number",
+    "group": "/Member"
+  },
+  "MemberTollFreePhone": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Member"
+  },
+  "MemberPhoneTTYTDD": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Member"
+  },
+  "MemberOtherPhoneType": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Member",
+    "repeating": true
+  },
+  "MemberOtherPhones": [
+    {
+      "Type": {
+        "type": "string"
+      },
+      "Number": {
+        "type": "string",
+        "maxLength": 16,
+        "group": "/Member"
+      },
+      "Ext": {
+        "type": "number",
+        "group": "/Member"
+      }
+    }
+  ],
+  "SocialMediaType": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Member",
+    "repeating": true
+  },
+  "SocialMedias": [
+    {
+      "Type": {
+        "type": "string"
+      },
+      "UrlOrId": {
+        "type": "string",
+        "maxLength": 8000,
+        "group": "/Member"
+      }
+    }
+  ],
+  "MemberAOR": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Member"
+  },
+  "MemberAORMlsId": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Member"
+  },
+  "MemberAORkey": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/Member"
+  },
+  "MemberStateLicense": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Member"
+  },
+  "MemberStateLicenseState": {
+    "type": "string",
+    "maxLength": 2,
+    "group": "/Member"
+  },
+  "MemberDesignation": {
+    "type": [
+      "string"
+    ],
+    "group": "/Member"
+  },
+  "MemberAddress1": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Member"
+  },
+  "MemberAddress2": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Member"
+  },
+  "MemberCity": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Member"
+  },
+  "MemberStateOrProvince": {
+    "type": "string",
+    "maxLength": 2,
+    "group": "/Member"
+  },
+  "MemberPostalCode": {
+    "type": "string",
+    "maxLength": 10,
+    "group": "/Member"
+  },
+  "MemberPostalCodePlus4": {
+    "type": "string",
+    "maxLength": 4,
+    "group": "/Member"
+  },
+  "MemberCarrierRoute": {
+    "type": "string",
+    "maxLength": 9,
+    "group": "/Member"
+  },
+  "MemberCountyOrParish": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Member"
+  },
+  "MemberCountry": {
+    "type": "string",
+    "maxLength": 2,
+    "group": "/Member"
+  },
+  "MemberMlsAccessYN": {
+    "type": "boolean",
+    "group": "/Member"
+  },
+  "MemberStatus": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Member"
+  },
+  "MemberMlsSecurityClass": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Member"
+  },
+  "MemberType": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Member"
+  },
+  "MemberAssociationComments": {
+    "type": "string",
+    "maxLength": 500,
+    "group": "/Member"
+  },
+  "MemberLanguages": {
+    "type": [
+      "string"
+    ],
+    "group": "/Member"
+  },
+  "OfficeName": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Member"
+  },
+  "OfficeKey": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/Member"
+  },
+  "OfficeMlsId": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Member"
+  },
+  "TimestampEntered": {
+    "type": "date",
+    "group": "/Member"
+  },
+  "TimestampLastLoggedIn": {
+    "type": "date",
+    "group": "/Member"
+  },
+  "TimestampModified": {
+    "type": "date",
+    "group": "/Member"
+  }
+}

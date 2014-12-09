@@ -1,0 +1,441 @@
+{
+  "ContactKey": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/Contacts",
+    "primary": true
+  },
+  "ContactLoginId": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Contacts"
+  },
+  "ContactPassword": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Contacts"
+  },
+  "OriginatingSystemContactKey": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/Contacts"
+  },
+  "OriginatingSystemName": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/Contacts"
+  },
+  "OwnerMemberKey": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/Contacts"
+  },
+  "OwnerMemberID": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Contacts"
+  },
+  "NamePrefix": {
+    "type": "string",
+    "maxLength": 10,
+    "group": "/Contacts"
+  },
+  "FirstName": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Contacts"
+  },
+  "MiddleName": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Contacts"
+  },
+  "LastName": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Contacts"
+  },
+  "NameSuffix": {
+    "type": "string",
+    "maxLength": 10,
+    "group": "/Contacts"
+  },
+  "FullName": {
+    "type": "string",
+    "maxLength": 150,
+    "group": "/Contacts"
+  },
+  "Nickname": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Contacts"
+  },
+  "ReferedBy": {
+    "type": "string",
+    "maxLength": 150,
+    "group": "/Contacts"
+  },
+  "JobTitle": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Contacts"
+  },
+  "Notes": {
+    "type": "string",
+    "maxLength": 1024,
+    "group": "/Contacts"
+  },
+  "HomeAddress1": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Contacts"
+  },
+  "HomeAddress2": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Contacts"
+  },
+  "HomeCity": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Contacts"
+  },
+  "HomeStateOrProvince": {
+    "type": "string",
+    "maxLength": 2,
+    "group": "/Contacts"
+  },
+  "HomePostalCode": {
+    "type": "string",
+    "maxLength": 10,
+    "group": "/Contacts"
+  },
+  "HomePostalCodePlus4": {
+    "type": "string",
+    "maxLength": 4,
+    "group": "/Contacts"
+  },
+  "HomeCarrierRoute": {
+    "type": "string",
+    "maxLength": 9,
+    "group": "/Contacts"
+  },
+  "HomeCountyOrParish": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Contacts"
+  },
+  "HomeCountry": {
+    "type": "string",
+    "maxLength": 2,
+    "group": "/Contacts"
+  },
+  "WorkAddress1": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Contacts"
+  },
+  "WorkAddress2": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Contacts"
+  },
+  "WorkCity": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Contacts"
+  },
+  "WorkStateOrProvince": {
+    "type": "string",
+    "maxLength": 2,
+    "group": "/Contacts"
+  },
+  "WorkPostalCode": {
+    "type": "string",
+    "maxLength": 10,
+    "group": "/Contacts"
+  },
+  "WorkPostalCodePlus4": {
+    "type": "string",
+    "maxLength": 4,
+    "group": "/Contacts"
+  },
+  "WorkCarrierRoute": {
+    "type": "string",
+    "maxLength": 9,
+    "group": "/Contacts"
+  },
+  "WorkCountyOrParish": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Contacts"
+  },
+  "WorkCountry": {
+    "type": "string",
+    "maxLength": 2,
+    "group": "/Contacts"
+  },
+  "OtherAddress1": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Contacts"
+  },
+  "OtherAddress2": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Contacts"
+  },
+  "OtherCity": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Contacts"
+  },
+  "OtherStateOrProvince": {
+    "type": "string",
+    "maxLength": 2,
+    "group": "/Contacts"
+  },
+  "OtherPostalCode": {
+    "type": "string",
+    "maxLength": 10,
+    "group": "/Contacts"
+  },
+  "OtherPostalCodePlus4": {
+    "type": "string",
+    "maxLength": 4,
+    "group": "/Contacts"
+  },
+  "OtherCarrierRoute": {
+    "type": "string",
+    "maxLength": 9,
+    "group": "/Contacts"
+  },
+  "OtherCountyOrParish": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Contacts"
+  },
+  "OtherCountry": {
+    "type": "string",
+    "maxLength": 2,
+    "group": "/Contacts"
+  },
+  "PreferedAddress": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/Contacts"
+  },
+  "PreferredPhone": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/Contacts"
+  },
+  "Email": {
+    "type": "string",
+    "maxLength": 80,
+    "group": "/Contacts"
+  },
+  "Email2": {
+    "type": "string",
+    "maxLength": 80,
+    "group": "/Contacts"
+  },
+  "Email3": {
+    "type": "string",
+    "maxLength": 80,
+    "group": "/Contacts"
+  },
+  "OfficePhone": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Contacts"
+  },
+  "OfficePhoneExt": {
+    "type": "number",
+    "group": "/Contacts"
+  },
+  "MobilePhone": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Contacts"
+  },
+  "DirectPhone": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Contacts"
+  },
+  "HomePhone": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Contacts"
+  },
+  "HomeFax": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Contacts"
+  },
+  "BusinessFax": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Contacts"
+  },
+  "Pager": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Contacts"
+  },
+  "VoiceMail": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Contacts"
+  },
+  "VoiceMailExt": {
+    "type": "number",
+    "group": "/Contacts"
+  },
+  "TollFreePhone": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Contacts"
+  },
+  "PhoneTTYTTD": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Contacts"
+  },
+  "OtherPhoneType": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Contacts",
+    "repeating": true
+  },
+  "OtherPhones": [
+    {
+      "Type": {
+        "type": "string"
+      },
+      "Number": {
+        "type": "string",
+        "maxLength": 16,
+        "group": "/Contacts"
+      },
+      "Ext": {
+        "type": "number",
+        "group": "/Contacts"
+      }
+    }
+  ],
+  "Company": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Contacts"
+  },
+  "Department": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Contacts"
+  },
+  "SocialMediaType": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Contacts",
+    "repeating": true
+  },
+  "SocialMedias": [
+    {
+      "Type": {
+        "type": "string"
+      },
+      "UrlOrId": {
+        "type": "string",
+        "maxLength": 8000,
+        "group": "/Contacts"
+      }
+    }
+  ],
+  "Birthdate": {
+    "type": "date",
+    "group": "/Contacts"
+  },
+  "Anniversary": {
+    "type": "date",
+    "group": "/Contacts"
+  },
+  "TimestampEntered": {
+    "type": "date",
+    "group": "/Contacts"
+  },
+  "TimestampModified": {
+    "type": "date",
+    "group": "/Contacts"
+  },
+  "UserDefinedFieldName[#]": {
+    "type": "string",
+    "maxLength": 500,
+    "group": "/Contacts",
+    "repeating": true
+  },
+  "UserDefinedFieldValue[#]": {
+    "type": "string",
+    "maxLength": 500,
+    "group": "/Contacts",
+    "repeating": true
+  },
+  "AssistantName": {
+    "type": "string",
+    "maxLength": 150,
+    "group": "/Contacts"
+  },
+  "AssistantPhone": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Contacts"
+  },
+  "AssistantPhoneExt": {
+    "type": "number",
+    "group": "/Contacts"
+  },
+  "AssistantEmail": {
+    "type": "string",
+    "maxLength": 80,
+    "group": "/Contacts"
+  },
+  "SpousePartnerName": {
+    "type": "string",
+    "maxLength": 150,
+    "group": "/Contacts"
+  },
+  "Children": {
+    "type": "string",
+    "maxLength": 150,
+    "group": "/Contacts"
+  },
+  "Gender": {
+    "type": "string",
+    "maxLength": 6,
+    "group": "/Contacts"
+  },
+  "Language": {
+    "type": [
+      "string"
+    ],
+    "group": "/Contacts"
+  },
+  "Groups": {
+    "type": [
+      "string"
+    ],
+    "group": "/Contacts"
+  },
+  "ContactStatus": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Contacts"
+  },
+  "ContactType": {
+    "type": [
+      "string"
+    ],
+    "group": "/Contacts"
+  }
+}

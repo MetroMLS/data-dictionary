@@ -1,0 +1,2909 @@
+{
+  "ListingKey": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/Listing",
+    "primary": true
+  },
+  "ListingId": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/Listing"
+  },
+  "ListAOR": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Listing"
+  },
+  "OriginatingSystemKey": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/Listing"
+  },
+  "OriginatingSystemName": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/Listing"
+  },
+  "ListingService": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Listing"
+  },
+  "ListingAgreement": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Listing"
+  },
+  "LeaseConsideredYN": {
+    "type": "boolean",
+    "group": "/Listing"
+  },
+  "HomeWarrantyYN": {
+    "type": "boolean",
+    "group": "/Listing"
+  },
+  "CopyrightNotice": {
+    "type": "string",
+    "maxLength": 500,
+    "group": "/Listing"
+  },
+  "Disclaimer": {
+    "type": "string",
+    "maxLength": 500,
+    "group": "/Listing"
+  },
+  "StandardStatus": {
+    "type": "string",
+    "maxLength": 25,
+    "lookup": "StandardStatus",
+    "group": "/Listing",
+    "enum": [
+      "Active",
+      "Active Under Contract",
+      "Pending",
+      "Withdrawn",
+      "Closed",
+      "Expired",
+      "Canceled",
+      "Delete",
+      "Incomplete"
+    ]
+  },
+  "MlsStatus": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Listing"
+  },
+  "ApprovalStatus": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Listing"
+  },
+  "ListingContractDate": {
+    "type": "date",
+    "group": "/Listing/Dates"
+  },
+  "ContractStatusChangeDate": {
+    "type": "date",
+    "group": "/Listing/Dates"
+  },
+  "ExpirationDate": {
+    "type": "date",
+    "group": "/Listing/Dates"
+  },
+  "CancelationDate": {
+    "type": "date",
+    "group": "/Listing/Dates"
+  },
+  "ContingentDate": {
+    "type": "date",
+    "group": "/Listing/Dates"
+  },
+  "WithdrawnDate": {
+    "type": "date",
+    "group": "/Listing/Dates"
+  },
+  "PurchaseContractDate": {
+    "type": "date",
+    "group": "/Listing/Dates"
+  },
+  "CloseDate": {
+    "type": "date",
+    "group": "/Listing/Dates"
+  },
+  "OnMarketDate": {
+    "type": "date",
+    "group": "/Listing/Dates"
+  },
+  "OffMarketDate": {
+    "type": "date",
+    "group": "/Listing/Dates"
+  },
+  "PendingTimestamp": {
+    "type": "date",
+    "group": "/Listing/Dates"
+  },
+  "ModificationTimestamp": {
+    "type": "date",
+    "group": "/Listing/Dates"
+  },
+  "StatusChangeTimestamp": {
+    "type": "date",
+    "group": "/Listing/Dates"
+  },
+  "PriceChangeTimestamp": {
+    "type": "date",
+    "group": "/Listing/Dates"
+  },
+  "MajorChangeType": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/Listing/Dates"
+  },
+  "MajorChangeTimestamp": {
+    "type": "date",
+    "group": "/Listing/Dates"
+  },
+  "OriginalEntryTimestamp": {
+    "type": "date",
+    "group": "/Listing/Dates"
+  },
+  "OnMarketTimestamp": {
+    "type": "date",
+    "group": "/Listing/Dates"
+  },
+  "OffMarketTimestamp": {
+    "type": "date",
+    "group": "/Listing/Dates"
+  },
+  "DaysOnMarket": {
+    "type": "number",
+    "group": "/Listing/Dates"
+  },
+  "CumulativeDaysOnMarket": {
+    "type": "number",
+    "group": "/Listing/Dates"
+  },
+  "ClosePrice": {
+    "type": "number",
+    "group": "/Listing/Price"
+  },
+  "ListPrice": {
+    "type": "number",
+    "group": "/Listing/Price"
+  },
+  "OriginalListPrice": {
+    "type": "number",
+    "group": "/Listing/Price"
+  },
+  "ListPriceLow": {
+    "type": "number",
+    "group": "/Listing/Price"
+  },
+  "PreviousListPrice": {
+    "type": "number",
+    "group": "/Listing/Price"
+  },
+  "BuyerAgencyCompensation": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Listing/Compensation"
+  },
+  "BuyerAgencyCompensationType": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Listing/Compensation"
+  },
+  "SubAgencyCompensation": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Listing/Compensation"
+  },
+  "SubAgencyCompensationType": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Listing/Compensation"
+  },
+  "TransactionBrokerCompensation": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Listing/Compensation"
+  },
+  "TransactionBrokerCompensationType": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Listing/Compensation"
+  },
+  "DualVariableCompensationYN": {
+    "type": "boolean",
+    "group": "/Listing/Compensation"
+  },
+  "LeaseRenewalCompensation": {
+    "type": [
+      "string"
+    ],
+    "group": "/Listing/Compensation"
+  },
+  "VOWEntireListingDisplayYN": {
+    "type": "boolean",
+    "group": "/Listing/Marketing"
+  },
+  "VOWAddressDisplayYN": {
+    "type": "boolean",
+    "group": "/Listing/Marketing"
+  },
+  "VOWConsumerCommentYN": {
+    "type": "boolean",
+    "group": "/Listing/Marketing"
+  },
+  "VOWAutomatedValuationDisplayYN": {
+    "type": "boolean",
+    "group": "/Listing/Marketing"
+  },
+  "SignOnPropertyYN": {
+    "type": "boolean",
+    "group": "/Listing/Marketing"
+  },
+  "IDXEntireListingDisplayYN": {
+    "type": "boolean",
+    "group": "/Listing/Marketing"
+  },
+  "IDXAddressDisplayYN": {
+    "type": "boolean",
+    "group": "/Listing/Marketing"
+  },
+  "IDXConsumerCommentYN": {
+    "type": "boolean",
+    "group": "/Listing/Marketing"
+  },
+  "IDXAutomatedValuationDisplayYN": {
+    "type": "boolean",
+    "group": "/Listing/Marketing"
+  },
+  "PhotosCount": {
+    "type": "number",
+    "group": "/Listing/Media"
+  },
+  "PhotosChangeTimestamp": {
+    "type": "date",
+    "group": "/Listing/Media"
+  },
+  "VideosCount": {
+    "type": "number",
+    "group": "/Listing/Media"
+  },
+  "VideosChangeTimestamp": {
+    "type": "date",
+    "group": "/Listing/Media"
+  },
+  "DocumentsCount": {
+    "type": "number",
+    "group": "/Listing/Media"
+  },
+  "DocumentsChangeTimestamp": {
+    "type": "date",
+    "group": "/Listing/Media"
+  },
+  "DocumentsAvailable": {
+    "type": [
+      "string"
+    ],
+    "group": "/Listing/Media"
+  },
+  "VirtualTourURLUnbranded": {
+    "type": "string",
+    "maxLength": 8000,
+    "group": "/Listing/Marketing"
+  },
+  "VirtualTourURLBranded": {
+    "type": "string",
+    "maxLength": 8000,
+    "group": "/Listing/Marketing"
+  },
+  "PublicRemarks": {
+    "type": "string",
+    "maxLength": 4000,
+    "group": "/Listing/Remarks"
+  },
+  "SyndicationRemarks": {
+    "type": "string",
+    "maxLength": 4000,
+    "group": "/Listing/Remarks"
+  },
+  "PrivateRemarks": {
+    "type": "string",
+    "maxLength": 4000,
+    "group": "/Listing/Remarks"
+  },
+  "PrivateOfficeRemarks": {
+    "type": "string",
+    "maxLength": 4000,
+    "group": "/Listing/Remarks"
+  },
+  "ShowingInstructions": {
+    "type": "string",
+    "maxLength": 4000,
+    "group": "/Listing/Showing"
+  },
+  "ShowingContactPhoneNumber": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Listing/Showing"
+  },
+  "ShowingContactPhoneExtension": {
+    "type": "number",
+    "group": "/Listing/Showing"
+  },
+  "ShowingContactName": {
+    "type": "string",
+    "maxLength": 40,
+    "group": "/Listing/Showing"
+  },
+  "ShowingContactType": {
+    "type": [
+      "string"
+    ],
+    "group": "/Listing/Showing"
+  },
+  "LockBoxLocation": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/Listing/Showing"
+  },
+  "LockBoxType": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/Listing/Showing"
+  },
+  "LockBoxSerialNumber": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Listing/Showing"
+  },
+  "AccessCode": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Listing/Showing"
+  },
+  "Exclusions": {
+    "type": "string",
+    "maxLength": 1024,
+    "group": "/Listing/Contract"
+  },
+  "Inclusions": {
+    "type": "string",
+    "maxLength": 1024,
+    "group": "/Listing/Contract"
+  },
+  "Disclosures": {
+    "type": [
+      "string"
+    ],
+    "group": "/Listing/Contract"
+  },
+  "Ownership": {
+    "type": "string",
+    "maxLength": 1024,
+    "group": "/Listing/Contract"
+  },
+  "SpecialListingConditions": {
+    "type": [
+      "string"
+    ],
+    "group": "/Listing/Contract"
+  },
+  "ListingTerms": {
+    "type": [
+      "string"
+    ],
+    "group": "/Listing/Contract"
+  },
+  "ListingFinancing": {
+    "type": [
+      "string"
+    ],
+    "group": "/Listing/Contract"
+  },
+  "BuyerFinancing": {
+    "type": [
+      "string"
+    ],
+    "group": "/Listing/Closing"
+  },
+  "Contingency": {
+    "type": "string",
+    "maxLength": 1024,
+    "group": "/Listing/Closing"
+  },
+  "Possession": {
+    "type": [
+      "string"
+    ],
+    "group": "/Listing/Closing"
+  },
+  "AvailabilityDate": {
+    "type": "date",
+    "group": "/Listing/Closing"
+  },
+  "ClosingTerms": {
+    "type": [
+      "string"
+    ],
+    "group": "/Listing/Closing"
+  },
+  "StreetNumber": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Property/Location/Address"
+  },
+  "StreetNumberNumeric": {
+    "type": "number",
+    "group": "/Property/Location/Address"
+  },
+  "StreetDirPrefix": {
+    "type": "string",
+    "maxLength": 15,
+    "group": "/Property/Location/Address"
+  },
+  "StreetName": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Property/Location/Address"
+  },
+  "StreetAdditionalInfo": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Property/Location/Address"
+  },
+  "StreetSuffix": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Property/Location/Address"
+  },
+  "StreetSuffixModifier": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Property/Location/Address"
+  },
+  "StreetDirSuffix": {
+    "type": "string",
+    "maxLength": 15,
+    "group": "/Property/Location/Address"
+  },
+  "UnitNumber": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Property/Location/Address"
+  },
+  "City": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Property/Location/Address"
+  },
+  "StateOrProvince": {
+    "type": "string",
+    "maxLength": 2,
+    "group": "/Property/Location/Address"
+  },
+  "Country": {
+    "type": "string",
+    "maxLength": 2,
+    "group": "/Property/Location/Address"
+  },
+  "PostalCode": {
+    "type": "string",
+    "maxLength": 10,
+    "group": "/Property/Location/Address"
+  },
+  "PostalCodePlus4": {
+    "type": "string",
+    "maxLength": 4,
+    "group": "/Property/Location/Address"
+  },
+  "CarrierRoute": {
+    "type": "string",
+    "maxLength": 9,
+    "group": "/Property/Location/Address"
+  },
+  "UnparsedAddress": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/Property/Location/Address"
+  },
+  "PostalCity": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Property/Location/Address"
+  },
+  "CountyOrParish": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Property/Location/Address"
+  },
+  "Township": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Property/Location/Address"
+  },
+  "MLSAreaMajor": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Property/Location/Area"
+  },
+  "MLSAreaMinor": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Property/Location/Area"
+  },
+  "SubdivisionName": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Property/Location/Area"
+  },
+  "Latitude": {
+    "type": "number",
+    "group": "/Property/Location/GIS"
+  },
+  "Longitude": {
+    "type": "number",
+    "group": "/Property/Location/GIS"
+  },
+  "Elevation": {
+    "type": "number",
+    "group": "/Property/Location/GIS"
+  },
+  "ElevationUnits": {
+    "type": "string",
+    "maxLength": 10,
+    "group": "/Property/Location/GIS"
+  },
+  "Directions": {
+    "type": "string",
+    "maxLength": 1024,
+    "group": "/Property/Location/GIS"
+  },
+  "MapCoordinate": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Property/Location/GIS"
+  },
+  "MapCoordinateSource": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Property/Location/GIS"
+  },
+  "MapURL": {
+    "type": "string",
+    "maxLength": 8000,
+    "group": "/Property/Location/GIS"
+  },
+  "CrossStreet": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Property/Location/GIS"
+  },
+  "ElementarySchool": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Property/Location/School"
+  },
+  "ElementarySchoolDistrict": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Property/Location/School"
+  },
+  "MiddleOrJuniorSchool": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Property/Location/School"
+  },
+  "MiddleOrJuniorSchoolDistrict": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Property/Location/School"
+  },
+  "HighSchool": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Property/Location/School"
+  },
+  "HighSchoolDistrict": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Property/Location/School"
+  },
+  "ListAgentNamePrefix": {
+    "type": "string",
+    "maxLength": 10,
+    "group": "/Listing/AgentOffice/ListAgent"
+  },
+  "ListAgentFirstName": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Listing/AgentOffice/ListAgent"
+  },
+  "ListAgentMiddleName": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Listing/AgentOffice/ListAgent"
+  },
+  "ListAgentLastName": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Listing/AgentOffice/ListAgent"
+  },
+  "ListAgentNameSuffix": {
+    "type": "string",
+    "maxLength": 10,
+    "group": "/Listing/AgentOffice/ListAgent"
+  },
+  "ListAgentFullName": {
+    "type": "string",
+    "maxLength": 150,
+    "group": "/Listing/AgentOffice/ListAgent"
+  },
+  "ListAgentPreferredPhone": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Listing/AgentOffice/ListAgent"
+  },
+  "ListAgentPreferredPhoneExt": {
+    "type": "number",
+    "group": "/Listing/AgentOffice/ListAgent"
+  },
+  "ListAgentOfficePhone": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Listing/AgentOffice/ListAgent"
+  },
+  "ListAgentOfficePhoneExt": {
+    "type": "number",
+    "group": "/Listing/AgentOffice/ListAgent"
+  },
+  "ListAgentCellPhone": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Listing/AgentOffice/ListAgent"
+  },
+  "ListAgentDirectPhone": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Listing/AgentOffice/ListAgent"
+  },
+  "ListAgentHomePhone": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Listing/AgentOffice/ListAgent"
+  },
+  "ListAgentFax": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Listing/AgentOffice/ListAgent"
+  },
+  "ListAgentPager": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Listing/AgentOffice/ListAgent"
+  },
+  "ListAgentVoiceMail": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Listing/AgentOffice/ListAgent"
+  },
+  "ListAgentVoiceMailExt": {
+    "type": "number",
+    "group": "/Listing/AgentOffice/ListAgent"
+  },
+  "ListAgentTollFreePhone": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Listing/AgentOffice/ListAgent"
+  },
+  "ListAgentEmail": {
+    "type": "string",
+    "maxLength": 80,
+    "group": "/Listing/AgentOffice/ListAgent"
+  },
+  "ListAgentURL": {
+    "type": "string",
+    "maxLength": 8000,
+    "group": "/Listing/AgentOffice/ListAgent"
+  },
+  "ListAgentKey": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/Listing/AgentOffice/ListAgent"
+  },
+  "ListAgentAOR": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Listing/AgentOffice/ListAgent"
+  },
+  "ListAgentMlsId": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Listing/AgentOffice/ListAgent"
+  },
+  "ListAgentStateLicense": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Listing/AgentOffice/ListAgent"
+  },
+  "ListAgentDesignation": {
+    "type": [
+      "string"
+    ],
+    "group": "/Listing/AgentOffice/ListAgent"
+  },
+  "ListOfficeName": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Listing/AgentOffice/ListOffice"
+  },
+  "ListOfficePhone": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Listing/AgentOffice/ListOffice"
+  },
+  "ListOfficePhoneExt": {
+    "type": "number",
+    "group": "/Listing/AgentOffice/ListOffice"
+  },
+  "ListOfficeFax": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Listing/AgentOffice/ListOffice"
+  },
+  "ListOfficeEmail": {
+    "type": "string",
+    "maxLength": 80,
+    "group": "/Listing/AgentOffice/ListOffice"
+  },
+  "ListOfficeURL": {
+    "type": "string",
+    "maxLength": 8000,
+    "group": "/Listing/AgentOffice/ListOffice"
+  },
+  "ListOfficeKey": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/Listing/AgentOffice/ListOffice"
+  },
+  "ListOfficeAOR": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Listing/AgentOffice/ListOffice"
+  },
+  "ListOfficeMlsId": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Listing/AgentOffice/ListOffice"
+  },
+  "CoListAgentNamePrefix": {
+    "type": "string",
+    "maxLength": 10,
+    "group": "/Listing/AgentOffice/CoListAgent"
+  },
+  "CoListAgentFirstName": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Listing/AgentOffice/CoListAgent"
+  },
+  "CoListAgentMiddleName": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Listing/AgentOffice/CoListAgent"
+  },
+  "CoListAgentLastName": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Listing/AgentOffice/CoListAgent"
+  },
+  "CoListAgentNameSuffix": {
+    "type": "string",
+    "maxLength": 10,
+    "group": "/Listing/AgentOffice/CoListAgent"
+  },
+  "CoListAgentFullName": {
+    "type": "string",
+    "maxLength": 150,
+    "group": "/Listing/AgentOffice/CoListAgent"
+  },
+  "CoListAgentPreferredPhone": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Listing/AgentOffice/CoListAgent"
+  },
+  "CoListAgentPreferredPhoneExt": {
+    "type": "number",
+    "group": "/Listing/AgentOffice/CoListAgent"
+  },
+  "CoListAgentOfficePhone": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Listing/AgentOffice/CoListAgent"
+  },
+  "CoListAgentOfficePhoneExt": {
+    "type": "number",
+    "group": "/Listing/AgentOffice/CoListAgent"
+  },
+  "CoListAgentCellPhone": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Listing/AgentOffice/CoListAgent"
+  },
+  "CoListAgentDirectPhone": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Listing/AgentOffice/CoListAgent"
+  },
+  "CoListAgentHomePhone": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Listing/AgentOffice/CoListAgent"
+  },
+  "CoListAgentFax": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Listing/AgentOffice/CoListAgent"
+  },
+  "CoListAgentPager": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Listing/AgentOffice/CoListAgent"
+  },
+  "CoListAgentVoiceMail": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Listing/AgentOffice/CoListAgent"
+  },
+  "CoListAgentVoiceMailExt": {
+    "type": "number",
+    "group": "/Listing/AgentOffice/CoListAgent"
+  },
+  "CoListAgentTollFreePhone": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Listing/AgentOffice/CoListAgent"
+  },
+  "CoListAgentEmail": {
+    "type": "string",
+    "maxLength": 80,
+    "group": "/Listing/AgentOffice/CoListAgent"
+  },
+  "CoListAgentURL": {
+    "type": "string",
+    "maxLength": 8000,
+    "group": "/Listing/AgentOffice/CoListAgent"
+  },
+  "CoListAgentKey": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/Listing/AgentOffice/CoListAgent"
+  },
+  "CoListAgentAOR": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Listing/AgentOffice/CoListAgent"
+  },
+  "CoListAgentMlsId": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Listing/AgentOffice/CoListAgent"
+  },
+  "CoListAgentStateLicense": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Listing/AgentOffice/CoListAgent"
+  },
+  "CoListAgentDesignation": {
+    "type": [
+      "string"
+    ],
+    "group": "/Listing/AgentOffice/CoListAgent"
+  },
+  "CoListOfficeName": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Listing/AgentOffice/CoListOffice"
+  },
+  "CoListOfficePhone": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Listing/AgentOffice/CoListOffice"
+  },
+  "CoListOfficePhoneExt": {
+    "type": "number",
+    "group": "/Listing/AgentOffice/CoListOffice"
+  },
+  "CoListOfficeFax": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Listing/AgentOffice/CoListOffice"
+  },
+  "CoListOfficeEmail": {
+    "type": "string",
+    "maxLength": 80,
+    "group": "/Listing/AgentOffice/CoListOffice"
+  },
+  "CoListOfficeURL": {
+    "type": "string",
+    "maxLength": 8000,
+    "group": "/Listing/AgentOffice/CoListOffice"
+  },
+  "CoListOfficeKey": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/Listing/AgentOffice/CoListOffice"
+  },
+  "CoListOfficeAOR": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Listing/AgentOffice/CoListOffice"
+  },
+  "CoListOfficeMlsId": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Listing/AgentOffice/CoListOffice"
+  },
+  "BuyerAgentNamePrefix": {
+    "type": "string",
+    "maxLength": 10,
+    "group": "/Listing/AgentOffice/BuyerAgent"
+  },
+  "BuyerAgentFirstName": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Listing/AgentOffice/BuyerAgent"
+  },
+  "BuyerAgentMiddleName": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Listing/AgentOffice/BuyerAgent"
+  },
+  "BuyerAgentLastName": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Listing/AgentOffice/BuyerAgent"
+  },
+  "BuyerAgentNameSuffix": {
+    "type": "string",
+    "maxLength": 10,
+    "group": "/Listing/AgentOffice/BuyerAgent"
+  },
+  "BuyerAgentFullName": {
+    "type": "string",
+    "maxLength": 150,
+    "group": "/Listing/AgentOffice/BuyerAgent"
+  },
+  "BuyerAgentPreferredPhone": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Listing/AgentOffice/BuyerAgent"
+  },
+  "BuyerAgentPreferredPhoneExt": {
+    "type": "number",
+    "group": "/Listing/AgentOffice/BuyerAgent"
+  },
+  "BuyerAgentOfficePhone": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Listing/AgentOffice/BuyerAgent"
+  },
+  "BuyerAgentOfficePhoneExt": {
+    "type": "number",
+    "group": "/Listing/AgentOffice/BuyerAgent"
+  },
+  "BuyerAgentCellPhone": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Listing/AgentOffice/BuyerAgent"
+  },
+  "BuyerAgentDirectPhone": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Listing/AgentOffice/BuyerAgent"
+  },
+  "BuyerAgentHomePhone": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Listing/AgentOffice/BuyerAgent"
+  },
+  "BuyerAgentFax": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Listing/AgentOffice/BuyerAgent"
+  },
+  "BuyerAgentPager": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Listing/AgentOffice/BuyerAgent"
+  },
+  "BuyerAgentVoiceMail": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Listing/AgentOffice/BuyerAgent"
+  },
+  "BuyerAgentVoiceMailExt": {
+    "type": "number",
+    "group": "/Listing/AgentOffice/BuyerAgent"
+  },
+  "BuyerAgentTollFreePhone": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Listing/AgentOffice/BuyerAgent"
+  },
+  "BuyerAgentEmail": {
+    "type": "string",
+    "maxLength": 80,
+    "group": "/Listing/AgentOffice/BuyerAgent"
+  },
+  "BuyerAgentURL": {
+    "type": "string",
+    "maxLength": 8000,
+    "group": "/Listing/AgentOffice/BuyerAgent"
+  },
+  "BuyerAgentKey": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/Listing/AgentOffice/BuyerAgent"
+  },
+  "BuyerAgentAOR": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Listing/AgentOffice/BuyerAgent"
+  },
+  "BuyerAgentMlsId": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Listing/AgentOffice/BuyerAgent"
+  },
+  "BuyerAgentStateLicense": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Listing/AgentOffice/BuyerAgent"
+  },
+  "BuyerAgentDesignation": {
+    "type": [
+      "string"
+    ],
+    "group": "/Listing/AgentOffice/BuyerAgent"
+  },
+  "BuyerOfficeName": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Listing/AgentOffice/BuyerOffice"
+  },
+  "BuyerOfficePhone": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Listing/AgentOffice/BuyerOffice"
+  },
+  "BuyerOfficePhoneExt": {
+    "type": "number",
+    "group": "/Listing/AgentOffice/BuyerOffice"
+  },
+  "BuyerOfficeFax": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Listing/AgentOffice/BuyerOffice"
+  },
+  "BuyerOfficeEmail": {
+    "type": "string",
+    "maxLength": 80,
+    "group": "/Listing/AgentOffice/BuyerOffice"
+  },
+  "BuyerOfficeURL": {
+    "type": "string",
+    "maxLength": 8000,
+    "group": "/Listing/AgentOffice/BuyerOffice"
+  },
+  "BuyerOfficeKey": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/Listing/AgentOffice/BuyerOffice"
+  },
+  "BuyerOfficeAOR": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Listing/AgentOffice/BuyerOffice"
+  },
+  "BuyerOfficeMlsId": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Listing/AgentOffice/BuyerOffice"
+  },
+  "CoBuyerAgentNamePrefix": {
+    "type": "string",
+    "maxLength": 10,
+    "group": "/Listing/AgentOffice/CoBuyerAgent"
+  },
+  "CoBuyerAgentFirstName": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Listing/AgentOffice/CoBuyerAgent"
+  },
+  "CoBuyerAgentMiddleName": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Listing/AgentOffice/CoBuyerAgent"
+  },
+  "CoBuyerAgentLastName": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Listing/AgentOffice/CoBuyerAgent"
+  },
+  "CoBuyerAgentNameSuffix": {
+    "type": "string",
+    "maxLength": 10,
+    "group": "/Listing/AgentOffice/CoBuyerAgent"
+  },
+  "CoBuyerAgentFullName": {
+    "type": "string",
+    "maxLength": 150,
+    "group": "/Listing/AgentOffice/CoBuyerAgent"
+  },
+  "CoBuyerAgentPreferredPhone": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Listing/AgentOffice/CoBuyerAgent"
+  },
+  "CoBuyerAgentPreferredPhoneExt": {
+    "type": "number",
+    "group": "/Listing/AgentOffice/CoBuyerAgent"
+  },
+  "CoBuyerAgentOfficePhone": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Listing/AgentOffice/CoBuyerAgent"
+  },
+  "CoBuyerAgentOfficePhoneExt": {
+    "type": "number",
+    "group": "/Listing/AgentOffice/CoBuyerAgent"
+  },
+  "CoBuyerAgentCellPhone": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Listing/AgentOffice/CoBuyerAgent"
+  },
+  "CoBuyerAgentDirectPhone": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Listing/AgentOffice/CoBuyerAgent"
+  },
+  "CoBuyerAgentHomePhone": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Listing/AgentOffice/CoBuyerAgent"
+  },
+  "CoBuyerAgentFax": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Listing/AgentOffice/CoBuyerAgent"
+  },
+  "CoBuyerAgentPager": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Listing/AgentOffice/CoBuyerAgent"
+  },
+  "CoBuyerAgentVoiceMail": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Listing/AgentOffice/CoBuyerAgent"
+  },
+  "CoBuyerAgentVoiceMailExt": {
+    "type": "number",
+    "group": "/Listing/AgentOffice/CoBuyerAgent"
+  },
+  "CoBuyerAgentTollFreePhone": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Listing/AgentOffice/CoBuyerAgent"
+  },
+  "CoBuyerAgentEmail": {
+    "type": "string",
+    "maxLength": 80,
+    "group": "/Listing/AgentOffice/CoBuyerAgent"
+  },
+  "CoBuyerAgentURL": {
+    "type": "string",
+    "maxLength": 8000,
+    "group": "/Listing/AgentOffice/CoBuyerAgent"
+  },
+  "CoBuyerAgentKey": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/Listing/AgentOffice/CoBuyerAgent"
+  },
+  "CoBuyerAgentAOR": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Listing/AgentOffice/CoBuyerAgent"
+  },
+  "CoBuyerAgentMlsId": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Listing/AgentOffice/CoBuyerAgent"
+  },
+  "CoBuyerAgentStateLicense": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Listing/AgentOffice/CoBuyerAgent"
+  },
+  "CoBuyerAgentDesignation": {
+    "type": [
+      "string"
+    ],
+    "group": "/Listing/AgentOffice/CoBuyerAgent"
+  },
+  "CoBuyerOfficeName": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Listing/AgentOffice/CoBuyerOffice"
+  },
+  "CoBuyerOfficePhone": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Listing/AgentOffice/CoBuyerOffice"
+  },
+  "CoBuyerOfficePhoneExt": {
+    "type": "number",
+    "group": "/Listing/AgentOffice/CoBuyerOffice"
+  },
+  "CoBuyerOfficeFax": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Listing/AgentOffice/CoBuyerOffice"
+  },
+  "CoBuyerOfficeEmail": {
+    "type": "string",
+    "maxLength": 80,
+    "group": "/Listing/AgentOffice/CoBuyerOffice"
+  },
+  "CoBuyerOfficeURL": {
+    "type": "string",
+    "maxLength": 8000,
+    "group": "/Listing/AgentOffice/CoBuyerOffice"
+  },
+  "CoBuyerOfficeKey": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/Listing/AgentOffice/CoBuyerOffice"
+  },
+  "CoBuyerOfficeAOR": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Listing/AgentOffice/CoBuyerOffice"
+  },
+  "CoBuyerOfficeMlsId": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Listing/AgentOffice/CoBuyerOffice"
+  },
+  "ListTeamDisplayName": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Listing/AgentOffice/Team"
+  },
+  "BuyerTeamDisplayName": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Listing/AgentOffice/Team"
+  },
+  "PropertyType": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Property"
+  },
+  "PropertySubType": {
+    "type": "string",
+    "maxLength": 50,
+    "lookup": "PropertySubType",
+    "group": "/Property",
+    "enum": [
+      "Apartment",
+      "Boat Slip",
+      "Single Family Residence",
+      "Deeded Parking",
+      "Cabin",
+      "Condominium",
+      "Duplex",
+      "Farm",
+      "Manufactured Home",
+      "Mobile Home",
+      "Own Your Own",
+      "Quadruplex",
+      "Stock Cooperative",
+      "Townhouse",
+      "Timeshare",
+      "Triplex",
+      "Manufactured with 433"
+    ]
+  },
+  "AssociationYN": {
+    "type": "boolean",
+    "group": "/Property/HOA"
+  },
+  "AssociationName": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Property/HOA"
+  },
+  "AssociationPhone": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Property/HOA"
+  },
+  "AssociationFee": {
+    "type": "number",
+    "group": "/Property/HOA"
+  },
+  "AssociationFeeFrequency": {
+    "type": "string",
+    "maxLength": 25,
+    "lookup": "FeeFrequency",
+    "group": "/Property/HOA",
+    "enum": [
+      "Daily",
+      "Weekly",
+      "Bi-Weekly",
+      "Semi-Monthly",
+      "Monthly",
+      "Bi-Monthly",
+      "Quarterly",
+      "Semi-Annually",
+      "Annually",
+      "Seasonal",
+      "One Time"
+    ]
+  },
+  "AssociationName2": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Property/HOA"
+  },
+  "AssociationPhone2": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Property/HOA"
+  },
+  "AssociationFee2": {
+    "type": "number",
+    "group": "/Property/HOA"
+  },
+  "AssociationFee2Frequency": {
+    "type": "string",
+    "maxLength": 25,
+    "lookup": "FeeFrequency",
+    "group": "/Property/HOA",
+    "enum": [
+      "Daily",
+      "Weekly",
+      "Bi-Weekly",
+      "Semi-Monthly",
+      "Monthly",
+      "Bi-Monthly",
+      "Quarterly",
+      "Semi-Annually",
+      "Annually",
+      "Seasonal",
+      "One Time"
+    ]
+  },
+  "AssociationFeeIncludes": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/HOA"
+  },
+  "AssociationAmenities": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/HOA"
+  },
+  "LotSizeArea": {
+    "type": "number",
+    "group": "/Property/Characteristics"
+  },
+  "LotSizeSource": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Property/Characteristics"
+  },
+  "LotSizeUnits": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Property/Characteristics"
+  },
+  "LotSizeDimensions": {
+    "type": "string",
+    "maxLength": 150,
+    "group": "/Property/Characteristics"
+  },
+  "LotDimensionsSource": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Property/Characteristics"
+  },
+  "LotSizeAcres": {
+    "type": "number",
+    "group": "/Property/Characteristics"
+  },
+  "LotSizeSquareFeet": {
+    "type": "number",
+    "group": "/Property/Characteristics"
+  },
+  "FrontageType": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Characteristics"
+  },
+  "FrontageLength": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/Property/Characteristics"
+  },
+  "RoadFrontageType": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Characteristics"
+  },
+  "RoadSurfaceType": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Characteristics"
+  },
+  "RoadResponsibility": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Characteristics"
+  },
+  "OccupantName": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Property/OccupantOwner"
+  },
+  "OccupantPhone": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Property/OccupantOwner"
+  },
+  "OccupantType": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Property/OccupantOwner"
+  },
+  "OwnerName": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Property/OccupantOwner"
+  },
+  "OwnerPhone": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Property/OccupantOwner"
+  },
+  "AnchorsCoTenants": {
+    "type": "string",
+    "maxLength": 1024,
+    "group": "/Property/Characteristics"
+  },
+  "LeaseTerm": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Property/Characteristics"
+  },
+  "LandLeaseYN": {
+    "type": "boolean",
+    "group": "/Property/Characteristics"
+  },
+  "LandLeaseAmount": {
+    "type": "number",
+    "group": "/Property/Characteristics"
+  },
+  "LandLeaseAmountFrequency": {
+    "type": "string",
+    "maxLength": 25,
+    "lookup": "FeeFrequency",
+    "group": "/Property/Characteristics",
+    "enum": [
+      "Daily",
+      "Weekly",
+      "Bi-Weekly",
+      "Semi-Monthly",
+      "Monthly",
+      "Bi-Monthly",
+      "Quarterly",
+      "Semi-Annually",
+      "Annually",
+      "Seasonal",
+      "One Time"
+    ]
+  },
+  "LandLeaseExpirationDate": {
+    "type": "date",
+    "group": "/Property/Characteristics"
+  },
+  "View": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Characteristics"
+  },
+  "ViewYN": {
+    "type": "boolean",
+    "group": "/Property/Characteristics"
+  },
+  "LotFeatures": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Characteristics"
+  },
+  "CurrentUse": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Characteristics"
+  },
+  "PossibleUse": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Characteristics"
+  },
+  "DevelopmentStatus": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Characteristics"
+  },
+  "NumberOfLots": {
+    "type": "number",
+    "group": "/Property/Characteristics"
+  },
+  "Topography": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/Property/Characteristics"
+  },
+  "HorseYN": {
+    "type": "boolean",
+    "group": "/Property/Characteristics"
+  },
+  "HorseAmenities": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Characteristics"
+  },
+  "CommunityFeatures": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Characteristics"
+  },
+  "SeniorCommunityYN": {
+    "type": "boolean",
+    "group": "/Property/Characteristics"
+  },
+  "PoolFeatures": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Characteristics"
+  },
+  "PoolPrivateYN": {
+    "type": "boolean",
+    "group": "/Property/Characteristics"
+  },
+  "SpaFeatures": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Characteristics"
+  },
+  "SpaYN": {
+    "type": "boolean",
+    "group": "/Property/Characteristics"
+  },
+  "WaterfrontYN": {
+    "type": "boolean",
+    "group": "/Property/Characteristics"
+  },
+  "WaterBodyName": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Property/Characteristics"
+  },
+  "GrossScheduledIncome": {
+    "type": "number",
+    "group": "/Property/Financial"
+  },
+  "GrossIncome": {
+    "type": "number",
+    "group": "/Property/Financial"
+  },
+  "IncomeIncludes": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Financial"
+  },
+  "OperatingExpense": {
+    "type": "number",
+    "group": "/Property/Financial"
+  },
+  "OperatingExpenseIncludes": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Financial"
+  },
+  "NetOperatingIncome": {
+    "type": "number",
+    "group": "/Property/Financial"
+  },
+  "CapRate": {
+    "type": "number",
+    "group": "/Property/Financial"
+  },
+  "NumberOfUnitsLeased": {
+    "type": "number",
+    "group": "/Property/Financial"
+  },
+  "NumberOfUnitsMoMo": {
+    "type": "number",
+    "group": "/Property/Financial"
+  },
+  "NumberOfUnitsVacant": {
+    "type": "number",
+    "group": "/Property/Financial"
+  },
+  "ExistingLeaseType": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Financial"
+  },
+  "UnitsFurnished": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Property/Financial"
+  },
+  "TotalActualRent": {
+    "type": "number",
+    "group": "/Property/Financial"
+  },
+  "RentControlYN": {
+    "type": "boolean",
+    "group": "/Property/Financial"
+  },
+  "NumberOfUnitsTotal": {
+    "type": "number",
+    "group": "/Property/Characteristics"
+  },
+  "NumberOfBuildings": {
+    "type": "number",
+    "group": "/Property/Characteristics"
+  },
+  "OwnerPays": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Financial"
+  },
+  "TenantPays": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Financial"
+  },
+  "VacancyAllowance": {
+    "type": "number",
+    "group": "/Property/Financial"
+  },
+  "VacancyAllowanceRate": {
+    "type": "number",
+    "group": "/Property/Financial"
+  },
+  "CableTvExpense": {
+    "type": "number",
+    "group": "/Property/Financial"
+  },
+  "ElectricExpense": {
+    "type": "number",
+    "group": "/Property/Financial"
+  },
+  "GardnerExpense": {
+    "type": "number",
+    "group": "/Property/Financial"
+  },
+  "FurnitureReplacementExpense": {
+    "type": "number",
+    "group": "/Property/Financial"
+  },
+  "FuelExpense": {
+    "type": "number",
+    "group": "/Property/Financial"
+  },
+  "InsuranceExpense": {
+    "type": "number",
+    "group": "/Property/Financial"
+  },
+  "OtherExpense": {
+    "type": "number",
+    "group": "/Property/Financial"
+  },
+  "LicensesExpense": {
+    "type": "number",
+    "group": "/Property/Financial"
+  },
+  "MaintenanceExpense": {
+    "type": "number",
+    "group": "/Property/Financial"
+  },
+  "NewTaxesExpense": {
+    "type": "number",
+    "group": "/Property/Financial"
+  },
+  "PestControlExpense": {
+    "type": "number",
+    "group": "/Property/Financial"
+  },
+  "PoolExpense": {
+    "type": "number",
+    "group": "/Property/Financial"
+  },
+  "SuppliesExpense": {
+    "type": "number",
+    "group": "/Property/Financial"
+  },
+  "TrashExpense": {
+    "type": "number",
+    "group": "/Property/Financial"
+  },
+  "WaterSewerExpense": {
+    "type": "number",
+    "group": "/Property/Financial"
+  },
+  "WorkmansCompensationExpense": {
+    "type": "number",
+    "group": "/Property/Financial"
+  },
+  "ProfessionalManagementExpense": {
+    "type": "number",
+    "group": "/Property/Financial"
+  },
+  "ManagerExpense": {
+    "type": "number",
+    "group": "/Property/Financial"
+  },
+  "FinancialDataSource": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Financial"
+  },
+  "RentIncludes": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Financial"
+  },
+  "BusinessName": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/Business"
+  },
+  "BusinessType": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Business"
+  },
+  "OwnershipType": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Business"
+  },
+  "SpecialLicenses": {
+    "type": [
+      "string"
+    ],
+    "group": "/Business"
+  },
+  "NumberOfFullTimeEmployees": {
+    "type": "number",
+    "group": "/Business"
+  },
+  "NumberOfPartTimeEmployees": {
+    "type": "number",
+    "group": "/Business"
+  },
+  "LeaseAmount": {
+    "type": "number",
+    "group": "/Business"
+  },
+  "LeaseAmountFrequency": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Business"
+  },
+  "LeaseExpiration": {
+    "type": "date",
+    "group": "/Business"
+  },
+  "LeaseRenewalOptionYN": {
+    "type": "boolean",
+    "group": "/Business"
+  },
+  "LeaseAssignableYN": {
+    "type": "boolean",
+    "group": "/Business"
+  },
+  "HoursDaysofOperation": {
+    "type": [
+      "string"
+    ],
+    "group": "/Business"
+  },
+  "YearEstablished": {
+    "type": "number",
+    "group": "/Business"
+  },
+  "SeatingCapacity": {
+    "type": "number",
+    "group": "/Business"
+  },
+  "YearsCurrentOwner": {
+    "type": "number",
+    "group": "/Business"
+  },
+  "LaborInformation": {
+    "type": [
+      "string"
+    ],
+    "group": "/Business"
+  },
+  "Utilities": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Utilities"
+  },
+  "Electric": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Utilities"
+  },
+  "Gas": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Utilities"
+  },
+  "Telephone": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Utilities"
+  },
+  "IrrigationWaterRightsYN": {
+    "type": "boolean",
+    "group": "/Property/Utilities"
+  },
+  "IrrigationWaterRightsAcres": {
+    "type": "number",
+    "group": "/Property/Utilities"
+  },
+  "IrrigationSource": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Utilities"
+  },
+  "WaterSource": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Utilities"
+  },
+  "DistanceToWater": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/Property/Utilities"
+  },
+  "ElectricOnPropertyYN": {
+    "type": "boolean",
+    "group": "/Property/Utilities"
+  },
+  "DistanceToElectric": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/Property/Utilities"
+  },
+  "Sewer": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Utilities"
+  },
+  "DistanceToSewer": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/Property/Utilities"
+  },
+  "DistanceToGas": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/Property/Utilities"
+  },
+  "DistanceToPhoneService": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/Property/Utilities"
+  },
+  "DistanceToStreet": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/Property/Utilities"
+  },
+  "DistanceToSchools": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/Property/Location"
+  },
+  "DistanceFromShopping": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/Property/Location"
+  },
+  "DistanceToPlaceofWorship": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/Property/Location"
+  },
+  "DistanceToBus": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/Property/Location"
+  },
+  "DistanceFromSchoolBus": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/Property/Location"
+  },
+  "DistanceToFreeway": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/Property/Location"
+  },
+  "CropsIncludedYN": {
+    "type": "boolean",
+    "group": "/Property/Farming"
+  },
+  "GrazingPermitsBlmYN": {
+    "type": "boolean",
+    "group": "/Property/Farming"
+  },
+  "GrazingPermitsForestServiceYN": {
+    "type": "boolean",
+    "group": "/Property/Farming"
+  },
+  "GrazingPermitsPrivateYN": {
+    "type": "boolean",
+    "group": "/Property/Farming"
+  },
+  "CultivatedArea": {
+    "type": "number",
+    "group": "/Property/Farming"
+  },
+  "PastureArea": {
+    "type": "number",
+    "group": "/Property/Farming"
+  },
+  "RangeArea": {
+    "type": "number",
+    "group": "/Property/Farming"
+  },
+  "WoodedArea": {
+    "type": "number",
+    "group": "/Property/Farming"
+  },
+  "Vegetation": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Farming"
+  },
+  "Fencing": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Characteristics"
+  },
+  "FarmCreditServiceInclYN": {
+    "type": "boolean",
+    "group": "/Property/Farming"
+  },
+  "FarmLandAreaUnits": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Property/Farming"
+  },
+  "FarmLandAreaSource": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Property/Farming"
+  },
+  "BedroomsTotal": {
+    "type": "number",
+    "group": "/Property/Structure"
+  },
+  "BedroomsPossible": {
+    "type": "number",
+    "group": "/Property/Structure"
+  },
+  "BathroomsTotalInteger": {
+    "type": "number",
+    "group": "/Property/Structure"
+  },
+  "BathroomsTotalDecimal": {
+    "type": "number",
+    "group": "/Property/Structure"
+  },
+  "BathroomsTotalNotational": {
+    "type": "number",
+    "group": "/Property/Structure"
+  },
+  "BathroomsFull": {
+    "type": "number",
+    "group": "/Property/Structure"
+  },
+  "BathroomsHalf": {
+    "type": "number",
+    "group": "/Property/Structure"
+  },
+  "BathroomsThreeQuarter": {
+    "type": "number",
+    "group": "/Property/Structure"
+  },
+  "BathroomsOneQuarter": {
+    "type": "number",
+    "group": "/Property/Structure"
+  },
+  "LivingArea": {
+    "type": "number",
+    "group": "/Property/Structure"
+  },
+  "LivingAreaSource": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Property/Structure"
+  },
+  "LivingAreaUnits": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Property/Structure"
+  },
+  "AboveGradeFinishedArea": {
+    "type": "number",
+    "group": "/Property/Structure"
+  },
+  "AboveGradeFinishedAreaSource": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Property/Structure"
+  },
+  "AboveGradeFinishedAreaUnits": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Property/Structure"
+  },
+  "BelowGradeFinishedArea": {
+    "type": "number",
+    "group": "/Property/Structure"
+  },
+  "BelowGradeFinishedAreaSource": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Property/Structure"
+  },
+  "BelowGradeFinishedAreaUnits": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Property/Structure"
+  },
+  "BuildingAreaTotal": {
+    "type": "number",
+    "group": "/Property/Structure"
+  },
+  "BuildingAreaSource": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Property/Structure"
+  },
+  "BuildingAreaUnits": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Property/Structure"
+  },
+  "LeasableArea": {
+    "type": "number",
+    "group": "/Property/Structure"
+  },
+  "LeasableAreaUnits": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Property/Structure"
+  },
+  "CommonWalls": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Structure"
+  },
+  "PropertyAttachedYN": {
+    "type": "boolean",
+    "group": "/Property/Structure"
+  },
+  "FoundationArea": {
+    "type": "number",
+    "group": "/Property/Structure"
+  },
+  "GarageYN": {
+    "type": "boolean",
+    "group": "/Property/Structure"
+  },
+  "GarageSpaces": {
+    "type": "number",
+    "group": "/Property/Structure"
+  },
+  "AttachedGarageYN": {
+    "type": "boolean",
+    "group": "/Property/Structure"
+  },
+  "CarportSpaces": {
+    "type": "number",
+    "group": "/Property/Structure"
+  },
+  "CarportYN": {
+    "type": "boolean",
+    "group": "/Property/Structure"
+  },
+  "OpenParkingYN": {
+    "type": "boolean",
+    "group": "/Property/Structure"
+  },
+  "OpenParkingSpaces": {
+    "type": "number",
+    "group": "/Property/Structure"
+  },
+  "CoveredSpaces": {
+    "type": "number",
+    "group": "/Property/Structure"
+  },
+  "ParkingFeatures": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Structure"
+  },
+  "OtherParking": {
+    "type": "string",
+    "maxLength": 1024,
+    "group": "/Property/Structure"
+  },
+  "ParkingTotal": {
+    "type": "number",
+    "group": "/Property/Structure"
+  },
+  "RVParkingDimensions": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Property/Structure"
+  },
+  "StoriesTotal": {
+    "type": "number",
+    "group": "/Property/Structure"
+  },
+  "Stories": {
+    "type": "number",
+    "group": "/Property/Structure"
+  },
+  "Levels": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Structure"
+  },
+  "EntryLocation": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Property/Structure"
+  },
+  "EntryLevel": {
+    "type": "number",
+    "group": "/Property/Structure"
+  },
+  "YearBuilt": {
+    "type": "number",
+    "group": "/Property/Structure"
+  },
+  "YearBuiltEffective": {
+    "type": "number",
+    "group": "/Property/Structure"
+  },
+  "YearBuiltDetails": {
+    "type": "string",
+    "maxLength": 1024,
+    "group": "/Property/Structure"
+  },
+  "YearBuiltSource": {
+    "type": "string",
+    "maxLength": 60,
+    "group": "/Property/Structure"
+  },
+  "NewConstructionYN": {
+    "type": "boolean",
+    "group": "/Property/Structure"
+  },
+  "GreenBuildingVerificationType": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Structure/Performance/GreenCertification",
+    "repeating": true
+  },
+  "GreenVerifications": [
+    {
+      "Type": {
+        "type": "string"
+      },
+      "Body": {
+        "type": "string",
+        "maxLength": 50,
+        "group": "/Property/Structure/Performance/GreenCertification"
+      },
+      "Year": {
+        "type": "string",
+        "maxLength": 4,
+        "group": "/Property/Structure/Performance/GreenCertification"
+      },
+      "Rating": {
+        "type": "string",
+        "maxLength": 50,
+        "group": "/Property/Structure/Performance/GreenCertification"
+      },
+      "Metric": {
+        "type": "number",
+        "group": "/Property/Structure/Performance/GreenCertification"
+      },
+      "URL": {
+        "type": "string",
+        "maxLength": 8000,
+        "group": "/Property/Structure/Performance/GreenCertification"
+      }
+    }
+  ],
+  "BuilderName": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Property/Structure"
+  },
+  "BuilderModel": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Property/Structure"
+  },
+  "BuildingName": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Property/Structure"
+  },
+  "BuildingFeatures": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Structure"
+  },
+  "Heating": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Structure"
+  },
+  "HeatingYN": {
+    "type": "boolean",
+    "group": "/Property/Structure"
+  },
+  "Cooling": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Structure"
+  },
+  "CoolingYN": {
+    "type": "boolean",
+    "group": "/Property/Structure"
+  },
+  "InteriorFeatures": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Structure"
+  },
+  "ExteriorFeatures": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Structure"
+  },
+  "PatioAndPorchFeatures": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Structure"
+  },
+  "ArchitecturalStyle": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Structure"
+  },
+  "FireplaceFeatures": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Structure"
+  },
+  "FireplacesTotal": {
+    "type": "number",
+    "group": "/Property/Structure"
+  },
+  "FireplaceYN": {
+    "type": "boolean",
+    "group": "/Property/Structure"
+  },
+  "DoorFeatures": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Structure"
+  },
+  "WindowFeatures": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Structure"
+  },
+  "Roof": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Structure"
+  },
+  "ConstructionMaterials": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Structure"
+  },
+  "FoundationDetails": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Structure"
+  },
+  "Basement": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Structure"
+  },
+  "Flooring": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Structure"
+  },
+  "OtherStructures": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Structure"
+  },
+  "DirectionFaces": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Property/Structure"
+  },
+  "OtherEquipment": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Equipment"
+  },
+  "Appliances": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Equipment"
+  },
+  "LaundryFeatures": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Characteristics"
+  },
+  "SecurityFeatures": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Equipment"
+  },
+  "NumberOfSeparateElectricMeters": {
+    "type": "number",
+    "group": "/Property/Utilities"
+  },
+  "NumberOfSeparateGasMeters": {
+    "type": "number",
+    "group": "/Property/Utilities"
+  },
+  "NumberOfSeparateWaterMeters": {
+    "type": "number",
+    "group": "/Property/Utilities"
+  },
+  "GreenEnergyEfficient": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Structure/Performance/GreenMarketing"
+  },
+  "GreenEnergyGeneration": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Structure/Performance/GreenMarketing"
+  },
+  "GreenSustainability": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Structure/Performance/GreenMarketing"
+  },
+  "GreenWaterConservation": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Structure/Performance/GreenMarketing"
+  },
+  "GreenIndoorAirQuality": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Structure/Performance/GreenMarketing"
+  },
+  "GreenLocation": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Structure/Performance/GreenMarketing"
+  },
+  "WalkScore": {
+    "type": "number",
+    "group": "/Property/Structure/Performance/GreenMarketing"
+  },
+  "HabitableResidenceYN": {
+    "type": "boolean",
+    "group": "/Property/Structure"
+  },
+  "MobileLength": {
+    "type": "number",
+    "group": "/Property/Structure"
+  },
+  "MobileWidth": {
+    "type": "number",
+    "group": "/Property/Structure"
+  },
+  "BodyType": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Structure"
+  },
+  "Skirt": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Structure"
+  },
+  "MobileDimUnits": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Property/Structure"
+  },
+  "ParkName": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Property/Characteristics"
+  },
+  "ParkManagerName": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Property/Characteristics"
+  },
+  "ParkManagerPhone": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Property/Characteristics"
+  },
+  "MobileHomeRemainsYN": {
+    "type": "boolean",
+    "group": "/Property/Characteristics"
+  },
+  "Make": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Property/Structure"
+  },
+  "Model": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Property/Structure"
+  },
+  "NumberOfPads": {
+    "type": "number",
+    "group": "/Property/Characteristics"
+  },
+  "SerialU": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Property/Structure"
+  },
+  "DOH1": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Property/Structure"
+  },
+  "License1": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Property/Structure"
+  },
+  "SerialX": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Property/Structure"
+  },
+  "DOH2": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Property/Structure"
+  },
+  "License2": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Property/Structure"
+  },
+  "SerialXX": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Property/Structure"
+  },
+  "DOH3": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Property/Structure"
+  },
+  "License3": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Property/Structure"
+  },
+  "AccessibilityFeatures": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Structure"
+  },
+  "RoomsTotal": {
+    "type": "number",
+    "group": "/Property/Structure/Rooms"
+  },
+  "RoomType": {
+    "type": [
+      "string"
+    ],
+    "lookup": "RoomType",
+    "group": "/Property/Structure/Rooms",
+    "repeating": true,
+    "enum": [
+      "Dining Room",
+      "Living Room",
+      "Family Room",
+      "Basement",
+      "Kitchen",
+      "Master Bedroom",
+      "Bedroom 2",
+      "Bedroom 3",
+      "Bedroom 4",
+      "Bedroom 5",
+      "Master Bathroom",
+      "Bathroom 2",
+      "Bathroom 3",
+      "Bathroom 4",
+      "Bathroom 5",
+      "Den",
+      "Office",
+      "Great Room",
+      "Utility Room",
+      "Workshop",
+      "Laundry",
+      "Loft",
+      "Bonus Room",
+      "Game Room",
+      "Media Room",
+      "Library",
+      "Exercise Room",
+      "Gym",
+      "Sauna"
+    ]
+  },
+  "Rooms": [
+    {
+      "Type": {
+        "type": "string",
+        "enum": [
+          "Dining Room",
+          "Living Room",
+          "Family Room",
+          "Basement",
+          "Kitchen",
+          "Master Bedroom",
+          "Bedroom 2",
+          "Bedroom 3",
+          "Bedroom 4",
+          "Bedroom 5",
+          "Master Bathroom",
+          "Bathroom 2",
+          "Bathroom 3",
+          "Bathroom 4",
+          "Bathroom 5",
+          "Den",
+          "Office",
+          "Great Room",
+          "Utility Room",
+          "Workshop",
+          "Laundry",
+          "Loft",
+          "Bonus Room",
+          "Game Room",
+          "Media Room",
+          "Library",
+          "Exercise Room",
+          "Gym",
+          "Sauna"
+        ]
+      },
+      "Area": {
+        "type": "number",
+        "group": "/Property/Structure/Rooms"
+      },
+      "AreaUnits": {
+        "type": "string",
+        "maxLength": 25,
+        "group": "/Property/Structure/Rooms"
+      },
+      "AreaSource": {
+        "type": "string",
+        "maxLength": 50,
+        "group": "/Property/Structure/Rooms"
+      },
+      "Dimensions": {
+        "type": "string",
+        "maxLength": 50,
+        "group": "/Property/Structure/Rooms"
+      },
+      "Length": {
+        "type": "number",
+        "group": "/Property/Structure/Rooms"
+      },
+      "Width": {
+        "type": "number",
+        "group": "/Property/Structure/Rooms"
+      },
+      "LengthWidthUnits": {
+        "type": "string",
+        "maxLength": 25,
+        "group": "/Property/Structure/Rooms"
+      },
+      "LengthWidthSource": {
+        "type": "string",
+        "maxLength": 50,
+        "group": "/Property/Structure/Rooms"
+      },
+      "Level": {
+        "type": "string",
+        "maxLength": 25,
+        "group": "/Property/Structure/Rooms"
+      },
+      "Features": {
+        "type": [
+          "string"
+        ],
+        "group": "/Property/Structure/Rooms"
+      },
+      "Description": {
+        "type": "string",
+        "maxLength": 1024,
+        "group": "/Property/Structure/Rooms"
+      }
+    }
+  ],
+  "UnitTypeType": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/UnitType",
+    "repeating": true
+  },
+  "UnitTypes": [
+    {
+      "Type": {
+        "type": "string"
+      },
+      "UnitsTotal": {
+        "type": "number",
+        "group": "/Property/UnitType"
+      },
+      "BedsTotal": {
+        "type": "number",
+        "group": "/Property/UnitType"
+      },
+      "BathsTotal": {
+        "type": "number",
+        "group": "/Property/UnitType"
+      },
+      "Furnished": {
+        "type": "string",
+        "maxLength": 20,
+        "group": "/Property/UnitType"
+      },
+      "Description": {
+        "type": "string",
+        "maxLength": 1024,
+        "group": "/Property/UnitType"
+      },
+      "GarageSpaces": {
+        "type": "number",
+        "group": "/Property/UnitType"
+      },
+      "GarageAttachedYN": {
+        "type": "boolean",
+        "group": "/Property/UnitType"
+      },
+      "ActualRent": {
+        "type": "number",
+        "group": "/Property/UnitType"
+      },
+      "TotalRent": {
+        "type": "number",
+        "group": "/Property/UnitType"
+      },
+      "ProForma": {
+        "type": "number",
+        "group": "/Property/UnitType"
+      }
+    }
+  ],
+  "Zoning": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Property/Tax"
+  },
+  "ZoningDescription": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/Property/Tax"
+  },
+  "ParcelNumber": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Property/Tax"
+  },
+  "AdditionalParcelsYN": {
+    "type": "boolean",
+    "group": "/Property/Tax"
+  },
+  "AdditionalParcelsDescription": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/Property/Tax"
+  },
+  "PublicSurveySection": {
+    "type": "string",
+    "maxLength": 20,
+    "group": "/Property/Tax"
+  },
+  "PublicSurveyTownship": {
+    "type": "string",
+    "maxLength": 20,
+    "group": "/Property/Tax"
+  },
+  "PublicSurveyRange": {
+    "type": "string",
+    "maxLength": 20,
+    "group": "/Property/Tax"
+  },
+  "TaxLot": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Property/Tax"
+  },
+  "TaxBlock": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Property/Tax"
+  },
+  "TaxTract": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Property/Tax"
+  },
+  "TaxLegalDescription": {
+    "type": "string",
+    "maxLength": 6000,
+    "group": "/Property/Tax"
+  },
+  "TaxAnnualAmount": {
+    "type": "number",
+    "group": "/Property/Tax"
+  },
+  "TaxYear": {
+    "type": "number",
+    "group": "/Property/Tax"
+  },
+  "TaxAssessedValue": {
+    "type": "number",
+    "group": "/Property/Tax"
+  },
+  "TaxExemptions": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Tax"
+  },
+  "TaxOtherAnnualAssessmentAmount": {
+    "type": "number",
+    "group": "/Property/Tax"
+  },
+  "TaxBookNumber": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Property/Tax"
+  },
+  "TaxMapNumber": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Property/Tax"
+  },
+  "TaxParcelLetter": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Property/Tax"
+  },
+  "TaxStatusCurrent": {
+    "type": [
+      "string"
+    ],
+    "group": "/Property/Tax"
+  }
+}

@@ -1,0 +1,196 @@
+{
+  "OfficeKey": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/Office",
+    "primary": true
+  },
+  "OriginatingSystemOfficeKey": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/Office"
+  },
+  "OriginatingSystemName": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/Office"
+  },
+  "OfficeMlsId": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Office"
+  },
+  "OfficeName": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Office"
+  },
+  "OfficePhone": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Office"
+  },
+  "OfficePhoneExt": {
+    "type": "number",
+    "group": "/Office"
+  },
+  "OfficeFax": {
+    "type": "string",
+    "maxLength": 16,
+    "group": "/Office"
+  },
+  "OfficeEmail": {
+    "type": "string",
+    "maxLength": 80,
+    "group": "/Office"
+  },
+  "OfficeType": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Office"
+  },
+  "OfficeBranchType": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Office"
+  },
+  "SocialMediaType": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Office",
+    "repeating": true
+  },
+  "SocialMedias": [
+    {
+      "Type": {
+        "type": "string"
+      },
+      "UrlOrId": {
+        "type": "string",
+        "maxLength": 8000,
+        "group": "/Office"
+      }
+    }
+  ],
+  "OfficeAOR": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Office"
+  },
+  "OfficeAORMlsId": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Office"
+  },
+  "OfficeAORkey": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/Office"
+  },
+  "OfficeNrdsId": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Office"
+  },
+  "OfficeCorporateLicense": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Office"
+  },
+  "OfficeBrokerMlsId": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Office"
+  },
+  "OfficeBrokerKey": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/Office"
+  },
+  "OfficeManagerMlsId": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Office"
+  },
+  "OfficeManagerKey": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/Office"
+  },
+  "OfficeAddress1": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Office"
+  },
+  "OfficeAddress2": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Office"
+  },
+  "OfficeCity": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Office"
+  },
+  "OfficeStateOrProvince": {
+    "type": "string",
+    "maxLength": 2,
+    "group": "/Office"
+  },
+  "OfficePostalCode": {
+    "type": "string",
+    "maxLength": 10,
+    "group": "/Office"
+  },
+  "OfficePostalCodePlus4": {
+    "type": "string",
+    "maxLength": 4,
+    "group": "/Office"
+  },
+  "OfficeCountyOrParish": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Office"
+  },
+  "OfficeStatus": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Office"
+  },
+  "OfficeAssociationComments": {
+    "type": "string",
+    "maxLength": 500,
+    "group": "/Office"
+  },
+  "TimestampEntered": {
+    "type": "date",
+    "group": "/Office"
+  },
+  "TimestampLastLoggedIn": {
+    "type": "date",
+    "group": "/Office"
+  },
+  "TimestampModified": {
+    "type": "date",
+    "group": "/Office"
+  },
+  "MainOfficeKey": {
+    "type": "string",
+    "maxLength": 255,
+    "group": "/Office"
+  },
+  "MainOfficeMlsId": {
+    "type": "string",
+    "maxLength": 25,
+    "group": "/Office"
+  },
+  "FranchiseAffiliation": {
+    "type": "string",
+    "maxLength": 50,
+    "group": "/Office"
+  },
+  "IDXOfficeParticipationYN": {
+    "type": "boolean",
+    "group": "/Office"
+  }
+}
