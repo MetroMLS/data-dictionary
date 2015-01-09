@@ -1,5 +1,5 @@
 {
-  "HistoryRecordKey": {
+  "HistoryTransactionalKey": {
     "type": "string",
     "maxLength": 255,
     "group": "/History",
@@ -30,7 +30,7 @@
     "maxLength": 255,
     "group": "/History"
   },
-  "ChangeTimestamp": {
+  "ModificationTimestamp": {
     "type": "date",
     "group": "/History"
   },

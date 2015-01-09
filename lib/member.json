@@ -2,12 +2,14 @@
   "MemberKey": {
     "type": "string",
     "maxLength": 255,
+    "core": true,
     "group": "/Member",
     "primary": true
   },
   "OriginatingSystemMemberKey": {
     "type": "string",
     "maxLength": 255,
+    "core": true,
     "group": "/Member"
   },
   "OriginatingSystemName": {
@@ -18,6 +20,7 @@
   "MemberMlsId": {
     "type": "string",
     "maxLength": 25,
+    "core": true,
     "group": "/Member"
   },
   "MemberLoginId": {
@@ -28,6 +31,7 @@
   "MemberNrdsID": {
     "type": "string",
     "maxLength": 25,
+    "core": true,
     "group": "/Member"
   },
   "MemberPassword": {
@@ -43,16 +47,19 @@
   "MemberFirstName": {
     "type": "string",
     "maxLength": 50,
+    "core": true,
     "group": "/Member"
   },
   "MemberMiddleName": {
     "type": "string",
     "maxLength": 50,
+    "core": true,
     "group": "/Member"
   },
   "MemberLastName": {
     "type": "string",
     "maxLength": 50,
+    "core": true,
     "group": "/Member"
   },
   "MemberNameSuffix": {
@@ -78,29 +85,35 @@
   "MemberEmail": {
     "type": "string",
     "maxLength": 80,
+    "core": true,
     "group": "/Member"
   },
   "MemberPreferredPhone": {
     "type": "string",
     "maxLength": 16,
+    "core": true,
     "group": "/Member"
   },
   "MemberPreferredPhoneExt": {
     "type": "number",
+    "core": true,
     "group": "/Member"
   },
   "MemberOfficePhone": {
     "type": "string",
     "maxLength": 16,
+    "core": true,
     "group": "/Member"
   },
   "MemberOfficePhoneExt": {
     "type": "number",
+    "core": true,
     "group": "/Member"
   },
   "MemberMobilePhone": {
     "type": "string",
     "maxLength": 16,
+    "core": true,
     "group": "/Member"
   },
   "MemberDirectPhone": {
@@ -185,6 +198,7 @@
   "MemberAOR": {
     "type": "string",
     "maxLength": 50,
+    "core": true,
     "group": "/Member"
   },
   "MemberAORMlsId": {
@@ -200,6 +214,7 @@
   "MemberStateLicense": {
     "type": "string",
     "maxLength": 50,
+    "core": true,
     "group": "/Member"
   },
   "MemberStateLicenseState": {
@@ -216,31 +231,37 @@
   "MemberAddress1": {
     "type": "string",
     "maxLength": 50,
+    "core": true,
     "group": "/Member"
   },
   "MemberAddress2": {
     "type": "string",
     "maxLength": 50,
+    "core": true,
     "group": "/Member"
   },
   "MemberCity": {
     "type": "string",
     "maxLength": 50,
+    "core": true,
     "group": "/Member"
   },
   "MemberStateOrProvince": {
     "type": "string",
     "maxLength": 2,
+    "core": true,
     "group": "/Member"
   },
   "MemberPostalCode": {
     "type": "string",
     "maxLength": 10,
+    "core": true,
     "group": "/Member"
   },
   "MemberPostalCodePlus4": {
     "type": "string",
     "maxLength": 4,
+    "core": true,
     "group": "/Member"
   },
   "MemberCarrierRoute": {
@@ -251,11 +272,13 @@
   "MemberCountyOrParish": {
     "type": "string",
     "maxLength": 50,
+    "core": true,
     "group": "/Member"
   },
   "MemberCountry": {
     "type": "string",
     "maxLength": 2,
+    "core": true,
     "group": "/Member"
   },
   "MemberMlsAccessYN": {
@@ -265,6 +288,7 @@
   "MemberStatus": {
     "type": "string",
     "maxLength": 25,
+    "core": true,
     "group": "/Member"
   },
   "MemberMlsSecurityClass": {
@@ -296,23 +320,27 @@
   "OfficeKey": {
     "type": "string",
     "maxLength": 255,
+    "core": true,
     "group": "/Member"
   },
   "OfficeMlsId": {
     "type": "string",
     "maxLength": 25,
+    "core": true,
     "group": "/Member"
   },
-  "TimestampEntered": {
+  "OriginalEntryTimestamp": {
+    "type": "date",
+    "core": true,
+    "group": "/Member"
+  },
+  "LastLoginTimestamp": {
     "type": "date",
     "group": "/Member"
   },
-  "TimestampLastLoggedIn": {
+  "ModificationTimestamp": {
     "type": "date",
-    "group": "/Member"
-  },
-  "TimestampModified": {
-    "type": "date",
+    "core": true,
     "group": "/Member"
   }
 }

@@ -70,7 +70,7 @@
     "maxLength": 50,
     "group": "/Contacts"
   },
-  "ReferedBy": {
+  "ReferredBy": {
     "type": "string",
     "maxLength": 150,
     "group": "/Contacts"
@@ -220,7 +220,7 @@
     "maxLength": 2,
     "group": "/Contacts"
   },
-  "PreferedAddress": {
+  "PreferredAddress": {
     "type": "string",
     "maxLength": 255,
     "group": "/Contacts"
@@ -361,11 +361,11 @@
     "type": "date",
     "group": "/Contacts"
   },
-  "TimestampEntered": {
+  "OriginalEntryTimestamp": {
     "type": "date",
     "group": "/Contacts"
   },
-  "TimestampModified": {
+  "ModificationTimestamp": {
     "type": "date",
     "group": "/Contacts"
   },

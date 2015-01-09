@@ -2,22 +2,26 @@
   "MediaKey": {
     "type": "string",
     "maxLength": 255,
+    "core": true,
     "group": "/Media",
     "primary": true
   },
   "ResourceRecordKey": {
     "type": "string",
     "maxLength": 255,
+    "core": true,
     "group": "/Media"
   },
   "ResourceRecordID": {
     "type": "string",
     "maxLength": 255,
+    "core": true,
     "group": "/Media"
   },
   "OriginatingSystemMediaKey": {
     "type": "string",
     "maxLength": 255,
+    "core": true,
     "group": "/Media"
   },
   "OriginatingSystemName": {
@@ -28,16 +32,19 @@
   "MediaObjectID": {
     "type": "string",
     "maxLength": 255,
+    "core": true,
     "group": "/Media"
   },
   "ChangedByMemberID": {
     "type": "string",
     "maxLength": 255,
+    "core": true,
     "group": "/Media"
   },
   "ChangedByMemberKey": {
     "type": "string",
     "maxLength": 255,
+    "core": true,
     "group": "/Media"
   },
   "MediaCategory": {
@@ -62,6 +69,7 @@
   },
   "ModificationTimestamp": {
     "type": "date",
+    "core": true,
     "group": "/Media"
   },
   "MediaModificationTimestamp": {
@@ -71,6 +79,7 @@
   "MediaURL": {
     "type": "string",
     "maxLength": 8000,
+    "core": true,
     "group": "/Media"
   },
   "MediaHTML": {
@@ -80,6 +89,7 @@
   },
   "Order": {
     "type": "number",
+    "core": true,
     "group": "/Media"
   },
   "Group": {
@@ -103,6 +113,7 @@
   "ResourceName": {
     "type": "string",
     "maxLength": 50,
+    "core": true,
     "group": "/Media"
   },
   "ClassName": {

@@ -1,21 +1,21 @@
 {
-  "SearchKey": {
+  "SavedSearchKey": {
     "type": "string",
     "maxLength": 255,
     "group": "/SavedSearch",
     "primary": true
   },
-  "SearchName": {
+  "SavedSearchName": {
     "type": "string",
     "maxLength": 255,
     "group": "/SavedSearch"
   },
-  "SearchDescription": {
+  "SavedSearchDescription": {
     "type": "string",
     "maxLength": 4000,
     "group": "/SavedSearch"
   },
-  "SearchType": {
+  "SavedSearchType": {
     "type": "string",
     "maxLength": 50,
     "group": "/SavedSearch"

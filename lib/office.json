@@ -2,12 +2,14 @@
   "OfficeKey": {
     "type": "string",
     "maxLength": 255,
+    "core": true,
     "group": "/Office",
     "primary": true
   },
   "OriginatingSystemOfficeKey": {
     "type": "string",
     "maxLength": 255,
+    "core": true,
     "group": "/Office"
   },
   "OriginatingSystemName": {
@@ -18,20 +20,24 @@
   "OfficeMlsId": {
     "type": "string",
     "maxLength": 25,
+    "core": true,
     "group": "/Office"
   },
   "OfficeName": {
     "type": "string",
     "maxLength": 50,
+    "core": true,
     "group": "/Office"
   },
   "OfficePhone": {
     "type": "string",
     "maxLength": 16,
+    "core": true,
     "group": "/Office"
   },
   "OfficePhoneExt": {
     "type": "number",
+    "core": true,
     "group": "/Office"
   },
   "OfficeFax": {
@@ -42,6 +48,7 @@
   "OfficeEmail": {
     "type": "string",
     "maxLength": 80,
+    "core": true,
     "group": "/Office"
   },
   "OfficeType": {
@@ -90,6 +97,7 @@
   "OfficeNrdsId": {
     "type": "string",
     "maxLength": 25,
+    "core": true,
     "group": "/Office"
   },
   "OfficeCorporateLicense": {
@@ -100,11 +108,13 @@
   "OfficeBrokerMlsId": {
     "type": "string",
     "maxLength": 25,
+    "core": true,
     "group": "/Office"
   },
   "OfficeBrokerKey": {
     "type": "string",
     "maxLength": 255,
+    "core": true,
     "group": "/Office"
   },
   "OfficeManagerMlsId": {
@@ -120,41 +130,49 @@
   "OfficeAddress1": {
     "type": "string",
     "maxLength": 50,
+    "core": true,
     "group": "/Office"
   },
   "OfficeAddress2": {
     "type": "string",
     "maxLength": 50,
+    "core": true,
     "group": "/Office"
   },
   "OfficeCity": {
     "type": "string",
     "maxLength": 50,
+    "core": true,
     "group": "/Office"
   },
   "OfficeStateOrProvince": {
     "type": "string",
     "maxLength": 2,
+    "core": true,
     "group": "/Office"
   },
   "OfficePostalCode": {
     "type": "string",
     "maxLength": 10,
+    "core": true,
     "group": "/Office"
   },
   "OfficePostalCodePlus4": {
     "type": "string",
     "maxLength": 4,
+    "core": true,
     "group": "/Office"
   },
   "OfficeCountyOrParish": {
     "type": "string",
     "maxLength": 50,
+    "core": true,
     "group": "/Office"
   },
   "OfficeStatus": {
     "type": "string",
     "maxLength": 25,
+    "core": true,
     "group": "/Office"
   },
   "OfficeAssociationComments": {
@@ -162,26 +180,30 @@
     "maxLength": 500,
     "group": "/Office"
   },
-  "TimestampEntered": {
+  "OriginalEntryTimestamp": {
+    "type": "date",
+    "core": true,
+    "group": "/Office"
+  },
+  "LastLoginTimestamp": {
     "type": "date",
     "group": "/Office"
   },
-  "TimestampLastLoggedIn": {
+  "ModificationTimestamp": {
     "type": "date",
-    "group": "/Office"
-  },
-  "TimestampModified": {
-    "type": "date",
+    "core": true,
     "group": "/Office"
   },
   "MainOfficeKey": {
     "type": "string",
     "maxLength": 255,
+    "core": true,
     "group": "/Office"
   },
   "MainOfficeMlsId": {
     "type": "string",
     "maxLength": 25,
+    "core": true,
     "group": "/Office"
   },
   "FranchiseAffiliation": {
