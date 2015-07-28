@@ -42,8 +42,9 @@ var keys = [
   'synonym',
   'status',
   'lookup',
-  'core',
+  'level',
   'payloads',
+  'path',
   'group',
   'repeating'
 ]
@@ -92,7 +93,8 @@ function toSchema (obj) {
   obj.definition = undefined
   obj.synonym = undefined
   obj.status = undefined
-  obj.core = obj.core? true : undefined
+  obj.group = undefined
+  obj.level = obj.level.toLowerCase()
   return obj
 }
 
