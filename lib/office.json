@@ -2,69 +2,75 @@
   "OfficeKey": {
     "type": "string",
     "maxLength": 255,
-    "core": true,
-    "group": "/Office",
+    "level": "core",
+    "path": "/Office",
     "primary": true
   },
   "OriginatingSystemOfficeKey": {
     "type": "string",
     "maxLength": 255,
-    "core": true,
-    "group": "/Office"
+    "level": "core",
+    "path": "/Office"
   },
   "OriginatingSystemName": {
     "type": "string",
     "maxLength": 255,
-    "group": "/Office"
+    "level": "bronze",
+    "path": "/Office"
   },
   "OfficeMlsId": {
     "type": "string",
     "maxLength": 25,
-    "core": true,
-    "group": "/Office"
+    "level": "core",
+    "path": "/Office"
   },
   "OfficeName": {
     "type": "string",
     "maxLength": 50,
-    "core": true,
-    "group": "/Office"
+    "level": "core",
+    "path": "/Office"
   },
   "OfficePhone": {
     "type": "string",
     "maxLength": 16,
-    "core": true,
-    "group": "/Office"
+    "level": "core",
+    "path": "/Office"
   },
   "OfficePhoneExt": {
-    "type": "number",
-    "core": true,
-    "group": "/Office"
+    "type": "string",
+    "maxLength": 10,
+    "level": "core",
+    "path": "/Office"
   },
   "OfficeFax": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Office"
+    "level": "bronze",
+    "path": "/Office"
   },
   "OfficeEmail": {
     "type": "string",
     "maxLength": 80,
-    "core": true,
-    "group": "/Office"
+    "level": "core",
+    "path": "/Office"
   },
   "OfficeType": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Office"
+    "level": "bronze",
+    "path": "/Office"
   },
   "OfficeBranchType": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Office"
+    "level": "silver",
+    "path": "/Office"
   },
   "SocialMediaType": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Office",
+    "level": "silver",
+    "path": "/Office",
     "repeating": true
   },
   "SocialMedias": [
@@ -75,144 +81,163 @@
       "UrlOrId": {
         "type": "string",
         "maxLength": 8000,
-        "group": "/Office"
+        "level": "silver",
+        "path": "/Office"
       }
     }
   ],
   "OfficeAOR": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Office"
+    "level": "bronze",
+    "path": "/Office"
   },
   "OfficeAORMlsId": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Office"
+    "level": "bronze",
+    "path": "/Office"
   },
   "OfficeAORkey": {
     "type": "string",
     "maxLength": 255,
-    "group": "/Office"
+    "level": "bronze",
+    "path": "/Office"
   },
-  "OfficeNrdsId": {
+  "OfficeNationalAssociationId": {
     "type": "string",
     "maxLength": 25,
-    "core": true,
-    "group": "/Office"
+    "level": "core",
+    "path": "/Office"
   },
   "OfficeCorporateLicense": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Office"
+    "level": "",
+    "path": "/Office"
   },
   "OfficeBrokerMlsId": {
     "type": "string",
     "maxLength": 25,
-    "core": true,
-    "group": "/Office"
+    "level": "core",
+    "path": "/Office"
   },
   "OfficeBrokerKey": {
     "type": "string",
     "maxLength": 255,
-    "core": true,
-    "group": "/Office"
+    "level": "core",
+    "path": "/Office"
   },
   "OfficeManagerMlsId": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Office"
+    "level": "bronze",
+    "path": "/Office"
   },
   "OfficeManagerKey": {
     "type": "string",
     "maxLength": 255,
-    "group": "/Office"
+    "level": "bronze",
+    "path": "/Office"
   },
   "OfficeAddress1": {
     "type": "string",
     "maxLength": 50,
-    "core": true,
-    "group": "/Office"
+    "level": "core",
+    "path": "/Office"
   },
   "OfficeAddress2": {
     "type": "string",
     "maxLength": 50,
-    "core": true,
-    "group": "/Office"
+    "level": "core",
+    "path": "/Office"
   },
   "OfficeCity": {
     "type": "string",
     "maxLength": 50,
-    "core": true,
-    "group": "/Office"
+    "level": "core",
+    "path": "/Office"
   },
   "OfficeStateOrProvince": {
     "type": "string",
     "maxLength": 2,
-    "core": true,
-    "group": "/Office"
+    "level": "core",
+    "path": "/Office"
   },
   "OfficePostalCode": {
     "type": "string",
     "maxLength": 10,
-    "core": true,
-    "group": "/Office"
+    "level": "core",
+    "path": "/Office"
   },
   "OfficePostalCodePlus4": {
     "type": "string",
     "maxLength": 4,
-    "core": true,
-    "group": "/Office"
+    "level": "core",
+    "path": "/Office"
   },
   "OfficeCountyOrParish": {
     "type": "string",
     "maxLength": 50,
-    "core": true,
-    "group": "/Office"
+    "level": "core",
+    "path": "/Office"
   },
   "OfficeStatus": {
     "type": "string",
     "maxLength": 25,
-    "core": true,
-    "group": "/Office"
+    "level": "core",
+    "path": "/Office"
   },
   "OfficeAssociationComments": {
     "type": "string",
     "maxLength": 500,
-    "group": "/Office"
+    "level": "silver",
+    "path": "/Office"
   },
   "OriginalEntryTimestamp": {
     "type": "date",
-    "core": true,
-    "group": "/Office"
-  },
-  "LastLoginTimestamp": {
-    "type": "date",
-    "group": "/Office"
+    "level": "core",
+    "path": "/Office"
   },
   "ModificationTimestamp": {
     "type": "date",
-    "core": true,
-    "group": "/Office"
+    "level": "core",
+    "path": "/Office"
   },
   "MainOfficeKey": {
     "type": "string",
     "maxLength": 255,
-    "core": true,
-    "group": "/Office"
+    "level": "core",
+    "path": "/Office"
   },
   "MainOfficeMlsId": {
     "type": "string",
     "maxLength": 25,
-    "core": true,
-    "group": "/Office"
+    "level": "core",
+    "path": "/Office"
   },
   "FranchiseAffiliation": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Office"
+    "level": "silver",
+    "path": "/Office"
   },
   "IDXOfficeParticipationYN": {
     "type": "boolean",
-    "group": "/Office"
+    "level": "bronze",
+    "path": "/Office"
+  },
+  "SyndicateTo": {
+    "type": [
+      "string"
+    ],
+    "level": "gold",
+    "path": "/Office"
+  },
+  "SyndicateAgentOption": {
+    "type": "string",
+    "maxLength": 50,
+    "level": "gold",
+    "path": "/Office"
   }
 }

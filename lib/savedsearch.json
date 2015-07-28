@@ -2,80 +2,96 @@
   "SavedSearchKey": {
     "type": "string",
     "maxLength": 255,
-    "group": "/SavedSearch",
+    "level": "gold",
+    "path": "/SavedSearch",
     "primary": true
   },
   "SavedSearchName": {
     "type": "string",
     "maxLength": 255,
-    "group": "/SavedSearch"
+    "level": "gold",
+    "path": "/SavedSearch"
   },
   "SavedSearchDescription": {
     "type": "string",
     "maxLength": 4000,
-    "group": "/SavedSearch"
+    "level": "gold",
+    "path": "/SavedSearch"
   },
   "SavedSearchType": {
     "type": "string",
     "maxLength": 50,
-    "group": "/SavedSearch"
+    "level": "gold",
+    "path": "/SavedSearch"
   },
   "OriginatingSystemKey": {
     "type": "string",
     "maxLength": 255,
-    "group": "/SavedSearch"
+    "level": "gold",
+    "path": "/SavedSearch"
   },
   "OriginatingSystemName": {
     "type": "string",
     "maxLength": 255,
-    "group": "/SavedSearch"
+    "level": "gold",
+    "path": "/SavedSearch"
   },
   "SearchQuery": {
     "type": "string",
     "maxLength": 8000,
-    "group": "/SavedSearch"
+    "level": "gold",
+    "path": "/SavedSearch"
   },
   "SearchQueryType": {
     "type": "string",
     "maxLength": 50,
-    "group": "/SavedSearch"
+    "level": "gold",
+    "path": "/SavedSearch"
   },
   "OriginalEntryTimestamp": {
     "type": "date",
-    "group": "/SavedSearch"
+    "level": "gold",
+    "path": "/SavedSearch"
   },
   "ModificationTimestamp": {
     "type": "date",
-    "group": "/SavedSearch"
+    "level": "gold",
+    "path": "/SavedSearch"
   },
   "ResourceName": {
     "type": "string",
     "maxLength": 50,
-    "group": "/SavedSearch"
+    "level": "gold",
+    "path": "/SavedSearch"
   },
   "ClassName": {
     "type": "string",
     "maxLength": 50,
-    "group": "/SavedSearch"
+    "level": "gold",
+    "path": "/SavedSearch"
   },
   "MemberKey": {
     "type": "string",
     "maxLength": 255,
-    "group": "/SavedSearch"
+    "level": "gold",
+    "path": "/SavedSearch"
   },
   "OriginatingSystemMemberKey": {
     "type": "string",
     "maxLength": 255,
-    "group": "/SavedSearch"
+    "level": "gold",
+    "path": "/SavedSearch"
   },
   "OriginatingSystemMemberName": {
     "type": "string",
     "maxLength": 255,
-    "group": "/SavedSearch"
+    "level": "gold",
+    "path": "/SavedSearch"
   },
   "MemberMlsId": {
     "type": "string",
     "maxLength": 25,
-    "group": "/SavedSearch"
+    "level": "gold",
+    "path": "/SavedSearch"
   }
 }

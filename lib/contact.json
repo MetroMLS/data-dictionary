@@ -2,311 +2,373 @@
   "ContactKey": {
     "type": "string",
     "maxLength": 255,
-    "group": "/Contacts",
+    "level": "silver",
+    "path": "/Contacts",
     "primary": true
   },
   "ContactLoginId": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "ContactPassword": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "OriginatingSystemContactKey": {
     "type": "string",
     "maxLength": 255,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "OriginatingSystemName": {
     "type": "string",
     "maxLength": 255,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "OwnerMemberKey": {
     "type": "string",
     "maxLength": 255,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "OwnerMemberID": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "NamePrefix": {
     "type": "string",
     "maxLength": 10,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "FirstName": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "MiddleName": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "LastName": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "NameSuffix": {
     "type": "string",
     "maxLength": 10,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "FullName": {
     "type": "string",
     "maxLength": 150,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "Nickname": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "ReferredBy": {
     "type": "string",
     "maxLength": 150,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "JobTitle": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "Notes": {
     "type": "string",
     "maxLength": 1024,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "HomeAddress1": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "HomeAddress2": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "HomeCity": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "HomeStateOrProvince": {
     "type": "string",
     "maxLength": 2,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "HomePostalCode": {
     "type": "string",
     "maxLength": 10,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "HomePostalCodePlus4": {
     "type": "string",
     "maxLength": 4,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "HomeCarrierRoute": {
     "type": "string",
     "maxLength": 9,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "HomeCountyOrParish": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "HomeCountry": {
     "type": "string",
     "maxLength": 2,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "WorkAddress1": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "WorkAddress2": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "WorkCity": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "WorkStateOrProvince": {
     "type": "string",
     "maxLength": 2,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "WorkPostalCode": {
     "type": "string",
     "maxLength": 10,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "WorkPostalCodePlus4": {
     "type": "string",
     "maxLength": 4,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "WorkCarrierRoute": {
     "type": "string",
     "maxLength": 9,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "WorkCountyOrParish": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "WorkCountry": {
     "type": "string",
     "maxLength": 2,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "OtherAddress1": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "OtherAddress2": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "OtherCity": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "OtherStateOrProvince": {
     "type": "string",
     "maxLength": 2,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "OtherPostalCode": {
     "type": "string",
     "maxLength": 10,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "OtherPostalCodePlus4": {
     "type": "string",
     "maxLength": 4,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "OtherCarrierRoute": {
     "type": "string",
     "maxLength": 9,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "OtherCountyOrParish": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "OtherCountry": {
     "type": "string",
     "maxLength": 2,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "PreferredAddress": {
     "type": "string",
     "maxLength": 255,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "PreferredPhone": {
     "type": "string",
     "maxLength": 255,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "Email": {
     "type": "string",
     "maxLength": 80,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "Email2": {
     "type": "string",
     "maxLength": 80,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "Email3": {
     "type": "string",
     "maxLength": 80,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "OfficePhone": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "OfficePhoneExt": {
     "type": "number",
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "MobilePhone": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "DirectPhone": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "HomePhone": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "HomeFax": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "BusinessFax": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "Pager": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "VoiceMail": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "VoiceMailExt": {
     "type": "number",
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "TollFreePhone": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "PhoneTTYTTD": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "OtherPhoneType": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Contacts",
+    "level": "silver",
+    "path": "/Contacts",
     "repeating": true
   },
   "OtherPhones": [
@@ -317,28 +379,33 @@
       "Number": {
         "type": "string",
         "maxLength": 16,
-        "group": "/Contacts"
+        "level": "silver",
+        "path": "/Contacts"
       },
       "Ext": {
         "type": "number",
-        "group": "/Contacts"
+        "level": "silver",
+        "path": "/Contacts"
       }
     }
   ],
   "Company": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "Department": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "SocialMediaType": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Contacts",
+    "level": "silver",
+    "path": "/Contacts",
     "repeating": true
   },
   "SocialMedias": [
@@ -349,93 +416,111 @@
       "UrlOrId": {
         "type": "string",
         "maxLength": 8000,
-        "group": "/Contacts"
+        "level": "silver",
+        "path": "/Contacts"
       }
     }
   ],
   "Birthdate": {
     "type": "date",
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "Anniversary": {
     "type": "date",
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "OriginalEntryTimestamp": {
     "type": "date",
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "ModificationTimestamp": {
     "type": "date",
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "UserDefinedFieldName[#]": {
     "type": "string",
     "maxLength": 500,
-    "group": "/Contacts",
+    "level": "silver",
+    "path": "/Contacts",
     "repeating": true
   },
   "UserDefinedFieldValue[#]": {
     "type": "string",
     "maxLength": 500,
-    "group": "/Contacts",
+    "level": "silver",
+    "path": "/Contacts",
     "repeating": true
   },
   "AssistantName": {
     "type": "string",
     "maxLength": 150,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "AssistantPhone": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "AssistantPhoneExt": {
     "type": "number",
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "AssistantEmail": {
     "type": "string",
     "maxLength": 80,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "SpousePartnerName": {
     "type": "string",
     "maxLength": 150,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "Children": {
     "type": "string",
     "maxLength": 150,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "Gender": {
     "type": "string",
     "maxLength": 6,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "Language": {
     "type": [
       "string"
     ],
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "Groups": {
     "type": [
       "string"
     ],
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "ContactStatus": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   },
   "ContactType": {
     "type": [
       "string"
     ],
-    "group": "/Contacts"
+    "level": "silver",
+    "path": "/Contacts"
   }
 }

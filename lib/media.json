@@ -2,134 +2,148 @@
   "MediaKey": {
     "type": "string",
     "maxLength": 255,
-    "core": true,
-    "group": "/Media",
+    "level": "core",
+    "path": "/Media",
     "primary": true
   },
   "ResourceRecordKey": {
     "type": "string",
     "maxLength": 255,
-    "core": true,
-    "group": "/Media"
+    "level": "core",
+    "path": "/Media"
   },
   "ResourceRecordID": {
     "type": "string",
     "maxLength": 255,
-    "core": true,
-    "group": "/Media"
+    "level": "core",
+    "path": "/Media"
   },
   "OriginatingSystemMediaKey": {
     "type": "string",
     "maxLength": 255,
-    "core": true,
-    "group": "/Media"
+    "level": "core",
+    "path": "/Media"
   },
   "OriginatingSystemName": {
     "type": "string",
     "maxLength": 255,
-    "group": "/Media"
+    "level": "",
+    "path": "/Media"
   },
   "MediaObjectID": {
     "type": "string",
     "maxLength": 255,
-    "core": true,
-    "group": "/Media"
+    "level": "core",
+    "path": "/Media"
   },
   "ChangedByMemberID": {
     "type": "string",
     "maxLength": 255,
-    "core": true,
-    "group": "/Media"
+    "level": "core",
+    "path": "/Media"
   },
   "ChangedByMemberKey": {
     "type": "string",
     "maxLength": 255,
-    "core": true,
-    "group": "/Media"
+    "level": "core",
+    "path": "/Media"
   },
   "MediaCategory": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Media"
+    "level": "bronze",
+    "path": "/Media"
   },
   "MimeType": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Media"
+    "level": "bronze",
+    "path": "/Media"
   },
   "ShortDescription": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Media"
+    "level": "bronze",
+    "path": "/Media"
   },
   "LongDescription": {
     "type": "string",
     "maxLength": 1024,
-    "group": "/Media"
+    "level": "bronze",
+    "path": "/Media"
   },
   "ModificationTimestamp": {
     "type": "date",
-    "core": true,
-    "group": "/Media"
+    "level": "core",
+    "path": "/Media"
   },
   "MediaModificationTimestamp": {
     "type": "date",
-    "group": "/Media"
+    "level": "bronze",
+    "path": "/Media"
   },
   "MediaURL": {
     "type": "string",
     "maxLength": 8000,
-    "core": true,
-    "group": "/Media"
+    "level": "core",
+    "path": "/Media"
   },
   "MediaHTML": {
     "type": "string",
     "maxLength": 8500,
-    "group": "/Media"
+    "level": "bronze",
+    "path": "/Media"
   },
   "Order": {
     "type": "number",
-    "core": true,
-    "group": "/Media"
+    "level": "core",
+    "path": "/Media"
   },
   "Group": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Media"
+    "level": "bronze",
+    "path": "/Media"
   },
   "ImageWidth": {
     "type": "number",
-    "group": "/Media"
+    "level": "bronze",
+    "path": "/Media"
   },
   "ImageHeight": {
     "type": "number",
-    "group": "/Media"
+    "level": "bronze",
+    "path": "/Media"
   },
   "ImageSizeDescription": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Media"
+    "level": "bronze",
+    "path": "/Media"
   },
   "ResourceName": {
     "type": "string",
     "maxLength": 50,
-    "core": true,
-    "group": "/Media"
+    "level": "core",
+    "path": "/Media"
   },
   "ClassName": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Media"
+    "level": "bronze",
+    "path": "/Media"
   },
   "Permission": {
     "type": [
       "string"
     ],
-    "group": "/Media"
+    "level": "bronze",
+    "path": "/Media"
   },
   "MediaStatus": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Media"
+    "level": "bronze",
+    "path": "/Media"
   }
 }
