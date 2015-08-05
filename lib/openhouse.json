@@ -2,101 +2,122 @@
   "OpenHouseKey": {
     "type": "string",
     "maxLength": 255,
-    "group": "/OpenHouse",
+    "level": "core",
+    "path": "/OpenHouse",
     "primary": true
   },
   "OpenHouseId": {
     "type": "string",
     "maxLength": 255,
-    "group": "/OpenHouse"
+    "level": "core",
+    "path": "/OpenHouse"
   },
   "OriginatingSystemKey": {
     "type": "string",
     "maxLength": 255,
-    "group": "/OpenHouse"
+    "level": "core",
+    "path": "/OpenHouse"
   },
   "OriginatingSystemName": {
     "type": "string",
     "maxLength": 255,
-    "group": "/OpenHouse"
+    "level": "bronze",
+    "path": "/OpenHouse"
   },
   "ListingKey": {
     "type": "string",
     "maxLength": 255,
-    "group": "/OpenHouse/Listing"
+    "level": "core",
+    "path": "/OpenHouse"
   },
   "ListingId": {
     "type": "string",
     "maxLength": 255,
-    "group": "/OpenHouse/Listing"
+    "level": "core",
+    "path": "/OpenHouse"
   },
   "ModificationTimestamp": {
     "type": "date",
-    "group": "/OpenHouse/OpenHouseDates"
+    "level": "core",
+    "path": "/OpenHouse"
   },
   "OriginalEntryTimestamp": {
     "type": "date",
-    "group": "/OpenHouse/OpenHouseDates"
+    "level": "bronze",
+    "path": "/OpenHouse"
   },
   "OpenHouseDate": {
     "type": "date",
-    "group": "/OpenHouse/OpenHouseDates"
+    "level": "core",
+    "path": "/OpenHouse"
   },
   "OpenHouseStartTime": {
     "type": "date",
-    "group": "/OpenHouse/OpenHouseDates"
+    "level": "core",
+    "path": "/OpenHouse"
   },
   "OpenHouseEndTime": {
     "type": "date",
-    "group": "/OpenHouse/OpenHouseDates"
+    "level": "core",
+    "path": "/OpenHouse"
   },
   "ShowingAgentMlsID": {
     "type": "string",
     "maxLength": 25,
-    "group": "/OpenHouse/AgentOffice"
+    "level": "core",
+    "path": "/OpenHouse"
   },
   "ShowingAgentKey": {
     "type": "string",
     "maxLength": 255,
-    "group": "/OpenHouse/AgentOffice"
+    "level": "core",
+    "path": "/OpenHouse"
   },
   "ShowingAgentFirstName": {
     "type": "string",
     "maxLength": 50,
-    "group": "/OpenHouse/AgentOffice"
+    "level": "core",
+    "path": "/OpenHouse"
   },
   "ShowingAgentLastName": {
     "type": "string",
     "maxLength": 50,
-    "group": "/OpenHouse/AgentOffice"
+    "level": "core",
+    "path": "/OpenHouse"
   },
   "OpenHouseType": {
     "type": "string",
     "maxLength": 25,
-    "group": "/OpenHouse"
+    "level": "core",
+    "path": "/OpenHouse"
   },
   "AppointmentRequiredYN": {
     "type": "boolean",
-    "group": "/OpenHouse"
+    "level": "bronze",
+    "path": "/OpenHouse"
   },
   "Refreshments": {
     "type": "string",
     "maxLength": 255,
-    "group": "/OpenHouse"
+    "level": "bronze",
+    "path": "/OpenHouse"
   },
   "Attended": {
     "type": "string",
     "maxLength": 25,
-    "group": "/OpenHouse"
+    "level": "bronze",
+    "path": "/OpenHouse"
   },
   "OpenHouseRemarks": {
     "type": "string",
     "maxLength": 500,
-    "group": "/OpenHouse"
+    "level": "core",
+    "path": "/OpenHouse"
   },
   "Status": {
     "type": "string",
-    "maxLength": 1,
-    "group": "/OpenHouse"
+    "maxLength": 25,
+    "level": "core",
+    "path": "/OpenHouse"
   }
 }

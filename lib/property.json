@@ -2,1305 +2,1711 @@
   "ListingKey": {
     "type": "string",
     "maxLength": 255,
-    "group": "/Listing",
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing",
     "primary": true
   },
   "ListingId": {
     "type": "string",
     "maxLength": 255,
-    "group": "/Listing"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "ListAOR": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Listing"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "OriginatingSystemKey": {
     "type": "string",
     "maxLength": 255,
-    "group": "/Listing"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "OriginatingSystemName": {
     "type": "string",
     "maxLength": 255,
-    "group": "/Listing"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "ListingService": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Listing"
+    "level": "core",
+    "path": "/Listing"
   },
   "ListingAgreement": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Listing"
+    "level": "core",
+    "path": "/Listing"
   },
   "LeaseConsideredYN": {
     "type": "boolean",
-    "group": "/Listing"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "HomeWarrantyYN": {
     "type": "boolean",
-    "group": "/Listing"
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "CopyrightNotice": {
     "type": "string",
     "maxLength": 500,
-    "group": "/Listing"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "Disclaimer": {
     "type": "string",
     "maxLength": 500,
-    "group": "/Listing"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "StandardStatus": {
     "type": "string",
     "maxLength": 25,
     "lookup": "StandardStatus",
-    "group": "/Listing",
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing",
     "enum": [
       "Active",
       "Active Under Contract",
       "Pending",
+      "Hold",
       "Withdrawn",
       "Closed",
       "Expired",
       "Canceled",
       "Delete",
-      "Incomplete"
+      "Incomplete",
+      "Coming Soon"
     ]
   },
   "MlsStatus": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Listing"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "ApprovalStatus": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Listing"
+    "level": "silver",
+    "path": "/Listing"
   },
   "ListingContractDate": {
     "type": "date",
-    "group": "/Listing/Dates"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "ContractStatusChangeDate": {
     "type": "date",
-    "group": "/Listing/Dates"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "ExpirationDate": {
     "type": "date",
-    "group": "/Listing/Dates"
+    "level": "core",
+    "path": "/Listing"
   },
   "CancelationDate": {
     "type": "date",
-    "group": "/Listing/Dates"
+    "level": "core",
+    "path": "/Listing"
   },
   "ContingentDate": {
     "type": "date",
-    "group": "/Listing/Dates"
+    "level": "core",
+    "path": "/Listing"
   },
   "WithdrawnDate": {
     "type": "date",
-    "group": "/Listing/Dates"
+    "level": "core",
+    "path": "/Listing"
   },
   "PurchaseContractDate": {
     "type": "date",
-    "group": "/Listing/Dates"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "CloseDate": {
     "type": "date",
-    "group": "/Listing/Dates"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "OnMarketDate": {
     "type": "date",
-    "group": "/Listing/Dates"
+    "level": "core",
+    "path": "/Listing"
   },
   "OffMarketDate": {
     "type": "date",
-    "group": "/Listing/Dates"
+    "level": "core",
+    "path": "/Listing"
   },
   "PendingTimestamp": {
     "type": "date",
-    "group": "/Listing/Dates"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "ModificationTimestamp": {
     "type": "date",
-    "group": "/Listing/Dates"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "StatusChangeTimestamp": {
     "type": "date",
-    "group": "/Listing/Dates"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "PriceChangeTimestamp": {
     "type": "date",
-    "group": "/Listing/Dates"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "MajorChangeType": {
     "type": "string",
     "maxLength": 255,
-    "group": "/Listing/Dates"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "MajorChangeTimestamp": {
     "type": "date",
-    "group": "/Listing/Dates"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "OriginalEntryTimestamp": {
     "type": "date",
-    "group": "/Listing/Dates"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "OnMarketTimestamp": {
     "type": "date",
-    "group": "/Listing/Dates"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "OffMarketTimestamp": {
     "type": "date",
-    "group": "/Listing/Dates"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "DaysOnMarket": {
     "type": "number",
-    "group": "/Listing/Dates"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "CumulativeDaysOnMarket": {
     "type": "number",
-    "group": "/Listing/Dates"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "ClosePrice": {
     "type": "number",
-    "group": "/Listing/Price"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "ListPrice": {
     "type": "number",
-    "group": "/Listing/Price"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "OriginalListPrice": {
     "type": "number",
-    "group": "/Listing/Price"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "ListPriceLow": {
     "type": "number",
-    "group": "/Listing/Price"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "PreviousListPrice": {
     "type": "number",
-    "group": "/Listing/Price"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "BuyerAgencyCompensation": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Listing/Compensation"
+    "level": "core",
+    "path": "/Listing"
   },
   "BuyerAgencyCompensationType": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Listing/Compensation"
+    "lookup": "BuyerAgencyCompensationType",
+    "level": "core",
+    "path": "/Listing",
+    "enum": [
+      "$",
+      "%"
+    ]
   },
   "SubAgencyCompensation": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Listing/Compensation"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "SubAgencyCompensationType": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Listing/Compensation"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "TransactionBrokerCompensation": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Listing/Compensation"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "TransactionBrokerCompensationType": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Listing/Compensation"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "DualVariableCompensationYN": {
     "type": "boolean",
-    "group": "/Listing/Compensation"
+    "level": "core",
+    "path": "/Listing"
   },
   "LeaseRenewalCompensation": {
     "type": [
       "string"
     ],
-    "group": "/Listing/Compensation"
-  },
-  "VOWEntireListingDisplayYN": {
-    "type": "boolean",
-    "group": "/Listing/Marketing"
-  },
-  "VOWAddressDisplayYN": {
-    "type": "boolean",
-    "group": "/Listing/Marketing"
-  },
-  "VOWConsumerCommentYN": {
-    "type": "boolean",
-    "group": "/Listing/Marketing"
-  },
-  "VOWAutomatedValuationDisplayYN": {
-    "type": "boolean",
-    "group": "/Listing/Marketing"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "SignOnPropertyYN": {
     "type": "boolean",
-    "group": "/Listing/Marketing"
+    "level": "bronze",
+    "path": "/Listing"
   },
-  "IDXEntireListingDisplayYN": {
+  "InternetEntireListingDisplayYN": {
     "type": "boolean",
-    "group": "/Listing/Marketing"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
-  "IDXAddressDisplayYN": {
+  "InternetAddressDisplayYN": {
     "type": "boolean",
-    "group": "/Listing/Marketing"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
-  "IDXConsumerCommentYN": {
+  "InternetConsumerCommentYN": {
     "type": "boolean",
-    "group": "/Listing/Marketing"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
-  "IDXAutomatedValuationDisplayYN": {
+  "InternetAutomatedValuationDisplayYN": {
     "type": "boolean",
-    "group": "/Listing/Marketing"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
+  },
+  "SyndicateTo": {
+    "type": [
+      "string"
+    ],
+    "level": "gold",
+    "path": "/Listing"
   },
   "PhotosCount": {
     "type": "number",
-    "group": "/Listing/Media"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "PhotosChangeTimestamp": {
     "type": "date",
-    "group": "/Listing/Media"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "VideosCount": {
     "type": "number",
-    "group": "/Listing/Media"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "VideosChangeTimestamp": {
     "type": "date",
-    "group": "/Listing/Media"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "DocumentsCount": {
     "type": "number",
-    "group": "/Listing/Media"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "DocumentsChangeTimestamp": {
     "type": "date",
-    "group": "/Listing/Media"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "DocumentsAvailable": {
     "type": [
       "string"
     ],
-    "group": "/Listing/Media"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "VirtualTourURLUnbranded": {
     "type": "string",
     "maxLength": 8000,
-    "group": "/Listing/Marketing"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "VirtualTourURLBranded": {
     "type": "string",
     "maxLength": 8000,
-    "group": "/Listing/Marketing"
+    "level": "",
+    "path": "/Listing"
   },
   "PublicRemarks": {
     "type": "string",
     "maxLength": 4000,
-    "group": "/Listing/Remarks"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "SyndicationRemarks": {
     "type": "string",
     "maxLength": 4000,
-    "group": "/Listing/Remarks"
+    "level": "core",
+    "path": "/Listing"
   },
   "PrivateRemarks": {
     "type": "string",
     "maxLength": 4000,
-    "group": "/Listing/Remarks"
+    "level": "core",
+    "path": "/Listing"
   },
   "PrivateOfficeRemarks": {
     "type": "string",
     "maxLength": 4000,
-    "group": "/Listing/Remarks"
+    "level": "",
+    "path": "/Listing"
   },
   "ShowingInstructions": {
     "type": "string",
     "maxLength": 4000,
-    "group": "/Listing/Showing"
+    "level": "core",
+    "path": "/Listing"
   },
-  "ShowingContactPhoneNumber": {
+  "ShowingContactPhone": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Listing/Showing"
+    "level": "core",
+    "path": "/Listing"
   },
-  "ShowingContactPhoneExtension": {
-    "type": "number",
-    "group": "/Listing/Showing"
+  "ShowingContactPhoneExt": {
+    "type": "string",
+    "maxLength": 10,
+    "level": "core",
+    "path": "/Listing"
   },
   "ShowingContactName": {
     "type": "string",
     "maxLength": 40,
-    "group": "/Listing/Showing"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "ShowingContactType": {
     "type": [
       "string"
     ],
-    "group": "/Listing/Showing"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "LockBoxLocation": {
     "type": "string",
     "maxLength": 255,
-    "group": "/Listing/Showing"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "LockBoxType": {
-    "type": "string",
-    "maxLength": 255,
-    "group": "/Listing/Showing"
+    "type": [
+      "string"
+    ],
+    "level": "bronze",
+    "path": "/Listing"
   },
   "LockBoxSerialNumber": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Listing/Showing"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "AccessCode": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Listing/Showing"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "Exclusions": {
     "type": "string",
     "maxLength": 1024,
-    "group": "/Listing/Contract"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "Inclusions": {
     "type": "string",
     "maxLength": 1024,
-    "group": "/Listing/Contract"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "Disclosures": {
     "type": [
       "string"
     ],
-    "group": "/Listing/Contract"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "Ownership": {
     "type": "string",
     "maxLength": 1024,
-    "group": "/Listing/Contract"
+    "level": "silver",
+    "path": "/Listing"
   },
   "SpecialListingConditions": {
     "type": [
       "string"
     ],
-    "group": "/Listing/Contract"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "ListingTerms": {
     "type": [
       "string"
     ],
-    "group": "/Listing/Contract"
+    "level": "bronze",
+    "path": "/Listing"
   },
-  "ListingFinancing": {
+  "CurrentFinancing": {
     "type": [
       "string"
     ],
-    "group": "/Listing/Contract"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "BuyerFinancing": {
     "type": [
       "string"
     ],
-    "group": "/Listing/Closing"
+    "level": "bronze",
+    "path": "/Listing"
+  },
+  "Concessions": {
+    "type": "string",
+    "maxLength": 25,
+    "level": "silver",
+    "path": "/Listing"
+  },
+  "ConcessionsComments": {
+    "type": "string",
+    "maxLength": 100,
+    "level": "silver",
+    "path": "/Listing"
+  },
+  "ConcessionsAmount": {
+    "type": "number",
+    "level": "silver",
+    "path": "/Listing"
   },
   "Contingency": {
     "type": "string",
     "maxLength": 1024,
-    "group": "/Listing/Closing"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "Possession": {
     "type": [
       "string"
     ],
-    "group": "/Listing/Closing"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "AvailabilityDate": {
     "type": "date",
-    "group": "/Listing/Closing"
-  },
-  "ClosingTerms": {
-    "type": [
-      "string"
-    ],
-    "group": "/Listing/Closing"
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "StreetNumber": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Property/Location/Address"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "StreetNumberNumeric": {
     "type": "number",
-    "group": "/Property/Location/Address"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "StreetDirPrefix": {
     "type": "string",
     "maxLength": 15,
-    "group": "/Property/Location/Address"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "StreetName": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Property/Location/Address"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "StreetAdditionalInfo": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Property/Location/Address"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "StreetSuffix": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Property/Location/Address"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "StreetSuffixModifier": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Property/Location/Address"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "StreetDirSuffix": {
     "type": "string",
     "maxLength": 15,
-    "group": "/Property/Location/Address"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "UnitNumber": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Property/Location/Address"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "City": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Property/Location/Address"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "StateOrProvince": {
     "type": "string",
     "maxLength": 2,
-    "group": "/Property/Location/Address"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "Country": {
     "type": "string",
     "maxLength": 2,
-    "group": "/Property/Location/Address"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "PostalCode": {
     "type": "string",
     "maxLength": 10,
-    "group": "/Property/Location/Address"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "PostalCodePlus4": {
     "type": "string",
     "maxLength": 4,
-    "group": "/Property/Location/Address"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "CarrierRoute": {
     "type": "string",
     "maxLength": 9,
-    "group": "/Property/Location/Address"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "UnparsedAddress": {
     "type": "string",
     "maxLength": 255,
-    "group": "/Property/Location/Address"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "PostalCity": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Property/Location/Address"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "CountyOrParish": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Property/Location/Address"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "Township": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Property/Location/Address"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "MLSAreaMajor": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Property/Location/Area"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "MLSAreaMinor": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Property/Location/Area"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "SubdivisionName": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Property/Location/Area"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "Latitude": {
     "type": "number",
-    "group": "/Property/Location/GIS"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "Longitude": {
     "type": "number",
-    "group": "/Property/Location/GIS"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "Elevation": {
     "type": "number",
-    "group": "/Property/Location/GIS"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "ElevationUnits": {
     "type": "string",
     "maxLength": 10,
-    "group": "/Property/Location/GIS"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "Directions": {
     "type": "string",
     "maxLength": 1024,
-    "group": "/Property/Location/GIS"
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "MapCoordinate": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Property/Location/GIS"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "MapCoordinateSource": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Property/Location/GIS"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "MapURL": {
     "type": "string",
     "maxLength": 8000,
-    "group": "/Property/Location/GIS"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "CrossStreet": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Property/Location/GIS"
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "ElementarySchool": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Property/Location/School"
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "ElementarySchoolDistrict": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Property/Location/School"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "MiddleOrJuniorSchool": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Property/Location/School"
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "MiddleOrJuniorSchoolDistrict": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Property/Location/School"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "HighSchool": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Property/Location/School"
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "HighSchoolDistrict": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Property/Location/School"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "ListAgentNamePrefix": {
     "type": "string",
     "maxLength": 10,
-    "group": "/Listing/AgentOffice/ListAgent"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "ListAgentFirstName": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Listing/AgentOffice/ListAgent"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "ListAgentMiddleName": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Listing/AgentOffice/ListAgent"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "ListAgentLastName": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Listing/AgentOffice/ListAgent"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "ListAgentNameSuffix": {
     "type": "string",
     "maxLength": 10,
-    "group": "/Listing/AgentOffice/ListAgent"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "ListAgentFullName": {
     "type": "string",
     "maxLength": 150,
-    "group": "/Listing/AgentOffice/ListAgent"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "ListAgentPreferredPhone": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Listing/AgentOffice/ListAgent"
+    "level": "core",
+    "path": "/Listing"
   },
   "ListAgentPreferredPhoneExt": {
-    "type": "number",
-    "group": "/Listing/AgentOffice/ListAgent"
+    "type": "string",
+    "maxLength": 10,
+    "level": "core",
+    "path": "/Listing"
   },
   "ListAgentOfficePhone": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Listing/AgentOffice/ListAgent"
+    "level": "core",
+    "path": "/Listing"
   },
   "ListAgentOfficePhoneExt": {
-    "type": "number",
-    "group": "/Listing/AgentOffice/ListAgent"
+    "type": "string",
+    "maxLength": 10,
+    "level": "core",
+    "path": "/Listing"
   },
   "ListAgentCellPhone": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Listing/AgentOffice/ListAgent"
+    "level": "core",
+    "path": "/Listing"
   },
   "ListAgentDirectPhone": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Listing/AgentOffice/ListAgent"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "ListAgentHomePhone": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Listing/AgentOffice/ListAgent"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "ListAgentFax": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Listing/AgentOffice/ListAgent"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "ListAgentPager": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Listing/AgentOffice/ListAgent"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "ListAgentVoiceMail": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Listing/AgentOffice/ListAgent"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "ListAgentVoiceMailExt": {
-    "type": "number",
-    "group": "/Listing/AgentOffice/ListAgent"
+    "type": "string",
+    "maxLength": 10,
+    "level": "bronze",
+    "path": "/Listing"
   },
   "ListAgentTollFreePhone": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Listing/AgentOffice/ListAgent"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "ListAgentEmail": {
     "type": "string",
     "maxLength": 80,
-    "group": "/Listing/AgentOffice/ListAgent"
+    "level": "core",
+    "path": "/Listing"
   },
   "ListAgentURL": {
     "type": "string",
     "maxLength": 8000,
-    "group": "/Listing/AgentOffice/ListAgent"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "ListAgentKey": {
     "type": "string",
     "maxLength": 255,
-    "group": "/Listing/AgentOffice/ListAgent"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "ListAgentAOR": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Listing/AgentOffice/ListAgent"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "ListAgentMlsId": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Listing/AgentOffice/ListAgent"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "ListAgentStateLicense": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Listing/AgentOffice/ListAgent"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "ListAgentDesignation": {
     "type": [
       "string"
     ],
-    "group": "/Listing/AgentOffice/ListAgent"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "ListOfficeName": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Listing/AgentOffice/ListOffice"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "ListOfficePhone": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Listing/AgentOffice/ListOffice"
+    "level": "core",
+    "path": "/Listing"
   },
   "ListOfficePhoneExt": {
-    "type": "number",
-    "group": "/Listing/AgentOffice/ListOffice"
+    "type": "string",
+    "maxLength": 10,
+    "level": "core",
+    "path": "/Listing"
   },
   "ListOfficeFax": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Listing/AgentOffice/ListOffice"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "ListOfficeEmail": {
     "type": "string",
     "maxLength": 80,
-    "group": "/Listing/AgentOffice/ListOffice"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "ListOfficeURL": {
     "type": "string",
     "maxLength": 8000,
-    "group": "/Listing/AgentOffice/ListOffice"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "ListOfficeKey": {
     "type": "string",
     "maxLength": 255,
-    "group": "/Listing/AgentOffice/ListOffice"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "ListOfficeAOR": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Listing/AgentOffice/ListOffice"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "ListOfficeMlsId": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Listing/AgentOffice/ListOffice"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "CoListAgentNamePrefix": {
     "type": "string",
     "maxLength": 10,
-    "group": "/Listing/AgentOffice/CoListAgent"
+    "level": "",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "CoListAgentFirstName": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Listing/AgentOffice/CoListAgent"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "CoListAgentMiddleName": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Listing/AgentOffice/CoListAgent"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "CoListAgentLastName": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Listing/AgentOffice/CoListAgent"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "CoListAgentNameSuffix": {
     "type": "string",
     "maxLength": 10,
-    "group": "/Listing/AgentOffice/CoListAgent"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "CoListAgentFullName": {
     "type": "string",
     "maxLength": 150,
-    "group": "/Listing/AgentOffice/CoListAgent"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "CoListAgentPreferredPhone": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Listing/AgentOffice/CoListAgent"
+    "level": "core",
+    "path": "/Listing"
   },
   "CoListAgentPreferredPhoneExt": {
-    "type": "number",
-    "group": "/Listing/AgentOffice/CoListAgent"
+    "type": "string",
+    "maxLength": 10,
+    "level": "core",
+    "path": "/Listing"
   },
   "CoListAgentOfficePhone": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Listing/AgentOffice/CoListAgent"
+    "level": "core",
+    "path": "/Listing"
   },
   "CoListAgentOfficePhoneExt": {
-    "type": "number",
-    "group": "/Listing/AgentOffice/CoListAgent"
+    "type": "string",
+    "maxLength": 10,
+    "level": "core",
+    "path": "/Listing"
   },
   "CoListAgentCellPhone": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Listing/AgentOffice/CoListAgent"
+    "level": "core",
+    "path": "/Listing"
   },
   "CoListAgentDirectPhone": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Listing/AgentOffice/CoListAgent"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "CoListAgentHomePhone": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Listing/AgentOffice/CoListAgent"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "CoListAgentFax": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Listing/AgentOffice/CoListAgent"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "CoListAgentPager": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Listing/AgentOffice/CoListAgent"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "CoListAgentVoiceMail": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Listing/AgentOffice/CoListAgent"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "CoListAgentVoiceMailExt": {
-    "type": "number",
-    "group": "/Listing/AgentOffice/CoListAgent"
+    "type": "string",
+    "maxLength": 10,
+    "level": "bronze",
+    "path": "/Listing"
   },
   "CoListAgentTollFreePhone": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Listing/AgentOffice/CoListAgent"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "CoListAgentEmail": {
     "type": "string",
     "maxLength": 80,
-    "group": "/Listing/AgentOffice/CoListAgent"
+    "level": "core",
+    "path": "/Listing"
   },
   "CoListAgentURL": {
     "type": "string",
     "maxLength": 8000,
-    "group": "/Listing/AgentOffice/CoListAgent"
+    "level": "",
+    "path": "/Listing"
   },
   "CoListAgentKey": {
     "type": "string",
     "maxLength": 255,
-    "group": "/Listing/AgentOffice/CoListAgent"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "CoListAgentAOR": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Listing/AgentOffice/CoListAgent"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "CoListAgentMlsId": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Listing/AgentOffice/CoListAgent"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "CoListAgentStateLicense": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Listing/AgentOffice/CoListAgent"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "CoListAgentDesignation": {
     "type": [
       "string"
     ],
-    "group": "/Listing/AgentOffice/CoListAgent"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "CoListOfficeName": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Listing/AgentOffice/CoListOffice"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "CoListOfficePhone": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Listing/AgentOffice/CoListOffice"
+    "level": "core",
+    "path": "/Listing"
   },
   "CoListOfficePhoneExt": {
-    "type": "number",
-    "group": "/Listing/AgentOffice/CoListOffice"
+    "type": "string",
+    "maxLength": 10,
+    "level": "core",
+    "path": "/Listing"
   },
   "CoListOfficeFax": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Listing/AgentOffice/CoListOffice"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "CoListOfficeEmail": {
     "type": "string",
     "maxLength": 80,
-    "group": "/Listing/AgentOffice/CoListOffice"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "CoListOfficeURL": {
     "type": "string",
     "maxLength": 8000,
-    "group": "/Listing/AgentOffice/CoListOffice"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "CoListOfficeKey": {
     "type": "string",
     "maxLength": 255,
-    "group": "/Listing/AgentOffice/CoListOffice"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "CoListOfficeAOR": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Listing/AgentOffice/CoListOffice"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "CoListOfficeMlsId": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Listing/AgentOffice/CoListOffice"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
   "BuyerAgentNamePrefix": {
     "type": "string",
     "maxLength": 10,
-    "group": "/Listing/AgentOffice/BuyerAgent"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "BuyerAgentFirstName": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Listing/AgentOffice/BuyerAgent"
+    "level": "core",
+    "path": "/Listing"
   },
   "BuyerAgentMiddleName": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Listing/AgentOffice/BuyerAgent"
+    "level": "core",
+    "path": "/Listing"
   },
   "BuyerAgentLastName": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Listing/AgentOffice/BuyerAgent"
+    "level": "core",
+    "path": "/Listing"
   },
   "BuyerAgentNameSuffix": {
     "type": "string",
     "maxLength": 10,
-    "group": "/Listing/AgentOffice/BuyerAgent"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "BuyerAgentFullName": {
     "type": "string",
     "maxLength": 150,
-    "group": "/Listing/AgentOffice/BuyerAgent"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "BuyerAgentPreferredPhone": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Listing/AgentOffice/BuyerAgent"
+    "level": "core",
+    "path": "/Listing"
   },
   "BuyerAgentPreferredPhoneExt": {
-    "type": "number",
-    "group": "/Listing/AgentOffice/BuyerAgent"
+    "type": "string",
+    "maxLength": 10,
+    "level": "core",
+    "path": "/Listing"
   },
   "BuyerAgentOfficePhone": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Listing/AgentOffice/BuyerAgent"
+    "level": "core",
+    "path": "/Listing"
   },
   "BuyerAgentOfficePhoneExt": {
-    "type": "number",
-    "group": "/Listing/AgentOffice/BuyerAgent"
+    "type": "string",
+    "maxLength": 10,
+    "level": "core",
+    "path": "/Listing"
   },
   "BuyerAgentCellPhone": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Listing/AgentOffice/BuyerAgent"
+    "level": "core",
+    "path": "/Listing"
   },
   "BuyerAgentDirectPhone": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Listing/AgentOffice/BuyerAgent"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "BuyerAgentHomePhone": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Listing/AgentOffice/BuyerAgent"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "BuyerAgentFax": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Listing/AgentOffice/BuyerAgent"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "BuyerAgentPager": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Listing/AgentOffice/BuyerAgent"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "BuyerAgentVoiceMail": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Listing/AgentOffice/BuyerAgent"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "BuyerAgentVoiceMailExt": {
-    "type": "number",
-    "group": "/Listing/AgentOffice/BuyerAgent"
+    "type": "string",
+    "maxLength": 10,
+    "level": "bronze",
+    "path": "/Listing"
   },
   "BuyerAgentTollFreePhone": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Listing/AgentOffice/BuyerAgent"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "BuyerAgentEmail": {
     "type": "string",
     "maxLength": 80,
-    "group": "/Listing/AgentOffice/BuyerAgent"
+    "level": "core",
+    "path": "/Listing"
   },
   "BuyerAgentURL": {
     "type": "string",
     "maxLength": 8000,
-    "group": "/Listing/AgentOffice/BuyerAgent"
+    "level": "",
+    "path": "/Listing"
   },
   "BuyerAgentKey": {
     "type": "string",
     "maxLength": 255,
-    "group": "/Listing/AgentOffice/BuyerAgent"
+    "level": "core",
+    "path": "/Listing"
   },
   "BuyerAgentAOR": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Listing/AgentOffice/BuyerAgent"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "BuyerAgentMlsId": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Listing/AgentOffice/BuyerAgent"
+    "level": "core",
+    "path": "/Listing"
   },
   "BuyerAgentStateLicense": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Listing/AgentOffice/BuyerAgent"
+    "level": "core",
+    "path": "/Listing"
   },
   "BuyerAgentDesignation": {
     "type": [
       "string"
     ],
-    "group": "/Listing/AgentOffice/BuyerAgent"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "BuyerOfficeName": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Listing/AgentOffice/BuyerOffice"
+    "level": "core",
+    "path": "/Listing"
   },
   "BuyerOfficePhone": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Listing/AgentOffice/BuyerOffice"
+    "level": "core",
+    "path": "/Listing"
   },
   "BuyerOfficePhoneExt": {
-    "type": "number",
-    "group": "/Listing/AgentOffice/BuyerOffice"
+    "type": "string",
+    "maxLength": 10,
+    "level": "core",
+    "path": "/Listing"
   },
   "BuyerOfficeFax": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Listing/AgentOffice/BuyerOffice"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "BuyerOfficeEmail": {
     "type": "string",
     "maxLength": 80,
-    "group": "/Listing/AgentOffice/BuyerOffice"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "BuyerOfficeURL": {
     "type": "string",
     "maxLength": 8000,
-    "group": "/Listing/AgentOffice/BuyerOffice"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "BuyerOfficeKey": {
     "type": "string",
     "maxLength": 255,
-    "group": "/Listing/AgentOffice/BuyerOffice"
+    "level": "core",
+    "path": "/Listing"
   },
   "BuyerOfficeAOR": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Listing/AgentOffice/BuyerOffice"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "BuyerOfficeMlsId": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Listing/AgentOffice/BuyerOffice"
+    "level": "core",
+    "path": "/Listing"
   },
   "CoBuyerAgentNamePrefix": {
     "type": "string",
     "maxLength": 10,
-    "group": "/Listing/AgentOffice/CoBuyerAgent"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "CoBuyerAgentFirstName": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Listing/AgentOffice/CoBuyerAgent"
+    "level": "core",
+    "path": "/Listing"
   },
   "CoBuyerAgentMiddleName": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Listing/AgentOffice/CoBuyerAgent"
+    "level": "core",
+    "path": "/Listing"
   },
   "CoBuyerAgentLastName": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Listing/AgentOffice/CoBuyerAgent"
+    "level": "core",
+    "path": "/Listing"
   },
   "CoBuyerAgentNameSuffix": {
     "type": "string",
     "maxLength": 10,
-    "group": "/Listing/AgentOffice/CoBuyerAgent"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "CoBuyerAgentFullName": {
     "type": "string",
     "maxLength": 150,
-    "group": "/Listing/AgentOffice/CoBuyerAgent"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "CoBuyerAgentPreferredPhone": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Listing/AgentOffice/CoBuyerAgent"
+    "level": "core",
+    "path": "/Listing"
   },
   "CoBuyerAgentPreferredPhoneExt": {
-    "type": "number",
-    "group": "/Listing/AgentOffice/CoBuyerAgent"
+    "type": "string",
+    "maxLength": 10,
+    "level": "core",
+    "path": "/Listing"
   },
   "CoBuyerAgentOfficePhone": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Listing/AgentOffice/CoBuyerAgent"
+    "level": "core",
+    "path": "/Listing"
   },
   "CoBuyerAgentOfficePhoneExt": {
-    "type": "number",
-    "group": "/Listing/AgentOffice/CoBuyerAgent"
+    "type": "string",
+    "maxLength": 10,
+    "level": "core",
+    "path": "/Listing"
   },
   "CoBuyerAgentCellPhone": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Listing/AgentOffice/CoBuyerAgent"
+    "level": "core",
+    "path": "/Listing"
   },
   "CoBuyerAgentDirectPhone": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Listing/AgentOffice/CoBuyerAgent"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "CoBuyerAgentHomePhone": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Listing/AgentOffice/CoBuyerAgent"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "CoBuyerAgentFax": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Listing/AgentOffice/CoBuyerAgent"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "CoBuyerAgentPager": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Listing/AgentOffice/CoBuyerAgent"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "CoBuyerAgentVoiceMail": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Listing/AgentOffice/CoBuyerAgent"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "CoBuyerAgentVoiceMailExt": {
-    "type": "number",
-    "group": "/Listing/AgentOffice/CoBuyerAgent"
+    "type": "string",
+    "maxLength": 10,
+    "level": "bronze",
+    "path": "/Listing"
   },
   "CoBuyerAgentTollFreePhone": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Listing/AgentOffice/CoBuyerAgent"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "CoBuyerAgentEmail": {
     "type": "string",
     "maxLength": 80,
-    "group": "/Listing/AgentOffice/CoBuyerAgent"
+    "level": "core",
+    "path": "/Listing"
   },
   "CoBuyerAgentURL": {
     "type": "string",
     "maxLength": 8000,
-    "group": "/Listing/AgentOffice/CoBuyerAgent"
+    "level": "",
+    "path": "/Listing"
   },
   "CoBuyerAgentKey": {
     "type": "string",
     "maxLength": 255,
-    "group": "/Listing/AgentOffice/CoBuyerAgent"
+    "level": "core",
+    "path": "/Listing"
   },
   "CoBuyerAgentAOR": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Listing/AgentOffice/CoBuyerAgent"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "CoBuyerAgentMlsId": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Listing/AgentOffice/CoBuyerAgent"
+    "level": "core",
+    "path": "/Listing"
   },
   "CoBuyerAgentStateLicense": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Listing/AgentOffice/CoBuyerAgent"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "CoBuyerAgentDesignation": {
     "type": [
       "string"
     ],
-    "group": "/Listing/AgentOffice/CoBuyerAgent"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "CoBuyerOfficeName": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Listing/AgentOffice/CoBuyerOffice"
+    "level": "core",
+    "path": "/Listing"
   },
   "CoBuyerOfficePhone": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Listing/AgentOffice/CoBuyerOffice"
+    "level": "core",
+    "path": "/Listing"
   },
   "CoBuyerOfficePhoneExt": {
-    "type": "number",
-    "group": "/Listing/AgentOffice/CoBuyerOffice"
+    "type": "string",
+    "maxLength": 10,
+    "level": "core",
+    "path": "/Listing"
   },
   "CoBuyerOfficeFax": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Listing/AgentOffice/CoBuyerOffice"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "CoBuyerOfficeEmail": {
     "type": "string",
     "maxLength": 80,
-    "group": "/Listing/AgentOffice/CoBuyerOffice"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "CoBuyerOfficeURL": {
     "type": "string",
     "maxLength": 8000,
-    "group": "/Listing/AgentOffice/CoBuyerOffice"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "CoBuyerOfficeKey": {
     "type": "string",
     "maxLength": 255,
-    "group": "/Listing/AgentOffice/CoBuyerOffice"
+    "level": "core",
+    "path": "/Listing"
   },
   "CoBuyerOfficeAOR": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Listing/AgentOffice/CoBuyerOffice"
+    "level": "bronze",
+    "path": "/Listing"
   },
   "CoBuyerOfficeMlsId": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Listing/AgentOffice/CoBuyerOffice"
+    "level": "core",
+    "path": "/Listing"
   },
-  "ListTeamDisplayName": {
+  "ListTeamName": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Listing/AgentOffice/Team"
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
   },
-  "BuyerTeamDisplayName": {
+  "ListTeamKey": {
+    "type": "string",
+    "maxLength": 255,
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Listing"
+  },
+  "BuyerTeamName": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Listing/AgentOffice/Team"
+    "level": "silver",
+    "path": "/Listing"
+  },
+  "BuyerTeamKey": {
+    "type": "string",
+    "maxLength": 255,
+    "level": "silver",
+    "path": "/Listing"
   },
   "PropertyType": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Property"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "PropertySubType": {
     "type": "string",
     "maxLength": 50,
     "lookup": "PropertySubType",
-    "group": "/Property",
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Property",
     "enum": [
       "Apartment",
       "Boat Slip",
@@ -1318,32 +1724,38 @@
       "Townhouse",
       "Timeshare",
       "Triplex",
-      "Manufactured with 433"
+      "Manufactured on Land"
     ]
   },
   "AssociationYN": {
     "type": "boolean",
-    "group": "/Property/HOA"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "AssociationName": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Property/HOA"
+    "level": "bronze",
+    "path": "/Property"
   },
   "AssociationPhone": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Property/HOA"
+    "level": "bronze",
+    "path": "/Property"
   },
   "AssociationFee": {
     "type": "number",
-    "group": "/Property/HOA"
+    "level": "bronze",
+    "path": "/Property"
   },
   "AssociationFeeFrequency": {
     "type": "string",
     "maxLength": 25,
     "lookup": "FeeFrequency",
-    "group": "/Property/HOA",
+    "level": "bronze",
+    "path": "/Property",
     "enum": [
       "Daily",
       "Weekly",
@@ -1361,22 +1773,26 @@
   "AssociationName2": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Property/HOA"
+    "level": "bronze",
+    "path": "/Property"
   },
   "AssociationPhone2": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Property/HOA"
+    "level": "bronze",
+    "path": "/Property"
   },
   "AssociationFee2": {
     "type": "number",
-    "group": "/Property/HOA"
+    "level": "bronze",
+    "path": "/Property"
   },
   "AssociationFee2Frequency": {
     "type": "string",
     "maxLength": 25,
     "lookup": "FeeFrequency",
-    "group": "/Property/HOA",
+    "level": "bronze",
+    "path": "/Property",
     "enum": [
       "Daily",
       "Weekly",
@@ -1395,123 +1811,183 @@
     "type": [
       "string"
     ],
-    "group": "/Property/HOA"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "AssociationAmenities": {
     "type": [
       "string"
     ],
-    "group": "/Property/HOA"
+    "level": "platinum",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
+  },
+  "PetsAllowed": {
+    "type": [
+      "string"
+    ],
+    "lookup": "PetsAllowed",
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property",
+    "enum": [
+      "Yes",
+      "No",
+      "Call",
+      "Cats OK",
+      "Dogs OK",
+      "Number Limit",
+      "Size Limit",
+      "Breed Restrictions"
+    ]
   },
   "LotSizeArea": {
     "type": "number",
-    "group": "/Property/Characteristics"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "LotSizeSource": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Property/Characteristics"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "LotSizeUnits": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Property/Characteristics"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "LotSizeDimensions": {
     "type": "string",
     "maxLength": 150,
-    "group": "/Property/Characteristics"
+    "level": "gold",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "LotDimensionsSource": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Property/Characteristics"
+    "level": "gold",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "LotSizeAcres": {
     "type": "number",
-    "group": "/Property/Characteristics"
+    "level": "gold",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "LotSizeSquareFeet": {
     "type": "number",
-    "group": "/Property/Characteristics"
+    "level": "gold",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "FrontageType": {
     "type": [
       "string"
     ],
-    "group": "/Property/Characteristics"
+    "level": "gold",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "FrontageLength": {
     "type": "string",
     "maxLength": 255,
-    "group": "/Property/Characteristics"
+    "level": "gold",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "RoadFrontageType": {
     "type": [
       "string"
     ],
-    "group": "/Property/Characteristics"
+    "level": "gold",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "RoadSurfaceType": {
     "type": [
       "string"
     ],
-    "group": "/Property/Characteristics"
+    "level": "gold",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "RoadResponsibility": {
     "type": [
       "string"
     ],
-    "group": "/Property/Characteristics"
+    "level": "gold",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "OccupantName": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Property/OccupantOwner"
+    "level": "bronze",
+    "path": "/Property"
   },
   "OccupantPhone": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Property/OccupantOwner"
+    "level": "bronze",
+    "path": "/Property"
   },
   "OccupantType": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Property/OccupantOwner"
+    "level": "bronze",
+    "path": "/Property"
   },
   "OwnerName": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Property/OccupantOwner"
+    "level": "bronze",
+    "path": "/Property"
   },
   "OwnerPhone": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Property/OccupantOwner"
+    "level": "bronze",
+    "path": "/Property"
   },
   "AnchorsCoTenants": {
     "type": "string",
     "maxLength": 1024,
-    "group": "/Property/Characteristics"
+    "level": "platinum",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "LeaseTerm": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Property/Characteristics"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "LandLeaseYN": {
     "type": "boolean",
-    "group": "/Property/Characteristics"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "LandLeaseAmount": {
     "type": "number",
-    "group": "/Property/Characteristics"
+    "level": "bronze",
+    "path": "/Property"
   },
   "LandLeaseAmountFrequency": {
     "type": "string",
     "maxLength": 25,
     "lookup": "FeeFrequency",
-    "group": "/Property/Characteristics",
+    "level": "bronze",
+    "path": "/Property",
     "enum": [
       "Daily",
       "Weekly",
@@ -1528,738 +2004,1235 @@
   },
   "LandLeaseExpirationDate": {
     "type": "date",
-    "group": "/Property/Characteristics"
+    "level": "bronze",
+    "path": "/Property"
   },
   "View": {
     "type": [
       "string"
     ],
-    "group": "/Property/Characteristics"
+    "level": "platinum",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "ViewYN": {
     "type": "boolean",
-    "group": "/Property/Characteristics"
+    "level": "platinum",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "LotFeatures": {
     "type": [
       "string"
     ],
-    "group": "/Property/Characteristics"
+    "level": "platinum",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "CurrentUse": {
     "type": [
       "string"
     ],
-    "group": "/Property/Characteristics"
+    "level": "gold",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "PossibleUse": {
     "type": [
       "string"
     ],
-    "group": "/Property/Characteristics"
+    "level": "gold",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "DevelopmentStatus": {
     "type": [
       "string"
     ],
-    "group": "/Property/Characteristics"
+    "level": "gold",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "NumberOfLots": {
     "type": "number",
-    "group": "/Property/Characteristics"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "Topography": {
     "type": "string",
     "maxLength": 255,
-    "group": "/Property/Characteristics"
+    "level": "platinum",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "HorseYN": {
     "type": "boolean",
-    "group": "/Property/Characteristics"
+    "level": "platinum",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "HorseAmenities": {
     "type": [
       "string"
     ],
-    "group": "/Property/Characteristics"
+    "level": "platinum",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "CommunityFeatures": {
     "type": [
       "string"
     ],
-    "group": "/Property/Characteristics"
+    "level": "platinum",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "SeniorCommunityYN": {
     "type": "boolean",
-    "group": "/Property/Characteristics"
+    "level": "platinum",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "PoolFeatures": {
     "type": [
       "string"
     ],
-    "group": "/Property/Characteristics"
+    "level": "platinum",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "PoolPrivateYN": {
     "type": "boolean",
-    "group": "/Property/Characteristics"
+    "level": "platinum",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "SpaFeatures": {
     "type": [
       "string"
     ],
-    "group": "/Property/Characteristics"
+    "level": "platinum",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "SpaYN": {
     "type": "boolean",
-    "group": "/Property/Characteristics"
+    "level": "platinum",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "WaterfrontYN": {
     "type": "boolean",
-    "group": "/Property/Characteristics"
+    "level": "platinum",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
+  },
+  "WaterfrontFeatures": {
+    "type": [
+      "string"
+    ],
+    "lookup": "WaterfrontFeatures",
+    "level": "platinum",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "WaterBodyName": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Property/Characteristics"
+    "level": "platinum",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "GrossScheduledIncome": {
     "type": "number",
-    "group": "/Property/Financial"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "GrossIncome": {
     "type": "number",
-    "group": "/Property/Financial"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "IncomeIncludes": {
     "type": [
       "string"
     ],
-    "group": "/Property/Financial"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "OperatingExpense": {
     "type": "number",
-    "group": "/Property/Financial"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "OperatingExpenseIncludes": {
     "type": [
       "string"
     ],
-    "group": "/Property/Financial"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "NetOperatingIncome": {
     "type": "number",
-    "group": "/Property/Financial"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "CapRate": {
     "type": "number",
-    "group": "/Property/Financial"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "NumberOfUnitsLeased": {
     "type": "number",
-    "group": "/Property/Financial"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "NumberOfUnitsMoMo": {
     "type": "number",
-    "group": "/Property/Financial"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "NumberOfUnitsVacant": {
     "type": "number",
-    "group": "/Property/Financial"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "ExistingLeaseType": {
     "type": [
       "string"
     ],
-    "group": "/Property/Financial"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "UnitsFurnished": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Property/Financial"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "TotalActualRent": {
     "type": "number",
-    "group": "/Property/Financial"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "RentControlYN": {
     "type": "boolean",
-    "group": "/Property/Financial"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "NumberOfUnitsTotal": {
     "type": "number",
-    "group": "/Property/Characteristics"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "NumberOfBuildings": {
     "type": "number",
-    "group": "/Property/Characteristics"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "OwnerPays": {
     "type": [
       "string"
     ],
-    "group": "/Property/Financial"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "TenantPays": {
     "type": [
       "string"
     ],
-    "group": "/Property/Financial"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "VacancyAllowance": {
     "type": "number",
-    "group": "/Property/Financial"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "VacancyAllowanceRate": {
     "type": "number",
-    "group": "/Property/Financial"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "CableTvExpense": {
     "type": "number",
-    "group": "/Property/Financial"
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "ElectricExpense": {
     "type": "number",
-    "group": "/Property/Financial"
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "GardnerExpense": {
     "type": "number",
-    "group": "/Property/Financial"
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "FurnitureReplacementExpense": {
     "type": "number",
-    "group": "/Property/Financial"
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "FuelExpense": {
     "type": "number",
-    "group": "/Property/Financial"
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "InsuranceExpense": {
     "type": "number",
-    "group": "/Property/Financial"
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "OtherExpense": {
     "type": "number",
-    "group": "/Property/Financial"
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "LicensesExpense": {
     "type": "number",
-    "group": "/Property/Financial"
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "MaintenanceExpense": {
     "type": "number",
-    "group": "/Property/Financial"
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "NewTaxesExpense": {
     "type": "number",
-    "group": "/Property/Financial"
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "PestControlExpense": {
     "type": "number",
-    "group": "/Property/Financial"
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "PoolExpense": {
     "type": "number",
-    "group": "/Property/Financial"
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "SuppliesExpense": {
     "type": "number",
-    "group": "/Property/Financial"
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "TrashExpense": {
     "type": "number",
-    "group": "/Property/Financial"
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "WaterSewerExpense": {
     "type": "number",
-    "group": "/Property/Financial"
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "WorkmansCompensationExpense": {
     "type": "number",
-    "group": "/Property/Financial"
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "ProfessionalManagementExpense": {
     "type": "number",
-    "group": "/Property/Financial"
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "ManagerExpense": {
     "type": "number",
-    "group": "/Property/Financial"
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "FinancialDataSource": {
     "type": [
       "string"
     ],
-    "group": "/Property/Financial"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "RentIncludes": {
     "type": [
       "string"
     ],
-    "group": "/Property/Financial"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
+  },
+  "Furnished": {
+    "type": "string",
+    "maxLength": 50,
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "BusinessName": {
     "type": "string",
     "maxLength": 255,
-    "group": "/Business"
+    "level": "bronze",
+    "path": "/Property"
   },
   "BusinessType": {
-    "type": "string",
-    "maxLength": 50,
-    "group": "/Business"
+    "type": [
+      "string"
+    ],
+    "lookup": "BusinessType",
+    "level": "core",
+    "path": "/Property",
+    "enum": [
+      "Accounting",
+      "Administrative and Support",
+      "Advertising",
+      "Agriculture",
+      "Animal Grooming",
+      "Appliances",
+      "Aquarium Supplies",
+      "Arts and Entertainment",
+      "Athletic",
+      "Auto Body",
+      "Auto Glass",
+      "Auto Parts",
+      "Auto Rent/Lease",
+      "Auto Repair-Speclty",
+      "Auto Dealer",
+      "Auto Stereo/Alarm",
+      "Auto Tires",
+      "Auto Wrecking",
+      "Auto Service",
+      "Bakery",
+      "Bar/Tavern/Lounge",
+      "Barber/Beauty",
+      "Bed & Breakfast",
+      "Books/Cards/Stationary",
+      "Butcher",
+      "Cabinets",
+      "Candy/Cookie",
+      "Car Wash",
+      "Carpet/Tile",
+      "Child Care",
+      "Church",
+      "Clothing",
+      "Commercial",
+      "Computer",
+      "Construction/Contractor",
+      "Convalescent",
+      "Convenience Store",
+      "Dance Studio",
+      "Decorator",
+      "Dental",
+      "Deli/Catering",
+      "Distribution",
+      "Doughnut",
+      "Drugstore",
+      "Dry Cleaner",
+      "Education/School",
+      "Electronics",
+      "Employment",
+      "Farm",
+      "Fast Food",
+      "Financial",
+      "Fitness",
+      "Florist/Nursery",
+      "Food & Beverage",
+      "Forest Reserve",
+      "Franchise",
+      "Furniture",
+      "Gas Station",
+      "Gift Shop",
+      "Grocery",
+      "Hardware",
+      "Health Food",
+      "Health Services",
+      "Hobby",
+      "Home Cleaner",
+      "Hospitality",
+      "Hotel/Motel",
+      "Ice Cream/Frozen Yogurt",
+      "Industrial",
+      "Jewelry",
+      "Landscaping",
+      "Laundromat",
+      "Liquor Store",
+      "Locksmith",
+      "Manufacturing",
+      "Medical",
+      "Mixed",
+      "Mobile/Trailer Park",
+      "Music",
+      "Nursing Home",
+      "Other",
+      "Office Supply",
+      "Paints",
+      "Parking",
+      "Pet Store",
+      "Photographer",
+      "Pizza",
+      "Printing",
+      "Professional Service",
+      "Professional/Office",
+      "Real Estate",
+      "Recreation",
+      "Rental",
+      "Residential",
+      "Restaurant",
+      "Retail",
+      "Saddlery/Harness",
+      "Sporting Goods",
+      "Storage",
+      "Toys",
+      "Transportation",
+      "Travel",
+      "Upholstery",
+      "Utility",
+      "Variety",
+      "Video",
+      "Wallpaper",
+      "Warehouse",
+      "Wholesale"
+    ]
   },
   "OwnershipType": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Business"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "SpecialLicenses": {
     "type": [
       "string"
     ],
-    "group": "/Business"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "NumberOfFullTimeEmployees": {
     "type": "number",
-    "group": "/Business"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "NumberOfPartTimeEmployees": {
     "type": "number",
-    "group": "/Business"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "LeaseAmount": {
     "type": "number",
-    "group": "/Business"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "LeaseAmountFrequency": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Business"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "LeaseExpiration": {
     "type": "date",
-    "group": "/Business"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "LeaseRenewalOptionYN": {
     "type": "boolean",
-    "group": "/Business"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "LeaseAssignableYN": {
     "type": "boolean",
-    "group": "/Business"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "HoursDaysofOperation": {
     "type": [
       "string"
     ],
-    "group": "/Business"
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
+  },
+  "HoursDaysofOperationDescription": {
+    "type": "string",
+    "maxLength": 255,
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "YearEstablished": {
     "type": "number",
-    "group": "/Business"
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "SeatingCapacity": {
     "type": "number",
-    "group": "/Business"
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "YearsCurrentOwner": {
     "type": "number",
-    "group": "/Business"
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "LaborInformation": {
     "type": [
       "string"
     ],
-    "group": "/Business"
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "Utilities": {
     "type": [
       "string"
     ],
-    "group": "/Property/Utilities"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "Electric": {
     "type": [
       "string"
     ],
-    "group": "/Property/Utilities"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "Gas": {
     "type": [
       "string"
     ],
-    "group": "/Property/Utilities"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "Telephone": {
     "type": [
       "string"
     ],
-    "group": "/Property/Utilities"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "IrrigationWaterRightsYN": {
     "type": "boolean",
-    "group": "/Property/Utilities"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "IrrigationWaterRightsAcres": {
     "type": "number",
-    "group": "/Property/Utilities"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "IrrigationSource": {
     "type": [
       "string"
     ],
-    "group": "/Property/Utilities"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "WaterSource": {
     "type": [
       "string"
     ],
-    "group": "/Property/Utilities"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "DistanceToWater": {
     "type": "string",
     "maxLength": 255,
-    "group": "/Property/Utilities"
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "ElectricOnPropertyYN": {
     "type": "boolean",
-    "group": "/Property/Utilities"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "DistanceToElectric": {
     "type": "string",
     "maxLength": 255,
-    "group": "/Property/Utilities"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "Sewer": {
     "type": [
       "string"
     ],
-    "group": "/Property/Utilities"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "DistanceToSewer": {
     "type": "string",
     "maxLength": 255,
-    "group": "/Property/Utilities"
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "DistanceToGas": {
     "type": "string",
     "maxLength": 255,
-    "group": "/Property/Utilities"
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "DistanceToPhoneService": {
     "type": "string",
     "maxLength": 255,
-    "group": "/Property/Utilities"
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "DistanceToStreet": {
     "type": "string",
     "maxLength": 255,
-    "group": "/Property/Utilities"
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "DistanceToSchools": {
     "type": "string",
     "maxLength": 255,
-    "group": "/Property/Location"
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "DistanceFromShopping": {
     "type": "string",
     "maxLength": 255,
-    "group": "/Property/Location"
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "DistanceToPlaceofWorship": {
     "type": "string",
     "maxLength": 255,
-    "group": "/Property/Location"
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "DistanceToBus": {
     "type": "string",
     "maxLength": 255,
-    "group": "/Property/Location"
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "DistanceFromSchoolBus": {
     "type": "string",
     "maxLength": 255,
-    "group": "/Property/Location"
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "DistanceToFreeway": {
     "type": "string",
     "maxLength": 255,
-    "group": "/Property/Location"
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "CropsIncludedYN": {
     "type": "boolean",
-    "group": "/Property/Farming"
+    "level": "gold",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "GrazingPermitsBlmYN": {
     "type": "boolean",
-    "group": "/Property/Farming"
+    "level": "gold",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "GrazingPermitsForestServiceYN": {
     "type": "boolean",
-    "group": "/Property/Farming"
+    "level": "gold",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "GrazingPermitsPrivateYN": {
     "type": "boolean",
-    "group": "/Property/Farming"
+    "level": "gold",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "CultivatedArea": {
     "type": "number",
-    "group": "/Property/Farming"
+    "level": "gold",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "PastureArea": {
     "type": "number",
-    "group": "/Property/Farming"
+    "level": "gold",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "RangeArea": {
     "type": "number",
-    "group": "/Property/Farming"
+    "level": "gold",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "WoodedArea": {
     "type": "number",
-    "group": "/Property/Farming"
+    "level": "gold",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "Vegetation": {
     "type": [
       "string"
     ],
-    "group": "/Property/Farming"
+    "level": "gold",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "Fencing": {
     "type": [
       "string"
     ],
-    "group": "/Property/Characteristics"
+    "level": "gold",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "FarmCreditServiceInclYN": {
     "type": "boolean",
-    "group": "/Property/Farming"
+    "level": "gold",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "FarmLandAreaUnits": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Property/Farming"
+    "level": "gold",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "FarmLandAreaSource": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Property/Farming"
+    "level": "gold",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "BedroomsTotal": {
     "type": "number",
-    "group": "/Property/Structure"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "BedroomsPossible": {
     "type": "number",
-    "group": "/Property/Structure"
+    "level": "",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
+  },
+  "MainLevelBedrooms": {
+    "type": "number",
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "BathroomsTotalInteger": {
     "type": "number",
-    "group": "/Property/Structure"
-  },
-  "BathroomsTotalDecimal": {
-    "type": "number",
-    "group": "/Property/Structure"
-  },
-  "BathroomsTotalNotational": {
-    "type": "number",
-    "group": "/Property/Structure"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "BathroomsFull": {
     "type": "number",
-    "group": "/Property/Structure"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "BathroomsHalf": {
     "type": "number",
-    "group": "/Property/Structure"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "BathroomsThreeQuarter": {
     "type": "number",
-    "group": "/Property/Structure"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "BathroomsOneQuarter": {
     "type": "number",
-    "group": "/Property/Structure"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
+  },
+  "BathroomsPartial": {
+    "type": "number",
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
+  },
+  "MainLevelBathrooms": {
+    "type": "number",
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "LivingArea": {
     "type": "number",
-    "group": "/Property/Structure"
-  },
-  "LivingAreaSource": {
-    "type": "string",
-    "maxLength": 50,
-    "group": "/Property/Structure"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "LivingAreaUnits": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Property/Structure"
-  },
-  "AboveGradeFinishedArea": {
-    "type": "number",
-    "group": "/Property/Structure"
-  },
-  "AboveGradeFinishedAreaSource": {
-    "type": "string",
-    "maxLength": 50,
-    "group": "/Property/Structure"
-  },
-  "AboveGradeFinishedAreaUnits": {
-    "type": "string",
-    "maxLength": 25,
-    "group": "/Property/Structure"
-  },
-  "BelowGradeFinishedArea": {
-    "type": "number",
-    "group": "/Property/Structure"
-  },
-  "BelowGradeFinishedAreaSource": {
-    "type": "string",
-    "maxLength": 50,
-    "group": "/Property/Structure"
-  },
-  "BelowGradeFinishedAreaUnits": {
-    "type": "string",
-    "maxLength": 25,
-    "group": "/Property/Structure"
-  },
-  "BuildingAreaTotal": {
-    "type": "number",
-    "group": "/Property/Structure"
-  },
-  "BuildingAreaSource": {
-    "type": "string",
-    "maxLength": 50,
-    "group": "/Property/Structure"
-  },
-  "BuildingAreaUnits": {
-    "type": "string",
-    "maxLength": 25,
-    "group": "/Property/Structure"
-  },
-  "LeasableArea": {
-    "type": "number",
-    "group": "/Property/Structure"
-  },
-  "LeasableAreaUnits": {
-    "type": "string",
-    "maxLength": 25,
-    "group": "/Property/Structure"
-  },
-  "CommonWalls": {
-    "type": [
-      "string"
-    ],
-    "group": "/Property/Structure"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "PropertyAttachedYN": {
     "type": "boolean",
-    "group": "/Property/Structure"
-  },
-  "FoundationArea": {
-    "type": "number",
-    "group": "/Property/Structure"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "GarageYN": {
     "type": "boolean",
-    "group": "/Property/Structure"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "GarageSpaces": {
     "type": "number",
-    "group": "/Property/Structure"
-  },
-  "AttachedGarageYN": {
-    "type": "boolean",
-    "group": "/Property/Structure"
-  },
-  "CarportSpaces": {
-    "type": "number",
-    "group": "/Property/Structure"
-  },
-  "CarportYN": {
-    "type": "boolean",
-    "group": "/Property/Structure"
-  },
-  "OpenParkingYN": {
-    "type": "boolean",
-    "group": "/Property/Structure"
-  },
-  "OpenParkingSpaces": {
-    "type": "number",
-    "group": "/Property/Structure"
-  },
-  "CoveredSpaces": {
-    "type": "number",
-    "group": "/Property/Structure"
-  },
-  "ParkingFeatures": {
-    "type": [
-      "string"
-    ],
-    "group": "/Property/Structure"
-  },
-  "OtherParking": {
-    "type": "string",
-    "maxLength": 1024,
-    "group": "/Property/Structure"
-  },
-  "ParkingTotal": {
-    "type": "number",
-    "group": "/Property/Structure"
-  },
-  "RVParkingDimensions": {
-    "type": "string",
-    "maxLength": 50,
-    "group": "/Property/Structure"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "StoriesTotal": {
     "type": "number",
-    "group": "/Property/Structure"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "Stories": {
     "type": "number",
-    "group": "/Property/Structure"
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "Levels": {
     "type": [
       "string"
     ],
-    "group": "/Property/Structure"
+    "lookup": "Levels",
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Property",
+    "enum": [
+      "One",
+      "Two",
+      "Three Or More",
+      "Multi/Split"
+    ]
+  },
+  "YearBuilt": {
+    "type": "number",
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
+  },
+  "MobileLength": {
+    "type": "number",
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
+  },
+  "MobileWidth": {
+    "type": "number",
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
+  },
+  "Make": {
+    "type": "string",
+    "maxLength": 50,
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
+  },
+  "Model": {
+    "type": "string",
+    "maxLength": 50,
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
+  },
+  "ParcelNumber": {
+    "type": "string",
+    "maxLength": 50,
+    "level": "core",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
+  },
+  "LivingAreaSource": {
+    "type": "string",
+    "maxLength": 50,
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
+  },
+  "AboveGradeFinishedArea": {
+    "type": "number",
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
+  },
+  "AboveGradeFinishedAreaSource": {
+    "type": "string",
+    "maxLength": 50,
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
+  },
+  "AboveGradeFinishedAreaUnits": {
+    "type": "string",
+    "maxLength": 25,
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
+  },
+  "BelowGradeFinishedArea": {
+    "type": "number",
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
+  },
+  "BelowGradeFinishedAreaSource": {
+    "type": "string",
+    "maxLength": 50,
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
+  },
+  "BelowGradeFinishedAreaUnits": {
+    "type": "string",
+    "maxLength": 25,
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
+  },
+  "BuildingAreaTotal": {
+    "type": "number",
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
+  },
+  "BuildingAreaSource": {
+    "type": "string",
+    "maxLength": 50,
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
+  },
+  "BuildingAreaUnits": {
+    "type": "string",
+    "maxLength": 25,
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
+  },
+  "LeasableArea": {
+    "type": "number",
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
+  },
+  "LeasableAreaUnits": {
+    "type": "string",
+    "maxLength": 25,
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
+  },
+  "CommonWalls": {
+    "type": [
+      "string"
+    ],
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
+  },
+  "FoundationArea": {
+    "type": "number",
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
+  },
+  "AttachedGarageYN": {
+    "type": "boolean",
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
+  },
+  "CarportSpaces": {
+    "type": "number",
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
+  },
+  "CarportYN": {
+    "type": "boolean",
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
+  },
+  "OpenParkingYN": {
+    "type": "boolean",
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
+  },
+  "OpenParkingSpaces": {
+    "type": "number",
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
+  },
+  "CoveredSpaces": {
+    "type": "number",
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
+  },
+  "ParkingFeatures": {
+    "type": [
+      "string"
+    ],
+    "level": "platinum",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
+  },
+  "OtherParking": {
+    "type": "string",
+    "maxLength": 1024,
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
+  },
+  "ParkingTotal": {
+    "type": "number",
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
+  },
+  "RVParkingDimensions": {
+    "type": "string",
+    "maxLength": 50,
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "EntryLocation": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Property/Structure"
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "EntryLevel": {
     "type": "number",
-    "group": "/Property/Structure"
-  },
-  "YearBuilt": {
-    "type": "number",
-    "group": "/Property/Structure"
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "YearBuiltEffective": {
     "type": "number",
-    "group": "/Property/Structure"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "YearBuiltDetails": {
     "type": "string",
     "maxLength": 1024,
-    "group": "/Property/Structure"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "YearBuiltSource": {
     "type": "string",
     "maxLength": 60,
-    "group": "/Property/Structure"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "NewConstructionYN": {
     "type": "boolean",
-    "group": "/Property/Structure"
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "GreenBuildingVerificationType": {
     "type": [
       "string"
     ],
-    "group": "/Property/Structure/Performance/GreenCertification",
+    "level": "platinum",
+    "payloads": "Proposed IDX",
+    "path": "/Property",
     "repeating": true
   },
   "GreenVerifications": [
@@ -2270,360 +3243,466 @@
       "Body": {
         "type": "string",
         "maxLength": 50,
-        "group": "/Property/Structure/Performance/GreenCertification"
+        "level": "platinum",
+        "payloads": "Proposed IDX",
+        "path": "/Property"
       },
       "Year": {
-        "type": "string",
-        "maxLength": 4,
-        "group": "/Property/Structure/Performance/GreenCertification"
+        "type": "number",
+        "level": "platinum",
+        "payloads": "Proposed IDX",
+        "path": "/Property"
       },
       "Rating": {
         "type": "string",
         "maxLength": 50,
-        "group": "/Property/Structure/Performance/GreenCertification"
+        "level": "platinum",
+        "payloads": "Proposed IDX",
+        "path": "/Property"
       },
       "Metric": {
         "type": "number",
-        "group": "/Property/Structure/Performance/GreenCertification"
+        "level": "platinum",
+        "payloads": "Proposed IDX",
+        "path": "/Property"
       },
       "URL": {
         "type": "string",
         "maxLength": 8000,
-        "group": "/Property/Structure/Performance/GreenCertification"
+        "level": "platinum",
+        "payloads": "Proposed IDX",
+        "path": "/Property"
       }
     }
   ],
   "BuilderName": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Property/Structure"
+    "level": "gold",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "BuilderModel": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Property/Structure"
+    "level": "gold",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "BuildingName": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Property/Structure"
+    "level": "gold",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "BuildingFeatures": {
     "type": [
       "string"
     ],
-    "group": "/Property/Structure"
+    "level": "platinum",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "Heating": {
     "type": [
       "string"
     ],
-    "group": "/Property/Structure"
+    "level": "platinum",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "HeatingYN": {
     "type": "boolean",
-    "group": "/Property/Structure"
+    "level": "platinum",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "Cooling": {
     "type": [
       "string"
     ],
-    "group": "/Property/Structure"
+    "level": "platinum",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "CoolingYN": {
     "type": "boolean",
-    "group": "/Property/Structure"
+    "level": "platinum",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "InteriorFeatures": {
     "type": [
       "string"
     ],
-    "group": "/Property/Structure"
+    "level": "platinum",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "ExteriorFeatures": {
     "type": [
       "string"
     ],
-    "group": "/Property/Structure"
+    "level": "platinum",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "PatioAndPorchFeatures": {
     "type": [
       "string"
     ],
-    "group": "/Property/Structure"
+    "level": "platinum",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "ArchitecturalStyle": {
     "type": [
       "string"
     ],
-    "group": "/Property/Structure"
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
+  },
+  "PropertyCondition": {
+    "type": [
+      "string"
+    ],
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "FireplaceFeatures": {
     "type": [
       "string"
     ],
-    "group": "/Property/Structure"
+    "level": "platinum",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "FireplacesTotal": {
     "type": "number",
-    "group": "/Property/Structure"
+    "level": "platinum",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "FireplaceYN": {
     "type": "boolean",
-    "group": "/Property/Structure"
+    "level": "platinum",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "DoorFeatures": {
     "type": [
       "string"
     ],
-    "group": "/Property/Structure"
+    "level": "platinum",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "WindowFeatures": {
     "type": [
       "string"
     ],
-    "group": "/Property/Structure"
+    "level": "platinum",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "Roof": {
     "type": [
       "string"
     ],
-    "group": "/Property/Structure"
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "ConstructionMaterials": {
     "type": [
       "string"
     ],
-    "group": "/Property/Structure"
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "FoundationDetails": {
     "type": [
       "string"
     ],
-    "group": "/Property/Structure"
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "Basement": {
     "type": [
       "string"
     ],
-    "group": "/Property/Structure"
+    "level": "platinum",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "Flooring": {
     "type": [
       "string"
     ],
-    "group": "/Property/Structure"
+    "level": "platinum",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "OtherStructures": {
     "type": [
       "string"
     ],
-    "group": "/Property/Structure"
+    "level": "gold",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "DirectionFaces": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Property/Structure"
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "OtherEquipment": {
     "type": [
       "string"
     ],
-    "group": "/Property/Equipment"
+    "level": "platinum",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "Appliances": {
     "type": [
       "string"
     ],
-    "group": "/Property/Equipment"
+    "level": "platinum",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "LaundryFeatures": {
     "type": [
       "string"
     ],
-    "group": "/Property/Characteristics"
+    "level": "platinum",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "SecurityFeatures": {
     "type": [
       "string"
     ],
-    "group": "/Property/Equipment"
+    "level": "platinum",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "NumberOfSeparateElectricMeters": {
     "type": "number",
-    "group": "/Property/Utilities"
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "NumberOfSeparateGasMeters": {
     "type": "number",
-    "group": "/Property/Utilities"
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "NumberOfSeparateWaterMeters": {
     "type": "number",
-    "group": "/Property/Utilities"
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "GreenEnergyEfficient": {
     "type": [
       "string"
     ],
-    "group": "/Property/Structure/Performance/GreenMarketing"
+    "level": "platinum",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "GreenEnergyGeneration": {
     "type": [
       "string"
     ],
-    "group": "/Property/Structure/Performance/GreenMarketing"
+    "level": "platinum",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "GreenSustainability": {
     "type": [
       "string"
     ],
-    "group": "/Property/Structure/Performance/GreenMarketing"
+    "level": "platinum",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "GreenWaterConservation": {
     "type": [
       "string"
     ],
-    "group": "/Property/Structure/Performance/GreenMarketing"
+    "level": "platinum",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "GreenIndoorAirQuality": {
     "type": [
       "string"
     ],
-    "group": "/Property/Structure/Performance/GreenMarketing"
+    "level": "platinum",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "GreenLocation": {
     "type": [
       "string"
     ],
-    "group": "/Property/Structure/Performance/GreenMarketing"
+    "level": "platinum",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "WalkScore": {
     "type": "number",
-    "group": "/Property/Structure/Performance/GreenMarketing"
+    "level": "platinum",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "HabitableResidenceYN": {
     "type": "boolean",
-    "group": "/Property/Structure"
-  },
-  "MobileLength": {
-    "type": "number",
-    "group": "/Property/Structure"
-  },
-  "MobileWidth": {
-    "type": "number",
-    "group": "/Property/Structure"
+    "level": "gold",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "BodyType": {
     "type": [
       "string"
     ],
-    "group": "/Property/Structure"
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "Skirt": {
     "type": [
       "string"
     ],
-    "group": "/Property/Structure"
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "MobileDimUnits": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Property/Structure"
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "ParkName": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Property/Characteristics"
+    "level": "",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "ParkManagerName": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Property/Characteristics"
+    "level": "silver",
+    "path": "/Property"
   },
   "ParkManagerPhone": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Property/Characteristics"
+    "level": "silver",
+    "path": "/Property"
   },
   "MobileHomeRemainsYN": {
     "type": "boolean",
-    "group": "/Property/Characteristics"
-  },
-  "Make": {
-    "type": "string",
-    "maxLength": 50,
-    "group": "/Property/Structure"
-  },
-  "Model": {
-    "type": "string",
-    "maxLength": 50,
-    "group": "/Property/Structure"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "NumberOfPads": {
     "type": "number",
-    "group": "/Property/Characteristics"
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "SerialU": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Property/Structure"
+    "level": "silver",
+    "path": "/Property"
   },
   "DOH1": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Property/Structure"
+    "level": "silver",
+    "path": "/Property"
   },
   "License1": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Property/Structure"
+    "level": "silver",
+    "path": "/Property"
   },
   "SerialX": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Property/Structure"
+    "level": "silver",
+    "path": "/Property"
   },
   "DOH2": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Property/Structure"
+    "level": "silver",
+    "path": "/Property"
   },
   "License2": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Property/Structure"
+    "level": "silver",
+    "path": "/Property"
   },
   "SerialXX": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Property/Structure"
+    "level": "silver",
+    "path": "/Property"
   },
   "DOH3": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Property/Structure"
+    "level": "silver",
+    "path": "/Property"
   },
   "License3": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Property/Structure"
+    "level": "silver",
+    "path": "/Property"
   },
   "AccessibilityFeatures": {
     "type": [
       "string"
     ],
-    "group": "/Property/Structure"
+    "level": "silver",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "RoomsTotal": {
     "type": "number",
-    "group": "/Property/Structure/Rooms"
+    "level": "gold",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "RoomType": {
     "type": [
       "string"
     ],
     "lookup": "RoomType",
-    "group": "/Property/Structure/Rooms",
+    "level": "gold",
+    "payloads": "Proposed IDX",
+    "path": "/Property/Rooms",
     "repeating": true,
     "enum": [
       "Dining Room",
@@ -2632,11 +3711,13 @@
       "Basement",
       "Kitchen",
       "Master Bedroom",
+      "Bedroom 1",
       "Bedroom 2",
       "Bedroom 3",
       "Bedroom 4",
       "Bedroom 5",
       "Master Bathroom",
+      "Bathroom 1",
       "Bathroom 2",
       "Bathroom 3",
       "Bathroom 4",
@@ -2668,11 +3749,13 @@
           "Basement",
           "Kitchen",
           "Master Bedroom",
+          "Bedroom 1",
           "Bedroom 2",
           "Bedroom 3",
           "Bedroom 4",
           "Bedroom 5",
           "Master Bathroom",
+          "Bathroom 1",
           "Bathroom 2",
           "Bathroom 3",
           "Bathroom 4",
@@ -2695,56 +3778,78 @@
       },
       "Area": {
         "type": "number",
-        "group": "/Property/Structure/Rooms"
+        "level": "gold",
+        "payloads": "Proposed IDX",
+        "path": "/Property/Rooms"
       },
       "AreaUnits": {
         "type": "string",
         "maxLength": 25,
-        "group": "/Property/Structure/Rooms"
+        "level": "gold",
+        "payloads": "Proposed IDX",
+        "path": "/Property/Rooms"
       },
       "AreaSource": {
         "type": "string",
         "maxLength": 50,
-        "group": "/Property/Structure/Rooms"
+        "level": "gold",
+        "payloads": "Proposed IDX",
+        "path": "/Property/Rooms"
       },
       "Dimensions": {
         "type": "string",
         "maxLength": 50,
-        "group": "/Property/Structure/Rooms"
+        "level": "gold",
+        "payloads": "Proposed IDX",
+        "path": "/Property/Rooms"
       },
       "Length": {
         "type": "number",
-        "group": "/Property/Structure/Rooms"
+        "level": "gold",
+        "payloads": "Proposed IDX",
+        "path": "/Property/Rooms"
       },
       "Width": {
         "type": "number",
-        "group": "/Property/Structure/Rooms"
+        "level": "gold",
+        "payloads": "Proposed IDX",
+        "path": "/Property/Rooms"
       },
       "LengthWidthUnits": {
         "type": "string",
         "maxLength": 25,
-        "group": "/Property/Structure/Rooms"
+        "level": "gold",
+        "payloads": "Proposed IDX",
+        "path": "/Property/Rooms"
       },
       "LengthWidthSource": {
         "type": "string",
         "maxLength": 50,
-        "group": "/Property/Structure/Rooms"
+        "level": "gold",
+        "payloads": "Proposed IDX",
+        "path": "/Property/Rooms"
       },
       "Level": {
         "type": "string",
         "maxLength": 25,
-        "group": "/Property/Structure/Rooms"
+        "level": "gold",
+        "payloads": "Proposed IDX",
+        "path": "/Property/Rooms"
       },
       "Features": {
         "type": [
           "string"
         ],
-        "group": "/Property/Structure/Rooms"
+        "level": "gold",
+        "payloads": "Proposed IDX",
+        "path": "/Property/Rooms"
       },
       "Description": {
         "type": "string",
         "maxLength": 1024,
-        "group": "/Property/Structure/Rooms"
+        "level": "gold",
+        "payloads": "Proposed IDX",
+        "path": "/Property/Rooms"
       }
     }
   ],
@@ -2752,7 +3857,9 @@
     "type": [
       "string"
     ],
-    "group": "/Property/UnitType",
+    "level": "gold",
+    "payloads": "Proposed IDX",
+    "path": "/Property/UnitTypes",
     "repeating": true
   },
   "UnitTypes": [
@@ -2762,148 +3869,187 @@
       },
       "UnitsTotal": {
         "type": "number",
-        "group": "/Property/UnitType"
+        "level": "gold",
+        "payloads": "Proposed IDX",
+        "path": "/Property/UnitTypes"
       },
       "BedsTotal": {
         "type": "number",
-        "group": "/Property/UnitType"
+        "level": "gold",
+        "payloads": "Proposed IDX",
+        "path": "/Property/UnitTypes"
       },
       "BathsTotal": {
         "type": "number",
-        "group": "/Property/UnitType"
+        "level": "gold",
+        "payloads": "Proposed IDX",
+        "path": "/Property/UnitTypes"
       },
       "Furnished": {
         "type": "string",
         "maxLength": 20,
-        "group": "/Property/UnitType"
+        "level": "gold",
+        "payloads": "Proposed IDX",
+        "path": "/Property/UnitTypes"
       },
       "Description": {
         "type": "string",
         "maxLength": 1024,
-        "group": "/Property/UnitType"
+        "level": "gold",
+        "payloads": "Proposed IDX",
+        "path": "/Property/UnitTypes"
       },
       "GarageSpaces": {
         "type": "number",
-        "group": "/Property/UnitType"
+        "level": "gold",
+        "payloads": "Proposed IDX",
+        "path": "/Property/UnitTypes"
       },
       "GarageAttachedYN": {
         "type": "boolean",
-        "group": "/Property/UnitType"
+        "level": "gold",
+        "payloads": "Proposed IDX",
+        "path": "/Property/UnitTypes"
       },
       "ActualRent": {
         "type": "number",
-        "group": "/Property/UnitType"
+        "level": "gold",
+        "payloads": "Proposed IDX",
+        "path": "/Property/UnitTypes"
       },
       "TotalRent": {
         "type": "number",
-        "group": "/Property/UnitType"
+        "level": "gold",
+        "payloads": "Proposed IDX",
+        "path": "/Property/UnitTypes"
       },
       "ProForma": {
         "type": "number",
-        "group": "/Property/UnitType"
+        "level": "gold",
+        "payloads": "Proposed IDX",
+        "path": "/Property/UnitTypes"
       }
     }
   ],
   "Zoning": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Property/Tax"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "ZoningDescription": {
     "type": "string",
     "maxLength": 255,
-    "group": "/Property/Tax"
-  },
-  "ParcelNumber": {
-    "type": "string",
-    "maxLength": 50,
-    "group": "/Property/Tax"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "AdditionalParcelsYN": {
     "type": "boolean",
-    "group": "/Property/Tax"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "AdditionalParcelsDescription": {
     "type": "string",
     "maxLength": 255,
-    "group": "/Property/Tax"
+    "level": "bronze",
+    "payloads": "Proposed IDX",
+    "path": "/Property"
   },
   "PublicSurveySection": {
     "type": "string",
     "maxLength": 20,
-    "group": "/Property/Tax"
+    "level": "gold",
+    "path": "/Property"
   },
   "PublicSurveyTownship": {
     "type": "string",
     "maxLength": 20,
-    "group": "/Property/Tax"
+    "level": "gold",
+    "path": "/Property"
   },
   "PublicSurveyRange": {
     "type": "string",
     "maxLength": 20,
-    "group": "/Property/Tax"
+    "level": "gold",
+    "path": "/Property"
   },
   "TaxLot": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Property/Tax"
+    "level": "bronze",
+    "path": "/Property"
   },
   "TaxBlock": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Property/Tax"
+    "level": "bronze",
+    "path": "/Property"
   },
   "TaxTract": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Property/Tax"
+    "level": "bronze",
+    "path": "/Property"
   },
   "TaxLegalDescription": {
     "type": "string",
     "maxLength": 6000,
-    "group": "/Property/Tax"
+    "level": "bronze",
+    "path": "/Property"
   },
   "TaxAnnualAmount": {
     "type": "number",
-    "group": "/Property/Tax"
+    "level": "silver",
+    "path": "/Property"
   },
   "TaxYear": {
     "type": "number",
-    "group": "/Property/Tax"
+    "level": "silver",
+    "path": "/Property"
   },
   "TaxAssessedValue": {
     "type": "number",
-    "group": "/Property/Tax"
+    "level": "silver",
+    "path": "/Property"
   },
   "TaxExemptions": {
     "type": [
       "string"
     ],
-    "group": "/Property/Tax"
+    "level": "silver",
+    "path": "/Property"
   },
   "TaxOtherAnnualAssessmentAmount": {
     "type": "number",
-    "group": "/Property/Tax"
+    "level": "silver",
+    "path": "/Property"
   },
   "TaxBookNumber": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Property/Tax"
+    "level": "bronze",
+    "path": "/Property"
   },
   "TaxMapNumber": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Property/Tax"
+    "level": "bronze",
+    "path": "/Property"
   },
   "TaxParcelLetter": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Property/Tax"
+    "level": "bronze",
+    "path": "/Property"
   },
   "TaxStatusCurrent": {
     "type": [
       "string"
     ],
-    "group": "/Property/Tax"
+    "level": "silver",
+    "path": "/Property"
   }
 }

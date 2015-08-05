@@ -1,77 +1,92 @@
 {
-  "HistoryRecordKey": {
+  "HistoryTransactionalKey": {
     "type": "string",
     "maxLength": 255,
-    "group": "/History",
+    "level": "silver",
+    "path": "/History",
     "primary": true
   },
   "OriginatingSystemHistoryKey": {
     "type": "string",
     "maxLength": 255,
-    "group": "/History"
+    "level": "silver",
+    "path": "/History"
   },
   "OriginatingSystemName": {
     "type": "string",
     "maxLength": 255,
-    "group": "/History"
+    "level": "silver",
+    "path": "/History"
   },
   "ChangedByMemberID": {
     "type": "string",
     "maxLength": 25,
-    "group": "/History"
+    "level": "silver",
+    "path": "/History"
   },
   "ChangedByMemberKey": {
     "type": "string",
     "maxLength": 255,
-    "group": "/History"
+    "level": "silver",
+    "path": "/History"
   },
   "ChangeType": {
     "type": "string",
     "maxLength": 255,
-    "group": "/History"
+    "level": "silver",
+    "path": "/History"
   },
-  "ChangeTimestamp": {
+  "ModificationTimestamp": {
     "type": "date",
-    "group": "/History"
+    "level": "silver",
+    "path": "/History"
   },
   "FieldKey": {
     "type": "string",
     "maxLength": 255,
-    "group": "/History"
+    "level": "silver",
+    "path": "/History"
   },
   "FieldName": {
     "type": "string",
     "maxLength": 255,
-    "group": "/History"
+    "level": "silver",
+    "path": "/History"
   },
   "PreviousValue": {
     "type": "string",
     "maxLength": 8000,
-    "group": "/History"
+    "level": "silver",
+    "path": "/History"
   },
   "NewValue": {
     "type": "string",
     "maxLength": 8000,
-    "group": "/History"
+    "level": "silver",
+    "path": "/History"
   },
   "ClassName": {
     "type": "string",
     "maxLength": 255,
-    "group": "/History"
+    "level": "silver",
+    "path": "/History"
   },
   "ResourceName": {
     "type": "string",
     "maxLength": 255,
-    "group": "/History"
+    "level": "silver",
+    "path": "/History"
   },
   "ResourceRecordKey": {
     "type": "string",
     "maxLength": 255,
-    "group": "/History"
+    "level": "silver",
+    "path": "/History"
   },
   "ResourceRecordID": {
     "type": "string",
     "maxLength": 255,
-    "group": "/History"
+    "level": "silver",
+    "path": "/History"
   }
 }

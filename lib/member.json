@@ -2,150 +2,183 @@
   "MemberKey": {
     "type": "string",
     "maxLength": 255,
-    "group": "/Member",
+    "level": "core",
+    "path": "/Member",
     "primary": true
   },
   "OriginatingSystemMemberKey": {
     "type": "string",
     "maxLength": 255,
-    "group": "/Member"
+    "level": "core",
+    "path": "/Member"
   },
   "OriginatingSystemName": {
     "type": "string",
     "maxLength": 255,
-    "group": "/Member"
+    "level": "bronze",
+    "path": "/Member"
   },
   "MemberMlsId": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Member"
+    "level": "core",
+    "path": "/Member"
   },
   "MemberLoginId": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Member"
+    "level": "bronze",
+    "path": "/Member"
   },
-  "MemberNrdsID": {
+  "MemberNationalAssociationId": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Member"
+    "level": "core",
+    "path": "/Member"
   },
   "MemberPassword": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Member"
+    "level": "",
+    "path": "/Member"
   },
   "MemberNamePrefix": {
     "type": "string",
     "maxLength": 10,
-    "group": "/Member"
+    "level": "bronze",
+    "path": "/Member"
   },
   "MemberFirstName": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Member"
+    "level": "core",
+    "path": "/Member"
   },
   "MemberMiddleName": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Member"
+    "level": "core",
+    "path": "/Member"
   },
   "MemberLastName": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Member"
+    "level": "core",
+    "path": "/Member"
   },
   "MemberNameSuffix": {
     "type": "string",
     "maxLength": 10,
-    "group": "/Member"
+    "level": "bronze",
+    "path": "/Member"
   },
   "MemberFullName": {
     "type": "string",
     "maxLength": 150,
-    "group": "/Member"
+    "level": "bronze",
+    "path": "/Member"
   },
   "MemberNickname": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Member"
+    "level": "bronze",
+    "path": "/Member"
   },
   "JobTitle": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Member"
+    "level": "silver",
+    "path": "/Member"
   },
   "MemberEmail": {
     "type": "string",
     "maxLength": 80,
-    "group": "/Member"
+    "level": "core",
+    "path": "/Member"
   },
   "MemberPreferredPhone": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Member"
+    "level": "core",
+    "path": "/Member"
   },
   "MemberPreferredPhoneExt": {
-    "type": "number",
-    "group": "/Member"
+    "type": "string",
+    "maxLength": 10,
+    "level": "core",
+    "path": "/Member"
   },
   "MemberOfficePhone": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Member"
+    "level": "core",
+    "path": "/Member"
   },
   "MemberOfficePhoneExt": {
-    "type": "number",
-    "group": "/Member"
+    "type": "string",
+    "maxLength": 10,
+    "level": "core",
+    "path": "/Member"
   },
   "MemberMobilePhone": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Member"
+    "level": "core",
+    "path": "/Member"
   },
   "MemberDirectPhone": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Member"
+    "level": "bronze",
+    "path": "/Member"
   },
   "MemberHomePhone": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Member"
+    "level": "bronze",
+    "path": "/Member"
   },
   "MemberFax": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Member"
+    "level": "bronze",
+    "path": "/Member"
   },
   "MemberPager": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Member"
+    "level": "platinum",
+    "path": "/Member"
   },
   "MemberVoiceMail": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Member"
+    "level": "bronze",
+    "path": "/Member"
   },
   "MemberVoiceMailExt": {
-    "type": "number",
-    "group": "/Member"
+    "type": "string",
+    "maxLength": 10,
+    "level": "bronze",
+    "path": "/Member"
   },
   "MemberTollFreePhone": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Member"
+    "level": "bronze",
+    "path": "/Member"
   },
   "MemberPhoneTTYTDD": {
     "type": "string",
     "maxLength": 16,
-    "group": "/Member"
+    "level": "",
+    "path": "/Member"
   },
   "MemberOtherPhoneType": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Member",
+    "level": "bronze",
+    "path": "/Member",
     "repeating": true
   },
   "MemberOtherPhones": [
@@ -156,18 +189,22 @@
       "Number": {
         "type": "string",
         "maxLength": 16,
-        "group": "/Member"
+        "level": "bronze",
+        "path": "/Member"
       },
       "Ext": {
-        "type": "number",
-        "group": "/Member"
+        "type": "string",
+        "maxLength": 10,
+        "level": "bronze",
+        "path": "/Member"
       }
     }
   ],
   "SocialMediaType": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Member",
+    "level": "bronze",
+    "path": "/Member",
     "repeating": true
   },
   "SocialMedias": [
@@ -178,141 +215,176 @@
       "UrlOrId": {
         "type": "string",
         "maxLength": 8000,
-        "group": "/Member"
+        "level": "bronze",
+        "path": "/Member"
       }
     }
   ],
   "MemberAOR": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Member"
+    "level": "core",
+    "path": "/Member"
   },
   "MemberAORMlsId": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Member"
+    "level": "bronze",
+    "path": "/Member"
   },
   "MemberAORkey": {
     "type": "string",
     "maxLength": 255,
-    "group": "/Member"
+    "level": "bronze",
+    "path": "/Member"
   },
   "MemberStateLicense": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Member"
+    "level": "core",
+    "path": "/Member"
   },
   "MemberStateLicenseState": {
     "type": "string",
     "maxLength": 2,
-    "group": "/Member"
+    "level": "bronze",
+    "path": "/Member"
   },
   "MemberDesignation": {
     "type": [
       "string"
     ],
-    "group": "/Member"
+    "level": "silver",
+    "path": "/Member"
   },
   "MemberAddress1": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Member"
+    "level": "core",
+    "path": "/Member"
   },
   "MemberAddress2": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Member"
+    "level": "core",
+    "path": "/Member"
   },
   "MemberCity": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Member"
+    "level": "core",
+    "path": "/Member"
   },
   "MemberStateOrProvince": {
     "type": "string",
     "maxLength": 2,
-    "group": "/Member"
+    "level": "core",
+    "path": "/Member"
   },
   "MemberPostalCode": {
     "type": "string",
     "maxLength": 10,
-    "group": "/Member"
+    "level": "core",
+    "path": "/Member"
   },
   "MemberPostalCodePlus4": {
     "type": "string",
     "maxLength": 4,
-    "group": "/Member"
+    "level": "core",
+    "path": "/Member"
   },
   "MemberCarrierRoute": {
     "type": "string",
     "maxLength": 9,
-    "group": "/Member"
+    "level": "",
+    "path": "/Member"
   },
   "MemberCountyOrParish": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Member"
+    "level": "core",
+    "path": "/Member"
   },
   "MemberCountry": {
     "type": "string",
     "maxLength": 2,
-    "group": "/Member"
+    "level": "core",
+    "path": "/Member"
   },
   "MemberMlsAccessYN": {
     "type": "boolean",
-    "group": "/Member"
+    "level": "silver",
+    "path": "/Member"
   },
   "MemberStatus": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Member"
+    "level": "core",
+    "path": "/Member"
   },
   "MemberMlsSecurityClass": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Member"
+    "level": "bronze",
+    "path": "/Member"
   },
   "MemberType": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Member"
+    "level": "bronze",
+    "path": "/Member"
   },
   "MemberAssociationComments": {
     "type": "string",
     "maxLength": 500,
-    "group": "/Member"
+    "level": "silver",
+    "path": "/Member"
   },
   "MemberLanguages": {
     "type": [
       "string"
     ],
-    "group": "/Member"
+    "level": "silver",
+    "path": "/Member"
+  },
+  "SyndicateTo": {
+    "type": [
+      "string"
+    ],
+    "level": "gold",
+    "path": "/Member"
   },
   "OfficeName": {
     "type": "string",
     "maxLength": 50,
-    "group": "/Member"
+    "level": "bronze",
+    "path": "/Member"
   },
   "OfficeKey": {
     "type": "string",
     "maxLength": 255,
-    "group": "/Member"
+    "level": "core",
+    "path": "/Member"
   },
   "OfficeMlsId": {
     "type": "string",
     "maxLength": 25,
-    "group": "/Member"
+    "level": "core",
+    "path": "/Member"
   },
-  "TimestampEntered": {
+  "OriginalEntryTimestamp": {
     "type": "date",
-    "group": "/Member"
+    "level": "core",
+    "path": "/Member"
   },
-  "TimestampLastLoggedIn": {
+  "LastLoginTimestamp": {
     "type": "date",
-    "group": "/Member"
+    "level": "silver",
+    "path": "/Member"
   },
-  "TimestampModified": {
+  "ModificationTimestamp": {
     "type": "date",
-    "group": "/Member"
+    "level": "core",
+    "path": "/Member"
   }
 }
