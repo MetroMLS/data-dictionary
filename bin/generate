@@ -16,21 +16,6 @@ var file = process.argv[2]
 var res = process.argv[3]
 
 /**
- * Lovely resources
- */
-
-var resources = [
-  'Property',
-  'Member',
-  'Office',
-  'Contacts',
-  'Media',
-  'HistoryTransactional',
-  'SavedSearch',
-  'OpenHouse'
-]
-
-/**
  * Column names
  */
 
@@ -40,7 +25,7 @@ var keys = [
   'type',
   'maxLength',
   'maxPrecision',
-  'synonym',
+  'synonyms',
   'status',
   'lookup',
   'level',
@@ -48,7 +33,17 @@ var keys = [
   'bedesMapping',
   'path',
   'group',
-  'repeating'
+  'repeating',
+  'rid',
+  'resi',
+  'rlse',
+  'rinc',
+  'land',
+  'mobi',
+  'farm',
+  'coms',
+  'coml',
+  'buso'
 ]
 
 parse(file, res)
@@ -62,6 +57,8 @@ function parse (file, res) {
   out(src
     .map(toObject(keys))
     .map(toSchema)
+    .map(synonyms)
+    .map(classes(res))
     .map(primaryKey())
     .map(addEnums(enums))
     .map(cleanEmpty)
@@ -92,14 +89,35 @@ function toSchema (obj) {
   obj.type = parseType(obj.type)
   obj.maxLength = 'string' === obj.type? parseInt(obj.maxLength, 10) : undefined
   obj.repeating = 'Yes'===obj.repeating? true : undefined
-  obj.definition = undefined
-  obj.synonym = undefined
+  // obj.definition = undefined
   obj.status = undefined
   obj.group = undefined
   obj.bedesMapping = undefined
   obj.level = obj.level.toLowerCase()
   if (obj.lookup && obj.lookup.charAt(0) === '<') obj.lookup = undefined;
+  obj.rid = undefined
   return obj
+}
+
+function synonyms (obj) {
+  if (obj.synonyms) obj.synonyms = obj.synonyms
+    .split(',')
+    .map(function(s){ return s.trim() })
+  return obj
+}
+
+function classes (res) {
+  var classes = ['resi', 'rlse', 'rinc', 'land', 'mobi', 'farm', 'coms', 'coml', 'buso']
+  return function (obj) {
+    // classes only applies to properties!
+    if ('Property'===res) obj.classes = classes.filter(function(c){ return obj[c] === 'X' })
+
+    classes.forEach(function(c){
+      obj[c] = undefined
+    })
+
+    return obj
+  }
 }
 
 function primaryKey () {
