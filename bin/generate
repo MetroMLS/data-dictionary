@@ -1,7 +1,9 @@
 #!/usr/bin/env node
 
-var xlsx = require('xlsx-rows')
-var plural = require('plural')
+'use strict'
+
+const xlsx = require('xlsx-rows')
+const plural = require('plural')
 
 /**
  * Source file
@@ -19,7 +21,7 @@ var res = process.argv[3]
  * Column names
  */
 
-var keys = [
+const keys = [
   'key',
   'definition',
   'type',
@@ -49,16 +51,15 @@ var keys = [
 parse(file, res)
 
 function parse (file, res) {
-  var src = xlsx({file:file, sheetname:res})
-  var enums = xlsx({file:file, sheetname:'Enumerations'})
+  var src = xlsx({file: file, sheetname: res})
+  var enums = xlsx({file: file, sheetname: 'Enumerations'})
   src.shift()
   enums.shift()
 
   out(src
     .map(toObject(keys))
-    .map(toSchema)
-    .map(synonyms)
     .map(classes(res))
+    .map(toSchema)
     .map(primaryKey())
     .map(addEnums(enums))
     .map(cleanEmpty)
@@ -78,44 +79,40 @@ function out (obj) {
 function toObject (keys) {
   return function (vals) {
     var obj = {}
-    keys.forEach(function(k, i){
-      obj[k] = vals[i]
-    })
+    keys.forEach((k, i) => obj[k] = vals[i])
     return obj
   }
 }
 
 function toSchema (obj) {
-  obj.type = parseType(obj.type)
-  obj.maxLength = 'string' === obj.type? parseInt(obj.maxLength, 10) : undefined
-  obj.repeating = 'Yes'===obj.repeating? true : undefined
-  // obj.definition = undefined
-  obj.status = undefined
-  obj.group = undefined
-  obj.bedesMapping = undefined
-  obj.level = obj.level.toLowerCase()
-  if (obj.lookup && obj.lookup.charAt(0) === '<') obj.lookup = undefined;
-  obj.rid = undefined
-  return obj
+  return {
+    key: obj.key,
+    definition: obj.definition,
+    type: parseType(obj.type),
+    maxLength: parseInt(obj.maxLength, 10) || undefined,
+    maxPrecision: parseInt(obj.maxPrecision, 10) || undefined,
+    synonyms: synonyms(obj.synonyms),
+    lookup: (obj.lookup && obj.lookup.charAt(0) === '<') ? undefined : obj.lookup,
+    level: obj.level.toLowerCase(),
+    repeating: obj.repeating === 'Yes' ? true : undefined
+  }
 }
 
-function synonyms (obj) {
-  if (obj.synonyms) obj.synonyms = obj.synonyms
+function synonyms (arr) {
+  if (!arr) return
+  return arr
     .split(',')
-    .map(function(s){ return s.trim() })
-  return obj
+    .map((s) => s.trim())
+    .filter((s) => s.length)
 }
 
 function classes (res) {
-  var classes = ['resi', 'rlse', 'rinc', 'land', 'mobi', 'farm', 'coms', 'coml', 'buso']
+  const classes = ['resi', 'rlse', 'rinc', 'land', 'mobi', 'farm', 'coms', 'coml', 'buso']
   return function (obj) {
     // classes only applies to properties!
-    if ('Property'===res) obj.classes = classes.filter(function(c){ return obj[c] === 'X' })
-
-    classes.forEach(function(c){
-      obj[c] = undefined
-    })
-
+    if (res === 'Property') {
+      obj.classes = classes.filter((c) => obj[c] === 'X')
+    }
     return obj
   }
 }
@@ -137,7 +134,7 @@ function primaryKey () {
 
 function addEnums (arr) {
   var enums = {}
-  arr.forEach(function(row){
+  arr.forEach((row) => {
     if (!(row[0] in enums)) enums[row[0]] = []
     enums[row[0]].push(row[1])
   })
@@ -172,7 +169,7 @@ function repeatingFields (obj, i, arr) {
 
   // collect similar fields
   while (collect) {
-    j++;
+    j++
     fields.push(arr[j])
     collect = arr[j].key && arr[j].key.match(/(\w+)\[[Tt]ype\](\w+)$/)
     if (collect) {
@@ -181,13 +178,16 @@ function repeatingFields (obj, i, arr) {
     }
   }
 
-  keys.forEach(function(k, i){
+  keys.forEach((k, i) => {
     subdoc[k] = fields[i]
     delete subdoc[k].repeating
     delete subdoc[k].key
   })
 
-  obj.subdoc = {key:plural(shortName),body:[subdoc]}
+  obj.subdoc = {
+    key: plural(shortName),
+    body: [subdoc]
+  }
 
   return obj
 }
@@ -199,7 +199,7 @@ function repeatingFields (obj, i, arr) {
 function cleanEmpty (obj) {
   Object
     .keys(obj)
-    .forEach(function(k){
+    .forEach((k) => {
       if (undefined === obj[k]) delete obj[k]
     })
   return obj
@@ -209,7 +209,7 @@ function cleanEmpty (obj) {
  * Turn array into object
  */
 
-function reduce (obj, el){
+function reduce (obj, el) {
   if (!el.key) return obj
   obj[el.key] = el
   if (el.subdoc) {

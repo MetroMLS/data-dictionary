@@ -1,70 +1,71 @@
 {
   "OrganizationUniqueIdKey": {
+    "definition": "The key field used by the system hosting a table of OUIDs.  This key is likely to be unique to each hosting system and is not meant to be a universal ID for an organization, but rather a key used by clients of the hosting system.  The actual OUID is the Organization Unique ID field.",
     "type": "string",
     "maxLength": 255,
     "level": "platinum",
-    "path": "/OUID",
     "primary": true
   },
   "OrganizationUniqueIdKeyNumeric": {
+    "definition": "The key field used by the system hosting a table of OUIDs.  This key is likely to be unique to each hosting system and is not meant to be a universal ID for an organization, but rather a key used by clients of the hosting system.  The actual OUID is the Organization Unique ID field.  This is the numeric only key and used as an alternative to the OrganizationUniqueIdKey field.",
     "type": "number",
-    "level": "platinum",
-    "path": "/OUID"
+    "maxLength": 255,
+    "level": "platinum"
   },
   "OrganizationUniqueId": {
+    "definition": "The OUID.  This is the unique ID assigned to organizations included in the OUID resource.  Assignment of OUIDs will be centralized and may not be created by systems hosting the OUID resource.  Contact info@RESO.org for information on obtaining an OUID.",
     "type": "string",
     "maxLength": 25,
-    "level": "platinum",
-    "path": "/OUID"
+    "level": "platinum"
   },
   "OrganizationMlsCode": {
+    "definition": "If the organization is an MLS it is likely they already have an ID or code based on their name or an abbreviation.  This field supports the continued use/reference to that legacy code.",
     "type": "string",
     "maxLength": 25,
-    "level": "platinum",
-    "path": "/OUID"
+    "level": "platinum"
   },
   "OrganizationMlsVendorName": {
+    "definition": "If the organization uses an MLS system, this is the textual name of the vendor.",
     "type": "string",
     "maxLength": 255,
-    "level": "platinum",
-    "path": "/OUID"
+    "level": "platinum"
   },
   "OrganizationMlsVendorOuid": {
+    "definition": "If the organization uses an MLS system, this is that vendor's OUID.",
     "type": "string",
     "maxLength": 25,
-    "level": "platinum",
-    "path": "/OUID"
+    "level": "platinum"
   },
   "OrganizationName": {
+    "definition": "The textual name of the organization represented by a given OUID record.",
     "type": "string",
     "maxLength": 255,
-    "level": "platinum",
-    "path": "/OUID"
+    "level": "platinum"
   },
   "OrganizationAddress1": {
+    "definition": "The street number, direction, name and suffix of the organization.",
     "type": "string",
     "maxLength": 50,
-    "level": "platinum",
-    "path": "/OUID"
+    "level": "platinum"
   },
   "OrganizationAddress2": {
+    "definition": "The unit/suite number of the organization.",
     "type": "string",
     "maxLength": 50,
-    "level": "platinum",
-    "path": "/OUID"
+    "level": "platinum"
   },
   "OrganizationCity": {
+    "definition": "The city of the organization.",
     "type": "string",
     "maxLength": 50,
-    "level": "platinum",
-    "path": "/OUID"
+    "level": "platinum"
   },
   "OrganizationStateOrProvince": {
+    "definition": "The state or province in which the organization is addressed.",
     "type": "string",
     "maxLength": 2,
     "lookup": "StateOrProvince",
     "level": "platinum",
-    "path": "/OUID",
     "enum": [
       "AK",
       "AL",
@@ -134,35 +135,42 @@
     ]
   },
   "OrganizationPostalCode": {
+    "definition": "The postal code of the organization.",
     "type": "string",
     "maxLength": 10,
-    "level": "platinum",
-    "path": "/OUID"
+    "level": "platinum"
   },
   "OrganizationPostalCodePlus4": {
+    "definition": "The extension of the postal/zip code.  i.e. +4",
     "type": "string",
     "maxLength": 4,
-    "level": "platinum",
-    "path": "/OUID"
+    "level": "platinum"
   },
   "OrganizationCarrierRoute": {
+    "definition": "The group of addresses to which the USPS assigns the same code to aid in mail delivery. For the USPS, these codes are 9 digits: 5 numbers for the ZIP Code, one letter for the carrier route type, and 3 numbers for the carrier route number.",
     "type": "string",
     "maxLength": 9,
-    "level": "platinum",
-    "path": "/OUID"
+    "synonyms": [
+      "RR",
+      "CR"
+    ],
+    "level": "platinum"
   },
   "OrganizationCountyOrParish": {
+    "definition": "The county or parish in which the organization is addressed.",
     "type": "string",
     "maxLength": 50,
-    "level": "platinum",
-    "path": "/OUID"
+    "synonyms": [
+      "County"
+    ],
+    "level": "platinum"
   },
   "OrganizationCountry": {
+    "definition": "The country abbreviation in a postal address.",
     "type": "string",
     "maxLength": 2,
     "lookup": "Country",
     "level": "platinum",
-    "path": "/OUID",
     "enum": [
       "AF",
       "AL",
@@ -414,82 +422,86 @@
     ]
   },
   "OrganizationType": {
+    "definition": "The type of organization.  i.e. MLS, Vendor, Association, etc.  This is not a substitute or alternative for the Office resource, however it may be that a brokerage has a record in this table for a non-listing purpose.",
     "type": "string",
     "maxLength": 25,
-    "level": "platinum",
-    "path": "/OUID"
+    "level": "platinum"
   },
   "OrganizationContactNamePrefix": {
+    "definition": "Prefix to the name of the Organization Contact. (e.g. Dr. Mr. Ms. etc.)",
     "type": "string",
     "maxLength": 10,
-    "level": "platinum",
-    "path": "/OUID"
+    "synonyms": [
+      "Salutation",
+      "Title"
+    ],
+    "level": "platinum"
   },
   "OrganizationContactFirstName": {
+    "definition": "The first name of the Organization Contact.",
     "type": "string",
     "maxLength": 50,
-    "level": "platinum",
-    "path": "/OUID"
+    "level": "platinum"
   },
   "OrganizationContactMiddleName": {
+    "definition": "The middle name of the Organization Contact.",
     "type": "string",
     "maxLength": 50,
-    "level": "platinum",
-    "path": "/OUID"
+    "level": "platinum"
   },
   "OrganizationContactLastName": {
+    "definition": "The last name of the Organization Contact.",
     "type": "string",
     "maxLength": 50,
-    "level": "platinum",
-    "path": "/OUID"
+    "level": "platinum"
   },
   "OrganizationContactNameSuffix": {
+    "definition": "Suffix to the surname (e.g. Esq.,  Jr.,  III etc.) of the Organization Contact.",
     "type": "string",
     "maxLength": 10,
-    "level": "platinum",
-    "path": "/OUID"
+    "level": "platinum"
   },
   "OrganizationContactFullName": {
+    "definition": "The full name of the Organization Contact. (First Middle Last) or a alternate full name.",
     "type": "string",
     "maxLength": 150,
-    "level": "platinum",
-    "path": "/OUID"
+    "level": "platinum"
   },
   "OrganizationContactJobTitle": {
+    "definition": "The title or position of the Organization Contact.",
     "type": "string",
     "maxLength": 50,
-    "level": "platinum",
-    "path": "/OUID"
+    "level": "platinum"
   },
   "OrganizationContactEmail": {
+    "definition": "The email address of the Organization Contact.",
     "type": "string",
     "maxLength": 80,
-    "level": "platinum",
-    "path": "/OUID"
+    "level": "platinum"
   },
   "OrganizationContactPhone": {
+    "definition": "North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.",
     "type": "string",
     "maxLength": 16,
-    "level": "platinum",
-    "path": "/OUID"
+    "level": "platinum"
   },
   "OrganizationContactPhoneExt": {
+    "definition": "The extension of the given phone number (if applicable).",
     "type": "string",
     "maxLength": 10,
-    "level": "platinum",
-    "path": "/OUID"
+    "level": "platinum"
   },
   "OrganizationContactFax": {
+    "definition": "North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.",
     "type": "string",
     "maxLength": 16,
-    "level": "platinum",
-    "path": "/OUID"
+    "level": "platinum"
   },
   "OrganizationSocialMediaType": {
+    "definition": "A list of types of sites, blog, social media, the Organization URL or ID is referring to.  i.e. Website, Blog, Facebook, Twitter, LinkedIn, Skype, etc.,  This list is used to populate the Type with repeating Social Media URL or ID types.",
     "type": "string",
     "maxLength": 25,
     "level": "platinum",
-    "path": "/OUID",
     "repeating": true
   },
   "OrganizationSocialMedias": [
@@ -498,54 +510,55 @@
         "type": "string"
       },
       "UrlOrId": {
+        "definition": "The website URL or ID of social media site or account of the member.  This is a repeating element.  Replace [Type] with any of the options from the SocialMediaType field to create a unique field for that type of social media.  For example: SocialMediaFacebookUrlOrID, SocialMediaSkypeUrlOrID, etc.",
         "type": "string",
         "maxLength": 8000,
-        "level": "platinum",
-        "path": "/OUID"
+        "level": "platinum"
       }
     }
   ],
   "OrganizationAOR": {
+    "definition": "The Organization's Primary Board or Association of REALTORS if applicable.",
     "type": "string",
     "maxLength": 50,
-    "level": "platinum",
-    "path": "/OUID"
+    "level": "platinum"
   },
   "OrganizationAorOuid": {
+    "definition": "The OUID for the Organization's Association of REALTORS if applicable.",
     "type": "string",
     "maxLength": 25,
-    "level": "platinum",
-    "path": "/OUID"
+    "level": "platinum"
   },
   "OrganizationAorOuidKey": {
+    "definition": "The OrganizationUniqueIdKey of the AOR from the system serving the OUID resource.",
     "type": "string",
     "maxLength": 255,
-    "level": "platinum",
-    "path": "/OUID"
+    "level": "platinum"
   },
   "OrganizationAorOuidKeyNumeric": {
+    "definition": "The OrganizationUniqueIdKey of the AOR from the system serving the OUID resource.  This is the numeric only key and used as an alternative to the OrganizationAorOuidKey field.",
     "type": "number",
-    "level": "platinum",
-    "path": "/OUID"
+    "maxLength": 255,
+    "level": "platinum"
   },
   "OrganizationNationalAssociationId": {
+    "definition": "The national association ID of the Organization if applicable.  i.e. in the U.S. is the NRDS number.",
     "type": "string",
     "maxLength": 25,
-    "level": "platinum",
-    "path": "/OUID"
+    "level": "platinum"
   },
   "OrganizationStateLicense": {
+    "definition": "The license of the Organization if applicable. Separate multiple licenses with a comma and space.",
     "type": "string",
     "maxLength": 50,
-    "level": "platinum",
-    "path": "/OUID"
+    "level": "platinum"
   },
   "OrganizationStateLicenseState": {
+    "definition": "The state in which the Organization is licensed if applicable.",
     "type": "string",
     "maxLength": 2,
     "lookup": "StateOrProvince",
     "level": "platinum",
-    "path": "/OUID",
     "enum": [
       "AK",
       "AL",
@@ -615,51 +628,57 @@
     ]
   },
   "OrganizationStatus": {
+    "definition": "Is the Organization active or inactive.  1 or true is active, 0 or false is inactive.  This field is not nullable.",
     "type": "boolean",
-    "level": "platinum",
-    "path": "/OUID"
+    "maxLength": 1,
+    "level": "platinum"
   },
   "OrganizationStatusChangeTimestamp": {
+    "definition": "The date/time of when the Organization Status was last changed.",
     "type": "date",
-    "level": "platinum",
-    "path": "/OUID"
+    "maxLength": 27,
+    "level": "platinum"
   },
   "OrganizationMemberCount": {
+    "definition": "The total number of active members in the Organization if applicable.",
     "type": "number",
-    "level": "platinum",
-    "path": "/OUID"
+    "maxLength": 14,
+    "level": "platinum"
   },
   "ChangedByMemberID": {
+    "definition": "The local, well-know identifier of the member (user) who made the change.",
     "type": "string",
     "maxLength": 25,
-    "level": "platinum",
-    "path": "/OUID"
+    "level": "platinum"
   },
   "ChangedByMemberKey": {
+    "definition": "The unique identifier of the member (user) who made the change.  This is a foreign key relating to the Member resource's MemberKey.",
     "type": "string",
     "maxLength": 255,
-    "level": "platinum",
-    "path": "/OUID"
+    "level": "platinum"
   },
   "ChangedByMemberKeyNumeric": {
+    "definition": "The unique identifier of the member (user) who made the change.  This is a foreign key relating to the Member resource's MemberKey.  This is the numeric only key and used as an alternative to the ChangedByMemberKey field.",
     "type": "number",
-    "level": "platinum",
-    "path": "/OUID"
+    "maxLength": 255,
+    "level": "platinum"
   },
   "OrganizationComments": {
+    "definition": "Comments or notes about the Organization.",
     "type": "string",
     "maxLength": 500,
-    "level": "platinum",
-    "path": "/OUID"
+    "level": "platinum"
   },
   "OriginalEntryTimestamp": {
+    "definition": "Date/time the Organization record was originally input into the source system.",
     "type": "date",
-    "level": "platinum",
-    "path": "/OUID"
+    "maxLength": 27,
+    "level": "platinum"
   },
   "ModificationTimestamp": {
+    "definition": "Date/time the Organization record was last modified.",
     "type": "date",
-    "level": "platinum",
-    "path": "/OUID"
+    "maxLength": 27,
+    "level": "platinum"
   }
 }
