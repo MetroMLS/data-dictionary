@@ -37,14 +37,30 @@
   "ListingService": {
     "type": "string",
     "maxLength": 25,
+    "lookup": "ListingService",
     "level": "core",
-    "path": "/Listing"
+    "path": "/Listing",
+    "enum": [
+      "Full Service",
+      "Limited Service",
+      "Entry Only"
+    ]
   },
   "ListingAgreement": {
     "type": "string",
     "maxLength": 25,
+    "lookup": "ListingAgreement",
     "level": "core",
-    "path": "/Listing"
+    "path": "/Listing",
+    "enum": [
+      "Exclusive Right To Lease",
+      "Exclusive Agency",
+      "Exclusive Right With Exception",
+      "Exclusive Right To Sell",
+      "Net",
+      "Open",
+      "Probate"
+    ]
   },
   "LeaseConsideredYN": {
     "type": "boolean",
@@ -302,8 +318,16 @@
     "type": [
       "string"
     ],
+    "lookup": "LeaseRenewalCompensation",
     "level": "bronze",
-    "path": "/Listing"
+    "path": "/Listing",
+    "enum": [
+      "Call Listing Agent",
+      "Call Listing Office",
+      "Commission Paid on Tenant Purchase",
+      "No Renewal Commission",
+      "Renewal Commission Paid"
+    ]
   },
   "SignOnPropertyYN": {
     "type": "boolean",
@@ -448,8 +472,15 @@
     "type": [
       "string"
     ],
+    "lookup": "ShowingContactType",
     "level": "bronze",
-    "path": "/Listing"
+    "path": "/Listing",
+    "enum": [
+      "Agent",
+      "Occupant",
+      "Owner",
+      "Property Manager"
+    ]
   },
   "LockBoxLocation": {
     "type": "string",
@@ -507,30 +538,103 @@
     "type": [
       "string"
     ],
+    "lookup": "SpecialListingConditions",
     "level": "bronze",
     "payloads": "Proposed IDX",
-    "path": "/Listing"
+    "path": "/Listing",
+    "enum": [
+      "Auction",
+      "HUD Owned",
+      "In Foreclosure",
+      "Notice Of Default",
+      "Probate Listing",
+      "Real Estate Owned",
+      "Short Sale",
+      "Standard",
+      "Third Party Approval",
+      "Bankruptcy Property"
+    ]
   },
   "ListingTerms": {
     "type": [
       "string"
     ],
+    "lookup": "ListingTerms",
     "level": "bronze",
-    "path": "/Listing"
+    "path": "/Listing",
+    "enum": [
+      "1031 Exchange",
+      "All Inclusive Trust Deed",
+      "Assumable",
+      "Cash",
+      "Contract",
+      "Conventional",
+      "Existing Bonds",
+      "FHA",
+      "Land Use Fee",
+      "Lease Back",
+      "Lease Option",
+      "Lease Purchase",
+      "Lien Release",
+      "Owner May Carry",
+      "Owner Pay Points",
+      "Owner Will Carry",
+      "Private Financing Available",
+      "Relocation Property",
+      "Seller Equity Share",
+      "Special Funding",
+      "Submit",
+      "Trade",
+      "Trust Conveyance",
+      "Trust Deed",
+      "USDA Loan",
+      "VA Loan"
+    ]
   },
   "CurrentFinancing": {
     "type": [
       "string"
     ],
+    "lookup": "CurrentFinancing",
     "level": "bronze",
-    "path": "/Listing"
+    "path": "/Listing",
+    "enum": [
+      "Assumable",
+      "Contract",
+      "Conventional",
+      "FHA",
+      "FHA 203(b)",
+      "FHA 203(k)",
+      "None",
+      "Other",
+      "Private",
+      "Trust Deed",
+      "USDA",
+      "VA"
+    ]
   },
   "BuyerFinancing": {
     "type": [
       "string"
     ],
+    "lookup": "BuyerFinancing",
     "level": "bronze",
-    "path": "/Listing"
+    "path": "/Listing",
+    "enum": [
+      "Assumed",
+      "Cash",
+      "Contract",
+      "Conventional",
+      "FHA",
+      "FHA 203(b)",
+      "FHA 203(k)",
+      "Other",
+      "Private",
+      "Seller Financing",
+      "Trust Deed",
+      "USDA",
+      "VA"
+    ]
   },
   "Concessions": {
     "type": "string",
@@ -559,8 +663,22 @@
     "type": [
       "string"
     ],
+    "lookup": "Possession",
     "level": "bronze",
-    "path": "/Listing"
+    "path": "/Listing",
+    "enum": [
+      "Close of Escrow",
+      "Close Plus 1 Day",
+      "Close Plus 2 Days",
+      "Close Plus 3 Days",
+      "Close Plus 3 to 5 Days",
+      "Close Plus 30 Days",
+      "Negotiable",
+      "Rental Agreement",
+      "See Remarks",
+      "Seller Rent Back",
+      "Subject to Tenant Rights"
+    ]
   },
   "AvailabilityDate": {
     "type": "date",
@@ -640,9 +758,77 @@
   "StateOrProvince": {
     "type": "string",
     "maxLength": 2,
+    "lookup": "StateOrProvince",
     "level": "core",
     "payloads": "Proposed IDX",
-    "path": "/Listing"
+    "path": "/Listing",
+    "enum": [
+      "AK",
+      "AL",
+      "AR",
+      "AZ",
+      "CA",
+      "CO",
+      "CT",
+      "DC",
+      "DE",
+      "FL",
+      "GA",
+      "HI",
+      "IA",
+      "ID",
+      "IL",
+      "IN",
+      "KS",
+      "KY",
+      "LA",
+      "MA",
+      "MD",
+      "ME",
+      "MI",
+      "MN",
+      "MO",
+      "MS",
+      "MT",
+      "NC",
+      "ND",
+      "NE",
+      "NH",
+      "NJ",
+      "NM",
+      "NV",
+      "NY",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "SD",
+      "TN",
+      "TX",
+      "UT",
+      "VA",
+      "VI",
+      "VT",
+      "WA",
+      "WI",
+      "WV",
+      "WY",
+      "AB",
+      "BC",
+      "MB",
+      "NB",
+      "NF",
+      "NS",
+      "NT",
+      "NU",
+      "ON",
+      "PE",
+      "QC",
+      "SK",
+      "YT"
+    ]
   },
   "Country": {
     "type": "string",
@@ -1696,9 +1882,21 @@
   "PropertyType": {
     "type": "string",
     "maxLength": 50,
+    "lookup": "PropertyType",
     "level": "core",
     "payloads": "Proposed IDX",
-    "path": "/Property"
+    "path": "/Property",
+    "enum": [
+      "Residential",
+      "Residential Lease",
+      "Residential Income",
+      "Manufactured in Park",
+      "Land",
+      "Commercial Sale",
+      "Commercial Lease",
+      "Business Opportunity",
+      "Farm"
+    ]
   },
   "PropertySubType": {
     "type": "string",
@@ -1811,9 +2009,26 @@
     "type": [
       "string"
     ],
+    "lookup": "AssociationFeeIncludes",
     "level": "bronze",
     "payloads": "Proposed IDX",
-    "path": "/Property"
+    "path": "/Property",
+    "enum": [
+      "Cable TV",
+      "Earthquake Insurance",
+      "Electricity",
+      "Gas",
+      "Insurance",
+      "Maintenance Exterior",
+      "Maintenance Grounds",
+      "Pest Control",
+      "Security",
+      "Sewer",
+      "Snow Removal",
+      "Trash",
+      "Utilities",
+      "Water"
+    ]
   },
   "AssociationAmenities": {
     "type": [
@@ -1858,9 +2073,15 @@
   "LotSizeUnits": {
     "type": "string",
     "maxLength": 25,
+    "lookup": "LotSizeUnits",
     "level": "core",
     "payloads": "Proposed IDX",
-    "path": "/Property"
+    "path": "/Property",
+    "enum": [
+      "Acres",
+      "Square Feet",
+      "Square Meters"
+    ]
   },
   "LotSizeDimensions": {
     "type": "string",
@@ -1942,8 +2163,14 @@
   "OccupantType": {
     "type": "string",
     "maxLength": 50,
+    "lookup": "OccupantType",
     "level": "bronze",
-    "path": "/Property"
+    "path": "/Property",
+    "enum": [
+      "Owner",
+      "Tenant",
+      "Vacant"
+    ]
   },
   "OwnerName": {
     "type": "string",
@@ -1967,9 +2194,22 @@
   "LeaseTerm": {
     "type": "string",
     "maxLength": 25,
+    "lookup": "LeaseTerm",
     "level": "core",
     "payloads": "Proposed IDX",
-    "path": "/Property"
+    "path": "/Property",
+    "enum": [
+      "12 Months",
+      "24 Months",
+      "6 Months",
+      "Month to Month",
+      "Negotiable",
+      "Weekly",
+      "None",
+      "Other",
+      "Renewal Option",
+      "Short Term Lease"
+    ]
   },
   "LandLeaseYN": {
     "type": "boolean",
@@ -2132,7 +2372,6 @@
     "type": [
       "string"
     ],
-    "lookup": "WaterfrontFeatures",
     "level": "platinum",
     "payloads": "Proposed IDX",
     "path": "/Property"
@@ -2160,9 +2399,18 @@
     "type": [
       "string"
     ],
+    "lookup": "IncomeIncludes",
     "level": "bronze",
     "payloads": "Proposed IDX",
-    "path": "/Property"
+    "path": "/Property",
+    "enum": [
+      "Laundry",
+      "Parking",
+      "Recreation",
+      "Rent Only",
+      "RV Storage",
+      "Storage"
+    ]
   },
   "OperatingExpense": {
     "type": "number",
@@ -2174,9 +2422,45 @@
     "type": [
       "string"
     ],
+    "lookup": "OperatingExpenseIncludes",
     "level": "bronze",
     "payloads": "Proposed IDX",
-    "path": "/Property"
+    "path": "/Property",
+    "enum": [
+      "Accounting",
+      "Advertising",
+      "Association",
+      "Cable TV",
+      "Capital Improvements",
+      "Depreciation",
+      "Equipment Rental",
+      "Fuel",
+      "Furniture Replacement",
+      "Gardener",
+      "Insurance",
+      "Legal",
+      "Licenses",
+      "Maintenance",
+      "Maintenance Grounds",
+      "Maintenance Structure",
+      "Manager",
+      "Mortgage/Loans",
+      "New Tax",
+      "Other",
+      "Parking",
+      "Pest Control",
+      "Pool/Spa",
+      "Professional Management",
+      "Security",
+      "Snow Removal",
+      "Staff",
+      "Supplies",
+      "Trash",
+      "Utilities",
+      "Vacancy Allowance",
+      "Water/Sewer",
+      "Workmans Compensation"
+    ]
   },
   "NetOperatingIncome": {
     "type": "number",
@@ -2212,9 +2496,21 @@
     "type": [
       "string"
     ],
+    "lookup": "ExistingLeaseType",
     "level": "bronze",
     "payloads": "Proposed IDX",
-    "path": "/Property"
+    "path": "/Property",
+    "enum": [
+      "Absolute Net",
+      "CPI Adjustment",
+      "Escalation Clause",
+      "Gross",
+      "Ground Lease",
+      "Net",
+      "NN",
+      "NNN",
+      "Oral"
+    ]
   },
   "UnitsFurnished": {
     "type": "string",
@@ -2387,9 +2683,15 @@
     "type": [
       "string"
     ],
+    "lookup": "FinancialDataSource",
     "level": "bronze",
     "payloads": "Proposed IDX",
-    "path": "/Property"
+    "path": "/Property",
+    "enum": [
+      "Accountant",
+      "Owner",
+      "Property Manager"
+    ]
   },
   "RentIncludes": {
     "type": [
@@ -2534,17 +2836,40 @@
   "OwnershipType": {
     "type": "string",
     "maxLength": 50,
+    "lookup": "OwnershipType",
     "level": "bronze",
     "payloads": "Proposed IDX",
-    "path": "/Property"
+    "path": "/Property",
+    "enum": [
+      "Corporation",
+      "LLC",
+      "Partnership",
+      "Sole Proprietor"
+    ]
   },
   "SpecialLicenses": {
     "type": [
       "string"
     ],
+    "lookup": "SpecialLicenses",
     "level": "bronze",
     "payloads": "Proposed IDX",
-    "path": "/Property"
+    "path": "/Property",
+    "enum": [
+      "Beer/Wine",
+      "Class H",
+      "Entertainment",
+      "Franchise",
+      "Gambling",
+      "Liquor",
+      "Liquor 5 years or less",
+      "Liquor 5 years or more",
+      "Liquor-Off Sale",
+      "Liquor-On Sale",
+      "None",
+      "Other",
+      "Professional"
+    ]
   },
   "NumberOfFullTimeEmployees": {
     "type": "number",
@@ -2567,9 +2892,23 @@
   "LeaseAmountFrequency": {
     "type": "string",
     "maxLength": 25,
+    "lookup": "FeeFrequency",
     "level": "bronze",
     "payloads": "Proposed IDX",
-    "path": "/Property"
+    "path": "/Property",
+    "enum": [
+      "Daily",
+      "Weekly",
+      "Bi-Weekly",
+      "Semi-Monthly",
+      "Monthly",
+      "Bi-Monthly",
+      "Quarterly",
+      "Semi-Annually",
+      "Annually",
+      "Seasonal",
+      "One Time"
+    ]
   },
   "LeaseExpiration": {
     "type": "date",
@@ -2593,9 +2932,21 @@
     "type": [
       "string"
     ],
+    "lookup": "HoursDaysofOperation",
     "level": "silver",
     "payloads": "Proposed IDX",
-    "path": "/Property"
+    "path": "/Property",
+    "enum": [
+      "Open 24 Hours",
+      "Open 8 Hours/Day",
+      "Open -8 Hours/Day",
+      "Open 8+ Hours/Day",
+      "Open 7 Days",
+      "Open Monday-Friday",
+      "Open Sunday",
+      "Open Saturday",
+      "Evenings Only"
+    ]
   },
   "HoursDaysofOperationDescription": {
     "type": "string",
@@ -2941,9 +3292,14 @@
   "LivingAreaUnits": {
     "type": "string",
     "maxLength": 25,
+    "lookup": "LivingAreaUnits",
     "level": "core",
     "payloads": "Proposed IDX",
-    "path": "/Property"
+    "path": "/Property",
+    "enum": [
+      "Square Feet",
+      "Square Meters"
+    ]
   },
   "PropertyAttachedYN": {
     "type": "boolean",
@@ -3113,9 +3469,18 @@
     "type": [
       "string"
     ],
+    "lookup": "CommonWalls",
     "level": "bronze",
     "payloads": "Proposed IDX",
-    "path": "/Property"
+    "path": "/Property",
+    "enum": [
+      "1 common wall",
+      "2+ common walls",
+      "End Unit",
+      "No Common Walls",
+      "No one above",
+      "No one below"
+    ]
   },
   "FoundationArea": {
     "type": "number",
