@@ -61,14 +61,41 @@
   "ResourceName": {
     "type": "string",
     "maxLength": 50,
+    "lookup": "ResourceName",
     "level": "gold",
-    "path": "/SavedSearch"
+    "path": "/SavedSearch",
+    "enum": [
+      "Property",
+      "Member",
+      "Office",
+      "Contacts"
+    ]
   },
   "ClassName": {
     "type": "string",
     "maxLength": 50,
+    "lookup": "ClassName",
     "level": "gold",
-    "path": "/SavedSearch"
+    "path": "/SavedSearch",
+    "enum": [
+      "Business Opportunity",
+      "Commercial Lease",
+      "Commercial Sale",
+      "Contacts",
+      "Cross Property",
+      "Farm",
+      "History Transactional",
+      "Land",
+      "Manufactured in Park",
+      "Media",
+      "Member",
+      "Office",
+      "Open House",
+      "Residential",
+      "Residential Income",
+      "Residential Lease",
+      "Saved Search"
+    ]
   },
   "MemberKey": {
     "type": "string",

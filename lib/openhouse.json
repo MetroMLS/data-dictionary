@@ -88,8 +88,14 @@
   "OpenHouseType": {
     "type": "string",
     "maxLength": 25,
+    "lookup": "OpenHouseType",
     "level": "core",
-    "path": "/OpenHouse"
+    "path": "/OpenHouse",
+    "enum": [
+      "Public",
+      "Broker",
+      "Office"
+    ]
   },
   "AppointmentRequiredYN": {
     "type": "boolean",
@@ -105,8 +111,14 @@
   "Attended": {
     "type": "string",
     "maxLength": 25,
+    "lookup": "Attended",
     "level": "bronze",
-    "path": "/OpenHouse"
+    "path": "/OpenHouse",
+    "enum": [
+      "Agent",
+      "Seller",
+      "Unattended"
+    ]
   },
   "OpenHouseRemarks": {
     "type": "string",
@@ -117,7 +129,13 @@
   "Status": {
     "type": "string",
     "maxLength": 25,
+    "lookup": "Status",
     "level": "core",
-    "path": "/OpenHouse"
+    "path": "/OpenHouse",
+    "enum": [
+      "Active",
+      "Canceled",
+      "Ended"
+    ]
   }
 }

@@ -68,14 +68,41 @@
   "ClassName": {
     "type": "string",
     "maxLength": 255,
+    "lookup": "ClassName",
     "level": "silver",
-    "path": "/History"
+    "path": "/History",
+    "enum": [
+      "Business Opportunity",
+      "Commercial Lease",
+      "Commercial Sale",
+      "Contacts",
+      "Cross Property",
+      "Farm",
+      "History Transactional",
+      "Land",
+      "Manufactured in Park",
+      "Media",
+      "Member",
+      "Office",
+      "Open House",
+      "Residential",
+      "Residential Income",
+      "Residential Lease",
+      "Saved Search"
+    ]
   },
   "ResourceName": {
     "type": "string",
     "maxLength": 255,
+    "lookup": "ResourceName",
     "level": "silver",
-    "path": "/History"
+    "path": "/History",
+    "enum": [
+      "Property",
+      "Member",
+      "Office",
+      "Contacts"
+    ]
   },
   "ResourceRecordKey": {
     "type": "string",
