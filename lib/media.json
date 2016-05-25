@@ -6,10 +6,20 @@
     "path": "/Media",
     "primary": true
   },
+  "MediaKeyNumeric": {
+    "type": "number",
+    "level": "platinum",
+    "path": "/Media"
+  },
   "ResourceRecordKey": {
     "type": "string",
     "maxLength": 255,
     "level": "core",
+    "path": "/Media"
+  },
+  "ResourceRecordKeyNumeric": {
+    "type": "number",
+    "level": "platinum",
     "path": "/Media"
   },
   "ResourceRecordID": {
@@ -27,7 +37,31 @@
   "OriginatingSystemName": {
     "type": "string",
     "maxLength": 255,
-    "level": "",
+    "level": "bronze",
+    "path": "/Media"
+  },
+  "OriginatingSystemID": {
+    "type": "string",
+    "maxLength": 25,
+    "level": "platinum",
+    "path": "/Media"
+  },
+  "SourceSystemMediaKey": {
+    "type": "string",
+    "maxLength": 255,
+    "level": "silver",
+    "path": "/Media"
+  },
+  "SourceSystemName": {
+    "type": "string",
+    "maxLength": 255,
+    "level": "silver",
+    "path": "/Media"
+  },
+  "SourceSystemID": {
+    "type": "string",
+    "maxLength": 25,
+    "level": "platinum",
     "path": "/Media"
   },
   "MediaObjectID": {
@@ -48,6 +82,11 @@
     "level": "core",
     "path": "/Media"
   },
+  "ChangedByMemberKeyNumeric": {
+    "type": "number",
+    "level": "platinum",
+    "path": "/Media"
+  },
   "MediaCategory": {
     "type": "string",
     "maxLength": 50,
@@ -66,7 +105,7 @@
       "Agent Photo"
     ]
   },
-  "MimeType": {
+  "MediaType": {
     "type": "string",
     "maxLength": 50,
     "lookup": "MediaType",
@@ -88,6 +127,92 @@
       "docx",
       "xls",
       "xlsx"
+    ]
+  },
+  "ImageOf": {
+    "type": "string",
+    "maxLength": 50,
+    "lookup": "ImageOf",
+    "level": "platinum",
+    "path": "/Media",
+    "enum": [
+      "Aerial View",
+      "Atrium",
+      "Attic",
+      "Back of Structure",
+      "Balcony",
+      "Bar",
+      "Barn",
+      "Basement",
+      "Bathroom",
+      "Bedroom",
+      "Bonus Room",
+      "Breakfast Area",
+      "Closet",
+      "Community",
+      "Courtyard",
+      "Deck",
+      "Den",
+      "Dining Area",
+      "Dining Room",
+      "Dock",
+      "Entry",
+      "Exercise Room",
+      "Family Room",
+      "Fence",
+      "Fireplace",
+      "Floor Plan",
+      "Front of Structure",
+      "Game Room",
+      "Garage",
+      "Garden",
+      "Golf Course",
+      "Great Room",
+      "Guest Quarters",
+      "Gym",
+      "Hobby Room",
+      "Inlaw",
+      "Kitchen",
+      "Lake",
+      "Laundry",
+      "Library",
+      "Living Room",
+      "Loading Dock",
+      "Lobby",
+      "Loft",
+      "Lot",
+      "Master Bathroom",
+      "Master Bedroom",
+      "Media Room",
+      "Mud Room",
+      "Nursery",
+      "Office",
+      "Other",
+      "Out Buildings",
+      "Pantry",
+      "Parking",
+      "Patio",
+      "Pier",
+      "Plat Map",
+      "Pond",
+      "Pool",
+      "Reception",
+      "Recreation Room",
+      "Sauna",
+      "Showroom",
+      "Side of Structure",
+      "Sitting Room",
+      "Spa",
+      "Stable",
+      "Storage",
+      "Studio",
+      "Study",
+      "Sun Room",
+      "View",
+      "Waterfront",
+      "Wine Cellar",
+      "Workshop",
+      "Yard"
     ]
   },
   "ShortDescription": {
@@ -179,7 +304,7 @@
       "Farm",
       "History Transactional",
       "Land",
-      "Manufactured in Park",
+      "Manufactured In Park",
       "Media",
       "Member",
       "Office",
@@ -201,6 +326,11 @@
     "type": "string",
     "maxLength": 50,
     "level": "bronze",
+    "path": "/Media"
+  },
+  "PreferredPhotoYN": {
+    "type": "boolean",
+    "level": "platinum",
     "path": "/Media"
   }
 }

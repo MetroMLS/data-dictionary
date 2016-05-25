@@ -6,6 +6,11 @@
     "path": "/OpenHouse",
     "primary": true
   },
+  "OpenHouseKeyNumeric": {
+    "type": "number",
+    "level": "platinum",
+    "path": "/OpenHouse"
+  },
   "OpenHouseId": {
     "type": "string",
     "maxLength": 255,
@@ -24,10 +29,39 @@
     "level": "bronze",
     "path": "/OpenHouse"
   },
+  "OriginatingSystemID": {
+    "type": "string",
+    "maxLength": 25,
+    "level": "platinum",
+    "path": "/OpenHouse"
+  },
+  "SourceSystemKey": {
+    "type": "string",
+    "maxLength": 255,
+    "level": "silver",
+    "path": "/OpenHouse"
+  },
+  "SourceSystemName": {
+    "type": "string",
+    "maxLength": 255,
+    "level": "silver",
+    "path": "/OpenHouse"
+  },
+  "SourceSystemID": {
+    "type": "string",
+    "maxLength": 25,
+    "level": "platinum",
+    "path": "/OpenHouse"
+  },
   "ListingKey": {
     "type": "string",
     "maxLength": 255,
     "level": "core",
+    "path": "/OpenHouse"
+  },
+  "ListingKeyNumeric": {
+    "type": "number",
+    "level": "platinum",
     "path": "/OpenHouse"
   },
   "ListingId": {
@@ -73,6 +107,11 @@
     "level": "core",
     "path": "/OpenHouse"
   },
+  "ShowingAgentKeyNumeric": {
+    "type": "number",
+    "level": "platinum",
+    "path": "/OpenHouse"
+  },
   "ShowingAgentFirstName": {
     "type": "string",
     "maxLength": 50,
@@ -108,7 +147,7 @@
     "level": "bronze",
     "path": "/OpenHouse"
   },
-  "Attended": {
+  "OpenHouseAttendedBy": {
     "type": "string",
     "maxLength": 25,
     "lookup": "Attended",
@@ -126,10 +165,10 @@
     "level": "core",
     "path": "/OpenHouse"
   },
-  "Status": {
+  "OpenHouseStatus": {
     "type": "string",
     "maxLength": 25,
-    "lookup": "Status",
+    "lookup": "OpenHouseStatus",
     "level": "core",
     "path": "/OpenHouse",
     "enum": [

@@ -6,6 +6,11 @@
     "path": "/SavedSearch",
     "primary": true
   },
+  "SavedSearchKeyNumeric": {
+    "type": "number",
+    "level": "platinum",
+    "path": "/SavedSearch"
+  },
   "SavedSearchName": {
     "type": "string",
     "maxLength": 255,
@@ -36,6 +41,30 @@
     "level": "gold",
     "path": "/SavedSearch"
   },
+  "OriginatingSystemID": {
+    "type": "string",
+    "maxLength": 25,
+    "level": "platinum",
+    "path": "/SavedSearch"
+  },
+  "SourceSystemKey": {
+    "type": "string",
+    "maxLength": 255,
+    "level": "silver",
+    "path": "/SavedSearch"
+  },
+  "SourceSystemName": {
+    "type": "string",
+    "maxLength": 255,
+    "level": "silver",
+    "path": "/SavedSearch"
+  },
+  "SourceSystemID": {
+    "type": "string",
+    "maxLength": 25,
+    "level": "platinum",
+    "path": "/SavedSearch"
+  },
   "SearchQuery": {
     "type": "string",
     "maxLength": 8000,
@@ -45,6 +74,24 @@
   "SearchQueryType": {
     "type": "string",
     "maxLength": 50,
+    "level": "gold",
+    "path": "/SavedSearch"
+  },
+  "SearchQueryExceptions": {
+    "type": "string",
+    "maxLength": 50,
+    "level": "gold",
+    "path": "/SavedSearch"
+  },
+  "SearchQueryExceptionDetails": {
+    "type": "string",
+    "maxLength": 255,
+    "level": "gold",
+    "path": "/SavedSearch"
+  },
+  "SearchQueryHumanReadable": {
+    "type": "string",
+    "maxLength": 255,
     "level": "gold",
     "path": "/SavedSearch"
   },
@@ -86,7 +133,7 @@
       "Farm",
       "History Transactional",
       "Land",
-      "Manufactured in Park",
+      "Manufactured In Park",
       "Media",
       "Member",
       "Office",
@@ -101,6 +148,11 @@
     "type": "string",
     "maxLength": 255,
     "level": "gold",
+    "path": "/SavedSearch"
+  },
+  "MemberKeyNumeric": {
+    "type": "number",
+    "level": "platinum",
     "path": "/SavedSearch"
   },
   "OriginatingSystemMemberKey": {
