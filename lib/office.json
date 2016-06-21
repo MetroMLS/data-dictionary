@@ -6,6 +6,11 @@
     "path": "/Office",
     "primary": true
   },
+  "OfficeKeyNumeric": {
+    "type": "number",
+    "level": "platinum",
+    "path": "/Office"
+  },
   "OriginatingSystemOfficeKey": {
     "type": "string",
     "maxLength": 255,
@@ -18,6 +23,30 @@
     "level": "bronze",
     "path": "/Office"
   },
+  "OriginatingSystemID": {
+    "type": "string",
+    "maxLength": 25,
+    "level": "platinum",
+    "path": "/Office"
+  },
+  "SourceSystemOfficeKey": {
+    "type": "string",
+    "maxLength": 255,
+    "level": "silver",
+    "path": "/Office"
+  },
+  "SourceSystemName": {
+    "type": "string",
+    "maxLength": 255,
+    "level": "silver",
+    "path": "/Office"
+  },
+  "SourceSystemID": {
+    "type": "string",
+    "maxLength": 25,
+    "level": "platinum",
+    "path": "/Office"
+  },
   "OfficeMlsId": {
     "type": "string",
     "maxLength": 25,
@@ -26,7 +55,7 @@
   },
   "OfficeName": {
     "type": "string",
-    "maxLength": 50,
+    "maxLength": 255,
     "level": "core",
     "path": "/Office"
   },
@@ -118,6 +147,11 @@
     "level": "bronze",
     "path": "/Office"
   },
+  "OfficeAORkeyNumeric": {
+    "type": "number",
+    "level": "platinum",
+    "path": "/Office"
+  },
   "OfficeNationalAssociationId": {
     "type": "string",
     "maxLength": 25,
@@ -127,7 +161,7 @@
   "OfficeCorporateLicense": {
     "type": "string",
     "maxLength": 50,
-    "level": "",
+    "level": "bronze",
     "path": "/Office"
   },
   "OfficeBrokerMlsId": {
@@ -142,6 +176,11 @@
     "level": "core",
     "path": "/Office"
   },
+  "OfficeBrokerKeyNumeric": {
+    "type": "number",
+    "level": "platinum",
+    "path": "/Office"
+  },
   "OfficeManagerMlsId": {
     "type": "string",
     "maxLength": 25,
@@ -152,6 +191,11 @@
     "type": "string",
     "maxLength": 255,
     "level": "bronze",
+    "path": "/Office"
+  },
+  "OfficeManagerKeyNumeric": {
+    "type": "number",
+    "level": "platinum",
     "path": "/Office"
   },
   "OfficeAddress1": {
@@ -295,6 +339,11 @@
     "type": "string",
     "maxLength": 255,
     "level": "core",
+    "path": "/Office"
+  },
+  "MainOfficeKeyNumeric": {
+    "type": "number",
+    "level": "platinum",
     "path": "/Office"
   },
   "MainOfficeMlsId": {

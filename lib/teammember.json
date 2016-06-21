@@ -1,0 +1,133 @@
+{
+  "TeamMemberKey": {
+    "type": "string",
+    "maxLength": 255,
+    "level": "platinum",
+    "path": "/TeamMembers",
+    "primary": true
+  },
+  "TeamMemberKeyNumeric": {
+    "type": "number",
+    "level": "platinum",
+    "path": "/TeamMembers"
+  },
+  "OriginatingSystemKey": {
+    "type": "string",
+    "maxLength": 255,
+    "level": "platinum",
+    "path": "/TeamMembers"
+  },
+  "OriginatingSystemName": {
+    "type": "string",
+    "maxLength": 255,
+    "level": "platinum",
+    "path": "/TeamMembers"
+  },
+  "OriginatingSystemID": {
+    "type": "string",
+    "maxLength": 25,
+    "level": "platinum",
+    "path": "/TeamMembers"
+  },
+  "SourceSystemKey": {
+    "type": "string",
+    "maxLength": 255,
+    "level": "silver",
+    "path": "/TeamMembers"
+  },
+  "SourceSystemName": {
+    "type": "string",
+    "maxLength": 255,
+    "level": "silver",
+    "path": "/TeamMembers"
+  },
+  "SourceSystemID": {
+    "type": "string",
+    "maxLength": 25,
+    "level": "platinum",
+    "path": "/TeamMembers"
+  },
+  "TeamKey": {
+    "type": "string",
+    "maxLength": 255,
+    "level": "platinum",
+    "path": "/TeamMembers"
+  },
+  "TeamKeyNumeric": {
+    "type": "number",
+    "level": "platinum",
+    "path": "/TeamMembers"
+  },
+  "MemberKey": {
+    "type": "string",
+    "maxLength": 255,
+    "level": "platinum",
+    "path": "/TeamMembers"
+  },
+  "MemberKeyNumeric": {
+    "type": "number",
+    "level": "platinum",
+    "path": "/TeamMembers"
+  },
+  "MemberMlsId": {
+    "type": "string",
+    "maxLength": 25,
+    "level": "platinum",
+    "path": "/TeamMembers"
+  },
+  "MemberLoginId": {
+    "type": "string",
+    "maxLength": 25,
+    "level": "platinum",
+    "path": "/TeamMembers"
+  },
+  "TeamMemberNationalAssociationId": {
+    "type": "string",
+    "maxLength": 25,
+    "level": "platinum",
+    "path": "/TeamMembers"
+  },
+  "TeamMemberStateLicense": {
+    "type": "string",
+    "maxLength": 50,
+    "level": "platinum",
+    "path": "/TeamMembers"
+  },
+  "TeamMemberType": {
+    "type": "string",
+    "maxLength": 50,
+    "lookup": "MemberType",
+    "level": "platinum",
+    "path": "/TeamMembers",
+    "enum": [
+      "Association Staff",
+      "Designated REALTOR Appraiser",
+      "Designated REALTOR Participant",
+      "MLS Only Appraiser",
+      "MLS Only Broker",
+      "MLS Only Salesperson",
+      "MLS Staff",
+      "Non Member/Vendor",
+      "Office Manager",
+      "REALTOR Appraiser",
+      "REALTOR Salesperson",
+      "Unlicensed Assistant"
+    ]
+  },
+  "TeamImpersonationLevel": {
+    "type": "string",
+    "maxLength": 50,
+    "level": "platinum",
+    "path": "/TeamMembers"
+  },
+  "OriginalEntryTimestamp": {
+    "type": "date",
+    "level": "platinum",
+    "path": "/TeamMembers"
+  },
+  "ModificationTimestamp": {
+    "type": "date",
+    "level": "platinum",
+    "path": "/TeamMembers"
+  }
+}

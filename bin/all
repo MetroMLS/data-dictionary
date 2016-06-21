@@ -14,3 +14,6 @@ gen Office office
 gen OpenHouse openhouse
 gen Property property
 gen SavedSearch savedsearch
+gen Teams team
+gen TeamMembers teammember
+gen OUID ouid

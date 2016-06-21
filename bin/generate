@@ -39,11 +39,13 @@ var keys = [
   'definition',
   'type',
   'maxLength',
+  'maxPrecision',
   'synonym',
   'status',
   'lookup',
   'level',
   'payloads',
+  'bedesMapping',
   'path',
   'group',
   'repeating'
@@ -94,7 +96,9 @@ function toSchema (obj) {
   obj.synonym = undefined
   obj.status = undefined
   obj.group = undefined
+  obj.bedesMapping = undefined
   obj.level = obj.level.toLowerCase()
+  if (obj.lookup && obj.lookup.charAt(0) === '<') obj.lookup = undefined;
   return obj
 }
 

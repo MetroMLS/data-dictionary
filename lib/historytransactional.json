@@ -3,74 +3,128 @@
     "type": "string",
     "maxLength": 255,
     "level": "silver",
-    "path": "/History",
+    "path": "/HistoryTransactional",
     "primary": true
+  },
+  "HistoryTransactionalKeyNumeric": {
+    "type": "number",
+    "level": "platinum",
+    "path": "/HistoryTransactional"
   },
   "OriginatingSystemHistoryKey": {
     "type": "string",
     "maxLength": 255,
     "level": "silver",
-    "path": "/History"
+    "path": "/HistoryTransactional"
   },
   "OriginatingSystemName": {
     "type": "string",
     "maxLength": 255,
     "level": "silver",
-    "path": "/History"
+    "path": "/HistoryTransactional"
+  },
+  "OriginatingSystemID": {
+    "type": "string",
+    "maxLength": 25,
+    "level": "platinum",
+    "path": "/HistoryTransactional"
+  },
+  "SourceSystemHistoryKey": {
+    "type": "string",
+    "maxLength": 255,
+    "level": "silver",
+    "path": "/HistoryTransactional"
+  },
+  "SourceSystemName": {
+    "type": "string",
+    "maxLength": 255,
+    "level": "silver",
+    "path": "/HistoryTransactional"
+  },
+  "SourceSystemID": {
+    "type": "string",
+    "maxLength": 25,
+    "level": "platinum",
+    "path": "/HistoryTransactional"
   },
   "ChangedByMemberID": {
     "type": "string",
     "maxLength": 25,
     "level": "silver",
-    "path": "/History"
+    "path": "/HistoryTransactional"
   },
   "ChangedByMemberKey": {
     "type": "string",
     "maxLength": 255,
     "level": "silver",
-    "path": "/History"
+    "path": "/HistoryTransactional"
+  },
+  "ChangedByMemberKeyNumeric": {
+    "type": "number",
+    "level": "platinum",
+    "path": "/HistoryTransactional"
   },
   "ChangeType": {
     "type": "string",
     "maxLength": 255,
+    "lookup": "ChangeType",
     "level": "silver",
-    "path": "/History"
+    "path": "/HistoryTransactional",
+    "enum": [
+      "Active",
+      "Active Under Contract",
+      "Back On Market",
+      "Canceled",
+      "Closed",
+      "Deleted",
+      "Expired",
+      "Hold",
+      "New Listing",
+      "Pending",
+      "Price Change",
+      "Withdrawn"
+    ]
   },
   "ModificationTimestamp": {
     "type": "date",
     "level": "silver",
-    "path": "/History"
+    "path": "/HistoryTransactional"
   },
   "FieldKey": {
     "type": "string",
     "maxLength": 255,
     "level": "silver",
-    "path": "/History"
+    "path": "/HistoryTransactional"
+  },
+  "FieldKeyNumeric": {
+    "type": "number",
+    "level": "platinum",
+    "path": "/HistoryTransactional"
   },
   "FieldName": {
     "type": "string",
     "maxLength": 255,
     "level": "silver",
-    "path": "/History"
+    "path": "/HistoryTransactional"
   },
   "PreviousValue": {
     "type": "string",
     "maxLength": 8000,
     "level": "silver",
-    "path": "/History"
+    "path": "/HistoryTransactional"
   },
   "NewValue": {
     "type": "string",
     "maxLength": 8000,
     "level": "silver",
-    "path": "/History"
+    "path": "/HistoryTransactional"
   },
   "ClassName": {
     "type": "string",
     "maxLength": 255,
     "lookup": "ClassName",
     "level": "silver",
-    "path": "/History",
+    "path": "/HistoryTransactional",
     "enum": [
       "Business Opportunity",
       "Commercial Lease",
@@ -80,7 +134,7 @@
       "Farm",
       "History Transactional",
       "Land",
-      "Manufactured in Park",
+      "Manufactured In Park",
       "Media",
       "Member",
       "Office",
@@ -96,7 +150,7 @@
     "maxLength": 255,
     "lookup": "ResourceName",
     "level": "silver",
-    "path": "/History",
+    "path": "/HistoryTransactional",
     "enum": [
       "Property",
       "Member",
@@ -108,12 +162,17 @@
     "type": "string",
     "maxLength": 255,
     "level": "silver",
-    "path": "/History"
+    "path": "/HistoryTransactional"
+  },
+  "ResourceRecordKeyNumeric": {
+    "type": "number",
+    "level": "platinum",
+    "path": "/HistoryTransactional"
   },
   "ResourceRecordID": {
     "type": "string",
     "maxLength": 255,
     "level": "silver",
-    "path": "/History"
+    "path": "/HistoryTransactional"
   }
 }
