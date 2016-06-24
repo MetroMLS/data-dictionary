@@ -8,15 +8,13 @@ Used by [Retsly](https://rets.ly/) for our Web API.
 
 The [Real Estate Standards Organization](http://reso.org/) (RESO) has
 defined a standard schema for real estate advertising data called the
-[Data Dictionary](http://www.reso.org/data-dictionary). The goal is
+[Data Dictionary][dd]. The goal is
 to allow interoperability between vendors that work with
 real estate data.
 
-This repo provides the Data Dictionary as described in [Data Dictionary 1.4][dd],
-with Core fields as defined in [Certification Rules 1.4.0 (pdf)][rules].
+This repo provides the Data Dictionary as described in [Data Dictionary 1.5][dd].
 
-[dd]:http://www.reso.org/data-dictionary-1-4
-[rules]:https://reso.memberclicks.net/assets/Certifications/resodatadictionarycertificationtestingrules_v1.4.0_2015_0527.pdf
+[dd]:http://www.reso.org/data-dictionary
 
 ## Install
 
@@ -52,15 +50,11 @@ Once done, run the script:
 
     $ bin/all
 
-## Repo owner
-
-[Luke Vivier](https://github.com/lvivier)
-
 ## License
 
 (The MIT License)
 
-Copyright (c) 2015 Retsly Software Inc <support@rets.ly>
+Copyright (c) 2016 Retsly Software Inc <support@rets.ly>
 
 Permission is hereby granted, free of charge, to any person obtaining a
 copy of this software and associated documentation files (the 'Software'),
