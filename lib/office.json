@@ -1,5 +1,6 @@
 {
   "OfficeKey": {
+    "definition": "A system unique identifier. Specifically, in aggregation systems, the Key is the system unique identifier from the system that the record was just retrieved. This may be identical to the related xxxId identifier, but the key is guaranteed unique for this record set. ",
     "type": "string",
     "maxLength": 255,
     "level": "core",
@@ -7,54 +8,70 @@
     "primary": true
   },
   "OriginatingSystemOfficeKey": {
+    "definition": "Unique identifier from the originating system which is commonly a key to that system.  In the case where data is passed through more than one system, this is the originating system key.  This is a foreign key relating to the system where this record was originated.",
     "type": "string",
     "maxLength": 255,
+    "synonym": [
+      "ProviderKey"
+    ],
     "level": "core",
     "path": "/Office"
   },
   "OriginatingSystemName": {
+    "definition": "The name of the originating record provider.  Most commonly the name of the MLS. The place where the listing is originally input by the member.  The legal name of the company.  To be used for display.",
     "type": "string",
     "maxLength": 255,
+    "synonym": [
+      "ProviderName",
+      "MLSID"
+    ],
     "level": "bronze",
     "path": "/Office"
   },
   "OfficeMlsId": {
+    "definition": "The local, well-known identifier. This value may not be unique, specifically in the case of aggregation systems, this value should be the identifier from the original system.",
     "type": "string",
     "maxLength": 25,
     "level": "core",
     "path": "/Office"
   },
   "OfficeName": {
+    "definition": "The legal name of the brokerage.",
     "type": "string",
     "maxLength": 50,
     "level": "core",
     "path": "/Office"
   },
   "OfficePhone": {
+    "definition": "North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.",
     "type": "string",
     "maxLength": 16,
     "level": "core",
     "path": "/Office"
   },
   "OfficePhoneExt": {
+    "definition": "The extension of the given phone number (if applicable).",
     "type": "string",
     "maxLength": 10,
     "level": "core",
     "path": "/Office"
   },
   "OfficeFax": {
+    "definition": "North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.",
     "type": "string",
     "maxLength": 16,
     "level": "bronze",
     "path": "/Office"
   },
   "OfficeEmail": {
+    "definition": "The email address of the office",
     "type": "string",
     "maxLength": 80,
     "level": "core",
     "path": "/Office"
   },
   "OfficeType": {
+    "definition": "The type of business conducted by the office.  i.e. Real Estate, Appraiser, etc.",
     "type": "string",
     "maxLength": 50,
     "lookup": "OfficeType",
@@ -75,12 +92,14 @@
     ]
   },
   "OfficeBranchType": {
+    "definition": "The level of the office in the hierarchy of Main, Branch, Stand Alone, etc.,",
     "type": "string",
     "maxLength": 50,
     "level": "silver",
     "path": "/Office"
   },
   "SocialMediaType": {
+    "definition": "A list of types of sites, blog, social media, the Office URL or ID is referring to.  i.e. Website, Blog, Facebook, Twitter, LinkedIn, Skype, etc.,  This list is used to populate the Type with repeating Social Media URL or ID types.",
     "type": "string",
     "maxLength": 25,
     "level": "silver",
@@ -93,6 +112,7 @@
         "type": "string"
       },
       "UrlOrId": {
+        "definition": "The website URL or ID of social media site or account of the Office.  This is a repeating element.  Replace [Type] with any of the options from the SocialMediaType field to create a unique field for that type of social media.  For example: SocialMediaFacebookUrlOrID, SocialMediaSkypeUrlOrID, etc.",
         "type": "string",
         "maxLength": 8000,
         "level": "silver",
@@ -101,78 +121,91 @@
     }
   ],
   "OfficeAOR": {
+    "definition": "The Office's Board or Association of REALTORS.",
     "type": "string",
     "maxLength": 50,
     "level": "bronze",
     "path": "/Office"
   },
   "OfficeAORMlsId": {
+    "definition": "The local, well-known identifier for the office's Association of REALTORS. This value may not be unique, specifically in the case of aggregation systems, this value should be the identifier from the original system.",
     "type": "string",
     "maxLength": 25,
     "level": "bronze",
     "path": "/Office"
   },
   "OfficeAORkey": {
+    "definition": "A system unique identifier. Specifically, in aggregation systems, the OfficeAORkey is the system unique identifier from the system that the record was retrieved. This may be identical to the related xxxId.  This is a foreign key relating to the AOR's member management system in which the record was originated.",
     "type": "string",
     "maxLength": 255,
     "level": "bronze",
     "path": "/Office"
   },
   "OfficeNationalAssociationId": {
+    "definition": "The national association ID of the office.  i.e. in the U.S. is the NRDS number.",
     "type": "string",
     "maxLength": 25,
     "level": "core",
     "path": "/Office"
   },
   "OfficeCorporateLicense": {
+    "definition": "When an office/firm is a corporation, an independent license number is issued.",
     "type": "string",
     "maxLength": 50,
     "level": "",
     "path": "/Office"
   },
   "OfficeBrokerMlsId": {
+    "definition": "The MemberMlsId of the responsible/owning broker.",
     "type": "string",
     "maxLength": 25,
     "level": "core",
     "path": "/Office"
   },
   "OfficeBrokerKey": {
+    "definition": "The MemberKey of the responsible/owning broker.  This is a foreign key relating to the Member resource's MemberKey.",
     "type": "string",
     "maxLength": 255,
     "level": "core",
     "path": "/Office"
   },
   "OfficeManagerMlsId": {
+    "definition": "The lead Office Manager for the given office.",
     "type": "string",
     "maxLength": 25,
     "level": "bronze",
     "path": "/Office"
   },
   "OfficeManagerKey": {
+    "definition": "The lead Office Manager for the given office.  This is a foreign key relating to the Member resource's MemberKey.",
     "type": "string",
     "maxLength": 255,
     "level": "bronze",
     "path": "/Office"
   },
   "OfficeAddress1": {
+    "definition": "The street number, direction, name and suffix of the office.",
     "type": "string",
     "maxLength": 50,
     "level": "core",
     "path": "/Office"
   },
   "OfficeAddress2": {
+    "definition": "The unit/suite number of the office.",
     "type": "string",
     "maxLength": 50,
     "level": "core",
     "path": "/Office"
   },
   "OfficeCity": {
+    "definition": "The city of the office.",
     "type": "string",
     "maxLength": 50,
     "level": "core",
     "path": "/Office"
   },
   "OfficeStateOrProvince": {
+    "definition": "The state or province in which the office is located.",
     "type": "string",
     "maxLength": 2,
     "lookup": "StateOrProvince",
@@ -247,24 +280,31 @@
     ]
   },
   "OfficePostalCode": {
+    "definition": "The postal code of the office.",
     "type": "string",
     "maxLength": 10,
     "level": "core",
     "path": "/Office"
   },
   "OfficePostalCodePlus4": {
+    "definition": "The extension of the postal/zip code.  i.e. +4",
     "type": "string",
     "maxLength": 4,
     "level": "core",
     "path": "/Office"
   },
   "OfficeCountyOrParish": {
+    "definition": "The county or parish in which the offices is located.",
     "type": "string",
     "maxLength": 50,
+    "synonym": [
+      "County"
+    ],
     "level": "core",
     "path": "/Office"
   },
   "OfficeStatus": {
+    "definition": "Is the office active, inactive or under disciplinary action.",
     "type": "string",
     "maxLength": 25,
     "lookup": "OfficeStatus",
@@ -276,45 +316,53 @@
     ]
   },
   "OfficeAssociationComments": {
+    "definition": "Notes relating to the office.",
     "type": "string",
     "maxLength": 500,
     "level": "silver",
     "path": "/Office"
   },
   "OriginalEntryTimestamp": {
+    "definition": "Date/time the roster (member or office) record was originally input into the source system.",
     "type": "date",
     "level": "core",
     "path": "/Office"
   },
   "ModificationTimestamp": {
+    "definition": "Date/time the roster (member or office) record was last modified.",
     "type": "date",
     "level": "core",
     "path": "/Office"
   },
   "MainOfficeKey": {
+    "definition": "OfficeKey of the Main Office in a firm/company of offices.  This is a self referencing foreign key relating to this resource's OfficeKey.  This key may be the same value as the OfficeKey for a given record if the given office is the Main Office.",
     "type": "string",
     "maxLength": 255,
     "level": "core",
     "path": "/Office"
   },
   "MainOfficeMlsId": {
+    "definition": "OfficeMlsId of the Main Office in a firm/company of offices.",
     "type": "string",
     "maxLength": 25,
     "level": "core",
     "path": "/Office"
   },
   "FranchiseAffiliation": {
+    "definition": "The name of the franchise to which the broker/office is contracted.",
     "type": "string",
     "maxLength": 50,
     "level": "silver",
     "path": "/Office"
   },
   "IDXOfficeParticipationYN": {
+    "definition": "Does the Office/Broker participate in IDX.",
     "type": "boolean",
     "level": "bronze",
     "path": "/Office"
   },
   "SyndicateTo": {
+    "definition": "The principal broker's choice on where they would like their listings syndicated.  i.e. Zillow, Trulia, Homes.com, etc.",
     "type": [
       "string"
     ],
@@ -322,6 +370,7 @@
     "path": "/Office"
   },
   "SyndicateAgentOption": {
+    "definition": "A list of options allowing the broker to pass the decision of syndication choice down to the listing agents.  i.e. No Agent Choice, Allow Agent Choice, Restrict Agent Choice, etc.",
     "type": "string",
     "maxLength": 50,
     "level": "gold",

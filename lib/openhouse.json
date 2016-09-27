@@ -1,5 +1,6 @@
 {
   "OpenHouseKey": {
+    "definition": "A unique identifier for this record from the immediate source. This may be a number, or string that can include URI or other forms.  This is the system you are connecting to and not necessarily the original source of the record.",
     "type": "string",
     "maxLength": 255,
     "level": "core",
@@ -7,85 +8,130 @@
     "primary": true
   },
   "OpenHouseId": {
+    "definition": "The well known identifier for the listing. The value may be identical to that of the Listing Key, but the Listing ID is intended to be the value used by a human to retrieve the information about a specific listing. In a multiple originating system or a merged system, this value may not be unique and may require the use of the provider system to create a synthetic unique value.",
     "type": "string",
     "maxLength": 255,
     "level": "core",
     "path": "/OpenHouse"
   },
   "OriginatingSystemKey": {
+    "definition": "Unique identifier from the originating system which is commonly a key to that system.  In the case where data is passed through more than one system, this is the originating system key.  This is a foreign key relating to the system where this record was originated.",
     "type": "string",
     "maxLength": 255,
+    "synonym": [
+      "ProviderKey"
+    ],
     "level": "core",
     "path": "/OpenHouse"
   },
   "OriginatingSystemName": {
+    "definition": "The name of the originating record provider.  Most commonly the name of the MLS. The place where the listing is originally input by the member.  The legal name of the company.  To be used for display.",
     "type": "string",
     "maxLength": 255,
+    "synonym": [
+      "ProviderName",
+      "MLSID"
+    ],
     "level": "bronze",
     "path": "/OpenHouse"
   },
   "ListingKey": {
+    "definition": "A unique identifier for the listing record related to this Open House. This may be a number, or string that can include URI or other forms.  This is the system you are connecting to and not necessarily the original source of the record.   This may be a foreign key from the resrouce selected in the ResrouceName field.",
     "type": "string",
     "maxLength": 255,
+    "synonym": [
+      "SystemUniqueID",
+      "ImmediateSourceID"
+    ],
     "level": "core",
     "path": "/OpenHouse"
   },
   "ListingId": {
+    "definition": "The well known identifier for the listing related to this Open House. The value may be identical to that of the Listing Key, but the Listing ID is intended to be the value used by a human to retrieve the information about a specific listing. In a multiple originating system or a merged system, this value may not be unique and may require the use of the provider system to create a synthetic unique value.",
     "type": "string",
     "maxLength": 255,
+    "synonym": [
+      "MLNumber",
+      "MLSNumber",
+      "ListingNumber"
+    ],
     "level": "core",
     "path": "/OpenHouse"
   },
   "ModificationTimestamp": {
+    "definition": "The transactional timestamp automatically recorded by the MLS system representing the date/time the Open House was last modified.",
     "type": "date",
+    "synonym": [
+      "ModificationDateTime",
+      "DateTimeModified",
+      "ModDate",
+      "DateMod",
+      "UpdateDate",
+      "UpdateTimestamp"
+    ],
     "level": "core",
     "path": "/OpenHouse"
   },
   "OriginalEntryTimestamp": {
+    "definition": "The transactional timestamp automatically recorded by the MLS system representing the date/time the Open House was entered and made visible to members of the MLS.",
     "type": "date",
+    "synonym": [
+      "EntryDate",
+      "InputDate",
+      "DateTimeCreated",
+      "CreatedDate."
+    ],
     "level": "bronze",
     "path": "/OpenHouse"
   },
   "OpenHouseDate": {
+    "definition": "The date on which the open house will occur.",
     "type": "date",
     "level": "core",
     "path": "/OpenHouse"
   },
   "OpenHouseStartTime": {
+    "definition": "The time the open house begins.",
     "type": "date",
     "level": "core",
     "path": "/OpenHouse"
   },
   "OpenHouseEndTime": {
+    "definition": "The time the open house ends.",
     "type": "date",
     "level": "core",
     "path": "/OpenHouse"
   },
   "ShowingAgentMlsID": {
+    "definition": "The local, well-known identifier for the member. This value may not be unique, specifically in the case of aggregation systems, this value should be the identifier from the original system.",
     "type": "string",
     "maxLength": 25,
     "level": "core",
     "path": "/OpenHouse"
   },
   "ShowingAgentKey": {
+    "definition": "A system unique identifier. Specifically, in aggregation systems, the ListAgentKey is the system unique identifier from the system that the record was retrieved. This may be identical to the related xxxId.  This is a foreign key relating to the Member resource's MemberKey.",
     "type": "string",
     "maxLength": 255,
     "level": "core",
     "path": "/OpenHouse"
   },
   "ShowingAgentFirstName": {
+    "definition": "The first name of the showing agent.",
     "type": "string",
     "maxLength": 50,
     "level": "core",
     "path": "/OpenHouse"
   },
   "ShowingAgentLastName": {
+    "definition": "The last name of the showing agent.",
     "type": "string",
     "maxLength": 50,
     "level": "core",
     "path": "/OpenHouse"
   },
   "OpenHouseType": {
+    "definition": "The type of open house.  i.e. Public, Broker, Office, Association, Private (invitation or targeted publication).",
     "type": "string",
     "maxLength": 25,
     "lookup": "OpenHouseType",
@@ -98,17 +144,20 @@
     ]
   },
   "AppointmentRequiredYN": {
+    "definition": "Indicates whether or not the OpenHouse requires an appointment.",
     "type": "boolean",
     "level": "bronze",
     "path": "/OpenHouse"
   },
   "Refreshments": {
+    "definition": "A description of the refreshments that will be served at the open house.",
     "type": "string",
     "maxLength": 255,
     "level": "bronze",
     "path": "/OpenHouse"
   },
   "Attended": {
+    "definition": "Will the open house be attended by a licensed agent?  Options are attended by agent, attended by the seller or unattended.",
     "type": "string",
     "maxLength": 25,
     "lookup": "Attended",
@@ -121,12 +170,14 @@
     ]
   },
   "OpenHouseRemarks": {
+    "definition": "Comments, instructions or information about the open house.",
     "type": "string",
     "maxLength": 500,
     "level": "core",
     "path": "/OpenHouse"
   },
   "Status": {
+    "definition": "Status of the open house, i.e. Active, Cancelled, Ended.",
     "type": "string",
     "maxLength": 25,
     "lookup": "Status",

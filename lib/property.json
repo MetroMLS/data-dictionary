@@ -1,42 +1,72 @@
 {
   "ListingKey": {
+    "definition": "A unique identifier for this record from the immediate source. This may be a number, or string that can include URI or other forms.  This is the system you are connecting to and not necessarily the original source of the record.",
     "type": "string",
     "maxLength": 255,
+    "synonym": [
+      "SystemUniqueID",
+      "ImmediateSourceID"
+    ],
     "level": "core",
     "payloads": "Proposed IDX",
     "path": "/Listing",
     "primary": true
   },
   "ListingId": {
+    "definition": "The well known identifier for the listing. The value may be identical to that of the Listing Key, but the Listing ID is intended to be the value used by a human to retrieve the information about a specific listing. In a multiple originating system or a merged system, this value may not be unique and may require the use of the provider system to create a synthetic unique value.",
     "type": "string",
     "maxLength": 255,
+    "synonym": [
+      "MLNumber",
+      "MLSNumber",
+      "ListingNumber"
+    ],
     "level": "core",
     "payloads": "Proposed IDX",
     "path": "/Listing"
   },
   "ListAOR": {
+    "definition": "The responsible Board or Association of REALTORS for this listing.",
     "type": "string",
     "maxLength": 50,
+    "synonym": [
+      "ListingBoard",
+      "ListingAssociation"
+    ],
     "level": "bronze",
     "path": "/Listing"
   },
   "OriginatingSystemKey": {
+    "definition": "Unique identifier from the originating system which is commonly a key to that system.  In the case where data is passed through more than one system, this is the originating system key.  This is a foreign key relating to the system where this record was originated.",
     "type": "string",
     "maxLength": 255,
+    "synonym": [
+      "ProviderKey"
+    ],
     "level": "core",
     "payloads": "Proposed IDX",
     "path": "/Listing"
   },
   "OriginatingSystemName": {
+    "definition": "The name of the originating record provider.  Most commonly the name of the MLS. The place where the listing is originally input by the member.  The legal name of the company.  To be used for display.",
     "type": "string",
     "maxLength": 255,
+    "synonym": [
+      "ProviderName",
+      "MLSID"
+    ],
     "level": "core",
     "payloads": "Proposed IDX",
     "path": "/Listing"
   },
   "ListingService": {
+    "definition": "Defines the type or level of service the listing member will be providing to the selling home owner.  This will typically be a single selection.  Examples include Full Service, Limited Service or Entry Only.",
     "type": "string",
     "maxLength": 25,
+    "synonym": [
+      "ServiceType",
+      "ServiceLevel"
+    ],
     "lookup": "ListingService",
     "level": "core",
     "path": "/Listing",
@@ -47,8 +77,12 @@
     ]
   },
   "ListingAgreement": {
+    "definition": "The nature of the agreement between the seller and the listing agent.  Examples are Exclusive Agency, Open Listing, etc.",
     "type": "string",
     "maxLength": 25,
+    "synonym": [
+      "AgreementType"
+    ],
     "lookup": "ListingAgreement",
     "level": "core",
     "path": "/Listing",
@@ -63,25 +97,39 @@
     ]
   },
   "LeaseConsideredYN": {
+    "definition": "Will the seller consider leasing the property instead of selling?  Single select.",
     "type": "boolean",
+    "synonym": [
+      "IsLeaseConsidered",
+      "LeaseConsidered"
+    ],
     "level": "bronze",
     "payloads": "Proposed IDX",
     "path": "/Listing"
   },
   "HomeWarrantyYN": {
+    "definition": "Is a home warranty included in the sale of the property?  Single select.",
     "type": "boolean",
+    "synonym": [
+      "HomeWarranty"
+    ],
     "level": "silver",
     "payloads": "Proposed IDX",
     "path": "/Listing"
   },
   "CopyrightNotice": {
+    "definition": "Notice of the legal rights of the owner of the information or data.",
     "type": "string",
     "maxLength": 500,
+    "synonym": [
+      "Copyright"
+    ],
     "level": "bronze",
     "payloads": "Proposed IDX",
     "path": "/Listing"
   },
   "Disclaimer": {
+    "definition": "Text that serves as the negation or limitation of the rights under a warranty given by a seller to a buyer.",
     "type": "string",
     "maxLength": 500,
     "level": "bronze",
@@ -89,8 +137,13 @@
     "path": "/Listing"
   },
   "StandardStatus": {
+    "definition": "The status of the listing as it reflects the state of the contract between the listing agent and seller or an agreement with a buyer. (Active, Backup, Canceled, Closed, Expired, Pending, Withdrawn).  Single Select",
     "type": "string",
     "maxLength": 25,
+    "synonym": [
+      "NormalizedListingStatus",
+      "RetsStatus"
+    ],
     "lookup": "StandardStatus",
     "level": "core",
     "payloads": "Proposed IDX",
@@ -110,173 +163,325 @@
     ]
   },
   "MlsStatus": {
+    "definition": "Local or regional status that are well known by business users. Each MlsStatus must map to a single StandardStatus. Multiple MlsStatus may map to a single StandardStatus.",
     "type": "string",
     "maxLength": 50,
+    "synonym": [
+      "ListingStatus",
+      "Status"
+    ],
     "level": "core",
     "payloads": "Proposed IDX",
     "path": "/Listing"
   },
   "ApprovalStatus": {
+    "definition": "When an MLS has the ability to set a listing to Draft and/or has facility to allow an agent to input, but their manager to approve the listings before publishing, this field is used for such control.",
     "type": "string",
     "maxLength": 25,
     "level": "silver",
     "path": "/Listing"
   },
   "ListingContractDate": {
+    "definition": "The effective date of the agreement between the seller and the seller's broker. This is the date entered by the agent reflecting when the change occurred contractually, not a timestamp of when the change was made in the MLS.",
     "type": "date",
+    "synonym": [
+      "ListingDate",
+      "DateOfListing",
+      "ListDate",
+      "ListingContractDate",
+      "AgreementDate"
+    ],
     "level": "core",
     "payloads": "Proposed IDX",
     "path": "/Listing"
   },
   "ContractStatusChangeDate": {
+    "definition": "The date of the listings contractual status change. This is not necessarily the time the agent made the change in the MLS system, but rather the date of the contractual change.",
     "type": "date",
+    "synonym": [
+      "StatusDate",
+      "StatusChange"
+    ],
     "level": "core",
     "payloads": "Proposed IDX",
     "path": "/Listing"
   },
   "ExpirationDate": {
+    "definition": "The date when the listing agreement will expire.  This is the date entered by the agent reflecting when the change occurred, or will occur, contractually, not a timestamp of when the change was made in the MLS.  The expiration date of listings, prior to their expiration, cancellation, sale or lease, is confidential information and should be restricted to the agent and their managers, partners or broker.",
     "type": "date",
+    "synonym": [
+      "ExpirationDate",
+      "DateExpired",
+      "Expired"
+    ],
     "level": "core",
     "path": "/Listing"
   },
   "CancelationDate": {
+    "definition": "Date the listing contract between the seller and listing agent was cancelled.  This is the date entered by the agent reflecting when the change occurred contractually, not a timestamp of when the change was made in the MLS.",
     "type": "date",
     "level": "core",
     "path": "/Listing"
   },
   "ContingentDate": {
+    "definition": "The date an offer was made with a contingency. The Listing remains On Market.  This is the date entered by the agent reflecting when the change occurred contractually, not a timestamp of when the change was made in the MLS.",
     "type": "date",
     "level": "core",
     "path": "/Listing"
   },
   "WithdrawnDate": {
+    "definition": "Date the listing was withdrawn from the market.  This is not when a listing contact was cancelled or closed, but a withdrawal from the market while the contract between the seller and listing agent is still in effect and an offer has not been accepted. This is the date entered by the agent reflecting when the change occurred contractually, not a timestamp of when the change was made in the MLS.",
     "type": "date",
     "level": "core",
     "path": "/Listing"
   },
   "PurchaseContractDate": {
+    "definition": "With for-sale listings, the date an offer was accepted and the listing was no longer on market.  This is the date entered by the agent reflecting when the change occurred contractually, not a timestamp of when the change was made in the MLS.  With lease listings this may represent a meeting of the minds to lease, but some contractual requirements are yet to be fulfilled, such as contract signing or receipt of the deposit.",
     "type": "date",
+    "synonym": [
+      "PendingDate",
+      "DatePending",
+      "UnderContractDate",
+      "ContractDate",
+      "LeasePending",
+      "PendingLeaseDate",
+      "LeaseAgreementDate"
+    ],
     "level": "core",
     "payloads": "Proposed IDX",
     "path": "/Listing"
   },
   "CloseDate": {
+    "definition": "With for-sale listings, the date the purchase agreement was fulfilled. With lease listings, the date the requirements were fulfilled, such as contract and/or deposit.  This is the date entered by the agent reflecting when the change occurred contractually, not a timestamp of when the change was made in the MLS.",
     "type": "date",
+    "synonym": [
+      "SoldDate",
+      "DateSold",
+      "COE",
+      "COEDate",
+      "CloseDate",
+      "DateLeased",
+      "DateRented",
+      "DateLeaseBegins",
+      "EffectiveLeaseDate"
+    ],
     "level": "core",
     "payloads": "Proposed IDX",
     "path": "/Listing"
   },
   "OnMarketDate": {
+    "definition": "The date the listing was placed on market. Where possible, this date is reflective of the date entered by the agent reflecting when the change occurred contractually, not a timestamp of when the change was made in the MLS.",
     "type": "date",
     "level": "core",
     "path": "/Listing"
   },
   "OffMarketDate": {
+    "definition": "The date the listing was taken off market. Where possible, this date is reflective of the date entered by the agent reflecting when the change occurred contractually, not a timestamp of when the change was made in the MLS.",
     "type": "date",
+    "synonym": [
+      "OffMarketDate",
+      "DateOffMarket"
+    ],
     "level": "core",
     "path": "/Listing"
   },
   "PendingTimestamp": {
+    "definition": "The transactional timestamp automatically recorded by the MLS system representing the most recent date/time the listing's status was set to Pending.",
     "type": "date",
     "level": "bronze",
     "path": "/Listing"
   },
   "ModificationTimestamp": {
+    "definition": "The transactional timestamp automatically recorded by the MLS system representing the date/time the listing was last modified.",
     "type": "date",
+    "synonym": [
+      "ModificationDateTime",
+      "DateTimeModified",
+      "ModDate",
+      "DateMod",
+      "UpdateDate",
+      "UpdateTimestamp"
+    ],
     "level": "core",
     "payloads": "Proposed IDX",
     "path": "/Listing"
   },
   "StatusChangeTimestamp": {
+    "definition": "The transactional timestamp automatically recorded by the MLS system representing the date/time the listing's status was last changed.",
     "type": "date",
+    "synonym": [
+      "StatusDateTime"
+    ],
     "level": "core",
     "payloads": "Proposed IDX",
     "path": "/Listing"
   },
   "PriceChangeTimestamp": {
+    "definition": "The transactional timestamp automatically recorded by the MLS system representing the date/time the listing's price was last changed.",
     "type": "date",
+    "synonym": [
+      "PriceChangeDateTime",
+      "PriceChange"
+    ],
     "level": "bronze",
     "payloads": "Proposed IDX",
     "path": "/Listing"
   },
   "MajorChangeType": {
+    "definition": "Description of the last major change on the listing, i.e. “price reduction”, “back on market”, etc.  May be used to display on a summary view of listing results to quickly identify listings that have had major changes recently.",
     "type": "string",
     "maxLength": 255,
     "level": "bronze",
     "path": "/Listing"
   },
   "MajorChangeTimestamp": {
+    "definition": "Timestamp of the last major change on the listing (see also MajorChangeType).",
     "type": "date",
     "level": "bronze",
     "path": "/Listing"
   },
   "OriginalEntryTimestamp": {
+    "definition": "The transactional timestamp automatically recorded by the MLS system representing the date/time the listing was entered and made visible to members of the MLS.",
     "type": "date",
+    "synonym": [
+      "EntryDate",
+      "InputDate",
+      "DateTimeCreated",
+      "CreatedDate."
+    ],
     "level": "core",
     "payloads": "Proposed IDX",
     "path": "/Listing"
   },
   "OnMarketTimestamp": {
+    "definition": "The transactional timestamp automatically recorded by the MLS system representing the most recent date/time the listing's status was set to Active or Backup.  This also includes initial input of the listing to Active/Backup or from a draft or approval status to Active/Backup.",
     "type": "date",
     "level": "bronze",
     "path": "/Listing"
   },
   "OffMarketTimestamp": {
+    "definition": "The transactional timestamp automatically recorded by the MLS system representing the most recent date/time the listing's status was set to and off market status (not Active or Backup)",
     "type": "date",
     "level": "bronze",
     "path": "/Listing"
   },
   "DaysOnMarket": {
+    "definition": "The number of days the listing is on market, as defined by the MLS business rules.",
     "type": "number",
+    "synonym": [
+      "DOM",
+      "ListingDaysOnMarket",
+      "DOML",
+      "LDOM",
+      "ADOM",
+      "ActiveDaysOnMarket",
+      "AgentDaysOnMarket"
+    ],
     "level": "bronze",
     "payloads": "Proposed IDX",
     "path": "/Listing"
   },
   "CumulativeDaysOnMarket": {
+    "definition": "The number of days the property is on market, as defined by the MLS business rules.",
     "type": "number",
+    "synonym": [
+      "CDOM",
+      "PropertyDaysOnMarket",
+      "DOMP",
+      "PDOM"
+    ],
     "level": "bronze",
     "payloads": "Proposed IDX",
     "path": "/Listing"
   },
   "ClosePrice": {
+    "definition": "The amount of money paid by the purchaser to the seller for the property under the agreement.",
     "type": "number",
+    "synonym": [
+      "SellingPrice",
+      "SoldPrice",
+      "SalePrice",
+      "PriceSold",
+      "LeasePrice",
+      "RentalPrice",
+      "PurchasePrice",
+      "CurrentPrice"
+    ],
     "level": "core",
     "payloads": "Proposed IDX",
     "path": "/Listing"
   },
   "ListPrice": {
+    "definition": "The current price of the property as determined by the seller and the seller's broker.  For auctions this is the minimum or reserve price.",
     "type": "number",
+    "synonym": [
+      "AskingPrice",
+      "PriceListing",
+      "PriceListed",
+      "CurrentPrice"
+    ],
     "level": "core",
     "payloads": "Proposed IDX",
     "path": "/Listing"
   },
   "OriginalListPrice": {
+    "definition": "The original price of the property on the initial agreement between the seller and the seller's broker.",
     "type": "number",
+    "synonym": [
+      "OriginalPrice"
+    ],
     "level": "core",
     "payloads": "Proposed IDX",
     "path": "/Listing"
   },
   "ListPriceLow": {
+    "definition": "The lower price used for Value Range Pricing.  The List Price must be greater than or equal to the ListPriceLow.",
     "type": "number",
+    "synonym": [
+      "LowPriceRange",
+      "LowRangePrice"
+    ],
     "level": "bronze",
     "payloads": "Proposed IDX",
     "path": "/Listing"
   },
   "PreviousListPrice": {
+    "definition": "The most recent previous ListPrice of the listing.",
     "type": "number",
+    "synonym": [
+      "PreviousPrice",
+      "LastPrice",
+      "ListPriorPrice"
+    ],
     "level": "bronze",
     "payloads": "Proposed IDX",
     "path": "/Listing"
   },
   "BuyerAgencyCompensation": {
+    "definition": "The total commission to be paid for this sale, expressed as either a percentage or a constant currency amount.",
     "type": "string",
     "maxLength": 25,
+    "synonym": [
+      "SOComp",
+      "SellingOfficeCompensation",
+      "BuyerBrokerCompensation",
+      "SOC",
+      "Commission"
+    ],
     "level": "core",
     "path": "/Listing"
   },
   "BuyerAgencyCompensationType": {
+    "definition": "A list of types to clarify the value entered in the BuyerAgencyCompensation field.  For example $, % or some other clarification of the BuyerAgencyCompensation.",
     "type": "string",
     "maxLength": 25,
+    "synonym": [
+      "SOCompType",
+      "SellingOfficeCompensationType",
+      "BuyerBrokerCompensationType",
+      "SOCType",
+      "CommissionType"
+    ],
     "lookup": "BuyerAgencyCompensationType",
     "level": "core",
     "path": "/Listing",
@@ -286,35 +491,54 @@
     ]
   },
   "SubAgencyCompensation": {
+    "definition": "The total commission to be paid to the Sub Agency, expressed as either a percentage or a constant currency amount.",
     "type": "string",
     "maxLength": 25,
+    "synonym": [
+      "SubAgentCompensation",
+      "CoBrokerCompensation"
+    ],
     "level": "bronze",
     "path": "/Listing"
   },
   "SubAgencyCompensationType": {
+    "definition": "A list of types to clarify the value entered in the SubAgencyCompensation field.  For example $, % or some other clarification of the SubAgencyCompensation.",
     "type": "string",
     "maxLength": 25,
+    "synonym": [
+      "SubAgentCompensationType",
+      "CoBrokerCompensationType"
+    ],
     "level": "bronze",
     "path": "/Listing"
   },
   "TransactionBrokerCompensation": {
+    "definition": "The total commission to be paid to the transaction facilitator, expressed as either a percentage or a constant currency amount.",
     "type": "string",
     "maxLength": 25,
     "level": "bronze",
     "path": "/Listing"
   },
   "TransactionBrokerCompensationType": {
+    "definition": "A list of types to clarify the value entered in the TransactionBrokerCompensation field.  For example $, % or some other clarification of the TransactionBrokerCompensation.",
     "type": "string",
     "maxLength": 25,
     "level": "bronze",
     "path": "/Listing"
   },
   "DualVariableCompensationYN": {
+    "definition": "A commission rate is a dual commission rate, a variable commission rate, or both.  A dual or variable rate commission arrangement is one in which the seller agrees to pay a specified commission if the property is sold by the listing broker without assistance and a different commission if the sale results through the efforts of a cooperating broker, or one in which the seller agrees to pay a specified commission if the property is sold by the listing broker either with or without the assistance of a cooperating broker and a different commission if the sale results through the efforts of a seller.",
     "type": "boolean",
+    "synonym": [
+      "DualVariableCompensation",
+      "DualVariableRateCompensation",
+      "VariableCompensation"
+    ],
     "level": "core",
     "path": "/Listing"
   },
   "LeaseRenewalCompensation": {
+    "definition": "A list of compensations other than the original Selling Office Compensation.  i.e. Compensation Paid on Renewal, Compensation Paid on Tennant Purchase, No Renewal Commission, Call Listing Office, etc.",
     "type": [
       "string"
     ],
@@ -330,35 +554,41 @@
     ]
   },
   "SignOnPropertyYN": {
+    "definition": "Is there a sign on the property.",
     "type": "boolean",
     "level": "bronze",
     "path": "/Listing"
   },
   "InternetEntireListingDisplayYN": {
+    "definition": "A yes/no field that states the seller has allowed the listing to be displayed on Internet sites.",
     "type": "boolean",
     "level": "core",
     "payloads": "Proposed IDX",
     "path": "/Listing"
   },
   "InternetAddressDisplayYN": {
+    "definition": "A yes/no field that states the seller has allowed the listing address to be displayed on Internet sites.",
     "type": "boolean",
     "level": "core",
     "payloads": "Proposed IDX",
     "path": "/Listing"
   },
   "InternetConsumerCommentYN": {
+    "definition": "A yes/no field that states the seller allows a comment or blog system to be attached to the listing on Internet sites.",
     "type": "boolean",
     "level": "core",
     "payloads": "Proposed IDX",
     "path": "/Listing"
   },
   "InternetAutomatedValuationDisplayYN": {
+    "definition": "A yes/no field that states the seller allows the listing can be displayed with an AVM on Internet sites.",
     "type": "boolean",
     "level": "core",
     "payloads": "Proposed IDX",
     "path": "/Listing"
   },
   "SyndicateTo": {
+    "definition": "When permitted by the broker, the options made by the agent on behalf of the seller, where they would like their listings syndicated.  i.e. Zillow, Trulia, Homes.com, etc.",
     "type": [
       "string"
     ],
@@ -366,40 +596,53 @@
     "path": "/Listing"
   },
   "PhotosCount": {
+    "definition": "The total number of pictures or photos included with the listing.",
     "type": "number",
+    "synonym": [
+      "PhotoCount"
+    ],
     "level": "core",
     "payloads": "Proposed IDX",
     "path": "/Listing"
   },
   "PhotosChangeTimestamp": {
+    "definition": "System generated timestamp of when the last update or change to the photos for this listing was made.",
     "type": "date",
+    "synonym": [
+      "PhotoChangeTimestamp"
+    ],
     "level": "core",
     "payloads": "Proposed IDX",
     "path": "/Listing"
   },
   "VideosCount": {
+    "definition": "The total number of videos or virtual tours included with the listing.",
     "type": "number",
     "level": "bronze",
     "payloads": "Proposed IDX",
     "path": "/Listing"
   },
   "VideosChangeTimestamp": {
+    "definition": "System generated timestamp of when the last update or change to the videos for this listing was made.",
     "type": "date",
     "level": "bronze",
     "payloads": "Proposed IDX",
     "path": "/Listing"
   },
   "DocumentsCount": {
+    "definition": "The total number of documents or supplements included with the listings.",
     "type": "number",
     "level": "bronze",
     "path": "/Listing"
   },
   "DocumentsChangeTimestamp": {
+    "definition": "System generated timestamp of when the last update or change to the documents for this listing was made.",
     "type": "date",
     "level": "bronze",
     "path": "/Listing"
   },
   "DocumentsAvailable": {
+    "definition": "A list of the Documents available for the property.  Knowing what documents are available for the property is valuable information.\r\n",
     "type": [
       "string"
     ],
@@ -407,6 +650,7 @@
     "path": "/Listing"
   },
   "VirtualTourURLUnbranded": {
+    "definition": "A text field that holds the URL for an unbranded virtual tour of the property.",
     "type": "string",
     "maxLength": 8000,
     "level": "core",
@@ -414,61 +658,89 @@
     "path": "/Listing"
   },
   "VirtualTourURLBranded": {
+    "definition": "A text field that holds the URL for a branded virtual tour of the property.",
     "type": "string",
     "maxLength": 8000,
     "level": "",
     "path": "/Listing"
   },
   "PublicRemarks": {
+    "definition": "Text remarks that may be displayed to the public. In an MLS, it is the field where information is entered for the public. This information is intended to be visible on-line. This is typically information that describes the selling points of the building and/or land for sale. Local conditions and rules will determine what such content can contain. Generally, the following information is excluded: any information pertaining to entry to the property, the seller and/or tenant, listing member contact information. In other systems, these remarks will be determined by local business rules.",
     "type": "string",
     "maxLength": 4000,
+    "synonym": [
+      "PropertyDescription",
+      "InternetRemarks",
+      "Remarks"
+    ],
     "level": "core",
     "payloads": "Proposed IDX",
     "path": "/Listing"
   },
   "SyndicationRemarks": {
+    "definition": "Becoming more common in the industry, MLS's are hosting a separate \"Public Remarks\" for syndication purposes.  This field should be defaulted to containing the Public Remarks, but upon broker decision, modified to include contact and other information denied by IDX rules, but allowed under local and national regulations.",
     "type": "string",
     "maxLength": 4000,
+    "synonym": [
+      "AdvertisingRemarks"
+    ],
     "level": "core",
     "path": "/Listing"
   },
   "PrivateRemarks": {
+    "definition": "Remarks that may contain security or proprietary information and should be restricted from public view.",
     "type": "string",
     "maxLength": 4000,
+    "synonym": [
+      "AgentRemarks",
+      "ConfidentialRemarks"
+    ],
     "level": "core",
     "path": "/Listing"
   },
   "PrivateOfficeRemarks": {
+    "definition": "A remarks field that is only visible to members of the same offices as the listing agent.",
     "type": "string",
     "maxLength": 4000,
     "level": "",
     "path": "/Listing"
   },
   "ShowingInstructions": {
+    "definition": "Remarks that detail the seller's instructions for showing the subject property. Showing instructions may include: contact information, showing times, notice required or other information. These remarks are privileged and are not for public viewing.",
     "type": "string",
     "maxLength": 4000,
+    "synonym": [
+      "ShowingRemarks"
+    ],
     "level": "core",
     "path": "/Listing"
   },
   "ShowingContactPhone": {
+    "definition": "A telephone number that should be called to arrange showing the property.",
     "type": "string",
     "maxLength": 16,
+    "synonym": [
+      "ShowingPhone"
+    ],
     "level": "core",
     "path": "/Listing"
   },
   "ShowingContactPhoneExt": {
+    "definition": "The extension of the given phone number (if applicable).",
     "type": "string",
     "maxLength": 10,
     "level": "core",
     "path": "/Listing"
   },
   "ShowingContactName": {
+    "definition": "The name of the contact for the showing of the listed property.",
     "type": "string",
     "maxLength": 40,
     "level": "bronze",
     "path": "/Listing"
   },
   "ShowingContactType": {
+    "definition": "The type of contact for the showing.  i.e. Agent, Broker, Seller.",
     "type": [
       "string"
     ],
@@ -483,60 +755,98 @@
     ]
   },
   "LockBoxLocation": {
+    "definition": "A field describing the location of the lock box.",
     "type": "string",
     "maxLength": 255,
+    "synonym": [
+      "KeySafeLocation"
+    ],
     "level": "bronze",
     "path": "/Listing"
   },
   "LockBoxType": {
+    "definition": "A field describing the type of lock box.",
     "type": [
       "string"
+    ],
+    "synonym": [
+      "KeySafeType"
     ],
     "level": "bronze",
     "path": "/Listing"
   },
   "LockBoxSerialNumber": {
+    "definition": "The serial number of the lockbox placed on the property.",
     "type": "string",
     "maxLength": 25,
+    "synonym": [
+      "KeySafeSerialNumber."
+    ],
     "level": "bronze",
     "path": "/Listing"
   },
   "AccessCode": {
+    "definition": "If the property is located behind an unmanned security gate such as in a Gated Community, what is the code to gain access through the secured gate.",
     "type": "string",
     "maxLength": 25,
+    "synonym": [
+      "GateCode"
+    ],
     "level": "bronze",
     "path": "/Listing"
   },
   "Exclusions": {
+    "definition": "Elements of the property that will not be included in the sale.  i.e. Chandeliers will be removed prior to close.",
     "type": "string",
     "maxLength": 1024,
+    "synonym": [
+      "ExclusionRemarks"
+    ],
     "level": "bronze",
     "payloads": "Proposed IDX",
     "path": "/Listing"
   },
   "Inclusions": {
+    "definition": "Portable elements of the property that will be included in the sale.",
     "type": "string",
     "maxLength": 1024,
+    "synonym": [
+      "InclusionRemarks"
+    ],
     "level": "bronze",
     "payloads": "Proposed IDX",
     "path": "/Listing"
   },
   "Disclosures": {
+    "definition": "Legal or pertinent information that should be disclosed to potential buyer's agents.",
     "type": [
       "string"
+    ],
+    "synonym": [
+      "Legal",
+      "LegalDisclosures"
     ],
     "level": "bronze",
     "path": "/Listing"
   },
   "Ownership": {
+    "definition": "A text description of the manner in which title to a property is held.  Trust, Corporation, Joint Tennant, Individual.",
     "type": "string",
     "maxLength": 1024,
     "level": "silver",
     "path": "/Listing"
   },
   "SpecialListingConditions": {
+    "definition": "A list of options that describe the type of sale.  i.e. Standard, REO, Short Sale, Probate, Auction, NOD, etc., at the time of listing.",
     "type": [
       "string"
+    ],
+    "synonym": [
+      "SaleType",
+      "REO",
+      "ShortSale",
+      "NoticeOfDefault",
+      "Foreclosure"
     ],
     "lookup": "SpecialListingConditions",
     "level": "bronze",
@@ -556,8 +866,12 @@
     ]
   },
   "ListingTerms": {
+    "definition": "Terms of the listing such as Lien Release, Subject to Court Approval or Owner Will Carry. Also may include options that describe the financing terms that are acceptable to the seller, i.e. cash, assumable, FHA loan, etc.",
     "type": [
       "string"
+    ],
+    "synonym": [
+      "Terms"
     ],
     "lookup": "ListingTerms",
     "level": "bronze",
@@ -592,6 +906,7 @@
     ]
   },
   "CurrentFinancing": {
+    "definition": "A list of options that describe the type of financing that the seller currently has in place for the property being sold.  i.e. cash, assumable, FHA loan, etc.",
     "type": [
       "string"
     ],
@@ -614,6 +929,7 @@
     ]
   },
   "BuyerFinancing": {
+    "definition": "A list of options that describe the type of financing used.  This field is used when setting a listing to Closed.  i.e. cash, FHA loan, etc.",
     "type": [
       "string"
     ],
@@ -637,29 +953,37 @@
     ]
   },
   "Concessions": {
+    "definition": "Are there concessions included in the sales agreement? Yes, No or Call Listing Agent",
     "type": "string",
     "maxLength": 25,
     "level": "silver",
     "path": "/Listing"
   },
   "ConcessionsComments": {
+    "definition": "Comments describing the concessions made by the buyer or the seller.",
     "type": "string",
     "maxLength": 100,
     "level": "silver",
     "path": "/Listing"
   },
   "ConcessionsAmount": {
+    "definition": "The dollar amount of the concessions.  If the concessions are made by the seller, some may subtract this value from the sales price as a means of calculating their own true price.  If concessions are made by the buyer, some may add this amount to the sale price to create their own true price.  Concessions made by both buyer and seller should be subtracted from each other providing a net value.  Details of this calculation should be added to the Concessions Comments field.",
     "type": "number",
     "level": "silver",
     "path": "/Listing"
   },
   "Contingency": {
+    "definition": "A list of contingencies that must be satisfied in order to complete the transaction.",
     "type": "string",
     "maxLength": 1024,
+    "synonym": [
+      "Contingencies"
+    ],
     "level": "bronze",
     "path": "/Listing"
   },
   "Possession": {
+    "definition": "A list defining when possession will occur.  i.e. COE, COE+1, etc.",
     "type": [
       "string"
     ],
@@ -681,12 +1005,14 @@
     ]
   },
   "AvailabilityDate": {
+    "definition": "The date the property will be available for possession/occupation.",
     "type": "date",
     "level": "silver",
     "payloads": "Proposed IDX",
     "path": "/Listing"
   },
   "StreetNumber": {
+    "definition": "The street number portion of a listed property's street address.  In some areas the street number may contain non-numeric characters.  This field can also contain extensions and modifiers to the street number, such as \"1/2\" or \"-B\".  This street number field should not include Prefixes, Direction or Suffixes.",
     "type": "string",
     "maxLength": 25,
     "level": "core",
@@ -694,12 +1020,14 @@
     "path": "/Listing"
   },
   "StreetNumberNumeric": {
+    "definition": "The integer portion of the street number.",
     "type": "number",
     "level": "core",
     "payloads": "Proposed IDX",
     "path": "/Listing"
   },
   "StreetDirPrefix": {
+    "definition": "The direction indicator that precedes the listed property's street name.",
     "type": "string",
     "maxLength": 15,
     "level": "core",
@@ -707,6 +1035,7 @@
     "path": "/Listing"
   },
   "StreetName": {
+    "definition": "The street name portion of a listed property's street address.",
     "type": "string",
     "maxLength": 50,
     "level": "core",
@@ -714,6 +1043,7 @@
     "path": "/Listing"
   },
   "StreetAdditionalInfo": {
+    "definition": "Information other than a prefix or suffix for the street portion of a postal address.",
     "type": "string",
     "maxLength": 50,
     "level": "core",
@@ -721,6 +1051,7 @@
     "path": "/Listing"
   },
   "StreetSuffix": {
+    "definition": "The suffix portion of a listed property's street address.",
     "type": "string",
     "maxLength": 25,
     "level": "core",
@@ -728,13 +1059,19 @@
     "path": "/Listing"
   },
   "StreetSuffixModifier": {
+    "definition": "The Street Suffix Modifier allows the member to enter a unique Street Suffix that was not found in the Street Suffix pick list or to extend or prefix the suffix.",
     "type": "string",
     "maxLength": 25,
+    "synonym": [
+      "Street Suffix Alternate",
+      "Street Suffix Extension."
+    ],
     "level": "core",
     "payloads": "Proposed IDX",
     "path": "/Listing"
   },
   "StreetDirSuffix": {
+    "definition": "The direction indicator that follows a listed property's street address.",
     "type": "string",
     "maxLength": 15,
     "level": "core",
@@ -742,13 +1079,20 @@
     "path": "/Listing"
   },
   "UnitNumber": {
+    "definition": "Text field containing the number or portion of a larger building or complex. Unit Number should appear following the street suffix or, if it exists, the street suffix direction, in the street address. Examples are: \"APT G\", \"55\", etc.    ",
     "type": "string",
     "maxLength": 25,
+    "synonym": [
+      "ApartmentNumber",
+      "SpaceNumber",
+      "Suite"
+    ],
     "level": "core",
     "payloads": "Proposed IDX",
     "path": "/Listing"
   },
   "City": {
+    "definition": "The city in listing address.",
     "type": "string",
     "maxLength": 50,
     "level": "core",
@@ -756,6 +1100,7 @@
     "path": "/Listing"
   },
   "StateOrProvince": {
+    "definition": "Text field containing the accepted postal abbreviation for the state or province.",
     "type": "string",
     "maxLength": 2,
     "lookup": "StateOrProvince",
@@ -831,6 +1176,7 @@
     ]
   },
   "Country": {
+    "definition": "The country abbreviation in a postal address.",
     "type": "string",
     "maxLength": 2,
     "level": "core",
@@ -838,34 +1184,54 @@
     "path": "/Listing"
   },
   "PostalCode": {
+    "definition": "The postal code portion of a street or mailing address.",
     "type": "string",
     "maxLength": 10,
+    "synonym": [
+      "ZipCode",
+      "Zip"
+    ],
     "level": "core",
     "payloads": "Proposed IDX",
     "path": "/Listing"
   },
   "PostalCodePlus4": {
+    "definition": "The postal code +4 portion of a street or mailing address.",
     "type": "string",
     "maxLength": 4,
+    "synonym": [
+      "Zip+4",
+      "ZipPlus4"
+    ],
     "level": "core",
     "payloads": "Proposed IDX",
     "path": "/Listing"
   },
   "CarrierRoute": {
+    "definition": "The group of addresses to which the USPS assigns the same code to aid in mail delivery. For the USPS, these codes are 9 digits: 5 numbers for the ZIP Code, one letter for the carrier route type, and 3 numbers for the carrier route number.",
     "type": "string",
     "maxLength": 9,
+    "synonym": [
+      "RR",
+      "CR"
+    ],
     "level": "bronze",
     "payloads": "Proposed IDX",
     "path": "/Listing"
   },
   "UnparsedAddress": {
+    "definition": "The UnparsedAddress is a text representation of the address with the full civic location as a single entity. It may optionally include any of City, StateOrProvince, PostalCode and Country.",
     "type": "string",
     "maxLength": 255,
+    "synonym": [
+      "FullAddress"
+    ],
     "level": "core",
     "payloads": "Proposed IDX",
     "path": "/Listing"
   },
   "PostalCity": {
+    "definition": "The official city per the USPS.  May be different from the \"City\".",
     "type": "string",
     "maxLength": 50,
     "level": "core",
@@ -873,27 +1239,42 @@
     "path": "/Listing"
   },
   "CountyOrParish": {
+    "definition": "The County, Parish or other regional authority",
     "type": "string",
     "maxLength": 50,
+    "synonym": [
+      "County"
+    ],
     "level": "core",
     "payloads": "Proposed IDX",
     "path": "/Listing"
   },
   "Township": {
+    "definition": "A subdivision of the county.",
     "type": "string",
     "maxLength": 50,
+    "synonym": [
+      "Municipality",
+      "TWP"
+    ],
     "level": "core",
     "payloads": "Proposed IDX",
     "path": "/Listing"
   },
   "MLSAreaMajor": {
+    "definition": "The major marketing area name, as defined by the MLS or other non-governmental organization.  If there is only one MLS Area in use, it must be the MLSAreaMajor.",
     "type": "string",
     "maxLength": 50,
+    "synonym": [
+      "MarketingArea",
+      "MLSArea"
+    ],
     "level": "core",
     "payloads": "Proposed IDX",
     "path": "/Listing"
   },
   "MLSAreaMinor": {
+    "definition": "The minor/sub marketing area name, as defined by the MLS or other non-governmental organization.  If there is only one MLS Area in use, it must be the MLSAreaMajor.",
     "type": "string",
     "maxLength": 50,
     "level": "bronze",
@@ -901,31 +1282,39 @@
     "path": "/Listing"
   },
   "SubdivisionName": {
+    "definition": "A neighborhood, community, complex or builder tract.",
     "type": "string",
     "maxLength": 50,
+    "synonym": [
+      "Builder's Tract"
+    ],
     "level": "core",
     "payloads": "Proposed IDX",
     "path": "/Listing"
   },
   "Latitude": {
+    "definition": "The geographic latitude of some reference point on the property, specified in degrees and decimal parts.  Positive numbers must not include the plus symbol.",
     "type": "number",
     "level": "core",
     "payloads": "Proposed IDX",
     "path": "/Listing"
   },
   "Longitude": {
+    "definition": "The geographic longitude of some reference point on the property, specified in degrees and decimal parts. Positive numbers must not include the plus symbol.",
     "type": "number",
     "level": "core",
     "payloads": "Proposed IDX",
     "path": "/Listing"
   },
   "Elevation": {
+    "definition": "The elevation of the property in relation to sea level.  Use the Elevation Units field to communicate the unit of measurement.  i.e. Feet or Meters.",
     "type": "number",
     "level": "bronze",
     "payloads": "Proposed IDX",
     "path": "/Listing"
   },
   "ElevationUnits": {
+    "definition": "A pick list of the unit of measurement used in the Elevation field.  i.e. Feet, Meters.",
     "type": "string",
     "maxLength": 10,
     "level": "bronze",
@@ -933,6 +1322,7 @@
     "path": "/Listing"
   },
   "Directions": {
+    "definition": "Driving directions to the property.",
     "type": "string",
     "maxLength": 1024,
     "level": "silver",
@@ -940,20 +1330,32 @@
     "path": "/Listing"
   },
   "MapCoordinate": {
+    "definition": "A map coordinate for the property, as determined by local custom. This is not necessarily the same as the geographic coordinate but may depend on the coordinate system used by whatever mapping service is customarily used by the listing service.",
     "type": "string",
     "maxLength": 25,
+    "synonym": [
+      "MapBookCoordinate",
+      "ThomasGuide",
+      "TG#",
+      "MapBookNumber"
+    ],
     "level": "bronze",
     "payloads": "Proposed IDX",
     "path": "/Listing"
   },
   "MapCoordinateSource": {
+    "definition": "Name of the map or map book publisher.",
     "type": "string",
     "maxLength": 25,
+    "synonym": [
+      "MapBook"
+    ],
     "level": "bronze",
     "payloads": "Proposed IDX",
     "path": "/Listing"
   },
   "MapURL": {
+    "definition": "URI to a map of the property.",
     "type": "string",
     "maxLength": 8000,
     "level": "bronze",
@@ -961,6 +1363,7 @@
     "path": "/Listing"
   },
   "CrossStreet": {
+    "definition": "Nearest cross streets to the property.  This field is in addition to, and independent of, the driving directions field.",
     "type": "string",
     "maxLength": 50,
     "level": "silver",
@@ -968,6 +1371,7 @@
     "path": "/Listing"
   },
   "ElementarySchool": {
+    "definition": "The name of the primary school having a catchment area that includes the associated property.",
     "type": "string",
     "maxLength": 50,
     "level": "silver",
@@ -975,6 +1379,7 @@
     "path": "/Listing"
   },
   "ElementarySchoolDistrict": {
+    "definition": "The name of the elementary school district having a catchment area that includes the associated property.",
     "type": "string",
     "maxLength": 50,
     "level": "bronze",
@@ -982,6 +1387,7 @@
     "path": "/Listing"
   },
   "MiddleOrJuniorSchool": {
+    "definition": "The name of the junior or middle school having a catchment area that includes the associated property.",
     "type": "string",
     "maxLength": 50,
     "level": "silver",
@@ -989,6 +1395,7 @@
     "path": "/Listing"
   },
   "MiddleOrJuniorSchoolDistrict": {
+    "definition": "The name of the junior or middle school district having a catchment area that includes the associated property.",
     "type": "string",
     "maxLength": 50,
     "level": "bronze",
@@ -996,6 +1403,7 @@
     "path": "/Listing"
   },
   "HighSchool": {
+    "definition": "The name of the high school having a catchment area that includes the associated property.",
     "type": "string",
     "maxLength": 50,
     "level": "silver",
@@ -1003,13 +1411,18 @@
     "path": "/Listing"
   },
   "HighSchoolDistrict": {
+    "definition": "The name of the high school district having a catchment area that includes the associated property.  When only one school district is used, this field should be used over the Junior or Elementary Districts.",
     "type": "string",
     "maxLength": 50,
+    "synonym": [
+      "SchoolDistrict"
+    ],
     "level": "bronze",
     "payloads": "Proposed IDX",
     "path": "/Listing"
   },
   "ListAgentNamePrefix": {
+    "definition": "Prefix to the name (e.g. Dr. Mr. Ms. etc.)",
     "type": "string",
     "maxLength": 10,
     "level": "bronze",
@@ -1017,6 +1430,7 @@
     "path": "/Listing"
   },
   "ListAgentFirstName": {
+    "definition": "The first name of the listing agent.",
     "type": "string",
     "maxLength": 50,
     "level": "core",
@@ -1024,6 +1438,7 @@
     "path": "/Listing"
   },
   "ListAgentMiddleName": {
+    "definition": "The middle name of the listing agent.",
     "type": "string",
     "maxLength": 50,
     "level": "core",
@@ -1031,6 +1446,7 @@
     "path": "/Listing"
   },
   "ListAgentLastName": {
+    "definition": "The last name of the listing agent.",
     "type": "string",
     "maxLength": 50,
     "level": "core",
@@ -1038,6 +1454,7 @@
     "path": "/Listing"
   },
   "ListAgentNameSuffix": {
+    "definition": "Suffix to the ListAgentLastName (e.g. Esq.,  Jr.,  III etc.)",
     "type": "string",
     "maxLength": 10,
     "level": "bronze",
@@ -1045,6 +1462,7 @@
     "path": "/Listing"
   },
   "ListAgentFullName": {
+    "definition": "The full name of the listing agent. (First Middle Last)",
     "type": "string",
     "maxLength": 150,
     "level": "bronze",
@@ -1052,90 +1470,105 @@
     "path": "/Listing"
   },
   "ListAgentPreferredPhone": {
+    "definition": "North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.",
     "type": "string",
     "maxLength": 16,
     "level": "core",
     "path": "/Listing"
   },
   "ListAgentPreferredPhoneExt": {
+    "definition": "The extension of the given phone number (if applicable).",
     "type": "string",
     "maxLength": 10,
     "level": "core",
     "path": "/Listing"
   },
   "ListAgentOfficePhone": {
+    "definition": "North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.",
     "type": "string",
     "maxLength": 16,
     "level": "core",
     "path": "/Listing"
   },
   "ListAgentOfficePhoneExt": {
+    "definition": "The extension of the given phone number (if applicable).",
     "type": "string",
     "maxLength": 10,
     "level": "core",
     "path": "/Listing"
   },
   "ListAgentCellPhone": {
+    "definition": "North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.",
     "type": "string",
     "maxLength": 16,
     "level": "core",
     "path": "/Listing"
   },
   "ListAgentDirectPhone": {
+    "definition": "North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.",
     "type": "string",
     "maxLength": 16,
     "level": "bronze",
     "path": "/Listing"
   },
   "ListAgentHomePhone": {
+    "definition": "North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.",
     "type": "string",
     "maxLength": 16,
     "level": "bronze",
     "path": "/Listing"
   },
   "ListAgentFax": {
+    "definition": "North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.",
     "type": "string",
     "maxLength": 16,
     "level": "bronze",
     "path": "/Listing"
   },
   "ListAgentPager": {
+    "definition": "North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.",
     "type": "string",
     "maxLength": 16,
     "level": "bronze",
     "path": "/Listing"
   },
   "ListAgentVoiceMail": {
+    "definition": "North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.",
     "type": "string",
     "maxLength": 16,
     "level": "bronze",
     "path": "/Listing"
   },
   "ListAgentVoiceMailExt": {
+    "definition": "The extension of the given phone number (if applicable).",
     "type": "string",
     "maxLength": 10,
     "level": "bronze",
     "path": "/Listing"
   },
   "ListAgentTollFreePhone": {
+    "definition": "North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.",
     "type": "string",
     "maxLength": 16,
     "level": "bronze",
     "path": "/Listing"
   },
   "ListAgentEmail": {
+    "definition": "The email address of the Listing Agent.",
     "type": "string",
     "maxLength": 80,
     "level": "core",
     "path": "/Listing"
   },
   "ListAgentURL": {
+    "definition": "The website URI of the listing agent.",
     "type": "string",
     "maxLength": 8000,
     "level": "bronze",
     "path": "/Listing"
   },
   "ListAgentKey": {
+    "definition": "A system unique identifier. Specifically, in aggregation systems, the ListAgentKey is the system unique identifier from the system that the record was retrieved. This may be identical to the related xxxId. This is a foreign key relating to the Member resource's MemberKey.",
     "type": "string",
     "maxLength": 255,
     "level": "core",
@@ -1143,12 +1576,14 @@
     "path": "/Listing"
   },
   "ListAgentAOR": {
+    "definition": "The Listing Agent's Board or Association of REALTORS.",
     "type": "string",
     "maxLength": 50,
     "level": "bronze",
     "path": "/Listing"
   },
   "ListAgentMlsId": {
+    "definition": "The local, well-known identifier for the member. This value may not be unique, specifically in the case of aggregation systems, this value should be the identifier from the original system.",
     "type": "string",
     "maxLength": 25,
     "level": "core",
@@ -1156,6 +1591,7 @@
     "path": "/Listing"
   },
   "ListAgentStateLicense": {
+    "definition": "The license of the listing agent. Separate multiple licenses with a comma and space.",
     "type": "string",
     "maxLength": 50,
     "level": "core",
@@ -1163,6 +1599,7 @@
     "path": "/Listing"
   },
   "ListAgentDesignation": {
+    "definition": "Designations and certifications acknowledging experience and expertise in various real estate sectors are awarded by NAR and each affiliated group upon completion of required courses.",
     "type": [
       "string"
     ],
@@ -1170,6 +1607,7 @@
     "path": "/Listing"
   },
   "ListOfficeName": {
+    "definition": "The legal name of the brokerage representing the seller.",
     "type": "string",
     "maxLength": 50,
     "level": "core",
@@ -1177,36 +1615,42 @@
     "path": "/Listing"
   },
   "ListOfficePhone": {
+    "definition": "North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.",
     "type": "string",
     "maxLength": 16,
     "level": "core",
     "path": "/Listing"
   },
   "ListOfficePhoneExt": {
+    "definition": "The extension of the given phone number (if applicable).",
     "type": "string",
     "maxLength": 10,
     "level": "core",
     "path": "/Listing"
   },
   "ListOfficeFax": {
+    "definition": "North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.",
     "type": "string",
     "maxLength": 16,
     "level": "bronze",
     "path": "/Listing"
   },
   "ListOfficeEmail": {
+    "definition": "The email address of the Listing Office.",
     "type": "string",
     "maxLength": 80,
     "level": "bronze",
     "path": "/Listing"
   },
   "ListOfficeURL": {
+    "definition": "The website URI for the listing office.",
     "type": "string",
     "maxLength": 8000,
     "level": "bronze",
     "path": "/Listing"
   },
   "ListOfficeKey": {
+    "definition": "A system unique identifier. Specifically, in aggregation systems, the Key is the system unique identifier from the system that the record was just retrieved. This may be identical to the related xxxId identifier, but the key is guaranteed unique for this record set.  This is a foreign key relating to the Office resource's OfficeKey.",
     "type": "string",
     "maxLength": 255,
     "level": "core",
@@ -1214,12 +1658,14 @@
     "path": "/Listing"
   },
   "ListOfficeAOR": {
+    "definition": "The Listing Office's Board or Association of REALTORS.",
     "type": "string",
     "maxLength": 50,
     "level": "bronze",
     "path": "/Listing"
   },
   "ListOfficeMlsId": {
+    "definition": "The local, well-known identifier. This value may not be unique, specifically in the case of aggregation systems, this value should be the identifier from the original system.",
     "type": "string",
     "maxLength": 25,
     "level": "core",
@@ -1227,6 +1673,7 @@
     "path": "/Listing"
   },
   "CoListAgentNamePrefix": {
+    "definition": "Prefix to the name (e.g. Dr. Mr. Ms. etc.)",
     "type": "string",
     "maxLength": 10,
     "level": "",
@@ -1234,6 +1681,7 @@
     "path": "/Listing"
   },
   "CoListAgentFirstName": {
+    "definition": "The first name of the co-listing agent.",
     "type": "string",
     "maxLength": 50,
     "level": "core",
@@ -1241,6 +1689,7 @@
     "path": "/Listing"
   },
   "CoListAgentMiddleName": {
+    "definition": "The middle name of the co-listing agent.",
     "type": "string",
     "maxLength": 50,
     "level": "core",
@@ -1248,6 +1697,7 @@
     "path": "/Listing"
   },
   "CoListAgentLastName": {
+    "definition": "The last name of the co-listing agent.",
     "type": "string",
     "maxLength": 50,
     "level": "core",
@@ -1255,6 +1705,7 @@
     "path": "/Listing"
   },
   "CoListAgentNameSuffix": {
+    "definition": "Suffix to the CoListAgentLastName (e.g. Esq.,  Jr.,  III etc.)",
     "type": "string",
     "maxLength": 10,
     "level": "bronze",
@@ -1262,6 +1713,7 @@
     "path": "/Listing"
   },
   "CoListAgentFullName": {
+    "definition": "The full name of the co-listing agent. (First Middle Last)",
     "type": "string",
     "maxLength": 150,
     "level": "bronze",
@@ -1269,90 +1721,105 @@
     "path": "/Listing"
   },
   "CoListAgentPreferredPhone": {
+    "definition": "North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.",
     "type": "string",
     "maxLength": 16,
     "level": "core",
     "path": "/Listing"
   },
   "CoListAgentPreferredPhoneExt": {
+    "definition": "The extension of the given phone number (if applicable).",
     "type": "string",
     "maxLength": 10,
     "level": "core",
     "path": "/Listing"
   },
   "CoListAgentOfficePhone": {
+    "definition": "North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.",
     "type": "string",
     "maxLength": 16,
     "level": "core",
     "path": "/Listing"
   },
   "CoListAgentOfficePhoneExt": {
+    "definition": "The extension of the given phone number (if applicable).",
     "type": "string",
     "maxLength": 10,
     "level": "core",
     "path": "/Listing"
   },
   "CoListAgentCellPhone": {
+    "definition": "North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.",
     "type": "string",
     "maxLength": 16,
     "level": "core",
     "path": "/Listing"
   },
   "CoListAgentDirectPhone": {
+    "definition": "North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.",
     "type": "string",
     "maxLength": 16,
     "level": "bronze",
     "path": "/Listing"
   },
   "CoListAgentHomePhone": {
+    "definition": "North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.",
     "type": "string",
     "maxLength": 16,
     "level": "bronze",
     "path": "/Listing"
   },
   "CoListAgentFax": {
+    "definition": "North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.",
     "type": "string",
     "maxLength": 16,
     "level": "bronze",
     "path": "/Listing"
   },
   "CoListAgentPager": {
+    "definition": "North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.",
     "type": "string",
     "maxLength": 16,
     "level": "bronze",
     "path": "/Listing"
   },
   "CoListAgentVoiceMail": {
+    "definition": "North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.",
     "type": "string",
     "maxLength": 16,
     "level": "bronze",
     "path": "/Listing"
   },
   "CoListAgentVoiceMailExt": {
+    "definition": "The extension of the given phone number (if applicable).",
     "type": "string",
     "maxLength": 10,
     "level": "bronze",
     "path": "/Listing"
   },
   "CoListAgentTollFreePhone": {
+    "definition": "North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.",
     "type": "string",
     "maxLength": 16,
     "level": "bronze",
     "path": "/Listing"
   },
   "CoListAgentEmail": {
+    "definition": "The email address of the Co Listing Agent.",
     "type": "string",
     "maxLength": 80,
     "level": "core",
     "path": "/Listing"
   },
   "CoListAgentURL": {
+    "definition": "The website URI of the co-listing agent.",
     "type": "string",
     "maxLength": 8000,
     "level": "",
     "path": "/Listing"
   },
   "CoListAgentKey": {
+    "definition": "A system unique identifier. Specifically, in aggregation systems, the Key is the system unique identifier from the system that the record was just retrieved. This may be identical to the related xxxId identifier, but the key is guaranteed unique for this record set.  This is a foreign key relating to the Member resource's MemberKey.",
     "type": "string",
     "maxLength": 255,
     "level": "core",
@@ -1360,12 +1827,14 @@
     "path": "/Listing"
   },
   "CoListAgentAOR": {
+    "definition": "The Co Listing Agent's Board or Association of REALTORS.",
     "type": "string",
     "maxLength": 50,
     "level": "bronze",
     "path": "/Listing"
   },
   "CoListAgentMlsId": {
+    "definition": "The local, well-known identifier. This value may not be unique, specifically in the case of aggregation systems, this value should be the identifier from the original system.",
     "type": "string",
     "maxLength": 25,
     "level": "core",
@@ -1373,6 +1842,7 @@
     "path": "/Listing"
   },
   "CoListAgentStateLicense": {
+    "definition": "The license of the co-listing agent. Separate multiple licenses with a comma and space.",
     "type": "string",
     "maxLength": 50,
     "level": "core",
@@ -1380,6 +1850,7 @@
     "path": "/Listing"
   },
   "CoListAgentDesignation": {
+    "definition": "Designations and certifications acknowledging experience and expertise in various real estate sectors are awarded by NAR and each affiliated group upon completion of required courses.",
     "type": [
       "string"
     ],
@@ -1387,6 +1858,7 @@
     "path": "/Listing"
   },
   "CoListOfficeName": {
+    "definition": "The legal name of the brokerage co-representing the seller.",
     "type": "string",
     "maxLength": 50,
     "level": "core",
@@ -1394,36 +1866,42 @@
     "path": "/Listing"
   },
   "CoListOfficePhone": {
+    "definition": "North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.",
     "type": "string",
     "maxLength": 16,
     "level": "core",
     "path": "/Listing"
   },
   "CoListOfficePhoneExt": {
+    "definition": "The extension of the given phone number (if applicable).",
     "type": "string",
     "maxLength": 10,
     "level": "core",
     "path": "/Listing"
   },
   "CoListOfficeFax": {
+    "definition": "North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.",
     "type": "string",
     "maxLength": 16,
     "level": "bronze",
     "path": "/Listing"
   },
   "CoListOfficeEmail": {
+    "definition": "The email address of the Co Listing Office.",
     "type": "string",
     "maxLength": 80,
     "level": "bronze",
     "path": "/Listing"
   },
   "CoListOfficeURL": {
+    "definition": "The website URI for the co-listing office.",
     "type": "string",
     "maxLength": 8000,
     "level": "bronze",
     "path": "/Listing"
   },
   "CoListOfficeKey": {
+    "definition": "A system unique identifier. Specifically, in aggregation systems, the Key is the system unique identifier from the system that the record was just retrieved. This may be identical to the related xxxId identifier, but the key is guaranteed unique for this record set.  This is a foreign key relating to the Office resource's OfficeKey.",
     "type": "string",
     "maxLength": 255,
     "level": "core",
@@ -1431,12 +1909,14 @@
     "path": "/Listing"
   },
   "CoListOfficeAOR": {
+    "definition": "The Co Listing Office's Board or Association of REALTORS.",
     "type": "string",
     "maxLength": 50,
     "level": "bronze",
     "path": "/Listing"
   },
   "CoListOfficeMlsId": {
+    "definition": "The local, well-known identifier. This value may not be unique, specifically in the case of aggregation systems, this value should be the identifier from the original system.",
     "type": "string",
     "maxLength": 25,
     "level": "core",
@@ -1444,150 +1924,175 @@
     "path": "/Listing"
   },
   "BuyerAgentNamePrefix": {
+    "definition": "Prefix to the name (e.g. Dr. Mr. Ms. etc.)",
     "type": "string",
     "maxLength": 10,
     "level": "bronze",
     "path": "/Listing"
   },
   "BuyerAgentFirstName": {
+    "definition": "The first name of the buyer's agent.",
     "type": "string",
     "maxLength": 50,
     "level": "core",
     "path": "/Listing"
   },
   "BuyerAgentMiddleName": {
+    "definition": "The middle name of the buyer's agent.",
     "type": "string",
     "maxLength": 50,
     "level": "core",
     "path": "/Listing"
   },
   "BuyerAgentLastName": {
+    "definition": "The last name of the buyer's agent.",
     "type": "string",
     "maxLength": 50,
     "level": "core",
     "path": "/Listing"
   },
   "BuyerAgentNameSuffix": {
+    "definition": "Suffix to the BuyerAgentLastName (e.g. Esq.,  Jr.,  III etc.)",
     "type": "string",
     "maxLength": 10,
     "level": "bronze",
     "path": "/Listing"
   },
   "BuyerAgentFullName": {
+    "definition": "The full name of the buyer's agent. (First Middle Last)",
     "type": "string",
     "maxLength": 150,
     "level": "bronze",
     "path": "/Listing"
   },
   "BuyerAgentPreferredPhone": {
+    "definition": "North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.",
     "type": "string",
     "maxLength": 16,
     "level": "core",
     "path": "/Listing"
   },
   "BuyerAgentPreferredPhoneExt": {
+    "definition": "The extension of the given phone number (if applicable).",
     "type": "string",
     "maxLength": 10,
     "level": "core",
     "path": "/Listing"
   },
   "BuyerAgentOfficePhone": {
+    "definition": "North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.",
     "type": "string",
     "maxLength": 16,
     "level": "core",
     "path": "/Listing"
   },
   "BuyerAgentOfficePhoneExt": {
+    "definition": "The extension of the given phone number (if applicable).",
     "type": "string",
     "maxLength": 10,
     "level": "core",
     "path": "/Listing"
   },
   "BuyerAgentCellPhone": {
+    "definition": "North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.",
     "type": "string",
     "maxLength": 16,
     "level": "core",
     "path": "/Listing"
   },
   "BuyerAgentDirectPhone": {
+    "definition": "North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.",
     "type": "string",
     "maxLength": 16,
     "level": "bronze",
     "path": "/Listing"
   },
   "BuyerAgentHomePhone": {
+    "definition": "North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.",
     "type": "string",
     "maxLength": 16,
     "level": "bronze",
     "path": "/Listing"
   },
   "BuyerAgentFax": {
+    "definition": "North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.",
     "type": "string",
     "maxLength": 16,
     "level": "bronze",
     "path": "/Listing"
   },
   "BuyerAgentPager": {
+    "definition": "North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.",
     "type": "string",
     "maxLength": 16,
     "level": "bronze",
     "path": "/Listing"
   },
   "BuyerAgentVoiceMail": {
+    "definition": "North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.",
     "type": "string",
     "maxLength": 16,
     "level": "bronze",
     "path": "/Listing"
   },
   "BuyerAgentVoiceMailExt": {
+    "definition": "The extension of the given phone number (if applicable).",
     "type": "string",
     "maxLength": 10,
     "level": "bronze",
     "path": "/Listing"
   },
   "BuyerAgentTollFreePhone": {
+    "definition": "North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.",
     "type": "string",
     "maxLength": 16,
     "level": "bronze",
     "path": "/Listing"
   },
   "BuyerAgentEmail": {
+    "definition": "The email address of the Buyer's Agent.",
     "type": "string",
     "maxLength": 80,
     "level": "core",
     "path": "/Listing"
   },
   "BuyerAgentURL": {
+    "definition": "The website URI of the buyers agent.",
     "type": "string",
     "maxLength": 8000,
     "level": "",
     "path": "/Listing"
   },
   "BuyerAgentKey": {
+    "definition": "A system unique identifier. Specifically, in aggregation systems, the Key is the system unique identifier from the system that the record was just retrieved. This may be identical to the related xxxId identifier, but the key is guaranteed unique for this record set.  This is a foreign key relating to the Member resource's MemberKey.",
     "type": "string",
     "maxLength": 255,
     "level": "core",
     "path": "/Listing"
   },
   "BuyerAgentAOR": {
+    "definition": "The Buyer's Agent's Board or Association of REALTORS.",
     "type": "string",
     "maxLength": 50,
     "level": "bronze",
     "path": "/Listing"
   },
   "BuyerAgentMlsId": {
+    "definition": "The local, well-known identifier. This value may not be unique, specifically in the case of aggregation systems, this value should be the identifier from the original system.",
     "type": "string",
     "maxLength": 25,
     "level": "core",
     "path": "/Listing"
   },
   "BuyerAgentStateLicense": {
+    "definition": "The license of the buyers agent. Separate multiple licenses with a comma and space.",
     "type": "string",
     "maxLength": 50,
     "level": "core",
     "path": "/Listing"
   },
   "BuyerAgentDesignation": {
+    "definition": "Designations and certifications acknowledging experience and expertise in various real estate sectors are awarded by NAR and each affiliated group upon completion of required courses.",
     "type": [
       "string"
     ],
@@ -1595,204 +2100,238 @@
     "path": "/Listing"
   },
   "BuyerOfficeName": {
+    "definition": "The legal name of the brokerage representing the buyer.",
     "type": "string",
     "maxLength": 50,
     "level": "core",
     "path": "/Listing"
   },
   "BuyerOfficePhone": {
+    "definition": "North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.",
     "type": "string",
     "maxLength": 16,
     "level": "core",
     "path": "/Listing"
   },
   "BuyerOfficePhoneExt": {
+    "definition": "The extension of the given phone number (if applicable).",
     "type": "string",
     "maxLength": 10,
     "level": "core",
     "path": "/Listing"
   },
   "BuyerOfficeFax": {
+    "definition": "North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.",
     "type": "string",
     "maxLength": 16,
     "level": "bronze",
     "path": "/Listing"
   },
   "BuyerOfficeEmail": {
+    "definition": "The email address of the Buyer's Office.",
     "type": "string",
     "maxLength": 80,
     "level": "bronze",
     "path": "/Listing"
   },
   "BuyerOfficeURL": {
+    "definition": "The website URI for the buyers office.",
     "type": "string",
     "maxLength": 8000,
     "level": "bronze",
     "path": "/Listing"
   },
   "BuyerOfficeKey": {
+    "definition": "A system unique identifier. Specifically, in aggregation systems, the Key is the system unique identifier from the system that the record was just retrieved. This may be identical to the related xxxId identifier, but the key is guaranteed unique for this record set.  This is a foreign key relating to the Office resource's OfficeKey.",
     "type": "string",
     "maxLength": 255,
     "level": "core",
     "path": "/Listing"
   },
   "BuyerOfficeAOR": {
+    "definition": "The Buyer's Office's Board or Association of REALTORS.",
     "type": "string",
     "maxLength": 50,
     "level": "bronze",
     "path": "/Listing"
   },
   "BuyerOfficeMlsId": {
+    "definition": "The local, well-known identifier. This value may not be unique, specifically in the case of aggregation systems, this value should be the identifier from the original system.",
     "type": "string",
     "maxLength": 25,
     "level": "core",
     "path": "/Listing"
   },
   "CoBuyerAgentNamePrefix": {
+    "definition": "Prefix to the name (e.g. Dr. Mr. Ms. etc.)",
     "type": "string",
     "maxLength": 10,
     "level": "bronze",
     "path": "/Listing"
   },
   "CoBuyerAgentFirstName": {
+    "definition": "The first name of the buyer's co-agent.",
     "type": "string",
     "maxLength": 50,
     "level": "core",
     "path": "/Listing"
   },
   "CoBuyerAgentMiddleName": {
+    "definition": "The middle name of the buyer's co-agent.",
     "type": "string",
     "maxLength": 50,
     "level": "core",
     "path": "/Listing"
   },
   "CoBuyerAgentLastName": {
+    "definition": "The last name of the buyer's co-agent.",
     "type": "string",
     "maxLength": 50,
     "level": "core",
     "path": "/Listing"
   },
   "CoBuyerAgentNameSuffix": {
+    "definition": "Suffix to the CoBuyerAgentLastName (e.g. Esq.,  Jr.,  III etc.)",
     "type": "string",
     "maxLength": 10,
     "level": "bronze",
     "path": "/Listing"
   },
   "CoBuyerAgentFullName": {
+    "definition": "The full name of the buyer's co-agent. (First Middle Last)",
     "type": "string",
     "maxLength": 150,
     "level": "bronze",
     "path": "/Listing"
   },
   "CoBuyerAgentPreferredPhone": {
+    "definition": "North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.",
     "type": "string",
     "maxLength": 16,
     "level": "core",
     "path": "/Listing"
   },
   "CoBuyerAgentPreferredPhoneExt": {
+    "definition": "The extension of the given phone number (if applicable).",
     "type": "string",
     "maxLength": 10,
     "level": "core",
     "path": "/Listing"
   },
   "CoBuyerAgentOfficePhone": {
+    "definition": "North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.",
     "type": "string",
     "maxLength": 16,
     "level": "core",
     "path": "/Listing"
   },
   "CoBuyerAgentOfficePhoneExt": {
+    "definition": "The extension of the given phone number (if applicable).",
     "type": "string",
     "maxLength": 10,
     "level": "core",
     "path": "/Listing"
   },
   "CoBuyerAgentCellPhone": {
+    "definition": "North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.",
     "type": "string",
     "maxLength": 16,
     "level": "core",
     "path": "/Listing"
   },
   "CoBuyerAgentDirectPhone": {
+    "definition": "North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.",
     "type": "string",
     "maxLength": 16,
     "level": "bronze",
     "path": "/Listing"
   },
   "CoBuyerAgentHomePhone": {
+    "definition": "North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.",
     "type": "string",
     "maxLength": 16,
     "level": "bronze",
     "path": "/Listing"
   },
   "CoBuyerAgentFax": {
+    "definition": "North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.",
     "type": "string",
     "maxLength": 16,
     "level": "bronze",
     "path": "/Listing"
   },
   "CoBuyerAgentPager": {
+    "definition": "North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.",
     "type": "string",
     "maxLength": 16,
     "level": "bronze",
     "path": "/Listing"
   },
   "CoBuyerAgentVoiceMail": {
+    "definition": "North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.",
     "type": "string",
     "maxLength": 16,
     "level": "bronze",
     "path": "/Listing"
   },
   "CoBuyerAgentVoiceMailExt": {
+    "definition": "The extension of the given phone number (if applicable).",
     "type": "string",
     "maxLength": 10,
     "level": "bronze",
     "path": "/Listing"
   },
   "CoBuyerAgentTollFreePhone": {
+    "definition": "North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.",
     "type": "string",
     "maxLength": 16,
     "level": "bronze",
     "path": "/Listing"
   },
   "CoBuyerAgentEmail": {
+    "definition": "The email address of the Buyer's Co Agent.",
     "type": "string",
     "maxLength": 80,
     "level": "core",
     "path": "/Listing"
   },
   "CoBuyerAgentURL": {
+    "definition": "The website URI of the co-buyers agent.",
     "type": "string",
     "maxLength": 8000,
     "level": "",
     "path": "/Listing"
   },
   "CoBuyerAgentKey": {
+    "definition": "A system unique identifier. Specifically, in aggregation systems, the Key is the system unique identifier from the system that the record was just retrieved. This may be identical to the related xxxId identifier, but the key is guaranteed unique for this record set.  This is a foreign key relating to the Member resource's MemberKey.",
     "type": "string",
     "maxLength": 255,
     "level": "core",
     "path": "/Listing"
   },
   "CoBuyerAgentAOR": {
+    "definition": "The Co Buyer's Agent's Board or Association of REALTORS.",
     "type": "string",
     "maxLength": 50,
     "level": "bronze",
     "path": "/Listing"
   },
   "CoBuyerAgentMlsId": {
+    "definition": "The local, well-known identifier. This value may not be unique, specifically in the case of aggregation systems, this value should be the identifier from the original system.",
     "type": "string",
     "maxLength": 25,
     "level": "core",
     "path": "/Listing"
   },
   "CoBuyerAgentStateLicense": {
+    "definition": "The license of the co-buyers agent. Separate multiple licenses with a comma and space.",
     "type": "string",
     "maxLength": 50,
     "level": "bronze",
     "path": "/Listing"
   },
   "CoBuyerAgentDesignation": {
+    "definition": "Designations and certifications acknowledging experience and expertise in various real estate sectors are awarded by NAR and each affiliated group upon completion of required courses.",
     "type": [
       "string"
     ],
@@ -1800,60 +2339,70 @@
     "path": "/Listing"
   },
   "CoBuyerOfficeName": {
+    "definition": "The legal name of the brokerage co-representing the buyer.",
     "type": "string",
     "maxLength": 50,
     "level": "core",
     "path": "/Listing"
   },
   "CoBuyerOfficePhone": {
+    "definition": "North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.",
     "type": "string",
     "maxLength": 16,
     "level": "core",
     "path": "/Listing"
   },
   "CoBuyerOfficePhoneExt": {
+    "definition": "The extension of the given phone number (if applicable).",
     "type": "string",
     "maxLength": 10,
     "level": "core",
     "path": "/Listing"
   },
   "CoBuyerOfficeFax": {
+    "definition": "North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.",
     "type": "string",
     "maxLength": 16,
     "level": "bronze",
     "path": "/Listing"
   },
   "CoBuyerOfficeEmail": {
+    "definition": "The email address of the Buyer's Co Office.",
     "type": "string",
     "maxLength": 80,
     "level": "bronze",
     "path": "/Listing"
   },
   "CoBuyerOfficeURL": {
+    "definition": "The website URI for the co-buyers office.",
     "type": "string",
     "maxLength": 8000,
     "level": "bronze",
     "path": "/Listing"
   },
   "CoBuyerOfficeKey": {
+    "definition": "A system unique identifier. Specifically, in aggregation systems, the Key is the system unique identifier from the system that the record was just retrieved. This may be identical to the related xxxId identifier, but the key is guaranteed unique for this record set.  This is a foreign key relating to the Office resource's OfficeKey.",
     "type": "string",
     "maxLength": 255,
     "level": "core",
     "path": "/Listing"
   },
   "CoBuyerOfficeAOR": {
+    "definition": "The Co Buyer's Office's Board or Association of REALTORS.",
     "type": "string",
     "maxLength": 50,
     "level": "bronze",
     "path": "/Listing"
   },
   "CoBuyerOfficeMlsId": {
+    "definition": "The local, well-known identifier. This value may not be unique, specifically in the case of aggregation systems, this value should be the identifier from the original system.",
     "type": "string",
     "maxLength": 25,
     "level": "core",
     "path": "/Listing"
   },
   "ListTeamName": {
+    "definition": "The name of the team representing the seller.",
     "type": "string",
     "maxLength": 50,
     "level": "silver",
@@ -1861,6 +2410,7 @@
     "path": "/Listing"
   },
   "ListTeamKey": {
+    "definition": "A system unique identifier. Specifically, in aggregation systems, the Key is the system unique identifier from the system that the record was just retrieved. This may be identical to the related xxxId identifier, but the key is guaranteed unique for this record set.  This is a foreign key relating to the Teams resource's TeamKey.",
     "type": "string",
     "maxLength": 255,
     "level": "silver",
@@ -1868,18 +2418,21 @@
     "path": "/Listing"
   },
   "BuyerTeamName": {
+    "definition": "The name of the team representing the buyer.",
     "type": "string",
     "maxLength": 50,
     "level": "silver",
     "path": "/Listing"
   },
   "BuyerTeamKey": {
+    "definition": "A system unique identifier. Specifically, in aggregation systems, the Key is the system unique identifier from the system that the record was just retrieved. This may be identical to the related xxxId identifier, but the key is guaranteed unique for this record set.  This is a foreign key relating to the Teams resource's TeamKey.",
     "type": "string",
     "maxLength": 255,
     "level": "silver",
     "path": "/Listing"
   },
   "PropertyType": {
+    "definition": "A list of types of properties such as Residential, Lease, Income, Land, Mobile, Commercial Sale, etc...",
     "type": "string",
     "maxLength": 50,
     "lookup": "PropertyType",
@@ -1899,6 +2452,7 @@
     ]
   },
   "PropertySubType": {
+    "definition": "A list of types of residential and residential lease properties, i.e. SFR, Condo, etc. Or a list of Sub Types for Mobile, such as Expando, Manufactured, Modular, etc.",
     "type": "string",
     "maxLength": 50,
     "lookup": "PropertySubType",
@@ -1926,31 +2480,53 @@
     ]
   },
   "AssociationYN": {
+    "definition": "Is there a Home Owners Association.  A separate Y/N field is needed because not all associations have dues.",
     "type": "boolean",
+    "synonym": [
+      "HOAYN"
+    ],
     "level": "bronze",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "AssociationName": {
+    "definition": "The name of the Home Owners Association.",
     "type": "string",
     "maxLength": 50,
+    "synonym": [
+      "HOAName"
+    ],
     "level": "bronze",
     "path": "/Property"
   },
   "AssociationPhone": {
+    "definition": "The phone number of the Home Owners Association. North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.",
     "type": "string",
     "maxLength": 16,
+    "synonym": [
+      "HOAPhone"
+    ],
     "level": "bronze",
     "path": "/Property"
   },
   "AssociationFee": {
+    "definition": "A fee paid by the homeowner to the Home Owners Association which is used for the upkeep of the common area, neighborhood or other association related benefits.",
     "type": "number",
+    "synonym": [
+      "HOAFee",
+      "CAM Charge",
+      "Condo Charge"
+    ],
     "level": "bronze",
     "path": "/Property"
   },
   "AssociationFeeFrequency": {
+    "definition": "The frequency the association fee is paid.  For example, Weekly, Monthly, Annually, Bi-Monthly, One Time, etc.",
     "type": "string",
     "maxLength": 25,
+    "synonym": [
+      "HOAFeeFrequency"
+    ],
     "lookup": "FeeFrequency",
     "level": "bronze",
     "path": "/Property",
@@ -1969,25 +2545,41 @@
     ]
   },
   "AssociationName2": {
+    "definition": "The name of the second of two Home Owners Association.",
     "type": "string",
     "maxLength": 50,
+    "synonym": [
+      "HOAName2"
+    ],
     "level": "bronze",
     "path": "/Property"
   },
   "AssociationPhone2": {
+    "definition": "The phone number of the second of two Home Owners Association. North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.",
     "type": "string",
     "maxLength": 16,
+    "synonym": [
+      "HOAPhone2"
+    ],
     "level": "bronze",
     "path": "/Property"
   },
   "AssociationFee2": {
+    "definition": "A fee paid by the homeowner to the second of two Home Owners Associations, which is used for the upkeep of the common area, neighborhood or other association related benefits.",
     "type": "number",
+    "synonym": [
+      "HOAFee2"
+    ],
     "level": "bronze",
     "path": "/Property"
   },
   "AssociationFee2Frequency": {
+    "definition": "The frequency the association fee is paid.  For example, Weekly, Monthly, Annually, Bi-Monthly, One Time, etc.",
     "type": "string",
     "maxLength": 25,
+    "synonym": [
+      "HOAFeeFrequency2"
+    ],
     "lookup": "FeeFrequency",
     "level": "bronze",
     "path": "/Property",
@@ -2006,8 +2598,12 @@
     ]
   },
   "AssociationFeeIncludes": {
+    "definition": "Services included with the association fee.  For example Landscaping, Trash, Water, etc.",
     "type": [
       "string"
+    ],
+    "synonym": [
+      "HOAFeeIncludes"
     ],
     "lookup": "AssociationFeeIncludes",
     "level": "bronze",
@@ -2031,14 +2627,21 @@
     ]
   },
   "AssociationAmenities": {
+    "definition": "Amenities provided by the Home Owners Association, Mobile Park or Complex. For example Pool, Clubhouse, etc.",
     "type": [
       "string"
+    ],
+    "synonym": [
+      "AssociationRules",
+      "AssociationInfo",
+      "HOAAmenities"
     ],
     "level": "platinum",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "PetsAllowed": {
+    "definition": "Are pets allowed at the property being leased?  A list of yes, no and more detailed restrictions/allowances.",
     "type": [
       "string"
     ],
@@ -2058,12 +2661,14 @@
     ]
   },
   "LotSizeArea": {
+    "definition": "The total area of the lot.  See Lot Size Units for the units of measurement (Square Feet, Square Meters, Acres, etc.).",
     "type": "number",
     "level": "core",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "LotSizeSource": {
+    "definition": "The source of the measurements. This may be a pick list of options showing the source of the measurement. i.e. Agent, Assessor, Estimate, etc.",
     "type": "string",
     "maxLength": 50,
     "level": "bronze",
@@ -2071,6 +2676,7 @@
     "path": "/Property"
   },
   "LotSizeUnits": {
+    "definition": "A pick list of the unit of measurement for the area.  i.e. Square Feet, Square Meters, Acres, etc.",
     "type": "string",
     "maxLength": 25,
     "lookup": "LotSizeUnits",
@@ -2084,6 +2690,7 @@
     ]
   },
   "LotSizeDimensions": {
+    "definition": "The dimensions of the lot minimally represented as length and width (i.e. 250 x 180) or a measurement of all sides of the polygon representing the property lines of the property.  i.e. 30 x 50 x 120 x 60 x 22.",
     "type": "string",
     "maxLength": 150,
     "level": "gold",
@@ -2091,6 +2698,7 @@
     "path": "/Property"
   },
   "LotDimensionsSource": {
+    "definition": "The source of the measurements. This may be a pick list of options showing the source of the measurement. i.e. Agent, Assessor, Estimate, etc.",
     "type": "string",
     "maxLength": 50,
     "level": "gold",
@@ -2098,18 +2706,21 @@
     "path": "/Property"
   },
   "LotSizeAcres": {
+    "definition": "The total Acres of the lot.  This field is related to the Lot Size Area and Lot Size Units and must be in sync with the values represented in those fields.  Lot Size Source also applies to this field when used.",
     "type": "number",
     "level": "gold",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "LotSizeSquareFeet": {
+    "definition": "The total square footage of the lot.  This field is related to the Lot Size Area and Lot Size Units and must be in sync with the values represented in those fields.  Lot Size Source also applies to this field when used.",
     "type": "number",
     "level": "gold",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "FrontageType": {
+    "definition": "Pick list of types of frontage.  i.e. Oceanfront, Lakefront, Golf course…etc….  Information about roads or road frontage should be located in the Road Frontage Type and Road Surface Type fields.",
     "type": [
       "string"
     ],
@@ -2118,6 +2729,7 @@
     "path": "/Property"
   },
   "FrontageLength": {
+    "definition": "Textual description of the length of the frontages selected in the Frontage Type field.",
     "type": "string",
     "maxLength": 255,
     "level": "gold",
@@ -2125,6 +2737,7 @@
     "path": "/Property"
   },
   "RoadFrontageType": {
+    "definition": "Pick list of types of Road frontage.  i.e. Freeway frontage, No Road Frontage, etc. The road frontage of the property is an important factor in determining value of the property and it’s appropriateness for intended use.",
     "type": [
       "string"
     ],
@@ -2133,6 +2746,7 @@
     "path": "/Property"
   },
   "RoadSurfaceType": {
+    "definition": "Pick list of types of surface of the Road to access the property.  The surface of the road(s) for access to the property is an important factor in determining value of the property and it’s appropriateness for intended use.",
     "type": [
       "string"
     ],
@@ -2141,6 +2755,7 @@
     "path": "/Property"
   },
   "RoadResponsibility": {
+    "definition": "The person or entity responsible for road maintenance (e.g., City, County, Private).",
     "type": [
       "string"
     ],
@@ -2149,18 +2764,21 @@
     "path": "/Property"
   },
   "OccupantName": {
+    "definition": "Name of the current occupant, if any, of the property being sold.",
     "type": "string",
     "maxLength": 50,
     "level": "bronze",
     "path": "/Property"
   },
   "OccupantPhone": {
+    "definition": "North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.",
     "type": "string",
     "maxLength": 16,
     "level": "bronze",
     "path": "/Property"
   },
   "OccupantType": {
+    "definition": "A field that describes the type of occupant, i.e. Owner, Tenant, Vacant.",
     "type": "string",
     "maxLength": 50,
     "lookup": "OccupantType",
@@ -2173,18 +2791,21 @@
     ]
   },
   "OwnerName": {
+    "definition": "Name of the owner of the property being sold.",
     "type": "string",
     "maxLength": 50,
     "level": "bronze",
     "path": "/Property"
   },
   "OwnerPhone": {
+    "definition": "North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.",
     "type": "string",
     "maxLength": 16,
     "level": "bronze",
     "path": "/Property"
   },
   "AnchorsCoTenants": {
+    "definition": "The main or most notable tenants as well as other tenants of the shopping center or mall in which the commercial property is located.",
     "type": "string",
     "maxLength": 1024,
     "level": "platinum",
@@ -2192,6 +2813,7 @@
     "path": "/Property"
   },
   "LeaseTerm": {
+    "definition": "A pick list of lengths that represent the length of the lease.  i.e. Weekly, Month to Month, 6 Month Lease, 12 Month Lease, 24 Month Lease.",
     "type": "string",
     "maxLength": 25,
     "lookup": "LeaseTerm",
@@ -2212,19 +2834,31 @@
     ]
   },
   "LandLeaseYN": {
+    "definition": "The land is not included in the sale and a lease exists.",
     "type": "boolean",
+    "synonym": [
+      "LandFeeLease"
+    ],
     "level": "core",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "LandLeaseAmount": {
+    "definition": "When the land is not included in the sale, but is leased, the amount of the lease.  This is the Space Rent for Mobile homes in a Park.",
     "type": "number",
+    "synonym": [
+      "SpaceRent"
+    ],
     "level": "bronze",
     "path": "/Property"
   },
   "LandLeaseAmountFrequency": {
+    "definition": "When the land is not included in the sale, but is leased, the frequency the Land Lease Fee is paid.",
     "type": "string",
     "maxLength": 25,
+    "synonym": [
+      "FeeFrequency"
+    ],
     "lookup": "FeeFrequency",
     "level": "bronze",
     "path": "/Property",
@@ -2243,11 +2877,13 @@
     ]
   },
   "LandLeaseExpirationDate": {
+    "definition": "When the land is not included in the sale, but is leased, the expiration date of the Land Lease.",
     "type": "date",
     "level": "bronze",
     "path": "/Property"
   },
   "View": {
+    "definition": "A view as seen from the listed property.",
     "type": [
       "string"
     ],
@@ -2256,12 +2892,14 @@
     "path": "/Property"
   },
   "ViewYN": {
+    "definition": "The property has a view.",
     "type": "boolean",
     "level": "platinum",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "LotFeatures": {
+    "definition": "A list of features or description of the lot included in the sale/lease.",
     "type": [
       "string"
     ],
@@ -2270,6 +2908,7 @@
     "path": "/Property"
   },
   "CurrentUse": {
+    "definition": "A list of the type(s) of current use of the property. The current use of the property is an important factor in understanding the overall condition of the land and determining it’s appropriateness for intended use.\r\n",
     "type": [
       "string"
     ],
@@ -2278,6 +2917,7 @@
     "path": "/Property"
   },
   "PossibleUse": {
+    "definition": "A list of the type(s) of possible or best uses of the property.  Probable use gives a good indication of what the best use or potential use of the property could be.\r\ni.e. Primary, Vacation, Investment, Rental, Retirement ",
     "type": [
       "string"
     ],
@@ -2286,6 +2926,7 @@
     "path": "/Property"
   },
   "DevelopmentStatus": {
+    "definition": "A list of the Development Status of the property.  The developmental status of land is an important factor in selling, purchasing and developing of land properties.\r\n",
     "type": [
       "string"
     ],
@@ -2294,12 +2935,14 @@
     "path": "/Property"
   },
   "NumberOfLots": {
+    "definition": "Total number of lots on the property or included in the sale. Land properties are often sold with multiple lots. It is important to be able to describe how many lots are in the property and not in all cases do lots have separate Parcel IDs.",
     "type": "number",
     "level": "bronze",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "Topography": {
+    "definition": "The state of the surface of the land included with the property.  i.e. flat, rolling, etc.",
     "type": "string",
     "maxLength": 255,
     "level": "platinum",
@@ -2307,12 +2950,14 @@
     "path": "/Property"
   },
   "HorseYN": {
+    "definition": "The Property is allowed to raise horses.",
     "type": "boolean",
     "level": "platinum",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "HorseAmenities": {
+    "definition": "A list of horse amenities on the lot or in the community.",
     "type": [
       "string"
     ],
@@ -2321,6 +2966,7 @@
     "path": "/Property"
   },
   "CommunityFeatures": {
+    "definition": "A list of features related to, or available within, the community.",
     "type": [
       "string"
     ],
@@ -2329,12 +2975,14 @@
     "path": "/Property"
   },
   "SeniorCommunityYN": {
+    "definition": "The community is a senior community.",
     "type": "boolean",
     "level": "platinum",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "PoolFeatures": {
+    "definition": "A list of features or description of the pool included in the sale/lease.",
     "type": [
       "string"
     ],
@@ -2343,12 +2991,14 @@
     "path": "/Property"
   },
   "PoolPrivateYN": {
+    "definition": "The property has a privately owned pool that is included in the sale/lease.",
     "type": "boolean",
     "level": "platinum",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "SpaFeatures": {
+    "definition": "A list of features or description of the spa included in the sale/lease.",
     "type": [
       "string"
     ],
@@ -2357,45 +3007,78 @@
     "path": "/Property"
   },
   "SpaYN": {
+    "definition": "The property has a spa.",
     "type": "boolean",
+    "synonym": [
+      "Jacuzzi",
+      "HotTub"
+    ],
     "level": "platinum",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "WaterfrontYN": {
+    "definition": "The property is on the waterfront.",
     "type": "boolean",
+    "synonym": [
+      "Lakefront",
+      "Oceanfront",
+      "Riverfront"
+    ],
     "level": "platinum",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "WaterfrontFeatures": {
+    "definition": "Features of the waterfront on which the property is located.",
     "type": [
       "string"
+    ],
+    "synonym": [
+      "LakefrontFeatures",
+      "OceanfrontFeatures",
+      "RiverfrontFeatures"
     ],
     "level": "platinum",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "WaterBodyName": {
+    "definition": "The name, if known, of the body of water on which the property is located. (E.g., lake name, river name, ocean name, sea name, canal name).",
     "type": "string",
     "maxLength": 50,
+    "synonym": [
+      "LakeName",
+      "RiverName",
+      "OceanName"
+    ],
     "level": "platinum",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "GrossScheduledIncome": {
+    "definition": "The maximum amount of annual rent collected if the property were 100% occupied all year and all tenants paid their rent.",
     "type": "number",
+    "synonym": [
+      "Proforma Income"
+    ],
     "level": "core",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "GrossIncome": {
+    "definition": "The actual current income from rent and all other revenue generating sources.",
     "type": "number",
+    "synonym": [
+      "Current Income",
+      "Actual Income"
+    ],
     "level": "core",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "IncomeIncludes": {
+    "definition": "A list of income sources included in the GrossScheduledIncome and GrossIncome.  i.e. Laundry, Parking, Recreation, Storage, etc.",
     "type": [
       "string"
     ],
@@ -2413,12 +3096,14 @@
     ]
   },
   "OperatingExpense": {
+    "definition": "The costs associated with the operation and maintenance of an income-producing property.",
     "type": "number",
     "level": "core",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "OperatingExpenseIncludes": {
+    "definition": "When individual expense fields are not used and only a total is entered, this lists the expenses that are included in the OperatingExpense field.",
     "type": [
       "string"
     ],
@@ -2463,36 +3148,45 @@
     ]
   },
   "NetOperatingIncome": {
+    "definition": "Net operating income is the revenue from a property after operating expenses have been deducted, but before deducting income taxes and financing expenses (interest and Principal Payments).   For example, Gross Income - Operating Expenses = Net Operating Income (NOI).",
     "type": "number",
     "level": "core",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "CapRate": {
+    "definition": "Cap Rate is equivalent to the return on investment you would receive if you pay cash for a property. The ratio between the net operating income produced by an asset and its capital cost (the original price paid to buy the asset) or alternatively its current market value.",
     "type": "number",
+    "synonym": [
+      "CapitalizationRate"
+    ],
     "level": "core",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "NumberOfUnitsLeased": {
+    "definition": "Total number of units currently under a lease agreement.",
     "type": "number",
     "level": "bronze",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "NumberOfUnitsMoMo": {
+    "definition": "The total number of units leasable month to month.",
     "type": "number",
     "level": "bronze",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "NumberOfUnitsVacant": {
+    "definition": "The number of units currently vacant.",
     "type": "number",
     "level": "bronze",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "ExistingLeaseType": {
+    "definition": "Information about the status of the existing lease on the property.  i.e. Net, NNN, NN, Gross, Absolute Net, Escalation Clause, Ground Lease, etc.",
     "type": [
       "string"
     ],
@@ -2513,6 +3207,7 @@
     ]
   },
   "UnitsFurnished": {
+    "definition": "Are the units furnished?  i.e. All Units, Varies By Unit, None.\r\n",
     "type": "string",
     "maxLength": 25,
     "level": "bronze",
@@ -2520,30 +3215,38 @@
     "path": "/Property"
   },
   "TotalActualRent": {
+    "definition": "Total actual rent currently being collected from tenants of the income property.",
     "type": "number",
     "level": "bronze",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "RentControlYN": {
+    "definition": "Is the property in a rent control area?",
     "type": "boolean",
     "level": "bronze",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "NumberOfUnitsTotal": {
+    "definition": "Total number of units included in the income property, occupied or unoccupied.",
     "type": "number",
     "level": "core",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "NumberOfBuildings": {
+    "definition": "Total number of separate buildings included in the income property.",
     "type": "number",
+    "synonym": [
+      "NumberOfUnitsBuildings"
+    ],
     "level": "bronze",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "OwnerPays": {
+    "definition": "A list of expenses for the property paid for by the owner as opposed to the tenant (e.g. Water, Trash, Electric).",
     "type": [
       "string"
     ],
@@ -2552,134 +3255,162 @@
     "path": "/Property"
   },
   "TenantPays": {
+    "definition": "A list of services or items that the tenant is responsible to pay.",
     "type": [
       "string"
+    ],
+    "synonym": [
+      "TenantExpense"
     ],
     "level": "bronze",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "VacancyAllowance": {
+    "definition": "An estimate of the amount of rent that may be foregone because of unoccupied units.",
     "type": "number",
     "level": "bronze",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "VacancyAllowanceRate": {
+    "definition": "An estimate of the percent of rent that may be foregone because of unoccupied units.",
     "type": "number",
     "level": "bronze",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "CableTvExpense": {
+    "definition": "The annual expense that is not paid directly by the tenant and is included in the Operating Expense calculations.",
     "type": "number",
     "level": "silver",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "ElectricExpense": {
+    "definition": "The annual expense that is not paid directly by the tenant and is included in the Operating Expense calculations.",
     "type": "number",
     "level": "silver",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "GardnerExpense": {
+    "definition": "The annual expense that is not paid directly by the tenant and is included in the Operating Expense calculations.",
     "type": "number",
     "level": "silver",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "FurnitureReplacementExpense": {
+    "definition": "The annual expense that is not paid directly by the tenant and is included in the Operating Expense calculations.",
     "type": "number",
     "level": "silver",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "FuelExpense": {
+    "definition": "The annual expense that is not paid directly by the tenant and is included in the Operating Expense calculations.",
     "type": "number",
     "level": "silver",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "InsuranceExpense": {
+    "definition": "The annual expense that is not paid directly by the tenant and is included in the Operating Expense calculations.",
     "type": "number",
     "level": "silver",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "OtherExpense": {
+    "definition": "The annual expense that is not paid directly by the tenant and is included in the Operating Expense calculations.",
     "type": "number",
     "level": "silver",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "LicensesExpense": {
+    "definition": "The annual expense that is not paid directly by the tenant and is included in the Operating Expense calculations.",
     "type": "number",
     "level": "silver",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "MaintenanceExpense": {
+    "definition": "The annual expense that is not paid directly by the tenant and is included in the Operating Expense calculations.",
     "type": "number",
     "level": "silver",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "NewTaxesExpense": {
+    "definition": "The annual expense that is not paid directly by the tenant and is included in the Operating Expense calculations.",
     "type": "number",
     "level": "silver",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "PestControlExpense": {
+    "definition": "The annual expense that is not paid directly by the tenant and is included in the Operating Expense calculations.",
     "type": "number",
     "level": "silver",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "PoolExpense": {
+    "definition": "The annual expense that is not paid directly by the tenant and is included in the Operating Expense calculations.",
     "type": "number",
     "level": "silver",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "SuppliesExpense": {
+    "definition": "The annual expense that is not paid directly by the tenant and is included in the Operating Expense calculations.",
     "type": "number",
     "level": "silver",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "TrashExpense": {
+    "definition": "The annual expense that is not paid directly by the tenant and is included in the Operating Expense calculations.",
     "type": "number",
     "level": "silver",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "WaterSewerExpense": {
+    "definition": "The annual expense that is not paid directly by the tenant and is included in the Operating Expense calculations.",
     "type": "number",
     "level": "silver",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "WorkmansCompensationExpense": {
+    "definition": "The annual expense that is not paid directly by the tenant and is included in the Operating Expense calculations.",
     "type": "number",
     "level": "silver",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "ProfessionalManagementExpense": {
+    "definition": "The annual expense that is not paid directly by the tenant and is included in the Operating Expense calculations.  This is for a management company.  Use ManagerExpense for a individual manager.",
     "type": "number",
+    "synonym": [
+      "ManagementCompanyExpense"
+    ],
     "level": "silver",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "ManagerExpense": {
+    "definition": "The annual expense that is not paid directly by the tenant and is included in the Operating Expense calculations.  This is for an individual manager.  Use ProfessionalManagementExpense for a management company.",
     "type": "number",
     "level": "silver",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "FinancialDataSource": {
+    "definition": "The source of the Rental information. For example Accountant, Owner, etc.",
     "type": [
       "string"
     ],
@@ -2694,6 +3425,7 @@
     ]
   },
   "RentIncludes": {
+    "definition": "A list of services or items that the tenant is not responsible to pay.",
     "type": [
       "string"
     ],
@@ -2702,6 +3434,7 @@
     "path": "/Property"
   },
   "Furnished": {
+    "definition": "The property being leased is furnished, unfurnished or partially furnished.",
     "type": "string",
     "maxLength": 50,
     "level": "bronze",
@@ -2709,14 +3442,19 @@
     "path": "/Property"
   },
   "BusinessName": {
+    "definition": "Name of the business being sold.",
     "type": "string",
     "maxLength": 255,
     "level": "bronze",
     "path": "/Property"
   },
   "BusinessType": {
+    "definition": "The type of business being sold.  Retail, Wholesale, Grocery, Food & Bev, etc…",
     "type": [
       "string"
+    ],
+    "synonym": [
+      "PropertySubType"
     ],
     "lookup": "BusinessType",
     "level": "core",
@@ -2834,6 +3572,7 @@
     ]
   },
   "OwnershipType": {
+    "definition": "Current type of ownership of the business being sold.  i.e. Corporation, LLC, Sole P, Partnership, etc.,",
     "type": "string",
     "maxLength": 50,
     "lookup": "OwnershipType",
@@ -2848,6 +3587,7 @@
     ]
   },
   "SpecialLicenses": {
+    "definition": "Special licenses required/used by the business being sold.  i.e. Beer/Wine, Class H, Professional, Gambling, None.",
     "type": [
       "string"
     ],
@@ -2872,24 +3612,28 @@
     ]
   },
   "NumberOfFullTimeEmployees": {
+    "definition": "The current number of individuals employed by the business on a full-time basis.",
     "type": "number",
     "level": "bronze",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "NumberOfPartTimeEmployees": {
+    "definition": "The current number of individuals employed by the business on a part-time basis.",
     "type": "number",
     "level": "bronze",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "LeaseAmount": {
+    "definition": "The amount of any lease the business pays for it's current location.",
     "type": "number",
     "level": "bronze",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "LeaseAmountFrequency": {
+    "definition": "The frequency of the LeaseAmount is paid.  Monthly, weekly, annual, etc.",
     "type": "string",
     "maxLength": 25,
     "lookup": "FeeFrequency",
@@ -2911,24 +3655,28 @@
     ]
   },
   "LeaseExpiration": {
+    "definition": "The expiration date of the lease for the business' current location.",
     "type": "date",
     "level": "bronze",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "LeaseRenewalOptionYN": {
+    "definition": "Is there an option to renew the lease at the business' current location.",
     "type": "boolean",
     "level": "bronze",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "LeaseAssignableYN": {
+    "definition": "Can the lease at the business' current location be assigned to another party.",
     "type": "boolean",
     "level": "bronze",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "HoursDaysofOperation": {
+    "definition": "A simplified enumerated list of the days and hours of operation of the business being sold.  i.e. Open 24 Hours or Open 7 Days.  For more detailed descriptions use the HoursDaysofOperationDescription field.",
     "type": [
       "string"
     ],
@@ -2949,6 +3697,7 @@
     ]
   },
   "HoursDaysofOperationDescription": {
+    "definition": "A detailed description of the hours and days the business being sold is open for business.  For a specific list of simplified times the business is open, use the HoursDaysofOperation enumerated field.",
     "type": "string",
     "maxLength": 255,
     "level": "silver",
@@ -2956,24 +3705,28 @@
     "path": "/Property"
   },
   "YearEstablished": {
+    "definition": "The year the business being sold was established.",
     "type": "number",
     "level": "silver",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "SeatingCapacity": {
+    "definition": "The seating capacity of the business being sold.",
     "type": "number",
     "level": "silver",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "YearsCurrentOwner": {
+    "definition": "The number of years the current owner has had possession of the business.",
     "type": "number",
     "level": "silver",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "LaborInformation": {
+    "definition": "Information about labor laws that are applicable to the business being sold. i.e. Union, Non-Union, Employee License Required.",
     "type": [
       "string"
     ],
@@ -2982,6 +3735,7 @@
     "path": "/Property"
   },
   "Utilities": {
+    "definition": "A list of the utilities for the property being sold/leased.",
     "type": [
       "string"
     ],
@@ -2990,6 +3744,7 @@
     "path": "/Property"
   },
   "Electric": {
+    "definition": "A list of electric-service related features of the property (e.g. 110 Volt, 3 Phase, 220 Volt, RV Hookup). Note: the previous \"Electric\" field was renamed to DistanceToElectric",
     "type": [
       "string"
     ],
@@ -2998,6 +3753,7 @@
     "path": "/Property"
   },
   "Gas": {
+    "definition": "A list of gas-service related features of the property (e.g. Natural Gas, Private LP Tank, None). Note: the previous \"Gas\" field was renamed to DistanceToGas",
     "type": [
       "string"
     ],
@@ -3006,6 +3762,7 @@
     "path": "/Property"
   },
   "Telephone": {
+    "definition": "A list of telephone-service related features of the property (e.g. Installed, Public, Available). Note: the previous \"Telephone\" field was renamed to DistanceToPhoneService",
     "type": [
       "string"
     ],
@@ -3014,18 +3771,21 @@
     "path": "/Property"
   },
   "IrrigationWaterRightsYN": {
+    "definition": "Does the property include water rights for irrigation?  A Boolean or Yes / No field.",
     "type": "boolean",
     "level": "bronze",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "IrrigationWaterRightsAcres": {
+    "definition": "The number of acres allowed under the property's water rights.",
     "type": "number",
     "level": "bronze",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "IrrigationSource": {
+    "definition": "The source which the property receives its water for irrigation.",
     "type": [
       "string"
     ],
@@ -3034,6 +3794,7 @@
     "path": "/Property"
   },
   "WaterSource": {
+    "definition": "A list of the source(s) of water for the property",
     "type": [
       "string"
     ],
@@ -3042,6 +3803,7 @@
     "path": "/Property"
   },
   "DistanceToWater": {
+    "definition": "If the property does not currently have water utility, is service available and if so, what is the distance.",
     "type": "string",
     "maxLength": 255,
     "level": "silver",
@@ -3049,12 +3811,14 @@
     "path": "/Property"
   },
   "ElectricOnPropertyYN": {
+    "definition": "Does the property currently have electrical utility available on the property.",
     "type": "boolean",
     "level": "bronze",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "DistanceToElectric": {
+    "definition": "If the property does not currently have electrical utility, is service available and if so, what is the distance.",
     "type": "string",
     "maxLength": 255,
     "level": "bronze",
@@ -3062,6 +3826,7 @@
     "path": "/Property"
   },
   "Sewer": {
+    "definition": "A list describing the sewer or septic features of the property.",
     "type": [
       "string"
     ],
@@ -3070,6 +3835,7 @@
     "path": "/Property"
   },
   "DistanceToSewer": {
+    "definition": "If the property does not currently have sewer or septic, is sewer service available and if so, what is the distance.",
     "type": "string",
     "maxLength": 255,
     "level": "silver",
@@ -3077,6 +3843,7 @@
     "path": "/Property"
   },
   "DistanceToGas": {
+    "definition": "If the property does not currently have natural gas utility, is service available and if so, what is the distance.",
     "type": "string",
     "maxLength": 255,
     "level": "silver",
@@ -3084,6 +3851,7 @@
     "path": "/Property"
   },
   "DistanceToPhoneService": {
+    "definition": "If the property does not currently have phone service, is service available and if so, what is the distance.",
     "type": "string",
     "maxLength": 255,
     "level": "silver",
@@ -3091,6 +3859,7 @@
     "path": "/Property"
   },
   "DistanceToStreet": {
+    "definition": "If the property does not have a maintained road or street adjacent to the lot, what are the conditions of access and distance to a maintained road.",
     "type": "string",
     "maxLength": 255,
     "level": "silver",
@@ -3098,6 +3867,7 @@
     "path": "/Property"
   },
   "DistanceToSchools": {
+    "definition": "A textual description of the distance to local schools.",
     "type": "string",
     "maxLength": 255,
     "level": "silver",
@@ -3105,6 +3875,7 @@
     "path": "/Property"
   },
   "DistanceFromShopping": {
+    "definition": "A description of the distance to primary shopping sources such as groceries, gasoline, clothing or department stores.",
     "type": "string",
     "maxLength": 255,
     "level": "silver",
@@ -3112,6 +3883,7 @@
     "path": "/Property"
   },
   "DistanceToPlaceofWorship": {
+    "definition": "A textual description of the distance to local places of worship.",
     "type": "string",
     "maxLength": 255,
     "level": "silver",
@@ -3119,6 +3891,7 @@
     "path": "/Property"
   },
   "DistanceToBus": {
+    "definition": "A textual description of the distance to local bus stops.",
     "type": "string",
     "maxLength": 255,
     "level": "silver",
@@ -3126,6 +3899,7 @@
     "path": "/Property"
   },
   "DistanceFromSchoolBus": {
+    "definition": "Distance from the property to the nearest school bus pickup point.",
     "type": "string",
     "maxLength": 255,
     "level": "silver",
@@ -3133,6 +3907,7 @@
     "path": "/Property"
   },
   "DistanceToFreeway": {
+    "definition": "A textual description of the distance to freeways.",
     "type": "string",
     "maxLength": 255,
     "level": "silver",
@@ -3140,54 +3915,63 @@
     "path": "/Property"
   },
   "CropsIncludedYN": {
+    "definition": "Are crops included in the sale of the property.",
     "type": "boolean",
     "level": "gold",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "GrazingPermitsBlmYN": {
+    "definition": "Specifies whether or not the property owner has grazing permits from the Bureau of Land Management.",
     "type": "boolean",
     "level": "gold",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "GrazingPermitsForestServiceYN": {
+    "definition": "Specifies whether or not the property owner has grazing permits from the Forestry Service.",
     "type": "boolean",
     "level": "gold",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "GrazingPermitsPrivateYN": {
+    "definition": "Specifies whether or not the property owner has private grazing permits.",
     "type": "boolean",
     "level": "gold",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "CultivatedArea": {
+    "definition": "Measurement or percentage of the property that has been cultivated.",
     "type": "number",
     "level": "gold",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "PastureArea": {
+    "definition": "Measurement or percentage of the property that has been allocated as pasture or grazing area.",
     "type": "number",
     "level": "gold",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "RangeArea": {
+    "definition": "Measurement or percentage of the property that has been allocated as range.",
     "type": "number",
     "level": "gold",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "WoodedArea": {
+    "definition": "Measurement or percentage of the property that is wooded or forest.",
     "type": "number",
     "level": "gold",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "Vegetation": {
+    "definition": "A list of the type(s) of vegetation on the property.  Note that this is not for farm crops, but more residential type vegetation.\r\n",
     "type": [
       "string"
     ],
@@ -3196,6 +3980,7 @@
     "path": "/Property"
   },
   "Fencing": {
+    "definition": "A list of types of fencing found at the property being sold.",
     "type": [
       "string"
     ],
@@ -3204,12 +3989,14 @@
     "path": "/Property"
   },
   "FarmCreditServiceInclYN": {
+    "definition": "Specifies whether or not Farm Credit Service shares are included in the price of the property.",
     "type": "boolean",
     "level": "gold",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "FarmLandAreaUnits": {
+    "definition": "A pick list of the unit of measurement for the area.  i.e. Square Feet, Square Meters, Acres, etc.  This field applies to all farm area fields (Cultivated, Pasture, Range, Wooded)",
     "type": "string",
     "maxLength": 25,
     "level": "gold",
@@ -3217,6 +4004,7 @@
     "path": "/Property"
   },
   "FarmLandAreaSource": {
+    "definition": "The source of the measurements. This may be a pick list of options showing the source of the measurement. i.e. Agent, Assessor, Estimate, etc. This field applies to all farm area fields (Cultivated, Pasture, Range, Wooded)",
     "type": "string",
     "maxLength": 50,
     "level": "gold",
@@ -3224,72 +4012,106 @@
     "path": "/Property"
   },
   "BedroomsTotal": {
+    "definition": "The total number of bedrooms in the dwelling.",
     "type": "number",
+    "synonym": [
+      "BedroomsTotal"
+    ],
     "level": "core",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "BedroomsPossible": {
+    "definition": "The sum of BedroomsTotal plus other rooms that may be used as a bedroom but are not defined as bedroom per local policy.",
     "type": "number",
+    "synonym": [
+      "BedroomsTotal"
+    ],
     "level": "",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "MainLevelBedrooms": {
+    "definition": "The number of bedrooms located on the main or entry level of the property.",
     "type": "number",
     "level": "silver",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "BathroomsTotalInteger": {
+    "definition": "The simple sum of the number of bathrooms.  For example for a property with two Full Bathrooms and one Half Bathroom, the Bathrooms Total Integer will be 3.  To express this example as 2.5, use the BathroomsTotalDecimal field.  To express this example as 2.1, use the BathroomsTotalNotational.",
     "type": "number",
     "level": "core",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "BathroomsFull": {
+    "definition": "A room containing all 4 of the 4 elements constituting a bath, which are; Toilet, Sink, Bathtub or Shower Head.  A Full Bath will typically contain four elements; Sink, Toilet, Tub and Shower Head (in tub or stall).  However, some may considered a Sink, Toilet and Tub (without a shower) a Full Bath, others consider this to be a Three Quarter Bath.  In the event that BathroomsThreeQuarter is not in use, this field may represent the sum of all Full and Three Quarter bathrooms.",
     "type": "number",
+    "synonym": [
+      "BathroomsFull",
+      "FullBaths"
+    ],
     "level": "core",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "BathroomsHalf": {
+    "definition": "A room containing 2 of the 4 elements constituting a bath, which are; Toilet, Sink, Bathtub or Shower Head.  A Half Bath will typically contain a Sink and Toilet.",
     "type": "number",
+    "synonym": [
+      "BathroomsHalf",
+      "HalfBaths"
+    ],
     "level": "core",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "BathroomsThreeQuarter": {
+    "definition": "A room containing 3 of the 4 elements constituting a bath, which are; Toilet, Sink, Bathtub or Shower Head. A typical Three Quarter Bath will contain Sink, Toilet and Shower.  Some may considered a Sink, Toilet and Tub (without a shower) a Three Quarter Bath, others consider this to be a Full Bath.",
     "type": "number",
+    "synonym": [
+      "BathroomsThreeQuarter",
+      "ThreeQuarterBaths"
+    ],
     "level": "core",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "BathroomsOneQuarter": {
+    "definition": "A room containing 1 of the 4 elements constituting a bath which are; Toilet, Sink, Bathtub or Shower Head.  Examples are a vanity with a sink or a WC (Water Closet, which is a room with only a toilet).",
     "type": "number",
+    "synonym": [
+      "BathroomsOneQuarter",
+      "QuarterBaths"
+    ],
     "level": "core",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "BathroomsPartial": {
+    "definition": "The number of partial bathrooms in the property being sold/leased.  When used in combination with the BathroomsFull field, this replaces (or is the sum of) all Half and One Quarter bathrooms; and in the event BathroomsThreeQuarter is not used, BathroomsFull replaces (or is the sum of) all Full and Three Quarter baths.  This field should not be used in combination with the BathroomsOneQuarter or the BathroomsHalf.",
     "type": "number",
     "level": "silver",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "MainLevelBathrooms": {
+    "definition": "The number of bathrooms located on the main or entry level of the property.",
     "type": "number",
     "level": "silver",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "LivingArea": {
+    "definition": "The total livable area within the structure.",
     "type": "number",
     "level": "core",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "LivingAreaUnits": {
+    "definition": "A pick list of the unit of measurement for the area.  i.e. Square Feet, Square Meters, Acres, etc.",
     "type": "string",
     "maxLength": 25,
     "lookup": "LivingAreaUnits",
@@ -3302,36 +4124,51 @@
     ]
   },
   "PropertyAttachedYN": {
+    "definition": "A flag indicating that the primary structure is attached to another structure that is not included in the sale.  i.e. one unit of a duplex. This flag may be T/F, Y/N or a list of attached or detached. As with all flags, the field may be null.  In some systems this information may be part of the Property Sub Type.",
     "type": "boolean",
+    "synonym": [
+      "StructureAttachedYN"
+    ],
     "level": "core",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "GarageYN": {
+    "definition": "A flag indicating that the listing has a garage. This flag may be T/F, Y/N or other true, false or unknown indicator. As with all flags, the field may be null.",
     "type": "boolean",
     "level": "core",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "GarageSpaces": {
+    "definition": "The number of spaces in the garage(s).",
     "type": "number",
     "level": "core",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "StoriesTotal": {
+    "definition": "The total number of floors in the building.  In the case of multi-dwelling structures, this is the entire structure and not the individual dwelling being sold.",
     "type": "number",
+    "synonym": [
+      "StoriesBuildingTotal"
+    ],
     "level": "core",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "Stories": {
+    "definition": "The number of floors in the property being sold.",
     "type": "number",
+    "synonym": [
+      "Floors"
+    ],
     "level": "core",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "Levels": {
+    "definition": "The number of levels in the property being sold.  For example, One Level, Two Levels, Split Level, Three or More Levels, Multi Level, Loft.    A discreet horizontal plane of interior living space (excluding basements).",
     "type": [
       "string"
     ],
@@ -3347,24 +4184,28 @@
     ]
   },
   "YearBuilt": {
+    "definition": "The year that an occupancy permit is first granted for the house or other local measure of initial habitability of the build. The type definition permits an empty value with an attribute noting that it is an unknown date or that the building is new construction. While constraints have not been applied, convention at the time of adoption has this as a four (4) digit year value.",
     "type": "number",
     "level": "core",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "MobileLength": {
+    "definition": "Length of the mobile/manufactured home.",
     "type": "number",
     "level": "core",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "MobileWidth": {
+    "definition": "Width of the mobile/manufactured home.",
     "type": "number",
     "level": "core",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "Make": {
+    "definition": "Make of the mobile or manufactured home.",
     "type": "string",
     "maxLength": 50,
     "level": "core",
@@ -3372,6 +4213,7 @@
     "path": "/Property"
   },
   "Model": {
+    "definition": "Model of the mobile or manufactured home.",
     "type": "string",
     "maxLength": 50,
     "level": "core",
@@ -3379,13 +4221,21 @@
     "path": "/Property"
   },
   "ParcelNumber": {
+    "definition": "A number used to uniquely identify a parcel or lot.  This number is typically issued by the county or county assessor.  The AP number format varies from county to county.  It is recommended that all Parcel Numbers be transmitted without dashes or hyphens.",
     "type": "string",
     "maxLength": 50,
+    "synonym": [
+      "APN",
+      "AssessorsParcelNumber",
+      "TaxID",
+      "AssessorNumber"
+    ],
     "level": "core",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "LivingAreaSource": {
+    "definition": "The source of the measurements. This is a pick list of options showing the source of the measurement. i.e. Agent, Assessor, Estimate, etc.",
     "type": "string",
     "maxLength": 50,
     "level": "bronze",
@@ -3393,12 +4243,14 @@
     "path": "/Property"
   },
   "AboveGradeFinishedArea": {
+    "definition": "Finished area within the structure that is at or above the surface of the ground.",
     "type": "number",
     "level": "silver",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "AboveGradeFinishedAreaSource": {
+    "definition": "The source of the measurements. This is a pick list of options showing the source of the measurement. i.e. Agent, Assessor, Estimate, etc.",
     "type": "string",
     "maxLength": 50,
     "level": "silver",
@@ -3406,6 +4258,7 @@
     "path": "/Property"
   },
   "AboveGradeFinishedAreaUnits": {
+    "definition": "A pick list of the unit of measurement for the area.  i.e. Square Feet, Square Meters, Acres, etc.",
     "type": "string",
     "maxLength": 25,
     "level": "silver",
@@ -3413,12 +4266,14 @@
     "path": "/Property"
   },
   "BelowGradeFinishedArea": {
+    "definition": "Finished area within the structure that is below ground.",
     "type": "number",
     "level": "silver",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "BelowGradeFinishedAreaSource": {
+    "definition": "The source of the measurements. This is a pick list of options showing the source of the measurement. i.e. Agent, Assessor, Estimate, etc.",
     "type": "string",
     "maxLength": 50,
     "level": "silver",
@@ -3426,6 +4281,7 @@
     "path": "/Property"
   },
   "BelowGradeFinishedAreaUnits": {
+    "definition": "A pick list of the unit of measurement for the area.  i.e. Square Feet, Square Meters, Acres, etc.",
     "type": "string",
     "maxLength": 25,
     "level": "silver",
@@ -3433,12 +4289,14 @@
     "path": "/Property"
   },
   "BuildingAreaTotal": {
+    "definition": "Total area of the structure. Includes both finished and unfinished areas.",
     "type": "number",
     "level": "silver",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "BuildingAreaSource": {
+    "definition": "The source of the measurements. This is a pick list of options showing the source of the measurement. i.e. Agent, Assessor, Estimate, etc.",
     "type": "string",
     "maxLength": 50,
     "level": "silver",
@@ -3446,6 +4304,7 @@
     "path": "/Property"
   },
   "BuildingAreaUnits": {
+    "definition": "A pick list of the unit of measurement for the area.  i.e. Square Feet, Square Meters, Acres, etc.",
     "type": "string",
     "maxLength": 25,
     "level": "silver",
@@ -3453,12 +4312,14 @@
     "path": "/Property"
   },
   "LeasableArea": {
+    "definition": "The area that may be leased within the commercial property.",
     "type": "number",
     "level": "silver",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "LeasableAreaUnits": {
+    "definition": "A pick list of the unit of measurement for the area.  i.e. Square Feet, Square Meters, Acres, etc.",
     "type": "string",
     "maxLength": 25,
     "level": "silver",
@@ -3466,6 +4327,7 @@
     "path": "/Property"
   },
   "CommonWalls": {
+    "definition": "A multi select list with options like 1 Common Wall, 2 Common Walls, No Common Walls, No One Above, No One Below.  Implementation should include rules preventing illogical selection combinations and to ensure consistency with the Property Attached Y/N field.",
     "type": [
       "string"
     ],
@@ -3483,48 +4345,59 @@
     ]
   },
   "FoundationArea": {
+    "definition": "The area or dimensions of the footprint of the structure on the lot.",
     "type": "number",
     "level": "silver",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "AttachedGarageYN": {
+    "definition": "A flag indicating that the garage attached to the dwelling.",
     "type": "boolean",
     "level": "silver",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "CarportSpaces": {
+    "definition": "The number of carport spaces included in the sale.",
     "type": "number",
     "level": "silver",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "CarportYN": {
+    "definition": "A flag indicating that the listing has a garage. This flag may be T/F, Y/N or other true, false or unknown indicator. As with all flags, the field may be null.",
     "type": "boolean",
     "level": "silver",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "OpenParkingYN": {
+    "definition": "A flag indicating that any parking spaces associated with the property are not covered by a roof.",
     "type": "boolean",
     "level": "silver",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "OpenParkingSpaces": {
+    "definition": "The number of open or uncovered parking spaces included in the sale.",
     "type": "number",
+    "synonym": [
+      "UncoveredParking"
+    ],
     "level": "bronze",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "CoveredSpaces": {
+    "definition": "The total number of garage and carport spaces.",
     "type": "number",
     "level": "bronze",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "ParkingFeatures": {
+    "definition": "A list of features or description of the parking included in the sale/lease.",
     "type": [
       "string"
     ],
@@ -3533,6 +4406,7 @@
     "path": "/Property"
   },
   "OtherParking": {
+    "definition": "Other types of parking available to, or part of, the property.",
     "type": "string",
     "maxLength": 1024,
     "level": "silver",
@@ -3540,12 +4414,14 @@
     "path": "/Property"
   },
   "ParkingTotal": {
+    "definition": "The total number of parking spaces included in the sale.",
     "type": "number",
     "level": "silver",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "RVParkingDimensions": {
+    "definition": "The dimensions of the RV parking area minimally represented as length and width (i.e. 25 x 18) or a measurement of all sides of the polygon representing the usable RV parking space.  i.e. 33 x 15 x 12 x 60.",
     "type": "string",
     "maxLength": 50,
     "level": "silver",
@@ -3553,25 +4429,35 @@
     "path": "/Property"
   },
   "EntryLocation": {
+    "definition": "A description of the main entry way to the property.  i.e. Elevator, Ground Level w/ Steps, Ground Level w/o Steps, Mid Level, Top Level, etc.",
     "type": "string",
     "maxLength": 50,
+    "synonym": [
+      "Entry Description"
+    ],
     "level": "silver",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "EntryLevel": {
+    "definition": "A numeric field that describes the level within the structure, SFR or a unit in a building, where the main entry to the dwelling is located.  When a unit has one floor it is implicit that this is also the level of the unit itself.",
     "type": "number",
+    "synonym": [
+      "Unit Floor Number"
+    ],
     "level": "silver",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "YearBuiltEffective": {
+    "definition": "The year a major rebuild/renovated of the structure occurred.",
     "type": "number",
     "level": "bronze",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "YearBuiltDetails": {
+    "definition": "A description of the details behind the year the structure was built.",
     "type": "string",
     "maxLength": 1024,
     "level": "bronze",
@@ -3579,6 +4465,7 @@
     "path": "/Property"
   },
   "YearBuiltSource": {
+    "definition": "Add a list of sources of the year built.  i.e. Appraiser, Assessor, Builder, Estimated, etc.,",
     "type": "string",
     "maxLength": 60,
     "level": "bronze",
@@ -3586,14 +4473,20 @@
     "path": "/Property"
   },
   "NewConstructionYN": {
+    "definition": "Is the property newly constructed and has not been previously occupied?",
     "type": "boolean",
     "level": "silver",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "GreenBuildingVerificationType": {
+    "definition": "The name of the verification or certification awarded to a new or pre-existing residential or commercial structure. For example: LEED, Energy Star, ICC-700.  In cases where more than one certification have been awarded, leverage multiple iterations of the green verification fields via the repeating element method.",
     "type": [
       "string"
+    ],
+    "synonym": [
+      "GreenBuildingCertification",
+      "GreenBuildingVerification"
     ],
     "level": "platinum",
     "payloads": "Proposed IDX",
@@ -3606,34 +4499,54 @@
         "type": "string"
       },
       "Body": {
+        "definition": "The name of the body or group providing the verification or certification named in the GreenBuildingVerificationType field.  This is often the same name but some certifications/verifications can be issued from difference bodies. This is a repeating element.  If desired replace [Type] with the name of the certification from the GreenBuildingVerificationType list.",
         "type": "string",
         "maxLength": 50,
+        "synonym": [
+          "GreenCertifyingBudy"
+        ],
         "level": "platinum",
         "payloads": "Proposed IDX",
         "path": "/Property"
       },
       "Year": {
+        "definition": "The year the certification or verification was awarded.  This is a repeating element.  If desired replace [Type] with the name of the certification from the GreenBuildingVerificationType list.",
         "type": "number",
+        "synonym": [
+          "GreenYearCertified"
+        ],
         "level": "platinum",
         "payloads": "Proposed IDX",
         "path": "/Property"
       },
       "Rating": {
+        "definition": "Many verifications or certifications have a rating system that provides an indication of the structure's level of energy efficiency.  When expressed in a numeric value, please use the GreenVerificationMetric field. Verifications and Certifications can also be a name, such as Gold or Silver, which is the purpose of this field. This is a repeating element.  If desired replace [Type] with the name of the certification from the GreenBuildingVerificationType list.",
         "type": "string",
         "maxLength": 50,
+        "synonym": [
+          "GreenCertificationRating"
+        ],
         "level": "platinum",
         "payloads": "Proposed IDX",
         "path": "/Property"
       },
       "Metric": {
+        "definition": "A final score indicating the performance of energy efficiency design and measures in the home as tested by a third-party rater.  Points achieved to earn a certification in the HighPerformanceRating field do not apply to this field.  HERS Index is most common with new homes and runs with a lower number being more efficient. A net-zero home uses zero energy and has a HERS score of 0.  A home that produces more energy than it uses has a negative score.  Home Energy Score is a tool more common for existing homes and runs with a higher number being more efficient.   It takes square footage into account and caps with 10 as the highest number of points. This is a repeating element.  If desired replace [Type] with the name of the certification from the GreenBuildingVerificationType list.",
         "type": "number",
+        "synonym": [
+          "GreenCertificationMetric"
+        ],
         "level": "platinum",
         "payloads": "Proposed IDX",
         "path": "/Property"
       },
       "URL": {
+        "definition": "Provides a link to the specific property’s high-performance rating or scoring details directly from and hosted by the sponsoring body of the program.   Typically provides thorough details, for example, which points where achieved and how, or in the case of a score what specifically was tested and the results. This is a repeating element.  If desired replace [Type] with the name of the certification from the GreenBuildingVerificationType list.",
         "type": "string",
         "maxLength": 8000,
+        "synonym": [
+          "GreenCertificationURL"
+        ],
         "level": "platinum",
         "payloads": "Proposed IDX",
         "path": "/Property"
@@ -3641,6 +4554,7 @@
     }
   ],
   "BuilderName": {
+    "definition": "Name of the builder of the property or builder's tract.",
     "type": "string",
     "maxLength": 50,
     "level": "gold",
@@ -3648,6 +4562,7 @@
     "path": "/Property"
   },
   "BuilderModel": {
+    "definition": "The builders model name or number for the property.",
     "type": "string",
     "maxLength": 50,
     "level": "gold",
@@ -3655,6 +4570,7 @@
     "path": "/Property"
   },
   "BuildingName": {
+    "definition": "Name of the building or business park.",
     "type": "string",
     "maxLength": 50,
     "level": "gold",
@@ -3662,6 +4578,7 @@
     "path": "/Property"
   },
   "BuildingFeatures": {
+    "definition": "Features or amenities of the building or business park.",
     "type": [
       "string"
     ],
@@ -3670,6 +4587,7 @@
     "path": "/Property"
   },
   "Heating": {
+    "definition": "A list describing the heating features of the property.",
     "type": [
       "string"
     ],
@@ -3678,12 +4596,14 @@
     "path": "/Property"
   },
   "HeatingYN": {
+    "definition": "The property has heating.",
     "type": "boolean",
     "level": "platinum",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "Cooling": {
+    "definition": "A list describing the cooling or air conditioning features of the property.",
     "type": [
       "string"
     ],
@@ -3692,12 +4612,14 @@
     "path": "/Property"
   },
   "CoolingYN": {
+    "definition": "The property has cooling or Air Conditioning.",
     "type": "boolean",
     "level": "platinum",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "InteriorFeatures": {
+    "definition": "A list of features or description of the interior of the property included in the sale/lease.",
     "type": [
       "string"
     ],
@@ -3706,6 +4628,7 @@
     "path": "/Property"
   },
   "ExteriorFeatures": {
+    "definition": "A list of features or description of the exterior of the property included in the sale/lease.",
     "type": [
       "string"
     ],
@@ -3714,6 +4637,7 @@
     "path": "/Property"
   },
   "PatioAndPorchFeatures": {
+    "definition": "A list of features or description of the patio or porch included in the sale/lease.",
     "type": [
       "string"
     ],
@@ -3722,22 +4646,32 @@
     "path": "/Property"
   },
   "ArchitecturalStyle": {
+    "definition": "A list describing the style of the structure.  For example, Victorian, Ranch, Craftsman, etc.",
     "type": [
       "string"
+    ],
+    "synonym": [
+      "Style"
     ],
     "level": "silver",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "PropertyCondition": {
+    "definition": "A list describing the condition of the property and any structures included in the sale.",
     "type": [
       "string"
+    ],
+    "synonym": [
+      "StructuralCondition",
+      "Condition"
     ],
     "level": "silver",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "FireplaceFeatures": {
+    "definition": "A list of features or description of the fireplace(s) included in the sale/lease.",
     "type": [
       "string"
     ],
@@ -3746,18 +4680,21 @@
     "path": "/Property"
   },
   "FireplacesTotal": {
+    "definition": "The total number of fireplaces included in the property.",
     "type": "number",
     "level": "platinum",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "FireplaceYN": {
+    "definition": "Does the property include a fireplace.",
     "type": "boolean",
     "level": "platinum",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "DoorFeatures": {
+    "definition": "A list of features or description of the doors included in the sale/lease.",
     "type": [
       "string"
     ],
@@ -3766,6 +4703,7 @@
     "path": "/Property"
   },
   "WindowFeatures": {
+    "definition": "A list of features or description of the windows included in the sale/lease.",
     "type": [
       "string"
     ],
@@ -3774,6 +4712,7 @@
     "path": "/Property"
   },
   "Roof": {
+    "definition": "A list describing the type or style of roof.  For example Spanish Tile, Composite, Shake, etc.",
     "type": [
       "string"
     ],
@@ -3782,6 +4721,7 @@
     "path": "/Property"
   },
   "ConstructionMaterials": {
+    "definition": "A list of the materials that were used in the construction of the property.",
     "type": [
       "string"
     ],
@@ -3790,6 +4730,7 @@
     "path": "/Property"
   },
   "FoundationDetails": {
+    "definition": "A list of the type(s) of foundation on which the property sits.",
     "type": [
       "string"
     ],
@@ -3798,6 +4739,7 @@
     "path": "/Property"
   },
   "Basement": {
+    "definition": "A list of information and features about the basement.  i.e. None/Slab, Finished, Partially Finished, Crawl Space, Dirt, Outside Entrance, Radon Mitigation\r\n",
     "type": [
       "string"
     ],
@@ -3806,6 +4748,7 @@
     "path": "/Property"
   },
   "Flooring": {
+    "definition": "A list of the type(s) of flooring found within the property.",
     "type": [
       "string"
     ],
@@ -3814,6 +4757,7 @@
     "path": "/Property"
   },
   "OtherStructures": {
+    "definition": "A list of structures other than the main dwelling.  For example, Guest House, Barn, Shed, etc.",
     "type": [
       "string"
     ],
@@ -3822,13 +4766,18 @@
     "path": "/Property"
   },
   "DirectionFaces": {
+    "definition": "The compass direction that the main entrance to the building faces. For example, North, South, East, West, South-West, etc. It may also be known as the building exposure.",
     "type": "string",
     "maxLength": 25,
+    "synonym": [
+      "BuildingExposure"
+    ],
     "level": "silver",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "OtherEquipment": {
+    "definition": "A list of other equipment that will be included in the sale of the property.",
     "type": [
       "string"
     ],
@@ -3837,6 +4786,7 @@
     "path": "/Property"
   },
   "Appliances": {
+    "definition": "A list of the appliances that will be included in the sale/lease of the property.",
     "type": [
       "string"
     ],
@@ -3845,6 +4795,7 @@
     "path": "/Property"
   },
   "LaundryFeatures": {
+    "definition": "Add this pick list of features and locations where the laundry is located in the property being sold.  i.e. Gas Dryer Hookup, In Kitchen, In Garage, etc.  CRMLS sees over 50% utilization of this field which has a dozen enumerations making it too long to fold into other fields such as rooms or Interior Features.",
     "type": [
       "string"
     ],
@@ -3853,6 +4804,7 @@
     "path": "/Property"
   },
   "SecurityFeatures": {
+    "definition": "A list describing the security features included in the sale/lease.",
     "type": [
       "string"
     ],
@@ -3861,24 +4813,28 @@
     "path": "/Property"
   },
   "NumberOfSeparateElectricMeters": {
+    "definition": "Total number of separate meters on the property.",
     "type": "number",
     "level": "silver",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "NumberOfSeparateGasMeters": {
+    "definition": "Total number of separate meters on the property.",
     "type": "number",
     "level": "silver",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "NumberOfSeparateWaterMeters": {
+    "definition": "Total number of separate meters on the property.",
     "type": "number",
     "level": "silver",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "GreenEnergyEfficient": {
+    "definition": "Pick list of general green attributes such as energy efficient doors, or appliances without naming specific elements whose efficiency rating wanes over time.",
     "type": [
       "string"
     ],
@@ -3887,6 +4843,7 @@
     "path": "/Property"
   },
   "GreenEnergyGeneration": {
+    "definition": "Pick list of methods of generating energy such as solar, wind or geothermal.",
     "type": [
       "string"
     ],
@@ -3895,6 +4852,7 @@
     "path": "/Property"
   },
   "GreenSustainability": {
+    "definition": "Pick list of sustainable elements used in the construction of the structure.",
     "type": [
       "string"
     ],
@@ -3903,6 +4861,7 @@
     "path": "/Property"
   },
   "GreenWaterConservation": {
+    "definition": "Pick list of general water conserving attributes of the property such as landscaping or reclamation.",
     "type": [
       "string"
     ],
@@ -3911,6 +4870,7 @@
     "path": "/Property"
   },
   "GreenIndoorAirQuality": {
+    "definition": "Pick list of indoor air quality measures.",
     "type": [
       "string"
     ],
@@ -3919,6 +4879,7 @@
     "path": "/Property"
   },
   "GreenLocation": {
+    "definition": "Pick list describing efficiencies involved with the property's location such as walkability or transportation proximity.",
     "type": [
       "string"
     ],
@@ -3927,18 +4888,21 @@
     "path": "/Property"
   },
   "WalkScore": {
+    "definition": "A walkability index based on the time to walk from a property to near by essentials such as grocery stores, schools, churches, etc.  See www.walkscore.com for more information and requirements for using WalkScore.",
     "type": "number",
     "level": "platinum",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "HabitableResidenceYN": {
+    "definition": "Does the property include a structure that can be lived in.",
     "type": "boolean",
     "level": "gold",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "BodyType": {
+    "definition": "Type of mobile home.",
     "type": [
       "string"
     ],
@@ -3947,6 +4911,7 @@
     "path": "/Property"
   },
   "Skirt": {
+    "definition": "A list of types of mobile home skirting.",
     "type": [
       "string"
     ],
@@ -3955,6 +4920,7 @@
     "path": "/Property"
   },
   "MobileDimUnits": {
+    "definition": "A pick list of the unit of measurement for the area.  i.e. Square Feet, Square Meters, Acres, etc.",
     "type": "string",
     "maxLength": 25,
     "level": "silver",
@@ -3962,6 +4928,7 @@
     "path": "/Property"
   },
   "ParkName": {
+    "definition": "Name of the mobile home park or corporate/commercial park.",
     "type": "string",
     "maxLength": 50,
     "level": "",
@@ -3969,84 +4936,128 @@
     "path": "/Property"
   },
   "ParkManagerName": {
+    "definition": "Name of the manager of the mobile home park.",
     "type": "string",
     "maxLength": 50,
     "level": "silver",
     "path": "/Property"
   },
   "ParkManagerPhone": {
+    "definition": "North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.",
     "type": "string",
     "maxLength": 16,
     "level": "silver",
     "path": "/Property"
   },
   "MobileHomeRemainsYN": {
+    "definition": "Is the mobile home to remain and be included in the sale of the property.",
     "type": "boolean",
     "level": "bronze",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "NumberOfPads": {
+    "definition": "The number of pads or spaces in the mobile home park.",
     "type": "number",
     "level": "silver",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "SerialU": {
+    "definition": "Serial number of the mobile or manufactured home.  For the first or only unit/section use Serial U over Serial X or Serial XX.",
     "type": "string",
     "maxLength": 25,
+    "synonym": [
+      "Unit1SerialNo"
+    ],
     "level": "silver",
     "path": "/Property"
   },
   "DOH1": {
+    "definition": "Department of Housing decal number for the mobile or manufactured home.  For the first or only unit/section use DOH 1 over DOH 2 or 3.",
     "type": "string",
     "maxLength": 25,
+    "synonym": [
+      "Unit1HCDHUDDECAL"
+    ],
     "level": "silver",
     "path": "/Property"
   },
   "License1": {
+    "definition": "License number of the mobile or manufactured home.  Also known as the Department of Housing label/insignia number. For the first or only unit/section use License 1 over License 2 or 3.",
     "type": "string",
     "maxLength": 25,
+    "synonym": [
+      "Unit1LicenseNo",
+      "Unit1Insignia"
+    ],
     "level": "silver",
     "path": "/Property"
   },
   "SerialX": {
+    "definition": "Serial number of the mobile or manufactured home.  For two units/sections, Serial U should be used first, Serial X second over or Serial XX.",
     "type": "string",
     "maxLength": 25,
+    "synonym": [
+      "Unit2SerialNo"
+    ],
     "level": "silver",
     "path": "/Property"
   },
   "DOH2": {
+    "definition": "Department of Housing decal number for the mobile or manufactured home.  For two units/sections use DOH 1 and 2 over DOH 3.",
     "type": "string",
     "maxLength": 25,
+    "synonym": [
+      "Unit2HCDHUDDECAL"
+    ],
     "level": "silver",
     "path": "/Property"
   },
   "License2": {
+    "definition": "License number of the mobile or manufactured home.  Also known as the Department of Housing label/insignia number. For two units/sections use License 1 and 2 over License 3.",
     "type": "string",
     "maxLength": 25,
+    "synonym": [
+      "Unit2LicenseNo",
+      "Unit2Insignia"
+    ],
     "level": "silver",
     "path": "/Property"
   },
   "SerialXX": {
+    "definition": "Serial number of the mobile or manufactured home.  For two units/sections, Serial U should be used first, Serial X second over or Serial XX.",
     "type": "string",
     "maxLength": 25,
+    "synonym": [
+      "Unit3SerialNo"
+    ],
     "level": "silver",
     "path": "/Property"
   },
   "DOH3": {
+    "definition": "Department of Housing decal number for the mobile or manufactured home.  For two units/sections use DOH 1 and 2 over DOH 3.",
     "type": "string",
     "maxLength": 25,
+    "synonym": [
+      "Unit3HCDHUDDECAL"
+    ],
     "level": "silver",
     "path": "/Property"
   },
   "License3": {
+    "definition": "License number of the mobile or manufactured home.  Also known as the Department of Housing label/insignia number. For two units/sections use License 1 and 2 over License 3.",
     "type": "string",
     "maxLength": 25,
+    "synonym": [
+      "Unit3LicenseNo",
+      "Unit3Insignia"
+    ],
     "level": "silver",
     "path": "/Property"
   },
   "AccessibilityFeatures": {
+    "definition": "A list or description of the accessibility features included in the sale/lease.",
     "type": [
       "string"
     ],
@@ -4055,12 +5066,14 @@
     "path": "/Property"
   },
   "RoomsTotal": {
+    "definition": "The number of rooms in the dwelling.",
     "type": "number",
     "level": "gold",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "RoomType": {
+    "definition": "This field is a list of the types used in the rooms repeating elements.  The Type is a list of possible room types.  i.e. Bedroom, Bathroom, Living Room, Workshop, etc.  Each selected are expected to appear as the \"[type]\" in the related rooms fields in a flattened implementation (RETS 1.x only) of the room fields.  A relational implementation of rooms must omit the type from the field name and use RoomType to create a vertical representation of the various rooms.  \r\n**Note that Garage or Basement should not be added as a room type and are represented by the ParkingFeatures and Basement fields respectively.",
     "type": [
       "string"
     ],
@@ -4142,12 +5155,14 @@
         ]
       },
       "Area": {
+        "definition": "[type] This field is a repeating element for each type of room selected in the RoomType field.  For every RoomType there are two possible implementations.  For a flat implementation (RETS 1.x only), each RoomType used is expected to appear as the \"[type]\" in the related rooms field name.  i.e. RoomKitchenArea.  \r\nA relational implementation of rooms must omit the type from the field name and use RoomType to create a vertical representation of the various rooms.  i.e. RoomArea with Kitchen in the relational table's RoomType field.",
         "type": "number",
         "level": "gold",
         "payloads": "Proposed IDX",
         "path": "/Property/Rooms"
       },
       "AreaUnits": {
+        "definition": "[type] This field is a repeating element for each type of room selected in the RoomType field.  For every RoomType there are two possible implementations.  For a flat implementation (RETS 1.x only), each RoomType used is expected to appear as the \"[type]\" in the related rooms field name.  i.e. RoomKitchenAreaUnits.  \r\nA relational implementation of rooms must omit the type from the field name and use RoomType to create a vertical representation of the various rooms.  i.e. RoomAreaUnits with Kitchen in the relational table's RoomType field.",
         "type": "string",
         "maxLength": 25,
         "level": "gold",
@@ -4155,6 +5170,7 @@
         "path": "/Property/Rooms"
       },
       "AreaSource": {
+        "definition": "[type] This field is a repeating element for each type of room selected in the RoomType field.  For every RoomType there are two possible implementations.  For a flat implementation (RETS 1.x only), each RoomType used is expected to appear as the \"[type]\" in the related rooms field name.  i.e. RoomKitchenAreaSource.  \r\nA relational implementation of rooms must omit the type from the field name and use RoomType to create a vertical representation of the various rooms.  i.e. RoomAreaSource.",
         "type": "string",
         "maxLength": 50,
         "level": "gold",
@@ -4162,6 +5178,7 @@
         "path": "/Property/Rooms"
       },
       "Dimensions": {
+        "definition": "[type] This field is a repeating element for each type of room selected in the RoomType field.  For every RoomType there are two possible implementations.  For a flat implementation (RETS 1.x only), each RoomType used is expected to appear as the \"[type]\" in the related rooms field name.  i.e. RoomKitchenDimensions.  \r\nA relational implementation of rooms must omit the type from the field name and use RoomType to create a vertical representation of the various rooms.  i.e. RoomDimensions with Kitchen in the relational table's RoomType field.",
         "type": "string",
         "maxLength": 50,
         "level": "gold",
@@ -4169,18 +5186,21 @@
         "path": "/Property/Rooms"
       },
       "Length": {
+        "definition": "[type] This field is a repeating element for each type of room selected in the RoomType field.  For every RoomType there are two possible implementations.  For a flat implementation (RETS 1.x only), each RoomType used is expected to appear as the \"[type]\" in the related rooms field name.  i.e. RoomKitchenLength.  \r\nA relational implementation of rooms must omit the type from the field name and use RoomType to create a vertical representation of the various rooms.  i.e. RoomLength with Kitchen in the relational table's RoomType field.",
         "type": "number",
         "level": "gold",
         "payloads": "Proposed IDX",
         "path": "/Property/Rooms"
       },
       "Width": {
+        "definition": "[type] This field is a repeating element for each type of room selected in the RoomType field.  For every RoomType there are two possible implementations.  For a flat implementation (RETS 1.x only), each RoomType used is expected to appear as the \"[type]\" in the related rooms field name.  i.e. RoomKitchenWidth.  \r\nA relational implementation of rooms must omit the type from the field name and use RoomType to create a vertical representation of the various rooms.  i.e. RoomWidth with Kitchen in the relational table's RoomType field.",
         "type": "number",
         "level": "gold",
         "payloads": "Proposed IDX",
         "path": "/Property/Rooms"
       },
       "LengthWidthUnits": {
+        "definition": "[type] This field is a repeating element for each type of room selected in the RoomType field.  For every RoomType there are two possible implementations.  For a flat implementation (RETS 1.x only), each RoomType used is expected to appear as the \"[type]\" in the related rooms field name.  i.e. RoomKitchenWidthUnits.  \r\nA relational implementation of rooms must omit the type from the field name and use RoomType to create a vertical representation of the various rooms.  i.e. RoomWidthUnits with Kitchen in the relational table's RoomType field.",
         "type": "string",
         "maxLength": 25,
         "level": "gold",
@@ -4188,6 +5208,7 @@
         "path": "/Property/Rooms"
       },
       "LengthWidthSource": {
+        "definition": "[type] This field is a repeating element for each type of room selected in the RoomType field.  For every RoomType there are two possible implementations.  For a flat implementation (RETS 1.x only), each RoomType used is expected to appear as the \"[type]\" in the related rooms field name.  i.e. RoomKitchenWidthSource.  \r\nA relational implementation of rooms must omit the type from the field name and use RoomType to create a vertical representation of the various rooms.  i.e. RoomWidthSource with Kitchen in the relational table's RoomType field.",
         "type": "string",
         "maxLength": 50,
         "level": "gold",
@@ -4195,6 +5216,7 @@
         "path": "/Property/Rooms"
       },
       "Level": {
+        "definition": "[type] This field is a repeating element for each type of room selected in the RoomType field.  For every RoomType there are two possible implementations.  For a flat implementation (RETS 1.x only), each RoomType used is expected to appear as the \"[type]\" in the related rooms field name.  i.e. RoomKitchenLevel.  \r\nA relational implementation of rooms must omit the type from the field name and use RoomType to create a vertical representation of the various rooms.  i.e. RoomLevel with Kitchen in the relational table's RoomType field.",
         "type": "string",
         "maxLength": 25,
         "level": "gold",
@@ -4202,6 +5224,7 @@
         "path": "/Property/Rooms"
       },
       "Features": {
+        "definition": "[type] This field is a repeating element for each type of room selected in the RoomType field.  For every RoomType there are two possible implementations.  For a flat implementation (RETS 1.x only), each RoomType used is expected to appear as the \"[type]\" in the related rooms field name.  i.e. RoomKitchenFeatures.  \r\nA relational implementation of rooms must omit the type from the field name and use RoomType to create a vertical representation of the various rooms.  i.e. RoomFeatures with Kitchen in the relational table's RoomType field.",
         "type": [
           "string"
         ],
@@ -4210,6 +5233,7 @@
         "path": "/Property/Rooms"
       },
       "Description": {
+        "definition": "[type] This field is a repeating element for each type of room selected in the RoomType field.  For every RoomType there are two possible implementations.  For a flat implementation (RETS 1.x only), each RoomType used is expected to appear as the \"[type]\" in the related rooms field name.  i.e. RoomKitchenDescription.  \r\nA relational implementation of rooms must omit the type from the field name and use RoomType to create a vertical representation of the various rooms.  i.e. RoomDescription with Kitchen in the relational table's RoomType field.",
         "type": "string",
         "maxLength": 1024,
         "level": "gold",
@@ -4219,6 +5243,7 @@
     }
   ],
   "UnitTypeType": {
+    "definition": "This field is a list of the types used in the Unit Type repeating elements.  The Type is a list of possible Unit Types.  i.e. 1, 2, 3 or 2 Bed, Studio, Special Loft, etc.\r\nEach selected are expected to appear as the \"[type]\" in the related UnitType fields in a flattened implementation (RETS 1.x only) of the room fields.  A relational implementation of UnitTypes must omit the type from the field name and use UnitTypeType to create a vertical representation of the various unit types.  The fact that the field repeats the word \"type\" is intentional.",
     "type": [
       "string"
     ],
@@ -4233,24 +5258,28 @@
         "type": "string"
       },
       "UnitsTotal": {
+        "definition": "[type] This field is a repeating element for each type of unit selected in the UnitType field.  For every UnitType there are two possible implementations.  For a flat implementation (RETS 1.x only), each UnitTypeType used is expected to appear as the \"[type]\" in the related rooms field name.  i.e. UnitTypeStudioUnitsTotal.  \r\nA relational implementation of UnitType must omit the type from the field name and use UnitTypeType to create a vertical representation of the various rooms.  i.e. UnitTypeUnitsTotal with Studio in the relational table's UnitType field.",
         "type": "number",
         "level": "gold",
         "payloads": "Proposed IDX",
         "path": "/Property/UnitTypes"
       },
       "BedsTotal": {
+        "definition": "[type] This field is a repeating element for each type of unit selected in the UnitType field.  For every UnitType there are two possible implementations.  For a flat implementation (RETS 1.x only), each UnitTypeType used is expected to appear as the \"[type]\" in the related rooms field name.  i.e. UnitTypeStudioBedsTotal.  \r\nA relational implementation of UnitType must omit the type from the field name and use UnitTypeType to create a vertical representation of the various rooms.  i.e. UnitTypeBedsTotal with Studio in the relational table's UnitType field.",
         "type": "number",
         "level": "gold",
         "payloads": "Proposed IDX",
         "path": "/Property/UnitTypes"
       },
       "BathsTotal": {
+        "definition": "[type] This field is a repeating element for each type of unit selected in the UnitType field.  For every UnitType there are two possible implementations.  For a flat implementation (RETS 1.x only), each UnitTypeType used is expected to appear as the \"[type]\" in the related rooms field name.  i.e. UnitTypeStudioBathsTotal.  \r\nA relational implementation of UnitType must omit the type from the field name and use UnitTypeType to create a vertical representation of the various rooms.  i.e. UnitTypeBathsTotal with Studio in the relational table's UnitType field.",
         "type": "number",
         "level": "gold",
         "payloads": "Proposed IDX",
         "path": "/Property/UnitTypes"
       },
       "Furnished": {
+        "definition": "[type] This field is a repeating element for each type of unit selected in the UnitType field.  For every UnitType there are two possible implementations.  For a flat implementation (RETS 1.x only), each UnitTypeType used is expected to appear as the \"[type]\" in the related rooms field name.  i.e. UnitTypeStudioFurnished.  \r\nA relational implementation of UnitType must omit the type from the field name and use UnitTypeType to create a vertical representation of the various rooms.  i.e. UnitTypeFurnished with Studio in the relational table's UnitType field.",
         "type": "string",
         "maxLength": 20,
         "level": "gold",
@@ -4258,6 +5287,7 @@
         "path": "/Property/UnitTypes"
       },
       "Description": {
+        "definition": "[type] This field is a repeating element for each type of unit selected in the UnitType field.  For every UnitType there are two possible implementations.  For a flat implementation (RETS 1.x only), each UnitTypeType used is expected to appear as the \"[type]\" in the related rooms field name.  i.e. UnitTypeStudioDescription.  \r\nA relational implementation of UnitType must omit the type from the field name and use UnitTypeType to create a vertical representation of the various rooms.  i.e. UnitTypeDescription with Studio in the relational table's UnitType field.",
         "type": "string",
         "maxLength": 1024,
         "level": "gold",
@@ -4265,30 +5295,35 @@
         "path": "/Property/UnitTypes"
       },
       "GarageSpaces": {
+        "definition": "[type] This field is a repeating element for each type of unit selected in the UnitType field.  For every UnitType there are two possible implementations.  For a flat implementation (RETS 1.x only), each UnitTypeType used is expected to appear as the \"[type]\" in the related rooms field name.  i.e. UnitTypeStudioGarageSpaces.  \r\nA relational implementation of UnitType must omit the type from the field name and use UnitTypeType to create a vertical representation of the various rooms.  i.e. UnitTypeGarageSpaces with Studio in the relational table's UnitType field.",
         "type": "number",
         "level": "gold",
         "payloads": "Proposed IDX",
         "path": "/Property/UnitTypes"
       },
       "GarageAttachedYN": {
+        "definition": "[type] This field is a repeating element for each type of unit selected in the UnitType field.  For every UnitType there are two possible implementations.  For a flat implementation (RETS 1.x only), each UnitTypeType used is expected to appear as the \"[type]\" in the related rooms field name.  i.e. UnitTypeStudioGarageAttachedYN.  \r\nA relational implementation of UnitType must omit the type from the field name and use UnitTypeType to create a vertical representation of the various rooms.  i.e. UnitTypeGarageAttachedYN with Studio in the relational table's UnitType field.",
         "type": "boolean",
         "level": "gold",
         "payloads": "Proposed IDX",
         "path": "/Property/UnitTypes"
       },
       "ActualRent": {
+        "definition": "[type] This field is a repeating element for each type of unit selected in the UnitType field.  For every UnitType there are two possible implementations.  For a flat implementation (RETS 1.x only), each UnitTypeType used is expected to appear as the \"[type]\" in the related rooms field name.  i.e. UnitTypeStudioActualRent.  \r\nA relational implementation of UnitType must omit the type from the field name and use UnitTypeType to create a vertical representation of the various rooms.  i.e. UnitTypeActualRent with Studio in the relational table's UnitType field.",
         "type": "number",
         "level": "gold",
         "payloads": "Proposed IDX",
         "path": "/Property/UnitTypes"
       },
       "TotalRent": {
+        "definition": "[type] This field is a repeating element for each type of unit selected in the UnitType field.  For every UnitType there are two possible implementations.  For a flat implementation (RETS 1.x only), each UnitTypeType used is expected to appear as the \"[type]\" in the related rooms field name.  i.e. UnitTypeStudioTotalRent.  \r\nA relational implementation of UnitType must omit the type from the field name and use UnitTypeType to create a vertical representation of the various rooms.  i.e. UnitTypeTotalRent with Studio in the relational table's UnitType field.",
         "type": "number",
         "level": "gold",
         "payloads": "Proposed IDX",
         "path": "/Property/UnitTypes"
       },
       "ProForma": {
+        "definition": "[type] This field is a repeating element for each type of unit selected in the UnitType field.  For every UnitType there are two possible implementations.  For a flat implementation (RETS 1.x only), each UnitTypeType used is expected to appear as the \"[type]\" in the related rooms field name.  i.e. UnitTypeStudioProForma.  \r\nA relational implementation of UnitType must omit the type from the field name and use UnitTypeType to create a vertical representation of the various rooms.  i.e. UnitTypeProForma with Studio in the relational table's UnitType field.",
         "type": "number",
         "level": "gold",
         "payloads": "Proposed IDX",
@@ -4297,6 +5332,7 @@
     }
   ],
   "Zoning": {
+    "definition": "A division of the city or county into areas of different permissible land uses. This Zone field should be used for the short code that is commonly used.  For full textual descriptions please use the ZoningDescription field.",
     "type": "string",
     "maxLength": 25,
     "level": "bronze",
@@ -4304,6 +5340,7 @@
     "path": "/Property"
   },
   "ZoningDescription": {
+    "definition": "A list of descriptions of the zoning of the property.  The zoning codes are often non-descriptive and variant. Zoning Description is a more descriptive form of the zoning for the property,  i.e. Agricultural, Residential, Rezone Possible, etc.  Specific zone codes must be added to the Zoning field.\r\n",
     "type": "string",
     "maxLength": 255,
     "level": "bronze",
@@ -4311,12 +5348,14 @@
     "path": "/Property"
   },
   "AdditionalParcelsYN": {
+    "definition": "Are there more than one parcel or lot included in the sale?",
     "type": "boolean",
     "level": "bronze",
     "payloads": "Proposed IDX",
     "path": "/Property"
   },
   "AdditionalParcelsDescription": {
+    "definition": "If additional parcels are included in the sale, a list of those parcel's IDs separated by commas.  Do not include the first or primary parcel number, that should be located in the Parcel Number field.",
     "type": "string",
     "maxLength": 255,
     "level": "bronze",
@@ -4324,63 +5363,86 @@
     "path": "/Property"
   },
   "PublicSurveySection": {
+    "definition": "This field specifically identifies the Section identified by the Public Land Survey System (PLSS).",
     "type": "string",
     "maxLength": 20,
     "level": "gold",
     "path": "/Property"
   },
   "PublicSurveyTownship": {
+    "definition": "This field specifically identifies the Township identified by the Public Land Survey System (PLSS).",
     "type": "string",
     "maxLength": 20,
     "level": "gold",
     "path": "/Property"
   },
   "PublicSurveyRange": {
+    "definition": "This field specifically identifies the Range identified by the Public Land Survey System (PLSS).",
     "type": "string",
     "maxLength": 20,
     "level": "gold",
     "path": "/Property"
   },
   "TaxLot": {
+    "definition": "A type of legal description for land in developed areas where streets or other rights-of-ways delineate large parcels of land referred to as divided into lots on which homes or other types of developments are built.  An example would read \"Lot 12 of Block 45 of Tract 3002 of the City of San Dunes, Desert County.\" Such a description would also reference an official plat filed with the clerk or recorder for that area which shows the location of the block and often the dimensions of the lots therein.",
     "type": "string",
     "maxLength": 25,
+    "synonym": [
+      "Lot"
+    ],
     "level": "bronze",
     "path": "/Property"
   },
   "TaxBlock": {
+    "definition": "A type of legal description for land in developed areas where streets or other rights-of-ways delineate large parcels of land referred to as divided into lots on which homes or other types of developments are built.  An example would read \"Lot 12 of Block 45 of Tract 3002 of the City of San Dunes, Desert County.\" Such a description would also reference an official plat filed with the clerk or recorder for that area which shows the location of the block and often the dimensions of the lots therein.",
     "type": "string",
     "maxLength": 25,
+    "synonym": [
+      "Block"
+    ],
     "level": "bronze",
     "path": "/Property"
   },
   "TaxTract": {
+    "definition": "A type of legal description for land in developed areas where streets or other rights-of-ways delineate large parcels of land referred to as divided into lots on which homes or other types of developments are built.  An example would read \"Lot 12 of Block 45 of Tract 3002 of the City of San Dunes, Desert County.\" Such a description would also reference an official plat filed with the clerk or recorder for that area which shows the location of the block and often the dimensions of the lots therein.",
     "type": "string",
     "maxLength": 25,
+    "synonym": [
+      "Tract"
+    ],
     "level": "bronze",
     "path": "/Property"
   },
   "TaxLegalDescription": {
+    "definition": "A type of legal description for land in developed areas where streets or other rights-of-ways delineate large parcels of land referred to as divided into lots on which homes or other types of developments are built.  An example would read \"Lot 12 of Block 45 of Tract 3002 of the City of San Dunes, Desert County.\" Such a description would also reference an official plat filed with the clerk or recorder for that area which shows the location of the block and often the dimensions of the lots therein. The text here is also an index into the property as described by the County Recorder.",
     "type": "string",
     "maxLength": 6000,
+    "synonym": [
+      "LegalDescription"
+    ],
     "level": "bronze",
     "path": "/Property"
   },
   "TaxAnnualAmount": {
+    "definition": "The annual property tax amount as of the last assessment made by the taxing authority.",
     "type": "number",
     "level": "silver",
     "path": "/Property"
   },
   "TaxYear": {
+    "definition": "The year in with the last assessment of the property value/tax was made.",
     "type": "number",
     "level": "silver",
     "path": "/Property"
   },
   "TaxAssessedValue": {
+    "definition": "The property value as of the last assessment made by the taxing authority.",
     "type": "number",
     "level": "silver",
     "path": "/Property"
   },
   "TaxExemptions": {
+    "definition": "A list of tax exemptions as they relate to the property.",
     "type": [
       "string"
     ],
@@ -4388,29 +5450,34 @@
     "path": "/Property"
   },
   "TaxOtherAnnualAssessmentAmount": {
+    "definition": "Any other annual taxes, not including the tax reported in the TaxAmount field, as of the last assessment made by the taxing authority.",
     "type": "number",
     "level": "silver",
     "path": "/Property"
   },
   "TaxBookNumber": {
+    "definition": "Some systems of parcel identification incorporate a method which utilizes a county identifier, a tax book number, a tax map number and a parcel identification number.",
     "type": "string",
     "maxLength": 25,
     "level": "bronze",
     "path": "/Property"
   },
   "TaxMapNumber": {
+    "definition": "Some systems of parcel identification incorporate a method which utilizes a county identifier, a tax book number, a tax map number and a parcel identification number.",
     "type": "string",
     "maxLength": 25,
     "level": "bronze",
     "path": "/Property"
   },
   "TaxParcelLetter": {
+    "definition": "Some systems of parcel identification incorporate a method which utilizes a county identifier, a tax book number, a tax map number and a parcel identification number.",
     "type": "string",
     "maxLength": 25,
     "level": "bronze",
     "path": "/Property"
   },
   "TaxStatusCurrent": {
+    "definition": "The current tax status of the mobile home in cases where the land or space is included in the sale.",
     "type": [
       "string"
     ],

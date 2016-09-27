@@ -86,12 +86,20 @@ function toObject (keys) {
   }
 }
 
+function synonyms (arr) {
+  if (!arr) return
+  return arr
+    .split(',')
+    .map((s) => s.trim())
+    .filter((s) => s.length)
+}
+
 function toSchema (obj) {
   obj.type = parseType(obj.type)
   obj.maxLength = 'string' === obj.type? parseInt(obj.maxLength, 10) : undefined
   obj.repeating = 'Yes'===obj.repeating? true : undefined
-  obj.definition = undefined
-  obj.synonym = undefined
+  obj.definition = obj.definition
+  obj.synonym = synonyms(obj.synonym)
   obj.status = undefined
   obj.group = undefined
   obj.level = obj.level.toLowerCase()

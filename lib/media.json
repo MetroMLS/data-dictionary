@@ -1,54 +1,86 @@
 {
   "MediaKey": {
+    "definition": "A unique identifier for this record from the immediate source. This may be a number, or string that can include URI or other forms.  This is the system you are connecting to and not necessarily the original source of the record.",
     "type": "string",
     "maxLength": 255,
+    "synonym": [
+      "SystemUniqueID",
+      "ImmediateSourceID"
+    ],
     "level": "core",
     "path": "/Media",
     "primary": true
   },
   "ResourceRecordKey": {
+    "definition": "The primary key of the related record from the source resource. For example the ListingKey, AgentKey, OfficeKey, TeamKey, etc.  This is the system you are connecting to and not necessarily the original source of the record.  This is a foreign key from the resrouce selected in the ResrouceName field.",
     "type": "string",
     "maxLength": 255,
+    "synonym": [
+      "SystemUniqueID",
+      "ImmediateSourceID"
+    ],
     "level": "core",
     "path": "/Media"
   },
   "ResourceRecordID": {
+    "definition": "The well known identifier of the related record from the source resource. The value may be identical to that of the Listing Key, but the Listing ID is intended to be the value used by a human to retrieve the information about a specific listing. In a multiple originating system or a merged system, this value may not be unique and may require the use of the provider system to create a synthetic unique value.",
     "type": "string",
     "maxLength": 255,
+    "synonym": [
+      "MLNumber",
+      "MLSNumber",
+      "ListingNumber",
+      "AgentID",
+      "OfficeID",
+      "ContactID"
+    ],
     "level": "core",
     "path": "/Media"
   },
   "OriginatingSystemMediaKey": {
+    "definition": "Unique identifier from the originating system which is commonly a key to that system.  In the case where data is passed through more than one system, this is the originating system key.  This is a foreign key relating to the system where this record was originated.",
     "type": "string",
     "maxLength": 255,
+    "synonym": [
+      "ProviderKey"
+    ],
     "level": "core",
     "path": "/Media"
   },
   "OriginatingSystemName": {
+    "definition": "The name of the originating record provider.  Most commonly the name of the MLS. The place where the listing is originally input by the member.  The legal name of the company.  To be used for display.",
     "type": "string",
     "maxLength": 255,
+    "synonym": [
+      "ProviderName",
+      "MLSID"
+    ],
     "level": "",
     "path": "/Media"
   },
   "MediaObjectID": {
+    "definition": "ID of the image, supplement or other object specified by the given media record.",
     "type": "string",
     "maxLength": 255,
     "level": "core",
     "path": "/Media"
   },
   "ChangedByMemberID": {
+    "definition": "ID of the user, agent, member, etc., that uploaded the media this record refers to.",
     "type": "string",
     "maxLength": 255,
     "level": "core",
     "path": "/Media"
   },
   "ChangedByMemberKey": {
+    "definition": "The primary key of the member who uploaded the media this record refers to.  This is a foreign key relating to the Member resource's MemberKey.",
     "type": "string",
     "maxLength": 255,
     "level": "core",
     "path": "/Media"
   },
   "MediaCategory": {
+    "definition": "Category describing the , Photos, Documents, Video, Unbranded Virtual Tour, Branded Virtual Tour, Floor Plan, Logo",
     "type": "string",
     "maxLength": 50,
     "lookup": "MediaCategory",
@@ -67,6 +99,7 @@
     ]
   },
   "MimeType": {
+    "definition": "Media Types as defined by IANA.\r\nhttp://www.iana.org/assignments/media-types/index.html",
     "type": "string",
     "maxLength": 50,
     "lookup": "MediaType",
@@ -91,67 +124,97 @@
     ]
   },
   "ShortDescription": {
+    "definition": "The short text given to summarize the object.  Commonly used as the short description displayed under a photo.",
     "type": "string",
     "maxLength": 50,
+    "synonym": [
+      "Caption",
+      "Name"
+    ],
     "level": "bronze",
     "path": "/Media"
   },
   "LongDescription": {
+    "definition": "The full robust description of the object.",
     "type": "string",
     "maxLength": 1024,
+    "synonym": [
+      "FullDescription"
+    ],
     "level": "bronze",
     "path": "/Media"
   },
   "ModificationTimestamp": {
+    "definition": "The transactional timestamp automatically recorded by the MLS system representing the date/time the media record was last modified.",
     "type": "date",
+    "synonym": [
+      "ModificationDateTime",
+      "DateTimeModified",
+      "ModDate",
+      "DateMod",
+      "UpdateDate",
+      "UpdateTimestamp"
+    ],
     "level": "core",
     "path": "/Media"
   },
   "MediaModificationTimestamp": {
+    "definition": "This timestamp is updated when a change to the object has been made, which may differ from a change to the Media Resource.",
     "type": "date",
+    "synonym": [
+      "MediaTimestamp"
+    ],
     "level": "bronze",
     "path": "/Media"
   },
   "MediaURL": {
+    "definition": "The URI to the media file referenced by this record.",
     "type": "string",
     "maxLength": 8000,
     "level": "core",
     "path": "/Media"
   },
   "MediaHTML": {
+    "definition": "The JavaScript or other method to embed a video, image, virtual tour or other media.",
     "type": "string",
     "maxLength": 8500,
     "level": "bronze",
     "path": "/Media"
   },
   "Order": {
+    "definition": "Only a positive integer including zero.  Element zero is the primary photo per RETS convention.",
     "type": "number",
     "level": "core",
     "path": "/Media"
   },
   "Group": {
+    "definition": "A placeholder for media classification such as elevation, exterior, interior, community, view, plan, plat.  The purpose is to allow media items to be grouped.",
     "type": "string",
     "maxLength": 50,
     "level": "bronze",
     "path": "/Media"
   },
   "ImageWidth": {
+    "definition": "The width of the image expressed in pixels.",
     "type": "number",
     "level": "bronze",
     "path": "/Media"
   },
   "ImageHeight": {
+    "definition": "The height of the image expressed in pixels.",
     "type": "number",
     "level": "bronze",
     "path": "/Media"
   },
   "ImageSizeDescription": {
+    "definition": "A text description of the size of the image.  i.e. Small, Thumbnail, Medium, Large, X-Large.  The largest image must be described as \"Largest\".  Thumbnail must also be included.  Pick List will remain open/extendable.",
     "type": "string",
     "maxLength": 50,
     "level": "bronze",
     "path": "/Media"
   },
   "ResourceName": {
+    "definition": "The resource or table of the listing or other record the media relates to.  i.e. Property, Member, Office, etc.",
     "type": "string",
     "maxLength": 50,
     "lookup": "ResourceName",
@@ -165,6 +228,7 @@
     ]
   },
   "ClassName": {
+    "definition": "The class or table of the listing or other record the media.  Residential, Lease, Agent, Office, Contact, etc.",
     "type": "string",
     "maxLength": 50,
     "lookup": "ClassName",
@@ -191,6 +255,7 @@
     ]
   },
   "Permission": {
+    "definition": "Public, Private, IDX, VOW, Office Only, Firm Only, Agent Only, ",
     "type": [
       "string"
     ],
@@ -198,6 +263,7 @@
     "path": "/Media"
   },
   "MediaStatus": {
+    "definition": "The status of the media item referenced by this record.  (Updated, Deleted, etc.,_   ",
     "type": "string",
     "maxLength": 50,
     "level": "bronze",

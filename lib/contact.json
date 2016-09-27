@@ -1,126 +1,161 @@
 {
   "ContactKey": {
+    "definition": "A system unique identifier. Specifically, in aggregation systems, the ContactKey is the system unique identifier from the system that the record was retrieved. This may be identical to the related xxxId.",
     "type": "string",
     "maxLength": 255,
+    "synonym": [
+      "RID"
+    ],
     "level": "silver",
     "path": "/Contacts",
     "primary": true
   },
   "ContactLoginId": {
+    "definition": "The local, well-known identifier for the contact. This value may not be unique, specifically in the case of aggregation systems, this value should be the identifier from the original system and is used by the Contact to logon to a client portal in that system.",
     "type": "string",
     "maxLength": 25,
     "level": "silver",
     "path": "/Contacts"
   },
   "ContactPassword": {
+    "definition": "A client password that the member whishes to share with other systems.  Normal security considerations apply and are the responsibility of the entity utilizing this field.",
     "type": "string",
     "maxLength": 25,
     "level": "silver",
     "path": "/Contacts"
   },
   "OriginatingSystemContactKey": {
+    "definition": "Unique identifier from the originating system which is commonly a key to that system.  In the case where data is passed through more than one system, this is the originating system key. This is a foreign key relating to the system where this record was originated.",
     "type": "string",
     "maxLength": 255,
+    "synonym": [
+      "ProviderKey"
+    ],
     "level": "silver",
     "path": "/Contacts"
   },
   "OriginatingSystemName": {
+    "definition": "The name of the originating record provider.  Most commonly the name of the MLS. The place where the listing is originally input by the member.  The legal name of the company.  To be used for display.",
     "type": "string",
     "maxLength": 255,
+    "synonym": [
+      "ProviderName",
+      "MLSID"
+    ],
     "level": "silver",
     "path": "/Contacts"
   },
   "OwnerMemberKey": {
+    "definition": "The unique identifier (key) of the member owning the contact. This is a foreign key relating to the Member resource's MemberKey.",
     "type": "string",
     "maxLength": 255,
     "level": "silver",
     "path": "/Contacts"
   },
   "OwnerMemberID": {
+    "definition": "The local, well-known identifier for the member owning the contact.",
     "type": "string",
     "maxLength": 25,
     "level": "silver",
     "path": "/Contacts"
   },
   "NamePrefix": {
+    "definition": "Prefix to the name (e.g. Dr. Mr. Ms. etc.)",
     "type": "string",
     "maxLength": 10,
+    "synonym": [
+      "Salutation",
+      "Title"
+    ],
     "level": "silver",
     "path": "/Contacts"
   },
   "FirstName": {
+    "definition": "The first name of the Member.",
     "type": "string",
     "maxLength": 50,
     "level": "silver",
     "path": "/Contacts"
   },
   "MiddleName": {
+    "definition": "The middle name of the Member.",
     "type": "string",
     "maxLength": 50,
     "level": "silver",
     "path": "/Contacts"
   },
   "LastName": {
+    "definition": "The last name of the Member.",
     "type": "string",
     "maxLength": 50,
     "level": "silver",
     "path": "/Contacts"
   },
   "NameSuffix": {
+    "definition": "Suffix to the surname (e.g. Esq.,  Jr.,  III etc.)",
     "type": "string",
     "maxLength": 10,
     "level": "silver",
     "path": "/Contacts"
   },
   "FullName": {
+    "definition": "The full name of the Member. (First Middle Last) or a alternate full name.",
     "type": "string",
     "maxLength": 150,
     "level": "silver",
     "path": "/Contacts"
   },
   "Nickname": {
+    "definition": "An alternate name used by the Member, usually as a substitute for the first name.",
     "type": "string",
     "maxLength": 50,
     "level": "silver",
     "path": "/Contacts"
   },
   "ReferredBy": {
+    "definition": "Name of the person who referred the contact.",
     "type": "string",
     "maxLength": 150,
     "level": "silver",
     "path": "/Contacts"
   },
   "JobTitle": {
+    "definition": "The title or position of the member within their organization.",
     "type": "string",
     "maxLength": 50,
     "level": "silver",
     "path": "/Contacts"
   },
   "Notes": {
+    "definition": "Notes about the client.",
     "type": "string",
     "maxLength": 1024,
     "level": "silver",
     "path": "/Contacts"
   },
   "HomeAddress1": {
+    "definition": "The street number, direction, name and suffix of the contact's home.",
     "type": "string",
     "maxLength": 50,
     "level": "silver",
     "path": "/Contacts"
   },
   "HomeAddress2": {
+    "definition": "The unit/suite number of the contact's home.",
     "type": "string",
     "maxLength": 50,
     "level": "silver",
     "path": "/Contacts"
   },
   "HomeCity": {
+    "definition": "The city of the contact's home.",
     "type": "string",
     "maxLength": 50,
     "level": "silver",
     "path": "/Contacts"
   },
   "HomeStateOrProvince": {
+    "definition": "The state or province in which the contact's home is addressed.",
     "type": "string",
     "maxLength": 2,
     "lookup": "StateOrProvince",
@@ -195,54 +230,70 @@
     ]
   },
   "HomePostalCode": {
+    "definition": "The postal code of the contact's home.",
     "type": "string",
     "maxLength": 10,
     "level": "silver",
     "path": "/Contacts"
   },
   "HomePostalCodePlus4": {
+    "definition": "The extension of the postal/zip code.  i.e. +4",
     "type": "string",
     "maxLength": 4,
     "level": "silver",
     "path": "/Contacts"
   },
   "HomeCarrierRoute": {
+    "definition": "The group of addresses to which the USPS assigns the same code to aid in mail delivery. For the USPS, these codes are 9 digits: 5 numbers for the ZIP Code, one letter for the carrier route type, and 3 numbers for the carrier route number.",
     "type": "string",
     "maxLength": 9,
+    "synonym": [
+      "RR",
+      "CR"
+    ],
     "level": "silver",
     "path": "/Contacts"
   },
   "HomeCountyOrParish": {
+    "definition": "The county or parish in which the contact's home is addressed.",
     "type": "string",
     "maxLength": 50,
+    "synonym": [
+      "County"
+    ],
     "level": "silver",
     "path": "/Contacts"
   },
   "HomeCountry": {
+    "definition": "The country abbreviation in a postal address.",
     "type": "string",
     "maxLength": 2,
     "level": "silver",
     "path": "/Contacts"
   },
   "WorkAddress1": {
+    "definition": "The street number, direction, name and suffix of the contact's work.",
     "type": "string",
     "maxLength": 50,
     "level": "silver",
     "path": "/Contacts"
   },
   "WorkAddress2": {
+    "definition": "The unit/suite number of the contact's work.",
     "type": "string",
     "maxLength": 50,
     "level": "silver",
     "path": "/Contacts"
   },
   "WorkCity": {
+    "definition": "The city of the contact's work.",
     "type": "string",
     "maxLength": 50,
     "level": "silver",
     "path": "/Contacts"
   },
   "WorkStateOrProvince": {
+    "definition": "The state or province in which the contact's work is addressed.",
     "type": "string",
     "maxLength": 2,
     "lookup": "StateOrProvince",
@@ -317,54 +368,70 @@
     ]
   },
   "WorkPostalCode": {
+    "definition": "The postal code of the contact's work.",
     "type": "string",
     "maxLength": 10,
     "level": "silver",
     "path": "/Contacts"
   },
   "WorkPostalCodePlus4": {
+    "definition": "The extension of the postal/zip code.  i.e. +4",
     "type": "string",
     "maxLength": 4,
     "level": "silver",
     "path": "/Contacts"
   },
   "WorkCarrierRoute": {
+    "definition": "The group of addresses to which the USPS assigns the same code to aid in mail delivery. For the USPS, these codes are 9 digits: 5 numbers for the ZIP Code, one letter for the carrier route type, and 3 numbers for the carrier route number.",
     "type": "string",
     "maxLength": 9,
+    "synonym": [
+      "RR",
+      "CR"
+    ],
     "level": "silver",
     "path": "/Contacts"
   },
   "WorkCountyOrParish": {
+    "definition": "The county or parish in which the contact's work is addressed.",
     "type": "string",
     "maxLength": 50,
+    "synonym": [
+      "County"
+    ],
     "level": "silver",
     "path": "/Contacts"
   },
   "WorkCountry": {
+    "definition": "The country abbreviation in a postal address.",
     "type": "string",
     "maxLength": 2,
     "level": "silver",
     "path": "/Contacts"
   },
   "OtherAddress1": {
+    "definition": "The other street number, direction, name and suffix of the contact.",
     "type": "string",
     "maxLength": 50,
     "level": "silver",
     "path": "/Contacts"
   },
   "OtherAddress2": {
+    "definition": "The other unit/suite number of the contact.",
     "type": "string",
     "maxLength": 50,
     "level": "silver",
     "path": "/Contacts"
   },
   "OtherCity": {
+    "definition": "The other city of the contact.",
     "type": "string",
     "maxLength": 50,
     "level": "silver",
     "path": "/Contacts"
   },
   "OtherStateOrProvince": {
+    "definition": "The other state or province in which the contact is addressed.",
     "type": "string",
     "maxLength": 2,
     "lookup": "StateOrProvince",
@@ -439,136 +506,166 @@
     ]
   },
   "OtherPostalCode": {
+    "definition": "The other postal code of the contact.",
     "type": "string",
     "maxLength": 10,
     "level": "silver",
     "path": "/Contacts"
   },
   "OtherPostalCodePlus4": {
+    "definition": "The other extension of the postal/zip code.  i.e. +4",
     "type": "string",
     "maxLength": 4,
     "level": "silver",
     "path": "/Contacts"
   },
   "OtherCarrierRoute": {
+    "definition": "The group of addresses to which the USPS assigns the same code to aid in mail delivery. For the USPS, these codes are 9 digits: 5 numbers for the ZIP Code, one letter for the carrier route type, and 3 numbers for the carrier route number.",
     "type": "string",
     "maxLength": 9,
+    "synonym": [
+      "RR",
+      "CR"
+    ],
     "level": "silver",
     "path": "/Contacts"
   },
   "OtherCountyOrParish": {
+    "definition": "The other county or parish in which contact is addressed.",
     "type": "string",
     "maxLength": 50,
+    "synonym": [
+      "County"
+    ],
     "level": "silver",
     "path": "/Contacts"
   },
   "OtherCountry": {
+    "definition": "The other country abbreviation in a postal address.",
     "type": "string",
     "maxLength": 2,
     "level": "silver",
     "path": "/Contacts"
   },
   "PreferredAddress": {
+    "definition": "A list of the address options Home, Work and Other used to determine the address preferred by the client.",
     "type": "string",
     "maxLength": 255,
     "level": "silver",
     "path": "/Contacts"
   },
   "PreferredPhone": {
+    "definition": "A list of the phone options Office, Mobile, Direct, Voicemail, Other used to determine the phone preferred by the client.",
     "type": "string",
     "maxLength": 255,
     "level": "silver",
     "path": "/Contacts"
   },
   "Email": {
+    "definition": "The preferred Email address of the contact.",
     "type": "string",
     "maxLength": 80,
     "level": "silver",
     "path": "/Contacts"
   },
   "Email2": {
+    "definition": "The secondary email address of the contact.",
     "type": "string",
     "maxLength": 80,
     "level": "silver",
     "path": "/Contacts"
   },
   "Email3": {
+    "definition": "The tertiary email address of the contact.",
     "type": "string",
     "maxLength": 80,
     "level": "silver",
     "path": "/Contacts"
   },
   "OfficePhone": {
+    "definition": "North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.",
     "type": "string",
     "maxLength": 16,
     "level": "silver",
     "path": "/Contacts"
   },
   "OfficePhoneExt": {
+    "definition": "The extension of the given phone number (if applicable).",
     "type": "number",
     "level": "silver",
     "path": "/Contacts"
   },
   "MobilePhone": {
+    "definition": "North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.",
     "type": "string",
     "maxLength": 16,
     "level": "silver",
     "path": "/Contacts"
   },
   "DirectPhone": {
+    "definition": "North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.",
     "type": "string",
     "maxLength": 16,
     "level": "silver",
     "path": "/Contacts"
   },
   "HomePhone": {
+    "definition": "North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.",
     "type": "string",
     "maxLength": 16,
     "level": "silver",
     "path": "/Contacts"
   },
   "HomeFax": {
+    "definition": "North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.",
     "type": "string",
     "maxLength": 16,
     "level": "silver",
     "path": "/Contacts"
   },
   "BusinessFax": {
+    "definition": "North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.",
     "type": "string",
     "maxLength": 16,
     "level": "silver",
     "path": "/Contacts"
   },
   "Pager": {
+    "definition": "North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.",
     "type": "string",
     "maxLength": 16,
     "level": "silver",
     "path": "/Contacts"
   },
   "VoiceMail": {
+    "definition": "North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.",
     "type": "string",
     "maxLength": 16,
     "level": "silver",
     "path": "/Contacts"
   },
   "VoiceMailExt": {
+    "definition": "The extension of the given phone number (if applicable).",
     "type": "number",
     "level": "silver",
     "path": "/Contacts"
   },
   "TollFreePhone": {
+    "definition": "North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.",
     "type": "string",
     "maxLength": 16,
     "level": "silver",
     "path": "/Contacts"
   },
   "PhoneTTYTTD": {
+    "definition": "North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.",
     "type": "string",
     "maxLength": 16,
     "level": "silver",
     "path": "/Contacts"
   },
   "OtherPhoneType": {
+    "definition": "The type of \"other\" phone that does not already exist in the given phone fields or if a second of any type of phone field is needed.  i.e. HomePhone2,  BrothersPhone, etc.  This is used as the list of options for the Other Phone repeating elements. ",
     "type": "string",
     "maxLength": 25,
     "level": "silver",
@@ -581,12 +678,14 @@
         "type": "string"
       },
       "Number": {
+        "definition": "The \"other\" phone option allowing members to convey additional phone numbers other than those already covered by the HomePhone, VoiceMail, etc., fields.  This is a repeating element.  Use the OtherPhoneType for a selection of additional phone types.",
         "type": "string",
         "maxLength": 16,
         "level": "silver",
         "path": "/Contacts"
       },
       "Ext": {
+        "definition": "The \"other\" phone option allowing members to convey additional phone numbers other than those already covered by the VoiceMailExt, OfficePhoneExt, etc., fields.  This is a repeating element.  Use the OtherPhoneType for a selection of additional phone types.",
         "type": "number",
         "level": "silver",
         "path": "/Contacts"
@@ -594,18 +693,21 @@
     }
   ],
   "Company": {
+    "definition": "The contact's company or employer.",
     "type": "string",
     "maxLength": 50,
     "level": "silver",
     "path": "/Contacts"
   },
   "Department": {
+    "definition": "The department in which the contact works.",
     "type": "string",
     "maxLength": 50,
     "level": "silver",
     "path": "/Contacts"
   },
   "SocialMediaType": {
+    "definition": "A list of types of sites, blog, social media, the Member URL or ID is referring to.  i.e. Website, Blog, Facebook, Twitter, LinkedIn, Skype, etc.,  This list is used to populate the Type with repeating Social Media URL or ID types.",
     "type": "string",
     "maxLength": 25,
     "level": "silver",
@@ -618,6 +720,7 @@
         "type": "string"
       },
       "UrlOrId": {
+        "definition": "The website URL or ID of social media site or account of the member.  This is a repeating element.  Replace [Type] with any of the options from the SocialMediaType field to create a unique field for that type of social media.  For example: SocialMediaFacebookUrlOrID, SocialMediaSkypeUrlOrID, etc.",
         "type": "string",
         "maxLength": 8000,
         "level": "silver",
@@ -626,26 +729,31 @@
     }
   ],
   "Birthdate": {
+    "definition": "The birthday of the contact; month, day and year.",
     "type": "date",
     "level": "silver",
     "path": "/Contacts"
   },
   "Anniversary": {
+    "definition": "The wedding anniversary of the contact; month, day and year.",
     "type": "date",
     "level": "silver",
     "path": "/Contacts"
   },
   "OriginalEntryTimestamp": {
+    "definition": "Date/time the contact record was originally input into the source system.",
     "type": "date",
     "level": "silver",
     "path": "/Contacts"
   },
   "ModificationTimestamp": {
+    "definition": "Date/time the contact record was last modified.",
     "type": "date",
     "level": "silver",
     "path": "/Contacts"
   },
   "UserDefinedFieldName[#]": {
+    "definition": "[#] This field is a repeating element.  If this field is repeated, add 1, 2, 3, etc., to the end of the field.",
     "type": "string",
     "maxLength": 500,
     "level": "silver",
@@ -653,6 +761,7 @@
     "repeating": true
   },
   "UserDefinedFieldValue[#]": {
+    "definition": "[#] This field is a repeating element.  If this field is repeated, add 1, 2, 3, etc., to the end of the field.",
     "type": "string",
     "maxLength": 500,
     "level": "silver",
@@ -660,47 +769,55 @@
     "repeating": true
   },
   "AssistantName": {
+    "definition": "Name of the contact's assistant.",
     "type": "string",
     "maxLength": 150,
     "level": "silver",
     "path": "/Contacts"
   },
   "AssistantPhone": {
+    "definition": "Phone number of the contact's assistant.",
     "type": "string",
     "maxLength": 16,
     "level": "silver",
     "path": "/Contacts"
   },
   "AssistantPhoneExt": {
+    "definition": "Phone number extension of the contact's assistant.",
     "type": "number",
     "level": "silver",
     "path": "/Contacts"
   },
   "AssistantEmail": {
+    "definition": "Email address of the contact's assistant.",
     "type": "string",
     "maxLength": 80,
     "level": "silver",
     "path": "/Contacts"
   },
   "SpousePartnerName": {
+    "definition": "The contact's spouse or partner.",
     "type": "string",
     "maxLength": 150,
     "level": "silver",
     "path": "/Contacts"
   },
   "Children": {
+    "definition": "A list of the names of the contact's children in a comma separated list.",
     "type": "string",
     "maxLength": 150,
     "level": "silver",
     "path": "/Contacts"
   },
   "Gender": {
+    "definition": "The contact's gender.",
     "type": "string",
     "maxLength": 6,
     "level": "silver",
     "path": "/Contacts"
   },
   "Language": {
+    "definition": "The languages spoken by the contact.",
     "type": [
       "string"
     ],
@@ -708,19 +825,31 @@
     "path": "/Contacts"
   },
   "Groups": {
+    "definition": "Also knows as Tags, Categories, Circles, ",
     "type": [
       "string"
+    ],
+    "synonym": [
+      "Tags",
+      "Groups",
+      "Categories",
+      "Types"
     ],
     "level": "silver",
     "path": "/Contacts"
   },
   "ContactStatus": {
+    "definition": "The status of the contact.  Active, Inactive, On Vacation, Deleted, etc., ",
     "type": "string",
     "maxLength": 25,
+    "synonym": [
+      "ChoiceList"
+    ],
     "level": "silver",
     "path": "/Contacts"
   },
   "ContactType": {
+    "definition": "The type of contact.  i.e. Business, Friend, Family, Prospect, Ready to Buy, etc.",
     "type": [
       "string"
     ],
